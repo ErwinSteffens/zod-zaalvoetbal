@@ -9,12 +9,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js action
       uses: actions/setup-node@v1
       with:
         node-version: 10.14
-    - name: Build
+    - name: Build it
       run: |
+        cd app
         yarn install
         yarn run build
       env:
