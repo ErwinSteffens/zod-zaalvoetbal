@@ -1,12 +1,13 @@
 name: Build
 
-on: [push]
+on:
+  push:
+    branches:
+      - '!master'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout repo
       uses: actions/checkout@v1
@@ -23,7 +24,8 @@ jobs:
         CI: true
     - name: Deploy 
       uses: w9jds/firebase-action@develop
+      if: github.ref=='master'
       with:
-        args: deploy --only hosting:prod
+        args: deploy
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
