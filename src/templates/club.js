@@ -7,7 +7,7 @@ export default ({data}) => {
     const team = data.clubJson
     return (
         <Layout>
-            <div>Club page: {team.id}</div>
+            <div>Club page test: {team.id}</div>
         </Layout>
     )
 }
