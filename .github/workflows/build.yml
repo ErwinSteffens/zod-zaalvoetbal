@@ -1,4 +1,4 @@
-name: Build and deploy
+name: Build
 
 on: [push]
 
@@ -14,15 +14,16 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.14
-    - name: Install dependencies
-      run: |
-        cd app
-        yarn install
-      env:
-        CI: true
     - name: Build 
       run: |
         cd app
+        yarn install
         yarn run build
       env:
         CI: true
+    - name: Deploy 
+      uses: w9jds/firebase-action@develop
+      with:
+        args: deploy --only hosting:prod
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
