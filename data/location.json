@@ -1,0 +1,47 @@
+[
+    {
+        "id": "sporthal-drostenhal",
+        "city": "Coevorden",
+        "venue": "Sporthal Drostenhal"
+    },
+    {
+        "id": "sporthal-erica",
+        "city": "Erica",
+        "venue": "Sporthal Erica"
+    },
+    {
+        "id": "sporthal-de-kampen",
+        "city": "Schoonebeek",
+        "venue": "Sporthal De Kampen"
+    },
+    {
+        "id": "sporthal-veenoord",
+        "city": "Veenoord",
+        "venue": "Sporthal Veenoord"
+    },
+    {
+        "id": "sporthal-de-swaneburg",
+        "city": "Coevorden",
+        "venue": "Sporthal De Swaneburg"
+    },
+    {
+        "id": "sporthal-dalen",
+        "city": "Dalen",
+        "venue": "Sporthal Dalen"
+    },
+    {
+        "id": "sporthal-broekveld",
+        "city": "Sleen",
+        "venue": "Sporthal Broekveld"
+    },
+    {
+        "id": "sporthal-schoonoord",
+        "city": "Schoonoord",
+        "venue": "Sporthal Schoonoord"
+    },
+    {
+        "id": "sporthal-de-goorn",
+        "city": "Oosterhesselen",
+        "venue": "Sporthal De Goorn"
+    }
+]
