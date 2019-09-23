@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Breadcrumb } from 'react-bootstrap'
-import Navbar from './Navbar'
+import Navbar from './navbar'
 
 import './layout.sass'
 
