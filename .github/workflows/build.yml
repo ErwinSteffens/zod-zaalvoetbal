@@ -8,15 +8,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout repo
+      uses: actions/checkout@v1
     - name: Use Node.js action
       uses: actions/setup-node@v1
       with:
         node-version: 10.14
-    - name: Build it
+    - name: Install dependencies
       run: |
         cd app
         yarn install
+      env:
+        CI: true
+    - name: Build 
+      run: |
+        cd app
         yarn run build
       env:
         CI: true
