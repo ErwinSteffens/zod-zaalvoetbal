@@ -1,13 +1,13 @@
 import React from 'react'
-import { Container, Row, Col, Breadcrumb } from 'react-bootstrap'
-import Navbar from './navbar'
+import { Container, Row, Col } from 'react-bootstrap'
+import Navbar from './NavBar'
 
-import './layout.sass'
+import './Layout.sass'
 
 export default ({ children }) => (
     <Container>
         <Navbar></Navbar>
-        <Row>
+        {/* <Row>
             <Col>
                 <Breadcrumb>
                     <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
@@ -17,7 +17,7 @@ export default ({ children }) => (
                     <Breadcrumb.Item active>Data</Breadcrumb.Item>
                 </Breadcrumb>
             </Col>
-        </Row>
+        </Row> */}
         <Row>
             <Col>{children}</Col>
         </Row>

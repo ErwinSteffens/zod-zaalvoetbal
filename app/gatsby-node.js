@@ -6,6 +6,9 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         `type ClubJson implements Node {
             teams: [TeamJson] @link(by: "clubId", from: "id")
          }`,
+        `type LocationJson implements Node {
+            games: [GameJson] @link(by: "locationId", from: "id")
+         }`,
         `type GameJson implements Node {
             homeTeam: TeamJson @link(from: "homeTeamId")
             awayTeam: TeamJson @link(from: "awayTeamId")
@@ -14,6 +17,21 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         `type PouleJson implements Node {
             teams: [TeamJson] @link
          }`,
+        schema.buildObjectType({
+            name: 'PouleJson',
+            fields: {
+                games: {
+                    type: '[GameJson]',
+                    resolve(source, args, context, info) {
+                        return context.nodeModel
+                            .getAllNodes({ type: 'GameJson' })
+                            .filter(game =>
+                                source.teams.includes(game.homeTeamId)
+                            )
+                    }
+                }
+            }
+        }),
         `type TeamJson implements Node {
             club: ClubJson @link(from: "clubId")
             poule: PouleJson @link(from: "pouleId")
@@ -67,7 +85,7 @@ exports.createPages = async ({ graphql, actions }) => {
     clubs.data.allClubJson.edges.forEach(({ node }) => {
         createPage({
             path: `/${node.id}`,
-            component: path.resolve(`./src/templates/club.js`),
+            component: path.resolve(`./src/templates/Club.js`),
             context: {
                 id: node.id
             }
@@ -93,7 +111,7 @@ exports.createPages = async ({ graphql, actions }) => {
     teams.data.allTeamJson.edges.forEach(({ node }) => {
         createPage({
             path: `${node.club.id}/${node.name}`,
-            component: path.resolve(`./src/templates/team.js`),
+            component: path.resolve(`./src/templates/Team.js`),
             context: {
                 id: node.id
             }
@@ -116,7 +134,7 @@ exports.createPages = async ({ graphql, actions }) => {
     poules.data.allPouleJson.edges.forEach(({ node }) => {
         createPage({
             path: `poules/${node.id}`,
-            component: path.resolve(`./src/templates/poule.js`),
+            component: path.resolve(`./src/templates/Poule.js`),
             context: {
                 id: node.id
             }
@@ -138,7 +156,7 @@ exports.createPages = async ({ graphql, actions }) => {
     locations.data.allLocationJson.edges.forEach(({ node }) => {
         createPage({
             path: `locaties/${node.id}`,
-            component: path.resolve(`./src/templates/location.js`),
+            component: path.resolve(`./src/templates/Location.js`),
             context: {
                 id: node.id
             }

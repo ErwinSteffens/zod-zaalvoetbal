@@ -38,6 +38,7 @@ export default () => {
                         {data.allClubJson.nodes.map(node => {
                             return (
                                 <Link
+                                    key={node.id}
                                     className="dropdown-item"
                                     role="button"
                                     to={`/${node.id}`}
@@ -51,6 +52,7 @@ export default () => {
                         {data.allPouleJson.nodes.map(node => {
                             return (
                                 <Link
+                                    key={node.id}
                                     className="dropdown-item"
                                     role="button"
                                     to={`/poules/${node.id}`}
@@ -64,6 +66,7 @@ export default () => {
                         {data.allLocationJson.nodes.map(node => {
                             return (
                                 <Link
+                                    key={node.id}
                                     className="dropdown-item"
                                     role="button"
                                     to={`/locaties/${node.id}`}

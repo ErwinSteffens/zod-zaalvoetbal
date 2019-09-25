@@ -663,7 +663,13 @@
         "id": "dalen-dsc_jo8-1",
         "clubId": "dalen-dsc",
         "name": "JO8-1",
-        "pouleId": "o8-poule-e"
+        "pouleId": "o8-poule-d"
+    },
+    {
+        "id": "dalen-dsc_jo8-2",
+        "clubId": "dalen-dsc",
+        "name": "JO8-2",
+        "pouleId": "o8-poule-2"
     },
     {
         "id": "vv-raptim_jo8-6",
