@@ -8,7 +8,7 @@
     {
         "id": "vv-raptim_jo13-1",
         "clubId": "vv-raptim",
-        "name": "JO13-1",   
+        "name": "JO13-1",
         "pouleId": "o13-poule-a"
     },
     {
@@ -408,6 +408,30 @@
         "pouleId": "o10-poule-b"
     },
     {
+        "id": "svv-04_jo10-2",
+        "clubId": "svv-04",
+        "name": "JO10-2",
+        "pouleId": "o10-poule-b"
+    },
+    {
+        "id": "vv-raptim_jo10-3",
+        "clubId": "vv-raptim",
+        "name": "JO10-3",
+        "pouleId": "o10-poule-b"
+    },
+    {
+        "id": "dalen-dsc_jo10-2",
+        "clubId": "dalen-dsc",
+        "name": "JO10-2",
+        "pouleId": "o10-poule-b"
+    },
+    {
+        "id": "ksc_jo10-1",
+        "clubId": "ksc",
+        "name": "JO10-1",
+        "pouleId": "o10-poule-b"
+    },
+    {
         "id": "vv-raptim_jo10-4",
         "clubId": "vv-raptim",
         "name": "JO10-4",
@@ -666,12 +690,6 @@
         "pouleId": "o8-poule-d"
     },
     {
-        "id": "dalen-dsc_jo8-2",
-        "clubId": "dalen-dsc",
-        "name": "JO8-2",
-        "pouleId": "o8-poule-2"
-    },
-    {
         "id": "vv-raptim_jo8-6",
         "clubId": "vv-raptim",
         "name": "JO8-6",
@@ -681,6 +699,12 @@
         "id": "sv-twedo_jo8-5",
         "clubId": "sv-twedo",
         "name": "JO8-5",
+        "pouleId": "o8-poule-e"
+    },
+    {
+        "id": "dalen-dsc_jo8-2",
+        "clubId": "dalen-dsc",
+        "name": "JO8-2",
         "pouleId": "o8-poule-e"
     },
     {

@@ -9,7 +9,8 @@
             "germanicus-csvc_jo13-1",
             "dalen-dsc_jo13-1",
             "svv-04_jo13-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o13-poule-b",
@@ -21,7 +22,8 @@
             "dalen-dsc_jo13-2",
             "svv-04_jo13-2",
             "vv-sweel_jo13-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o13-poule-c",
@@ -33,7 +35,8 @@
             "dalen-dsc_jo13-3",
             "nkvv-protos_jo13-1",
             "vv-sweel_jo13-2"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o13-poule-d",
@@ -44,7 +47,8 @@
             "germanicus-csvc_jo13-3",
             "vios_jo13-1",
             "nkvv-protos_jo13-2"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o13-poule-e",
@@ -55,7 +59,8 @@
             "germanicus-csvc_jo13-4",
             "vios_jo13-2",
             "dalen-dsc_jo13-4"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o12-poule-a",
@@ -67,7 +72,8 @@
             "ksc_jo12-1",
             "sc-erica_jo12-1",
             "vv-sleen_jo12-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o12-poule-b",
@@ -79,7 +85,8 @@
             "dalen-dsc_jo12-2",
             "sv-twedo_mo12-1",
             "sv-twedo_mo12-2"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o11-poule-a",
@@ -90,7 +97,8 @@
             "sv-twedo_jo11-2",
             "germanicus-csvc_jo11-1",
             "dalen-dsc_jo11-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o11-poule-b",
@@ -101,7 +109,8 @@
             "sv-twedo_jo11-3",
             "sc-erica_jo11-1",
             "vv-sleen_jo11-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o11-poule-c",
@@ -112,7 +121,8 @@
             "sv-twedo_jo11-4",
             "germanicus-csvc_jo11-2",
             "sc-erica_jo11-2"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o11-poule-d",
@@ -124,7 +134,8 @@
             "sv-twedo_jo11-5",
             "germanicus-csvc_mo11-1",
             "vv-sweel_mo11-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o10-poule-a",
@@ -136,14 +147,20 @@
             "germanicus-csvc_jo10-1",
             "svv-04_jo10-1",
             "sv-twedo_jo10-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o10-poule-b",
         "name": "O10 Poule B",
         "teams": [
-            "vv-raptim_jo10-2"
-        ]
+            "vv-raptim_jo10-2",
+            "svv-04_jo10-2",
+            "vv-raptim_jo10-3",
+            "dalen-dsc_jo10-2",
+            "ksc_jo10-1"
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o10-poule-c",
@@ -154,7 +171,8 @@
             "vios_jo10-1",
             "dalen-dsc_jo10-3",
             "nkvv-protos_jo10-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o9-poule-a",
@@ -166,7 +184,8 @@
             "sv-twedo_jo9-2",
             "svv-04_jo9-1",
             "vios_jo9-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o9-poule-b",
@@ -178,7 +197,8 @@
             "nkvv-protos_jo9-1",
             "germanicus-csvc_jo9-2",
             "sc-erica_jo9-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o9-poule-c",
@@ -190,7 +210,8 @@
             "svv-04_jo9-2",
             "ksc_jo9-1",
             "vv-sleen_jo9-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o8-poule-a",
@@ -200,7 +221,8 @@
             "germanicus-csvc_jo8-1",
             "sv-twedo_jo8-1",
             "sv-twedo_jo8-2"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o8-poule-b",
@@ -211,7 +233,8 @@
             "germanicus-csvc_jo8-2",
             "sc-erica_jo8-1",
             "svv-04_jo8-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o8-poule-c",
@@ -222,7 +245,8 @@
             "sv-twedo_jo8-3",
             "germanicus-csvc_jo8-3",
             "sc-erica_jo8-2"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o8-poule-d",
@@ -234,7 +258,8 @@
             "vios_jo8-2",
             "vv-sweel_jo8-1",
             "dalen-dsc_jo8-1"
-        ]
+        ],
+        "0": "\u00a8"
     },
     {
         "id": "o8-poule-e",
@@ -244,6 +269,7 @@
             "sv-twedo_jo8-5",
             "dalen-dsc_jo8-2",
             "vv-sweel_jo8-2"
-        ]
+        ],
+        "0": "\u00a8"
     }
 ]
