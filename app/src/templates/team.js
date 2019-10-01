@@ -1,34 +1,58 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import { List } from 'immutable'
 import moment from 'moment'
+import Toggle from 'react-toggle'
 
-import Layout from '../components/layout'
-import PouleStandings from '../components/PouleStandings'
-import GameTable from '../components/GameTable'
+import Layout from '../components/Layout'
+import ClubLogo from '../components/ClubLogo'
+import Standings from '../components/Standings'
+import Games from '../components/Games'
 
 export default ({ data }) => {
+    const [showAll, setShowAll] = useState(false)
+
     const team = data.teamJson
     const poule = team.poule
 
-    var games = List(poule.games)
-        .groupBy(game => {
-            return moment(game.time)
-                .startOf('day')
-                .toDate()
-        })
-        .sortBy((_v, k) => k)
+    var games = poule.games
+    if (!showAll) {
+        games = games.filter(g => g.homeTeam.id === team.id || g.awayTeam.id === team.id)
+    }
+
+    games = List(games).groupBy(game => {
+        const date = moment(game.time)
+            .startOf('day')
+            .toDate()
+
+        return `${date}__${game.location.id}`
+    })
+
+    games = games.sortBy((_v, k) => k)
 
     return (
         <Layout>
-            <div>Team page: {team.id}</div>
+            <div className="clearfix">
+                <ClubLogo className="page-header" club={team.club} />
+                <h3>{team.fullName}</h3>
+            </div>
+            <h4>Stand</h4>
+            <Standings poule={poule} highlightTeamId={team.id} />
 
-            <PouleStandings poule={poule} highlightTeamId={team.id} />
+            <label className="game-toggle">
+                <span className="label-text">Toon alle poule wedstrijden</span>
+                <Toggle checked={showAll} onChange={e => setShowAll(e.target.checked)}></Toggle>
+            </label>
+            <h4>Wedstrijden</h4>
+            {games.entrySeq().map(([key, games]) => {
+                // Get date and location from first item as they are grouped by location and date
+                const first = games.first()
 
-            {games.entrySeq().map(([date, games]) => {
                 return (
-                    <GameTable
-                        date={date}
+                    <Games
+                        key={key}
+                        date={first.time}
+                        location={first.location}
                         games={games}
                         highlightTeamId={team.id}
                     />
@@ -52,6 +76,8 @@ export const query = graphql`
                 id
                 name
                 teams {
+                    id
+                    name
                     fullName
                     club {
                         id
@@ -61,6 +87,7 @@ export const query = graphql`
                 games {
                     id
                     time
+                    round
                     location {
                         id
                         venue
@@ -70,11 +97,19 @@ export const query = graphql`
                         id
                         name
                         fullName
+                        club {
+                            id
+                            name
+                        }
                     }
                     awayTeam {
                         id
                         name
                         fullName
+                        club {
+                            id
+                            name
+                        }
                     }
                 }
             }

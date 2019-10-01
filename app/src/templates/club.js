@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 export default ({ data }) => {
     const club = data.clubJson
@@ -12,9 +12,7 @@ export default ({ data }) => {
             <ul>
                 {club.teams.map(team => (
                     <li>
-                        <Link to={`${club.id}/${team.name}`}>
-                            {team.fullName}
-                        </Link>
+                        <Link to={`${club.id}/${team.name}`}>{team.fullName}</Link>
                     </li>
                 ))}
             </ul>

@@ -25,9 +25,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
                     resolve(source, args, context, info) {
                         return context.nodeModel
                             .getAllNodes({ type: 'GameJson' })
-                            .filter(game =>
-                                source.teams.includes(game.homeTeamId)
-                            )
+                            .filter(game => source.teams.includes(game.homeTeamId))
                     }
                 }
             }
@@ -46,7 +44,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
                             id: source.clubId,
                             type: 'ClubJson'
                         })
-                        return `${club.name} - ${source.name}`
+                        return `${club.name} ${source.name}`
                     }
                 },
                 games: {
@@ -54,11 +52,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
                     resolve(source, args, context, info) {
                         return context.nodeModel
                             .getAllNodes({ type: 'GameJson' })
-                            .filter(
-                                game =>
-                                    game.homeTeamId === source.id ||
-                                    game.awayTeamId === source.id
-                            )
+                            .filter(game => game.homeTeamId === source.id || game.awayTeamId === source.id)
                     }
                 }
             }

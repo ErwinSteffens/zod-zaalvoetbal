@@ -28,51 +28,41 @@ export default () => {
     `)
 
     return (
-        <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#home">ZOD Zaalcompetitie</Navbar.Brand>
+        <Navbar bg="dark" expand="sm" variant="dark">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link className="nav-link" as={Link} to="/">
+                        Home
+                    </Nav.Link>
                     <NavDropdown title="Clubs">
                         {data.allClubJson.nodes.map(node => {
                             return (
-                                <Link
-                                    key={node.id}
-                                    className="dropdown-item"
-                                    role="button"
-                                    to={`/${node.id}`}
-                                >
+                                <NavDropdown.Item key={node.id} as={Link} to={`/${node.id}`}>
                                     {node.name}
-                                </Link>
+                                </NavDropdown.Item>
                             )
                         })}
                     </NavDropdown>
                     <NavDropdown title="Poules">
                         {data.allPouleJson.nodes.map(node => {
                             return (
-                                <Link
-                                    key={node.id}
-                                    className="dropdown-item"
-                                    role="button"
-                                    to={`/poules/${node.id}`}
-                                >
+                                <NavDropdown.Item key={node.id} as={Link} to={`/poules/${node.id}`}>
                                     {node.name}
-                                </Link>
+                                </NavDropdown.Item>
                             )
                         })}
                     </NavDropdown>
                     <NavDropdown title="Locaties">
                         {data.allLocationJson.nodes.map(node => {
                             return (
-                                <Link
+                                <NavDropdown.Item
                                     key={node.id}
-                                    className="dropdown-item"
-                                    role="button"
+                                    as={Link}
                                     to={`/locaties/${node.id}`}
                                 >
                                     {node.venue} - {node.city}
-                                </Link>
+                                </NavDropdown.Item>
                             )
                         })}
                     </NavDropdown>
