@@ -16,9 +16,9 @@ const Standings = ({ poule, highlightTeamId }) => {
                 <div className="value">W</div>
                 <div className="value">GL</div>
                 <div className="value">V</div>
-                <div className="value">+</div>
-                <div className="value">-</div>
-                <div className="value">PM</div>
+                <div className="value goals">+</div>
+                <div className="value goals">-</div>
+                <div className="value goals">PM</div>
             </div>
             {poule.teams.map((team, index) => {
                 let classes = cn('standings-row', {
@@ -38,9 +38,9 @@ const Standings = ({ poule, highlightTeamId }) => {
                         <div className="value">0</div>
                         <div className="value">0</div>
                         <div className="value">0</div>
-                        <div className="value">0</div>
-                        <div className="value">0</div>
-                        <div className="value">0</div>
+                        <div className="value goals">0</div>
+                        <div className="value goals">0</div>
+                        <div className="value goals">0</div>
                     </Link>
                 )
             })}

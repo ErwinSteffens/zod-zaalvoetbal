@@ -6,12 +6,22 @@ $font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif
 body 
     background: #eee
 
+    @include media-breakpoint-down(sm) 
+        background: #fff
+
+.navbar
+    @include media-breakpoint-down(sm) 
+        margin-left: -15px
+        margin-right: -15px
+
+
 .content
     background: #fff
     padding: 50px
 
-    @include media-breakpoint-down(md) 
-        padding: 10px
+    @include media-breakpoint-down(sm) 
+        padding: 20px 0
+        font-size: .8rem
 
     a
         color: #212529
@@ -27,12 +37,14 @@ body
         &:active
             color: #212529
 
-    h3, h4
+    h3
         margin-bottom: 30px
+        
+    h4
+        margin-bottom: 10px
 
     .location-map
-        float: right
-        width: 450px
+        width: 100%
         height: 300px
 
 .club-logo
@@ -45,6 +57,10 @@ body
         display: inline-block
         float: right
 
+        @include media-breakpoint-down(sm) 
+            width: 80px
+            height: 80px
+        
 .standings
     margin-bottom: 50px
 
@@ -52,6 +68,7 @@ body
         display: flex
         flex-wrap: wrap
         align-items: center
+        justify-content: center
         padding-top: 6px
         padding-bottom: 6px
         border-bottom: 1px solid #eee
@@ -73,23 +90,40 @@ body
 
     .value
         width: 6%
-        display: flex
         flex-direction: column
-        align-self: flex-end
         text-align: center
+
+        @include media-breakpoint-down(xs) 
+            width: 8%
 
         &.position
             width: 3%
 
+            @include media-breakpoint-down(xs) 
+                display: none
+
         &.points
             width: 12%
+
+            @include media-breakpoint-down(xs) 
+                width: 8%
 
         &.logo
             width: 9%
 
+            @include media-breakpoint-down(xs) 
+                width: 10%
+
         &.team
             text-align: left
             width: 34%
+
+            @include media-breakpoint-down(xs) 
+                width: 48%
+
+        &.goals
+            @include media-breakpoint-down(xs) 
+                display: none
 
     .club-logo
         width: 28px
@@ -98,11 +132,13 @@ body
         margin-left: auto
         margin-right: auto
 
-.game-toggle
-    float: right
-    
+        @include media-breakpoint-down(md) 
+            width: 20px
+            height: 20px
+
+.game-toggle    
     .react-toggle
-        margin-left: 8px
+        margin-right: 8px
         vertical-align: middle
 
     .label-text
@@ -111,6 +147,9 @@ body
 
 .games
     margin-bottom: 60px
+
+    @include media-breakpoint-down(xs) 
+        margin-bottom: 40px
 
     .header
         font-size: 12pt
@@ -141,19 +180,30 @@ body
             width: 10%
             display: flex
             flex-direction: column
-            align-self: flex-end
             text-align: center
 
             &.logo
                 width: 8%
 
+                @include media-breakpoint-down(xs) 
+                    width: 6%
+
             &.middle
                 width: 8%
-                font-size: 11pt
+                font-size: .9rem
                 font-weight: 700
+
+                @include media-breakpoint-down(xs) 
+                    width: 14%
+                    font-size: .8rem
 
             &.team
                 width: 38%
+                padding-left: 6px
+                padding-right: 6px
+
+                @include media-breakpoint-down(xs) 
+                    width: 37%
 
                 &.highlight
                     font-weight: 700
@@ -170,6 +220,10 @@ body
                 display: block
                 margin-left: auto
                 margin-right: auto
+
+                @include media-breakpoint-down(xs) 
+                    width: 20px
+                    height: 20px
 
         .middle
             text-align: center
