@@ -33,6 +33,13 @@ export default ({ children }) => (
             />
         </Helmet>
         <Container>
+            <Row>
+                <Col>
+                    <div className="top">
+                        <img src="/zod-white.svg" className="logo" alt="zod-zaalvoetbal" />
+                    </div>
+                </Col>
+            </Row>
             <Navigation></Navigation>
             <Row>
                 <Col>

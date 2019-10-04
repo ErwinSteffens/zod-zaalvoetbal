@@ -20,6 +20,14 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         schema.buildObjectType({
             name: 'PouleJson',
             fields: {
+                sortId: {
+                    type: 'Int',
+                    resolve(source, args, context, info) {
+                        let regex = /O(\d+) Poule ([A-Z]{1})/
+                        let result = source.name.match(regex)
+                        return parseInt(result[1]) * 100 + result[2].charCodeAt(0)
+                    }
+                },
                 games: {
                     type: '[GameJson]',
                     resolve(source, args, context, info) {
@@ -47,12 +55,23 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
                         return `${club.name} ${source.name}`
                     }
                 },
+                sortId: {
+                    type: 'Int',
+                    resolve(source, args, context, info) {
+                        let regex = /(JO|MO)(\d+)-(\d+)/
+                        let result = source.name.match(regex)
+                        return parseInt(result[2]) * 10 + parseInt(result[3])
+                    }
+                },
                 games: {
                     type: '[GameJson]',
                     resolve(source, args, context, info) {
                         return context.nodeModel
                             .getAllNodes({ type: 'GameJson' })
-                            .filter(game => game.homeTeamId === source.id || game.awayTeamId === source.id)
+                            .filter(
+                                game =>
+                                    game.homeTeamId === source.id || game.awayTeamId === source.id
+                            )
                     }
                 }
             }

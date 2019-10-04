@@ -1,5 +1,8 @@
 
 $font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif
+
+$dark: #333
+$navbar-dark-color: #fff
     
 @import '~bootstrap/scss/bootstrap.scss'
 
@@ -9,11 +12,37 @@ body
     @include media-breakpoint-down(sm) 
         background: #fff
 
+.top
+    height: 210px
+    padding: 30px
+    background: url('/zod-header.png')
+
+    @include media-breakpoint-down(sm) 
+        padding: 20px
+        max-height: 160px
+        background: #fff
+        text-align: center
+
+    .logo
+        max-width: 275px
+
+        @include media-breakpoint-down(sm) 
+            max-width: 220px
+
 .navbar
     @include media-breakpoint-down(sm) 
         margin-left: -15px
         margin-right: -15px
 
+    .clubs-menu
+        font-size: .9rem
+
+        @include media-breakpoint-up(sm) 
+            width: 800px
+
+        .club-logo
+            width: 20px
+            height: 20px
 
 .content
     background: #fff

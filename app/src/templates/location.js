@@ -18,6 +18,8 @@ export default ({ data }) => {
         })
         .sortBy((_v, k) => k)
 
+    const mapsUrl = `https://www.google.com/maps/embed/v1/place?q=place_id:${location.placeId}&key=AIzaSyCzh-2XRTB_MQdXyBPpEXQkyAxQz_FOibY`
+
     return (
         <Layout>
             <Row className="mb-4">
@@ -25,8 +27,9 @@ export default ({ data }) => {
                     <h3>{location.venue}</h3>
                     <b>Adres:</b>
                     <br />
-                    De Pienhoek 4<br />
-                    7761 CB Schoonebeek
+                    {location.address}
+                    <br />
+                    {location.postalCode} {location.city}
                     <br />
                     <br />
                 </Col>
@@ -34,17 +37,17 @@ export default ({ data }) => {
                     <iframe
                         title={location.venue}
                         className="location-map"
-                        frameborder="0"
+                        frameBorder="0"
                         style={{ border: 0 }}
-                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ9THDigjwt0cRaN5FuzGFjDk&key=AIzaSyCzh-2XRTB_MQdXyBPpEXQkyAxQz_FOibY"
-                        allowfullscreen
+                        src={mapsUrl}
+                        allowFullScreen
                     ></iframe>
                 </Col>
             </Row>
 
-            <h4>Wedstrijden</h4>
+            <h4 className="mb-4">Wedstrijden</h4>
             {games.entrySeq().map(([date, games]) => {
-                return <Games date={date} games={games} />
+                return <Games key={date} date={date} games={games} />
             })}
         </Layout>
     )
@@ -55,14 +58,15 @@ export const query = graphql`
         locationJson(id: { eq: $id }) {
             id
             venue
+            address
+            postalCode
             city
+            placeId
             games {
                 id
                 time
                 location {
                     id
-                    venue
-                    city
                 }
                 homeTeam {
                     id
