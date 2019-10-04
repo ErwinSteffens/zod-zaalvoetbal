@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { Navbar, Nav, NavDropdown, Row, Col } from 'react-bootstrap'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 import ClubLogo from './ClubLogo'
 
@@ -11,12 +11,6 @@ export default () => {
                 nodes {
                     id
                     name
-                    teams {
-                        id
-                        name
-                        fullName
-                        sortId
-                    }
                 }
             }
             allPouleJson(sort: { fields: sortId }) {
@@ -43,42 +37,21 @@ export default () => {
                     <Nav.Link className="nav-link" as={Link} to="/">
                         Home
                     </Nav.Link>
-                    <NavDropdown title="Teams">
-                        <Row className="clubs-menu">
-                            {data.allClubJson.nodes.map(club => {
-                                const teams = club.teams.sort((a, b) => {
-                                    if (a.sortId < b.sortId) {
-                                        return -1
-                                    }
-                                    if (a.sortId > b.sortId) {
-                                        return 1
-                                    }
-                                    return 0
-                                })
-                                return (
-                                    <Col key={club.id} xs={12} md={4} className="mb-2 mt-2">
-                                        {teams.map(team => {
-                                            return (
-                                                <NavDropdown.Item
-                                                    key={team.id}
-                                                    as={Link}
-                                                    to={`/${club.id}/${team.name}`}
-                                                >
-                                                    <ClubLogo club={club} className="mr-2" />
-                                                    {team.fullName}
-                                                </NavDropdown.Item>
-                                            )
-                                        })}
-                                    </Col>
-                                )
-                            })}
-                        </Row>
-                    </NavDropdown>
                     <NavDropdown title="Poules">
                         {data.allPouleJson.nodes.map(node => {
                             return (
                                 <NavDropdown.Item key={node.id} as={Link} to={`/poules/${node.id}`}>
                                     {node.name}
+                                </NavDropdown.Item>
+                            )
+                        })}
+                    </NavDropdown>
+                    <NavDropdown title="Clubs">
+                        {data.allClubJson.nodes.map(club => {
+                            return (
+                                <NavDropdown.Item key={club.id} as={Link} to={`/${club.id}`}>
+                                    <ClubLogo club={club} className="small mr-2" />
+                                    {club.name}
                                 </NavDropdown.Item>
                             )
                         })}

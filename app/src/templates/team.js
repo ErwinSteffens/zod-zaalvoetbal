@@ -11,7 +11,7 @@ import Standings from '../components/Standings'
 import Games from '../components/Games'
 
 export default ({ data }) => {
-    const [showAll, setShowAll] = useState(false)
+    const [showAll, setShowAll] = useState(true)
 
     const team = data.teamJson
     const poule = team.poule

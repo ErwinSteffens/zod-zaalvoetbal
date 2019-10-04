@@ -5,15 +5,23 @@ module.exports = {
         description: `Onderlinge zaalvoetbal competitie voor de jeugd in Zuidoost-Drenthe`
     },
     plugins: [
+        `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
         `gatsby-transformer-json`,
+        `gatsby-transformer-remark`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `./../data/`
+                path: `${__dirname}/src/data/`
             }
         },
-        `gatsby-plugin-react-helmet`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/src/markdown/`,
+                name: `markdown`
+            }
+        },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {

@@ -2,19 +2,47 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
+import ClubLogo from '../components/ClubLogo'
 
 export default ({ data }) => {
     const club = data.clubJson
 
+    const teams = club.teams.sort((a, b) => {
+        if (a.sortId < b.sortId) {
+            return -1
+        }
+        if (a.sortId > b.sortId) {
+            return 1
+        }
+        return 0
+    })
+
     return (
-        <Layout>
-            <div>Club page test: {club.id}</div>
-            <ul>
-                {club.teams.map(team => (
-                    <li>
-                        <Link to={`${club.id}/${team.name}`}>{team.fullName}</Link>
-                    </li>
-                ))}
+        <Layout className="club-page">
+            <div className="clearfix">
+                <ClubLogo className="page-header" club={club} />
+                <h3>{club.name}</h3>
+                <b>Contactpersoon:</b>
+                <br />
+                Erwin Steffens
+                <br />
+                Tel: 06-48482334
+                <br />
+                <br />
+            </div>
+            <h4>Teams</h4>
+
+            <ul className="team-list">
+                {teams.map(team => {
+                    return (
+                        <li>
+                            <Link key={team.id} as={Link} to={`/${club.id}/${team.name}`}>
+                                <ClubLogo club={club} className="small mr-2" />
+                                {team.fullName}
+                            </Link>
+                        </li>
+                    )
+                })}
             </ul>
         </Layout>
     )
@@ -29,6 +57,7 @@ export const query = graphql`
                 id
                 name
                 fullName
+                sortId
             }
         }
     }

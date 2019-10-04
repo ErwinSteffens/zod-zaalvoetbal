@@ -7,7 +7,7 @@ import Navigation from './Navigation'
 
 import './Layout.sass'
 
-export default ({ children }) => (
+export default ({ children, className }) => (
     <>
         <Helmet>
             <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -32,11 +32,11 @@ export default ({ children }) => (
                 rel="stylesheet"
             />
         </Helmet>
-        <Container>
+        <Container className={className}>
             <Row>
                 <Col>
                     <div className="top">
-                        <img src="/zod-white.svg" className="logo" alt="zod-zaalvoetbal" />
+                        <img src="/zod-black.svg" className="logo" alt="zod-zaalvoetbal" />
                     </div>
                 </Col>
             </Row>

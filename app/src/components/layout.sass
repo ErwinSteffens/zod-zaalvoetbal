@@ -34,23 +34,13 @@ body
         margin-left: -15px
         margin-right: -15px
 
-    .clubs-menu
-        font-size: .9rem
-
-        @include media-breakpoint-up(sm) 
-            width: 800px
-
-        .club-logo
-            width: 20px
-            height: 20px
-
 .content
     background: #fff
     padding: 50px
 
     @include media-breakpoint-down(sm) 
         padding: 20px 0
-        font-size: .8rem
+        // font-size: .8rem
 
     a
         color: #212529
@@ -76,9 +66,32 @@ body
         width: 100%
         height: 300px
 
+.team-list
+    list-style-type: none
+    padding: 0
+
+    li
+        padding: 2px
+
+.page
+    &.game-rules
+        li
+            margin-bottom: 10px
+
+.club-page
+    .team-list
+        column-count: 3
+
+        @include media-breakpoint-down(sm) 
+            column-count: 1
+
 .club-logo
     width: 256px
     height: 256px
+
+    &.small
+        width: 20px
+        height: 20px
 
     &.page-header
         width: 160px
@@ -87,11 +100,14 @@ body
         float: right
 
         @include media-breakpoint-down(sm) 
-            width: 80px
-            height: 80px
+            width: 120px
+            height: 120px
         
 .standings
     margin-bottom: 50px
+
+    @include media-breakpoint-down(xs) 
+        font-size: .8rem
 
     .standings-row 
         display: flex
@@ -178,6 +194,7 @@ body
     margin-bottom: 60px
 
     @include media-breakpoint-down(xs) 
+        font-size: .8rem
         margin-bottom: 40px
 
     .header
@@ -220,7 +237,6 @@ body
             &.middle
                 width: 8%
                 font-size: .9rem
-                font-weight: 700
 
                 @include media-breakpoint-down(xs) 
                     width: 14%
