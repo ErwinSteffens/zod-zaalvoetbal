@@ -9,6 +9,7 @@ import Layout from '../components/Layout'
 import ClubLogo from '../components/ClubLogo'
 import Standings from '../components/Standings'
 import Games from '../components/Games'
+import { Helmet } from 'react-helmet'
 
 export default ({ data }) => {
     const [showAll, setShowAll] = useState(true)
@@ -33,6 +34,9 @@ export default ({ data }) => {
 
     return (
         <Layout>
+            <Helmet>
+                <title>ZOD Zaalvoetbal - {team.fullName}</title>
+            </Helmet>
             <div className="clearfix">
                 <ClubLogo className="page-header" club={team.club} />
                 <h3>{team.fullName}</h3>

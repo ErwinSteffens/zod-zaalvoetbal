@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { List } from 'immutable'
 import { Row, Col } from 'react-bootstrap'
 import moment from 'moment'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 import Games from '../components/Games'
@@ -22,7 +23,10 @@ export default ({ data }) => {
 
     return (
         <Layout>
-            <Row className="mb-4">
+            <Helmet>
+                <title>ZOD Zaalvoetbal - {location.venue}</title>
+            </Helmet>
+            <Row className="location-info mb-4">
                 <Col xs={12} md={6}>
                     <h3>{location.venue}</h3>
                     <b>Adres:</b>

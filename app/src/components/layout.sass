@@ -273,5 +273,12 @@ body
         .middle
             text-align: center
 
+@media print
+    .navbar,.top
+        display: none
 
+    .games
+        page-break-inside: avoid
 
+    .location-info
+        page-break-after: always

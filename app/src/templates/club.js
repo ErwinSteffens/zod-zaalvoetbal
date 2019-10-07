@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 import ClubLogo from '../components/ClubLogo'
@@ -19,6 +20,9 @@ export default ({ data }) => {
 
     return (
         <Layout className="club-page">
+            <Helmet>
+                <title>ZOD Zaalvoetbal - {club.name}</title>
+            </Helmet>
             <div className="clearfix">
                 <ClubLogo className="page-header" club={club} />
                 <h3>{club.name}</h3>

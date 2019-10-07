@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { List } from 'immutable'
 import moment from 'moment'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 import Standings from '../components/Standings'
@@ -22,6 +23,9 @@ export default ({ data }) => {
 
     return (
         <Layout>
+            <Helmet>
+                <title>ZOD Zaalvoetbal - {poule.name}</title>
+            </Helmet>
             <h3>{poule.name}</h3>
             <h4>Stand</h4>
             <Standings poule={poule} />
