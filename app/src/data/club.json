@@ -1,46 +1,79 @@
 [
     {
         "id": "dalen-dsc",
-        "name": "Dalen-DSC"
+        "name": "Dalen-DSC",
+        "contact": "Tanja Mulder",
+        "contactPhone": "06-52180562",
+        "contactEmail": "tanja.lamberts@outlook.com"
     },
     {
         "id": "sc-erica",
-        "name": "Sc Erica"
+        "name": "Sc Erica",
+        "contact": "Raymond Rolink",
+        "contactPhone": "06-11008724",
+        "contactEmail": "rrolink@volkerwessels.com"
     },
     {
         "id": "germanicus-csvc",
-        "name": "Germanicus-CSVC"
+        "name": "Germanicus-CSVC",
+        "contact": "Johan Kosters",
+        "contactPhone": "06-14534769",
+        "contactEmail": "johekosters@hotmail.com"
     },
     {
         "id": "ksc",
-        "name": "KSC"
+        "name": "KSC",
+        "contact": "Gerrit Jan Eising",
+        "contactPhone": "06-13724862",
+        "contactEmail": "gj_ensing@live.nl"
     },
     {
         "id": "nkvv-protos",
-        "name": "NKvv Protos"
+        "name": "NKvv Protos",
+        "contact": "Harry Alting",
+        "contactPhone": "06-11268194",
+        "contactEmail": "harryalting@home.nl"
     },
     {
         "id": "vv-raptim",
-        "name": "vv Raptim"
+        "name": "vv Raptim",
+        "contact": "Nick Nannen",
+        "contactPhone": "06-20962085",
+        "contactEmail": "nick@nnsports.nl"
     },
     {
         "id": "svv-04",
-        "name": "SVV'04"
+        "name": "SVV'04",
+        "contact": "Hellen Kloeze",
+        "contactPhone": "06-12942369",
+        "contactEmail": "hek@ows.no"
     },
     {
         "id": "vv-sleen",
-        "name": "VV Sleen"
+        "name": "VV Sleen",
+        "contact": "Marcel Hilgers",
+        "contactPhone": "06-28074158",
+        "contactEmail": "secretariaatjeugd@vvsleen.nl"
     },
     {
         "id": "vv-sweel",
-        "name": "vv Sweel"
+        "name": "vv Sweel",
+        "contact": "Henk Nijenbanning",
+        "contactPhone": "06-50452701",
+        "contactEmail": "jeugdzaken@vvsweel.nl"
     },
     {
         "id": "sv-twedo",
-        "name": "SV Twedo"
+        "name": "SV Twedo",
+        "contact": "Edwin Guijt",
+        "contactPhone": "06-41869325",
+        "contactEmail": "eguit@ziggo.nl"
     },
     {
         "id": "vios",
-        "name": "VIOS"
+        "name": "VIOS",
+        "contact": "Erik Holties",
+        "contactPhone": "06-53285358",
+        "contactEmail": "erikenrenateholties@gmail.com"
     }
 ]

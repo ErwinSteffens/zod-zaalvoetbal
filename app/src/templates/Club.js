@@ -28,9 +28,11 @@ export default ({ data }) => {
                 <h3>{club.name}</h3>
                 <b>Contactpersoon:</b>
                 <br />
-                Erwin Steffens
+                {club.contact}
                 <br />
-                Tel: 06-48482334
+                {club.contactEmail}
+                <br />
+                Tel: {club.contactPhone}
                 <br />
                 <br />
             </div>
@@ -57,6 +59,9 @@ export const query = graphql`
         clubJson(id: { eq: $id }) {
             id
             name
+            contact
+            contactEmail
+            contactPhone
             teams {
                 id
                 name

@@ -3,7 +3,8 @@ $font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif
 
 $dark: #333
 $navbar-dark-color: #fff
-    
+$navbar-nav-link-padding-x: 1.4rem
+
 @import '~bootstrap/scss/bootstrap.scss'
 
 body 
@@ -34,13 +35,36 @@ body
         margin-left: -15px
         margin-right: -15px
 
+.footer
+    font-size: 0.8rem
+    padding: 50px
+    text-align: center
+
+    img 
+        width: 18px
+        display: inline
+        margin-right: 5px
+
+    a
+        color: #212529
+        text-decoration: underline
+
+        &:hover
+            color: #212529
+            text-decoration: none
+
+        &:visited
+            color: #212529
+            
+        &:active
+            color: #212529
+
 .content
     background: #fff
     padding: 50px
 
     @include media-breakpoint-down(sm) 
         padding: 20px 0
-        // font-size: .8rem
 
     a
         color: #212529
@@ -65,25 +89,6 @@ body
     .location-map
         width: 100%
         height: 300px
-
-.team-list
-    list-style-type: none
-    padding: 0
-
-    li
-        padding: 2px
-
-.page
-    &.game-rules
-        li
-            margin-bottom: 10px
-
-.club-page
-    .team-list
-        column-count: 3
-
-        @include media-breakpoint-down(sm) 
-            column-count: 1
 
 .club-logo
     width: 256px
@@ -273,8 +278,32 @@ body
         .middle
             text-align: center
 
+.team-list
+    list-style-type: none
+    padding: 0
+
+    li
+        padding: 2px
+
+.page
+    &.game-rules
+        li
+            margin-bottom: 10px
+
+.club-page
+    .team-list
+        column-count: 3
+
+        @include media-breakpoint-down(sm) 
+            column-count: 1
+
+.contacts-page
+    .club-logo
+        width: 32px
+        height: 32px
+
 @media print
-    .navbar,.top
+    .navbar,.top,.footer
         display: none
 
     .games
@@ -292,12 +321,12 @@ body
         margin-bottom: 5px
         margin-top: 0
 
-    .scores
-        padding: 30px
-        margin-top: 30px
-        margin-bottom: 60px
+    .info 
+        text-align: center
 
+    .scores
         .page
+            padding: 30px
             page-break-after: always
 
         .table
@@ -341,9 +370,8 @@ body
                         border: 1px solid #aaa
         
     .games
-        padding: 30px
-
         .page
+            padding: 30px
             page-break-after: always
 
         h1, h2, h3, h4, h5, h6
@@ -359,9 +387,6 @@ body
                 margin-bottom: 10px
                 margin-top: 30px
                 border-bottom: 1px solid #eee
-
-        .info
-            text-align: center
 
         .games-table
             margin-top: 30px

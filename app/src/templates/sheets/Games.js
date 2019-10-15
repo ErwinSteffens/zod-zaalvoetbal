@@ -28,7 +28,9 @@ export default ({ data }) => {
                 return (
                     <div className="page">
                         <h3>Programma</h3>
-                        <h5>{moment(date).format('dddd LL')} - {location.venue}</h5>
+                        <h5>
+                            {moment(date).format('dddd LL')} - {location.venue}
+                        </h5>
 
                         <div className="games-table">
                             {games.map(game => {
@@ -65,9 +67,9 @@ export default ({ data }) => {
                                 )
                             })}
                         </div>
-                        <p className="info">
+                        <div className="info">
                             Kijk voor een volledig programma op <u>www.zodzaalvoetbal.nl</u>.
-                        </p>
+                        </div>
                     </div>
                 )
             })}

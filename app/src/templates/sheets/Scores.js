@@ -42,7 +42,7 @@ export default ({ data }) => {
                             {games.map(game => {
                                 const { homeTeam, awayTeam } = game
                                 const poule = homeTeam.poule
-                                
+
                                 let classes = cn('game', {
                                     'mt-4': lastPoule !== null && lastPoule !== poule.id
                                 })
@@ -62,11 +62,11 @@ export default ({ data }) => {
                                 )
                             })}
                         </div>
-                        <p>
+                        <div className="info">
                             Uitslagen kunnen worden doorgegeven door een foto van dit formulier te
                             maken en te versturen via e-mail (erwinsteffens@gmail.com) of WhatsApp
                             (06-48482334).
-                        </p>
+                        </div>
                     </div>
                 )
             })}

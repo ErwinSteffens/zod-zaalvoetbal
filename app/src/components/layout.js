@@ -48,6 +48,15 @@ export default ({ children, className }) => (
                     <div className="content">{children}</div>
                 </Col>
             </Row>
+            <Row>
+                <Col>
+                    <div className="footer">
+                        Copyright © 2019
+                        <br />
+                        <a href="https://github.com/erwinsteffens/zod-zaalvoetbal">source code</a>
+                    </div>
+                </Col>
+            </Row>
         </Container>
     </>
 )

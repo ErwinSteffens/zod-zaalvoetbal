@@ -7,7 +7,7 @@ import ClubLogo from './ClubLogo'
 export default () => {
     const data = useStaticQuery(graphql`
         query {
-            allClubJson(sort: { fields: teams___children, order: DESC }) {
+            allClubJson(sort: { fields: name }) {
                 nodes {
                     id
                     name
@@ -72,7 +72,10 @@ export default () => {
                     <Nav.Link as={Link} to="/spelregels">
                         Spelregels
                     </Nav.Link>
-                    <Nav.Link as={Link} to="/contact">
+                    <Nav.Link as={Link} to="/downloads">
+                        Downloads
+                    </Nav.Link>
+                    <Nav.Link as={Link} to="/contacts">
                         Contact
                     </Nav.Link>
                 </Nav>
