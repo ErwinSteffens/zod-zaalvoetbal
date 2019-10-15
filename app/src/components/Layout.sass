@@ -7,7 +7,7 @@ $navbar-dark-color: #fff
 @import '~bootstrap/scss/bootstrap.scss'
 
 body 
-    background: #eee
+    background-color: #eee
 
     @include media-breakpoint-down(sm) 
         background: #fff
@@ -190,29 +190,29 @@ body
         vertical-align: middle
         margin-bottom: 0
 
-.games
+.games-header
+    font-size: 12pt
+    display: block
+    text-align: center
+    border-bottom: 2px solid #eee
+    padding-bottom: 6px
+    margin-bottom: 0
+
+    h6
+        margin-bottom: 2px
+
+        &::first-letter
+            text-transform: uppercase
+
+    .location
+        font-size: 11pt
+
+.games-table
     margin-bottom: 60px
 
     @include media-breakpoint-down(xs) 
         font-size: .8rem
         margin-bottom: 40px
-
-    .header
-        font-size: 12pt
-        display: block
-        text-align: center
-        border-bottom: 2px solid #eee
-        padding-bottom: 6px
-        margin-bottom: 0
-
-        h6
-            margin-bottom: 2px
-
-            &::first-letter
-                text-transform: uppercase
-
-        .location
-            font-size: 11pt
 
     .game
         display: flex
@@ -282,3 +282,133 @@ body
 
     .location-info
         page-break-after: always
+
+.sheet
+    background-color: #fff
+
+    h3, h4, h5, h6
+        &::first-letter
+            text-transform: uppercase  
+        margin-bottom: 5px
+        margin-top: 0
+
+    .scores
+        padding: 30px
+        margin-top: 30px
+        margin-bottom: 60px
+
+        .page
+            page-break-after: always
+
+        .table
+            margin-bottom: 50px
+
+            .game
+                display: flex
+                flex-wrap: wrap
+                padding-top: 8px
+                padding-bottom: 8px
+
+                &.header
+                    font-weight: 700
+
+                    .item
+                        &.score
+                            width: 28%
+                            text-align: center
+                            border: none
+
+                .item
+                    display: flex
+                    flex-direction: column
+
+                    &.time
+                        width: 8%
+
+                    &.poule
+                        width: 14%
+
+                    &.team
+                        width: 25%
+                        padding-left: 6px
+                        padding-right: 6px
+
+                    &.score
+                        width: 14%
+                        margin-top: -8px
+                        margin-bottom: -9px
+                        margin-right: -1px
+                        border: 1px solid #aaa
+        
+    .games
+        padding: 30px
+
+        .page
+            page-break-after: always
+
+        h1, h2, h3, h4, h5, h6
+            text-align: center
+
+        h3
+            font-size: 2rem
+
+        h4
+            &.poule
+                font-size: 1.1rem
+                padding-bottom: 10px
+                margin-bottom: 10px
+                margin-top: 30px
+                border-bottom: 1px solid #eee
+
+        .info
+            text-align: center
+
+        .games-table
+            margin-top: 30px
+            margin-bottom: 60px
+            font-size: 1.3rem
+
+            .game
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                padding-top: 8px
+                padding-bottom: 8px
+                border-bottom: none
+
+                .item
+                    width: 10%
+                    display: flex
+                    flex-direction: column
+                    text-align: center
+
+                    &.time
+                        width: 6%
+
+                    &.logo
+                        width: 12%
+
+                    &.team
+                        width: 35%
+                        padding-left: 6px
+                        padding-right: 6px
+
+                        &.highlight
+                            font-weight: 700
+
+                        &.home
+                            text-align: right
+                        
+                        &.away
+                            text-align: left
+
+                    .club-logo
+                        width: 32px
+                        height: 32px
+                        display: block
+                        margin-left: auto
+                        margin-right: auto
+
+                .middle
+                    text-align: center
+

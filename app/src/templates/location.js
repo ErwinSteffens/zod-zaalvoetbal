@@ -51,7 +51,14 @@ export default ({ data }) => {
 
             <h4 className="mb-4">Wedstrijden</h4>
             {games.entrySeq().map(([date, games]) => {
-                return <Games key={date} date={date} games={games} />
+                return (
+                    <>
+                        <div key={`${date}_header`} className="games-header">
+                            <h6>{moment(date).format('dddd LL')}</h6>
+                        </div>
+                        <Games key={date} date={date} games={games} />
+                    </>
+                )
             })}
         </Layout>
     )

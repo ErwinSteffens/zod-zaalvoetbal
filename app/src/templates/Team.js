@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { List } from 'immutable'
 import moment from 'moment'
 import Toggle from 'react-toggle'
@@ -59,15 +59,19 @@ export default ({ data }) => {
             {games.entrySeq().map(([key, games]) => {
                 // Get date and location from first item as they are grouped by location and date
                 const first = games.first()
+                const date = first.time
+                const location = first.location
 
                 return (
-                    <Games
-                        key={key}
-                        date={first.time}
-                        location={first.location}
-                        games={games}
-                        highlightTeamId={team.id}
-                    />
+                    <>
+                        <div key={`${key}_header`} className="games-header">
+                            <h6>{moment(date).format('dddd LL')}</h6>
+                            <Link className="location" to={`/locaties/${location.id}`}>
+                                {location.venue}
+                            </Link>
+                        </div>
+                        <Games key={key} games={games} highlightTeamId={team.id} />
+                    </>
                 )
             })}
         </Layout>

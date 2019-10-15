@@ -176,6 +176,26 @@ exports.createPages = async ({ graphql, actions }) => {
         })
     })
 
+    locations.data.allLocationJson.edges.forEach(({ node }) => {
+        createPage({
+            path: `sheets/scores/${node.id}`,
+            component: path.resolve(`./src/templates/sheets/Scores.js`),
+            context: {
+                id: node.id
+            }
+        })
+    })
+
+    locations.data.allLocationJson.edges.forEach(({ node }) => {
+        createPage({
+            path: `sheets/games/${node.id}`,
+            component: path.resolve(`./src/templates/sheets/Games.js`),
+            context: {
+                id: node.id
+            }
+        })
+    })
+
     const result = await graphql(`
         {
             allMarkdownRemark {

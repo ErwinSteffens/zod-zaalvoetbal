@@ -1,23 +1,14 @@
 import React from 'react'
 import cn from 'classnames'
 import moment from 'moment'
-import { Link } from 'gatsby'
 
 import ClubLogo from './ClubLogo'
 
 import 'react-toggle/style.css'
 
-const Games = ({ date, location, games, highlightTeamId }) => {
+const Games = ({ games, highlightTeamId }) => {
     return (
-        <div className="games">
-            <div className="header">
-                <h6>{moment(date).format('dddd LL')}</h6>
-                {location && (
-                    <Link className="location" to={`/locaties/${location.id}`}>
-                        {location.venue}
-                    </Link>
-                )}
-            </div>
+        <div className="games-table">
             {games.map(game => {
                 const { homeTeam, homeGoals, awayTeam, awayGoals } = game
 
