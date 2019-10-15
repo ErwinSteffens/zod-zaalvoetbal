@@ -1,7 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 import ClubLogo from '../components/ClubLogo'
@@ -10,7 +9,6 @@ import Contact from '../components/Contact'
 export default ({ data }) => {
     const clubContacts = data.allClubJson.nodes
 
-    const recaptchaKey = '6Lf2t70UAAAAANEW_pgS7JtLrPfb5LRSwN-Ba541'
     return (
         <>
             <Layout className="contacts-page">
