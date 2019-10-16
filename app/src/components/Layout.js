@@ -1,18 +1,11 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Container, Row, Col } from 'react-bootstrap'
-import ReactGA from 'react-ga'
 import 'moment/locale/nl'
 
 import Navigation from './Navigation'
 
 import './Layout.sass'
-
-ga('create', 'G-QDV8JQK26G', 'auto')
-ga('require', 'urlChangeTracker')
-ga('send', 'pageview')
-ReactGA.initialize('G-QDV8JQK26G')
-ReactGA.pageview(window.location.pathname + window.location.search)
 
 export default ({ children, className }) => (
     <>
