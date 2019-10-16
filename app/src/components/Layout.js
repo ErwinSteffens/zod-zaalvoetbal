@@ -29,6 +29,17 @@ export default ({ children, className }) => (
             <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
             <meta name="theme-color" content="#ffffff" />
 
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-QDV8JQK26G"></script>
+            <script>
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-QDV8JQK26G');
+                `}
+            </script>
+
             <link
                 href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
                 rel="stylesheet"
