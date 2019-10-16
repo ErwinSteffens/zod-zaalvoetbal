@@ -70,6 +70,12 @@ module.exports = {
                     }
                 ]
             }
+        },
+        {
+            resolve: `gatsby-plugin-gtag`,
+            options: {
+                trackingId: `G-QDV8JQK26G`
+            }
         }
     ]
 }

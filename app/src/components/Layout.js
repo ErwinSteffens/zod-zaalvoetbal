@@ -1,11 +1,18 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Container, Row, Col } from 'react-bootstrap'
+import ReactGA from 'react-ga'
 import 'moment/locale/nl'
 
 import Navigation from './Navigation'
 
 import './Layout.sass'
+
+ga('create', 'G-QDV8JQK26G', 'auto')
+ga('require', 'urlChangeTracker')
+ga('send', 'pageview')
+ReactGA.initialize('G-QDV8JQK26G')
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 export default ({ children, className }) => (
     <>
@@ -28,17 +35,6 @@ export default ({ children, className }) => (
             <meta name="msapplication-TileColor" content="#ffffff" />
             <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
             <meta name="theme-color" content="#ffffff" />
-
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-QDV8JQK26G"></script>
-            <script>
-                {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', 'G-QDV8JQK26G');
-                `}
-            </script>
 
             <link
                 href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
