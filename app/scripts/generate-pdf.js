@@ -11,7 +11,7 @@ const baseUrl = 'http://localhost:9000/'
 async function runGatsby() {
     console.log('Starting Gatsby serve')
 
-    let gatsby = spawn('npm', ['run', 'serve'], { detached: false, stdio: 'inherit' })
+    let gatsby = spawn('gatsby', ['serve'], { detached: false, stdio: 'inherit' })
 
     gatsby.on('exit', code => {
         console.log(`child process exited with code ${code}`)
