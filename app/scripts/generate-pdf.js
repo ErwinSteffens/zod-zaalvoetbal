@@ -1,7 +1,6 @@
 const puppeteer = require('puppeteer')
 const rimraf = require('rimraf')
 const fs = require('fs')
-// const util = require('util')
 const { spawn } = require('child_process')
 const exec = require('child_process').exec
 const waitOn = require('wait-on')
@@ -22,11 +21,9 @@ async function runGatsby() {
 
     await waitOn({
         resources: [baseUrl],
-        delay: 1000, // initial delay in ms, default 0
-        interval: 100, // poll interval in ms, default 250ms
-        timeout: 30000 // timeout in ms, default Infinity
-        // tcpTimeout: 1000, // tcp timeout in ms, default 300ms
-        // window: 1000, // stabilization time in ms, default 750ms
+        delay: 1000,
+        interval: 100,
+        timeout: 30000
     })
 
     console.log('Gatsby is running')
