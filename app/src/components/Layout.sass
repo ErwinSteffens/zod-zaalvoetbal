@@ -1,0 +1,441 @@
+
+$font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif
+
+$dark: #333
+$navbar-dark-color: #fff
+$navbar-nav-link-padding-x: 1.4rem
+
+@import '~bootstrap/scss/bootstrap.scss'
+
+body 
+    background-color: #eee
+
+    @include media-breakpoint-down(sm) 
+        background: #fff
+
+.top
+    height: 300px
+    padding: 30px
+    background: url('/header-bg.jpg')
+    background-size: 1110px
+    background-position-y: -200px
+
+    @include media-breakpoint-down(sm) 
+        padding: 20px
+        max-height: 160px
+        background: #fff
+        text-align: center
+
+    .logo
+        max-width: 325px
+
+        @include media-breakpoint-down(sm) 
+            max-width: 220px
+
+.navbar
+    @include media-breakpoint-down(sm) 
+        margin-left: -15px
+        margin-right: -15px
+
+.footer
+    font-size: 0.8rem
+    padding: 50px
+    text-align: center
+
+    img 
+        width: 18px
+        display: inline
+        margin-right: 5px
+
+    a
+        color: #212529
+        text-decoration: underline
+
+        &:hover
+            color: #212529
+            text-decoration: none
+
+        &:visited
+            color: #212529
+            
+        &:active
+            color: #212529
+
+.content
+    background: #fff
+    padding: 50px
+
+    @include media-breakpoint-down(sm) 
+        padding: 20px 0
+
+    a
+        color: #212529
+        text-decoration: underline
+
+        &:hover
+            color: #212529
+            text-decoration: none
+
+        &:visited
+            color: #212529
+            
+        &:active
+            color: #212529
+
+    h3
+        margin-bottom: 30px
+        
+    h4
+        margin-bottom: 10px
+
+    .location-map
+        width: 100%
+        height: 300px
+
+.club-logo
+    width: 256px
+    height: 256px
+
+    &.small
+        width: 20px
+        height: 20px
+
+    &.page-header
+        width: 160px
+        height: 160px
+        display: inline-block
+        float: right
+
+        @include media-breakpoint-down(sm) 
+            width: 120px
+            height: 120px
+        
+.standings
+    margin-bottom: 50px
+
+    @include media-breakpoint-down(xs) 
+        font-size: .8rem
+
+    .standings-row 
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+        padding-top: 6px
+        padding-bottom: 6px
+        border-bottom: 1px solid #eee
+
+        &.header
+            font-weight: 700
+            text-align: center
+            border-bottom: 2px solid #eee
+
+        &.highlight
+            .team
+                font-weight: 700
+
+    a
+        text-decoration: none
+
+        &:hover
+            background-color: #eee
+
+    .value
+        width: 6%
+        flex-direction: column
+        text-align: center
+
+        @include media-breakpoint-down(xs) 
+            width: 8%
+
+        &.position
+            width: 3%
+
+            @include media-breakpoint-down(xs) 
+                display: none
+
+        &.points
+            width: 12%
+
+            @include media-breakpoint-down(xs) 
+                width: 8%
+
+        &.logo
+            width: 9%
+
+            @include media-breakpoint-down(xs) 
+                width: 10%
+
+        &.team
+            text-align: left
+            width: 34%
+
+            @include media-breakpoint-down(xs) 
+                width: 48%
+
+        &.goals
+            @include media-breakpoint-down(xs) 
+                display: none
+
+    .club-logo
+        width: 28px
+        height: 28px
+        display: block
+        margin-left: auto
+        margin-right: auto
+
+        @include media-breakpoint-down(md) 
+            width: 20px
+            height: 20px
+
+.game-toggle    
+    .react-toggle
+        margin-right: 8px
+        vertical-align: middle
+
+    .label-text
+        vertical-align: middle
+        margin-bottom: 0
+
+.games-header
+    font-size: 12pt
+    display: block
+    text-align: center
+    border-bottom: 2px solid #eee
+    padding-bottom: 6px
+    margin-bottom: 0
+
+    h6
+        margin-bottom: 2px
+
+        &::first-letter
+            text-transform: uppercase
+
+    .location
+        font-size: 11pt
+
+.games-table
+    margin-bottom: 60px
+
+    @include media-breakpoint-down(xs) 
+        font-size: .8rem
+        margin-bottom: 40px
+
+    .game
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        padding-top: 8px
+        padding-bottom: 8px
+        border-bottom: 1px solid #eee
+
+        .item
+            width: 10%
+            display: flex
+            flex-direction: column
+            text-align: center
+
+            &.logo
+                width: 8%
+
+                @include media-breakpoint-down(xs) 
+                    width: 6%
+
+            &.middle
+                width: 8%
+                font-size: .9rem
+
+                @include media-breakpoint-down(xs) 
+                    width: 14%
+                    font-size: .8rem
+
+            &.team
+                width: 38%
+                padding-left: 6px
+                padding-right: 6px
+
+                @include media-breakpoint-down(xs) 
+                    width: 37%
+
+                &.highlight
+                    font-weight: 700
+
+                &.home
+                    text-align: right
+                
+                &.away
+                    text-align: left
+
+            .club-logo
+                width: 28px
+                height: 28px
+                display: block
+                margin-left: auto
+                margin-right: auto
+
+                @include media-breakpoint-down(xs) 
+                    width: 20px
+                    height: 20px
+
+        .middle
+            text-align: center
+
+.team-list
+    list-style-type: none
+    padding: 0
+
+    li
+        padding: 2px
+
+.page
+    &.game-rules
+        li
+            margin-bottom: 10px
+
+.club-page
+    .team-list
+        column-count: 3
+
+        @include media-breakpoint-down(sm) 
+            column-count: 1
+
+.contacts-page
+    .club-logo
+        width: 32px
+        height: 32px
+
+@media print
+    .navbar,.top,.footer
+        display: none
+
+    .games
+        page-break-inside: avoid
+
+    .location-info
+        page-break-after: always
+
+.sheet
+    background-color: #fff
+
+    h3, h4, h5, h6
+        &::first-letter
+            text-transform: uppercase  
+        margin-bottom: 5px
+        margin-top: 0
+
+    .info 
+        text-align: center
+
+    .scores
+        .page
+            padding: 30px
+            page-break-after: always
+
+        .table
+            margin-bottom: 50px
+
+            .game
+                display: flex
+                flex-wrap: wrap
+                padding-top: 8px
+                padding-bottom: 8px
+
+                &.header
+                    font-weight: 700
+
+                    .item
+                        &.score
+                            width: 28%
+                            text-align: center
+                            border: none
+
+                .item
+                    display: flex
+                    flex-direction: column
+
+                    &.time
+                        width: 8%
+
+                    &.poule
+                        width: 14%
+
+                    &.team
+                        width: 25%
+                        padding-left: 6px
+                        padding-right: 6px
+
+                    &.score
+                        width: 14%
+                        margin-top: -8px
+                        margin-bottom: -9px
+                        margin-right: -1px
+                        border: 1px solid #aaa
+        
+    .games
+        .page
+            padding: 30px
+            page-break-after: always
+
+        h1, h2, h3, h4, h5, h6
+            text-align: center
+
+        h3
+            font-size: 2rem
+
+        h4
+            &.poule
+                font-size: 1.1rem
+                padding-bottom: 10px
+                margin-bottom: 10px
+                margin-top: 30px
+                border-bottom: 1px solid #eee
+
+        .games-table
+            margin-top: 30px
+            margin-bottom: 60px
+            font-size: 1.3rem
+
+            .game
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                padding-top: 8px
+                padding-bottom: 8px
+                border-bottom: none
+
+                .item
+                    width: 10%
+                    display: flex
+                    flex-direction: column
+                    text-align: center
+
+                    &.time
+                        width: 6%
+
+                    &.logo
+                        width: 12%
+
+                    &.team
+                        width: 35%
+                        padding-left: 6px
+                        padding-right: 6px
+
+                        &.highlight
+                            font-weight: 700
+
+                        &.home
+                            text-align: right
+                        
+                        &.away
+                            text-align: left
+
+                    .club-logo
+                        width: 32px
+                        height: 32px
+                        display: block
+                        margin-left: auto
+                        margin-right: auto
+
+                .middle
+                    text-align: center
+
