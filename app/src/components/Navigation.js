@@ -30,7 +30,7 @@ export default () => {
     `)
 
     return (
-        <Navbar bg="dark" expand="sm" variant="dark">
+        <Navbar bg="dark" expand="lg" variant="dark">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">

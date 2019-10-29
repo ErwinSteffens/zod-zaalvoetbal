@@ -13,24 +13,29 @@ body
     @include media-breakpoint-down(sm) 
         background: #fff
 
+@include media-breakpoint-down(sm) 
+  .container
+    max-width: 100% !important
+
 .top
-    height: 300px
-    padding: 30px
+    height: 330px
+    padding: 20px 40px 
     background: url('/header-bg.jpg')
     background-size: 1110px
-    background-position-y: -200px
+    background-position-y: -175px
 
     @include media-breakpoint-down(sm) 
-        padding: 20px
-        max-height: 160px
-        background: #fff
+        height: 240px    
+        background: #83a6cb
         text-align: center
+        margin-left: -20px
+        margin-right: -20px
 
     .logo
-        max-width: 325px
+        height: 290px
 
         @include media-breakpoint-down(sm) 
-            max-width: 220px
+            height: 200px
 
 .navbar
     @include media-breakpoint-down(sm) 
@@ -294,9 +299,15 @@ body
 
 .club-page
     .team-list
-        column-count: 3
+        column-count: 4
 
-        @include media-breakpoint-down(sm) 
+        @include media-breakpoint-down(lg) 
+            column-count: 3
+
+        @include media-breakpoint-down(md) 
+            column-count: 2
+
+        @include media-breakpoint-down(xs) 
             column-count: 1
 
 .contacts-page

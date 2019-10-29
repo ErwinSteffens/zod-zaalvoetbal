@@ -37,7 +37,7 @@ export default ({ data }) => {
                     })
 
                     return (
-                        <Col key={club.id} xs={12} md={3} className="mb-2 mt-2">
+                        <Col key={club.id} xs={12} md={6} lg={4} xl={3} className="mb-2 mt-2">
                             <ul className="team-list">
                                 {teams.map(team => {
                                     return (
