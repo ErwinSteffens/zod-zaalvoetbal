@@ -38,7 +38,7 @@ export default ({ children, className }) => (
             <Row>
                 <Col>
                     <div className="top">
-                        <img src="/zod.png" className="logo" alt="zod-zaalvoetbal" />
+                        <img src="/zod-net.png" className="logo" alt="zod-zaalvoetbal" />
                     </div>
                 </Col>
             </Row>
