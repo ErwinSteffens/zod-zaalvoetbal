@@ -3,12 +3,11 @@
         "id": "o13-poule-a",
         "name": "O13 Poule A",
         "teams": [
-            "sv-twedo_jo13-1",
-            "vv-raptim_jo13-1",
-            "sc-erica_jo13-1",
-            "germanicus-csvc_jo13-1",
+            "svv-04_jo13-1",
             "dalen-dsc_jo13-1",
-            "svv-04_jo13-1"
+            "sv-twedo_jo13-1",
+            "sc-erica_jo13-1",
+            "germanicus-csvc_jo13-1"
         ]
     },
     {
@@ -16,56 +15,66 @@
         "name": "O13 Poule B",
         "teams": [
             "sv-twedo_jo13-2",
-            "vv-raptim_jo13-2",
-            "sc-erica_jo13-2",
-            "dalen-dsc_jo13-2",
             "svv-04_jo13-2",
-            "vv-sweel_jo13-1"
+            "germanicus-csvc_jo13-2",
+            "vv-raptim_jo13-1",
+            "vv-sleen_jo13-1",
+            "dalen-dsc_jo13-2"
         ]
     },
     {
         "id": "o13-poule-c",
         "name": "O13 Poule C",
         "teams": [
-            "vv-raptim_jo13-3",
-            "vv-raptim_jo13-4",
-            "germanicus-csvc_jo13-2",
+            "vios_jo13-1",
+            "vv-raptim_jo13-2",
+            "vv-sleen_jo13-2",
             "dalen-dsc_jo13-3",
-            "nkvv-protos_jo13-1",
-            "vv-sweel_jo13-2"
+            "vv-sweel_jo13-1"
         ]
     },
     {
         "id": "o13-poule-d",
         "name": "O13 Poule D",
         "teams": [
-            "vv-raptim_jo13-5",
-            "sv-twedo_jo13-3",
+            "sc-erica_jo13-2",
+            "vios_jo13-2",
+            "vv-sweel_jo13-2",
             "germanicus-csvc_jo13-3",
-            "vios_jo13-1",
-            "nkvv-protos_jo13-2"
+            "dalen-dsc_jo13-4"
         ]
     },
     {
         "id": "o13-poule-e",
         "name": "O13 Poule E",
         "teams": [
-            "vv-raptim_jo13-6",
+            "dalen-dsc_jo13-5",
+            "vv-raptim_jo13-3",
+            "ksc_jo13-1",
+            "sv-twedo_jo13-3",
+            "nkvv-protos_jo13-1"
+        ]
+    },
+    {
+        "id": "o13-poule-f",
+        "name": "O13 Poule F",
+        "teams": [
+            "ksc_jo13-2",
             "sv-twedo_jo13-4",
             "germanicus-csvc_jo13-4",
-            "vios_jo13-2",
-            "dalen-dsc_jo13-4"
+            "nkvv-protos_jo13-2",
+            "vv-raptim_jo13-4",
+            "dalen-dsc_jo13-6"
         ]
     },
     {
         "id": "o12-poule-a",
         "name": "O12 Poule A",
         "teams": [
-            "sv-twedo_jo12-1",
-            "dalen-dsc_jo12-1",
-            "svv-04_jo12-1",
-            "ksc_jo12-1",
-            "sc-erica_jo12-1",
+            "vios_jo12-1",
+            "vv-sweel_mo13-1",
+            "vv-raptim_jo12-1",
+            "vv-raptim_jo12-2",
             "vv-sleen_jo12-1"
         ]
     },
@@ -73,12 +82,11 @@
         "id": "o12-poule-b",
         "name": "O12 Poule B",
         "teams": [
-            "vios_jo12-1",
-            "svv-04_jo12-2",
-            "ksc_jo12-2",
-            "dalen-dsc_jo12-2",
-            "sv-twedo_mo12-1",
-            "sv-twedo_mo12-2"
+            "vios_jo12-2",
+            "vv-sweel_mo13-2",
+            "germanicus-csvc_mo12-1",
+            "germanicus-csvc_mo12-2",
+            "svv-04_jo12-1"
         ]
     },
     {
@@ -87,76 +95,77 @@
         "teams": [
             "vv-raptim_jo11-1",
             "sv-twedo_jo11-1",
-            "sv-twedo_jo11-2",
             "germanicus-csvc_jo11-1",
-            "dalen-dsc_jo11-1"
+            "dalen-dsc_jo11-1",
+            "vv-raptim_jo12-3"
         ]
     },
     {
         "id": "o11-poule-b",
         "name": "O11 Poule B",
         "teams": [
+            "sv-twedo_jo11-2",
+            "sc-erica_jo11-1",
             "svv-04_jo11-1",
             "vv-raptim_jo11-2",
-            "sv-twedo_jo11-3",
-            "sc-erica_jo11-1",
-            "vv-sleen_jo11-1"
+            "sc-erica_jo11-2",
+            "sv-twedo_jo11-3"
         ]
     },
     {
         "id": "o11-poule-c",
         "name": "O11 Poule C",
         "teams": [
-            "vv-sweel_jo11-1",
-            "vv-raptim_jo11-3",
+            "dalen-dsc_jo11-2",
             "sv-twedo_jo11-4",
-            "germanicus-csvc_jo11-2",
-            "sc-erica_jo11-2"
+            "svv-04_jo11-2",
+            "nkvv-protos_jo11-1",
+            "vv-raptim_jo11-3",
+            "vv-sleen_jo11-1"
         ]
     },
     {
         "id": "o11-poule-d",
         "name": "O11 Poule D",
         "teams": [
-            "dalen-dsc_jo11-2",
-            "vv-sleen_jo11-2",
-            "svv-04_jo11-2",
-            "sv-twedo_jo11-5",
-            "germanicus-csvc_mo11-1",
-            "vv-sweel_mo11-1"
+            "dalen-dsc_jo11-3",
+            "vv-raptim_jo11-4",
+            "ksc_jo11-1",
+            "sc-erica_jo11-3",
+            "vv-sweel_jo11-1",
+            "vv-sleen_jo11-2"
         ]
     },
     {
         "id": "o10-poule-a",
         "name": "O10 Poule A",
         "teams": [
-            "vv-raptim_jo10-1",
             "dalen-dsc_jo10-1",
-            "vv-sweel_jo10-1",
+            "vv-raptim_jo10-1",
             "germanicus-csvc_jo10-1",
-            "svv-04_jo10-1",
-            "sv-twedo_jo10-1"
+            "vios_jo10-1",
+            "vv-raptim_jo9-1"
         ]
     },
     {
         "id": "o10-poule-b",
         "name": "O10 Poule B",
         "teams": [
-            "vv-raptim_jo10-2",
-            "svv-04_jo10-2",
-            "vv-raptim_jo10-3",
             "dalen-dsc_jo10-2",
-            "ksc_jo10-1"
+            "vv-raptim_jo10-2",
+            "sv-twedo_jo9-1",
+            "svv-04_jo10-1",
+            "germanicus-csvc_jo9-1"
         ]
     },
     {
         "id": "o10-poule-c",
         "name": "O10 Poule C",
         "teams": [
-            "vv-raptim_jo10-4",
-            "germanicus-csvc_jo10-2",
-            "vios_jo10-1",
             "dalen-dsc_jo10-3",
+            "ksc_jo10-1",
+            "germanicus-csvc_jo10-2",
+            "svv-04_jo10-2",
             "nkvv-protos_jo10-1"
         ]
     },
@@ -164,90 +173,71 @@
         "id": "o9-poule-a",
         "name": "O9 Poule A",
         "teams": [
-            "vv-raptim_jo9-1",
-            "germanicus-csvc_jo9-1",
-            "dalen-dsc_jo9-1",
             "sv-twedo_jo9-2",
-            "svv-04_jo9-1",
-            "vios_jo9-1"
+            "sc-erica_jo9-1",
+            "vv-sweel_jo9-1",
+            "vv-raptim_jo8-1",
+            "vv-raptim_jo9-2",
+            "dalen-dsc_jo9-1"
         ]
     },
     {
         "id": "o9-poule-b",
         "name": "O9 Poule B",
         "teams": [
-            "vv-raptim_jo9-2",
-            "vv-sweel_jo9-1",
-            "dalen-dsc_jo9-2",
-            "nkvv-protos_jo9-1",
-            "germanicus-csvc_jo9-2",
-            "sc-erica_jo9-1"
+            "sv-twedo_jo9-3",
+            "sc-erica_jo9-2",
+            "vv-sweel_jo9-2",
+            "svv-04_jo9-1",
+            "vv-raptim_jo9-3",
+            "sc-erica_jo8-1"
         ]
     },
     {
         "id": "o9-poule-c",
         "name": "O9 Poule C",
         "teams": [
-            "vv-raptim_jo9-3",
-            "dalen-dsc_jo9-3",
-            "sc-erica_jo9-2",
-            "svv-04_jo9-2",
-            "ksc_jo9-1",
-            "vv-sleen_jo9-1"
+            "vios_jo9-1",
+            "vv-sweel_jo9-3",
+            "germanicus-csvc_jo9-2",
+            "vv-raptim_jo8-2",
+            "vv-sleen_jo9-1",
+            "svv-04_jo9-2"
         ]
     },
     {
         "id": "o8-poule-a",
         "name": "O8 Poule A",
         "teams": [
-            "vv-raptim_jo8-1",
-            "germanicus-csvc_jo8-1",
+            "vv-raptim_jo8-5",
             "sv-twedo_jo8-1",
-            "sv-twedo_jo8-2"
+            "vv-raptim_jo8-3",
+            "germanicus-csvc_jo8-1",
+            "dalen-dsc_jo8-1"
         ]
     },
     {
         "id": "o8-poule-b",
         "name": "O8 Poule B",
         "teams": [
-            "vv-raptim_jo8-2",
-            "vv-raptim_jo8-3",
+            "sv-twedo_jo8-2",
+            "vios_jo8-1",
+            "svv-04_jo8-1",
             "germanicus-csvc_jo8-2",
-            "sc-erica_jo8-1",
-            "svv-04_jo8-1"
+            "vv-sweel_jo8-1",
+            "vv-raptim_jo8-4"
         ]
     },
     {
         "id": "o8-poule-c",
         "name": "O8 Poule C",
         "teams": [
-            "vios_jo8-1",
-            "vv-raptim_jo8-4",
-            "sv-twedo_jo8-3",
-            "germanicus-csvc_jo8-3",
-            "sc-erica_jo8-2"
-        ]
-    },
-    {
-        "id": "o8-poule-d",
-        "name": "O8 Poule D",
-        "teams": [
-            "vv-raptim_jo8-5",
-            "sv-twedo_jo8-4",
-            "svv-04_jo8-2",
-            "vios_jo8-2",
-            "vv-sweel_jo8-1",
-            "dalen-dsc_jo8-1"
-        ]
-    },
-    {
-        "id": "o8-poule-e",
-        "name": "O8 Poule E",
-        "teams": [
             "vv-raptim_jo8-6",
-            "sv-twedo_jo8-5",
+            "sv-twedo_jo8-3",
+            "sc-erica_jo8-2",
+            "svv-04_jo8-2",
             "dalen-dsc_jo8-2",
-            "vv-sweel_jo8-2"
+            "germanicus-csvc_jo8-3"
         ]
     }
 ]

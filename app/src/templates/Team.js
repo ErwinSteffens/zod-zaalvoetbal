@@ -33,13 +33,14 @@ export default ({ data }) => {
     games = games.sortBy((_v, k) => k)
 
     return (
-        <Layout>
+        <Layout className="team">
             <Helmet>
                 <title>ZOD Zaalvoetbal - {team.fullName}</title>
             </Helmet>
             <div className="clearfix">
                 <ClubLogo className="page-header" club={team.club} />
                 <h3>{team.fullName}</h3>
+                <h6>{poule.name}</h6>
             </div>
             <h4 className="mb-4">Stand</h4>
             <Standings poule={poule} highlightTeamId={team.id} />
