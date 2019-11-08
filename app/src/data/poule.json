@@ -3,241 +3,1506 @@
         "id": "o13-poule-a",
         "name": "O13 Poule A",
         "teams": [
-            "svv-04_jo13-1",
-            "dalen-dsc_jo13-1",
-            "sv-twedo_jo13-1",
-            "sc-erica_jo13-1",
-            "germanicus-csvc_jo13-1"
+            {
+                "teamId": "svv-04_jo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "dalen-dsc_jo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sv-twedo_jo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sc-erica_jo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o13-poule-b",
         "name": "O13 Poule B",
         "teams": [
-            "sv-twedo_jo13-2",
-            "svv-04_jo13-2",
-            "germanicus-csvc_jo13-2",
-            "vv-raptim_jo13-1",
-            "vv-sleen_jo13-1",
-            "dalen-dsc_jo13-2"
+            {
+                "teamId": "sv-twedo_jo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "svv-04_jo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sleen_jo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "dalen-dsc_jo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o13-poule-c",
         "name": "O13 Poule C",
         "teams": [
-            "vios_jo13-1",
-            "vv-raptim_jo13-2",
-            "vv-sleen_jo13-2",
-            "dalen-dsc_jo13-3",
-            "vv-sweel_jo13-1"
+            {
+                "teamId": "vios_jo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sleen_jo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "dalen-dsc_jo13-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sweel_jo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o13-poule-d",
         "name": "O13 Poule D",
         "teams": [
-            "sc-erica_jo13-2",
-            "vios_jo13-2",
-            "vv-sweel_jo13-2",
-            "germanicus-csvc_jo13-3",
-            "dalen-dsc_jo13-4"
+            {
+                "teamId": "sc-erica_jo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vios_jo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sweel_jo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo13-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "dalen-dsc_jo13-4",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o13-poule-e",
         "name": "O13 Poule E",
         "teams": [
-            "dalen-dsc_jo13-5",
-            "vv-raptim_jo13-3",
-            "ksc_jo13-1",
-            "sv-twedo_jo13-3",
-            "nkvv-protos_jo13-1"
+            {
+                "teamId": "dalen-dsc_jo13-5",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo13-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "ksc_jo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sv-twedo_jo13-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "nkvv-protos_jo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o13-poule-f",
         "name": "O13 Poule F",
         "teams": [
-            "ksc_jo13-2",
-            "sv-twedo_jo13-4",
-            "germanicus-csvc_jo13-4",
-            "nkvv-protos_jo13-2",
-            "vv-raptim_jo13-4",
-            "dalen-dsc_jo13-6"
+            {
+                "teamId": "ksc_jo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sv-twedo_jo13-4",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo13-4",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "nkvv-protos_jo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo13-4",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "dalen-dsc_jo13-6",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o12-poule-a",
         "name": "O12 Poule A",
         "teams": [
-            "vios_jo12-1",
-            "vv-sweel_mo13-1",
-            "vv-raptim_jo12-1",
-            "vv-raptim_jo12-2",
-            "vv-sleen_jo12-1"
+            {
+                "teamId": "vios_jo12-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sweel_mo13-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo12-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo12-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sleen_jo12-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o12-poule-b",
         "name": "O12 Poule B",
         "teams": [
-            "vios_jo12-2",
-            "vv-sweel_mo13-2",
-            "germanicus-csvc_mo12-1",
-            "germanicus-csvc_mo12-2",
-            "svv-04_jo12-1"
+            {
+                "teamId": "vios_jo12-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sweel_mo13-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_mo12-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_mo12-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "svv-04_jo12-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o11-poule-a",
         "name": "O11 Poule A",
         "teams": [
-            "vv-raptim_jo11-1",
-            "sv-twedo_jo11-1",
-            "germanicus-csvc_jo11-1",
-            "dalen-dsc_jo11-1",
-            "vv-raptim_jo12-3"
+            {
+                "teamId": "vv-raptim_jo11-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sv-twedo_jo11-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo11-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "dalen-dsc_jo11-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo12-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o11-poule-b",
         "name": "O11 Poule B",
         "teams": [
-            "sv-twedo_jo11-2",
-            "sc-erica_jo11-1",
-            "svv-04_jo11-1",
-            "vv-raptim_jo11-2",
-            "sc-erica_jo11-2",
-            "sv-twedo_jo11-3"
+            {
+                "teamId": "sv-twedo_jo11-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sc-erica_jo11-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "svv-04_jo11-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo11-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sc-erica_jo11-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sv-twedo_jo11-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o11-poule-c",
         "name": "O11 Poule C",
         "teams": [
-            "dalen-dsc_jo11-2",
-            "sv-twedo_jo11-4",
-            "svv-04_jo11-2",
-            "nkvv-protos_jo11-1",
-            "vv-raptim_jo11-3",
-            "vv-sleen_jo11-1"
+            {
+                "teamId": "dalen-dsc_jo11-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sv-twedo_jo11-4",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "svv-04_jo11-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "nkvv-protos_jo11-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo11-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sleen_jo11-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o11-poule-d",
         "name": "O11 Poule D",
         "teams": [
-            "dalen-dsc_jo11-3",
-            "vv-raptim_jo11-4",
-            "ksc_jo11-1",
-            "sc-erica_jo11-3",
-            "vv-sweel_jo11-1",
-            "vv-sleen_jo11-2"
+            {
+                "teamId": "dalen-dsc_jo11-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo11-4",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "ksc_jo11-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sc-erica_jo11-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sweel_jo11-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sleen_jo11-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o10-poule-a",
         "name": "O10 Poule A",
         "teams": [
-            "dalen-dsc_jo10-1",
-            "vv-raptim_jo10-1",
-            "germanicus-csvc_jo10-1",
-            "vios_jo10-1",
-            "vv-raptim_jo9-1"
+            {
+                "teamId": "dalen-dsc_jo10-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo10-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo10-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vios_jo10-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo9-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o10-poule-b",
         "name": "O10 Poule B",
         "teams": [
-            "dalen-dsc_jo10-2",
-            "vv-raptim_jo10-2",
-            "sv-twedo_jo9-1",
-            "svv-04_jo10-1",
-            "germanicus-csvc_jo9-1"
+            {
+                "teamId": "dalen-dsc_jo10-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo10-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sv-twedo_jo9-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "svv-04_jo10-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo9-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o10-poule-c",
         "name": "O10 Poule C",
         "teams": [
-            "dalen-dsc_jo10-3",
-            "ksc_jo10-1",
-            "germanicus-csvc_jo10-2",
-            "svv-04_jo10-2",
-            "nkvv-protos_jo10-1"
+            {
+                "teamId": "dalen-dsc_jo10-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "ksc_jo10-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo10-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "svv-04_jo10-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "nkvv-protos_jo10-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o9-poule-a",
         "name": "O9 Poule A",
         "teams": [
-            "sv-twedo_jo9-2",
-            "sc-erica_jo9-1",
-            "vv-sweel_jo9-1",
-            "vv-raptim_jo8-1",
-            "vv-raptim_jo9-2",
-            "dalen-dsc_jo9-1"
+            {
+                "teamId": "sv-twedo_jo9-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sc-erica_jo9-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sweel_jo9-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 1,
+                "gamesWon": 0,
+                "gamesLost": 1,
+                "gamesDraw": 0,
+                "goalsFor": 3,
+                "goalsAgainst": 4,
+                "goalsDifference": -1
+            },
+            {
+                "teamId": "vv-raptim_jo8-1",
+                "rank": 0,
+                "points": 3,
+                "gamesPlayed": 1,
+                "gamesWon": 1,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 4,
+                "goalsAgainst": 3,
+                "goalsDifference": 1
+            },
+            {
+                "teamId": "vv-raptim_jo9-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "dalen-dsc_jo9-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o9-poule-b",
         "name": "O9 Poule B",
         "teams": [
-            "sv-twedo_jo9-3",
-            "sc-erica_jo9-2",
-            "vv-sweel_jo9-2",
-            "svv-04_jo9-1",
-            "vv-raptim_jo9-3",
-            "sc-erica_jo8-1"
+            {
+                "teamId": "sv-twedo_jo9-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sc-erica_jo9-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sweel_jo9-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "svv-04_jo9-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo9-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sc-erica_jo8-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o9-poule-c",
         "name": "O9 Poule C",
         "teams": [
-            "vios_jo9-1",
-            "vv-sweel_jo9-3",
-            "germanicus-csvc_jo9-2",
-            "vv-raptim_jo8-2",
-            "vv-sleen_jo9-1",
-            "svv-04_jo9-2"
+            {
+                "teamId": "vios_jo9-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sweel_jo9-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo9-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo8-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sleen_jo9-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "svv-04_jo9-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o8-poule-a",
         "name": "O8 Poule A",
         "teams": [
-            "vv-raptim_jo8-5",
-            "sv-twedo_jo8-1",
-            "vv-raptim_jo8-3",
-            "germanicus-csvc_jo8-1",
-            "dalen-dsc_jo8-1"
+            {
+                "teamId": "vv-raptim_jo8-5",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sv-twedo_jo8-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo8-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo8-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "dalen-dsc_jo8-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o8-poule-b",
         "name": "O8 Poule B",
         "teams": [
-            "sv-twedo_jo8-2",
-            "vios_jo8-1",
-            "svv-04_jo8-1",
-            "germanicus-csvc_jo8-2",
-            "vv-sweel_jo8-1",
-            "vv-raptim_jo8-4"
+            {
+                "teamId": "sv-twedo_jo8-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vios_jo8-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "svv-04_jo8-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo8-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-sweel_jo8-1",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "vv-raptim_jo8-4",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     },
     {
         "id": "o8-poule-c",
         "name": "O8 Poule C",
         "teams": [
-            "vv-raptim_jo8-6",
-            "sv-twedo_jo8-3",
-            "sc-erica_jo8-2",
-            "svv-04_jo8-2",
-            "dalen-dsc_jo8-2",
-            "germanicus-csvc_jo8-3"
+            {
+                "teamId": "vv-raptim_jo8-6",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sv-twedo_jo8-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "sc-erica_jo8-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "svv-04_jo8-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "dalen-dsc_jo8-2",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            },
+            {
+                "teamId": "germanicus-csvc_jo8-3",
+                "rank": 0,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
+                "gamesLost": 0,
+                "gamesDraw": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
+            }
         ]
     }
 ]

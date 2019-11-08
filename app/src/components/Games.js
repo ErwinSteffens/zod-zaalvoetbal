@@ -10,16 +10,16 @@ const Games = ({ games, highlightTeamId }) => {
     return (
         <div className="games-table">
             {games.map(game => {
-                const { homeTeam, homeGoals, awayTeam, awayGoals } = game
+                const { homeTeam, homeScore, awayTeam, awayScore } = game
 
-                const isPlayed = homeGoals !== undefined && awayGoals !== undefined
+                const isPlayed = homeScore !== null && awayScore !== null
                 const middleClasses = cn('item', 'middle', {
                     score: isPlayed,
                     time: !isPlayed
                 })
 
                 const middleContent = isPlayed
-                    ? `${homeGoals} - ${awayGoals}`
+                    ? `${homeScore} - ${awayScore}`
                     : moment(game.time).format('LT')
 
                 return (

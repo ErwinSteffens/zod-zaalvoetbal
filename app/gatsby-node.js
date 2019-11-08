@@ -14,8 +14,19 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
             awayTeam: TeamJson @link(from: "awayTeamId")
             location: LocationJson @link(from: "locationId")
          }`,
+        `type TeamScore {
+            team: TeamJson @link(from: "teamId")
+            points: Int
+            gamesPlayed: Int
+            gamesWon: Int
+            gamesLost: Int
+            gamesDraw: Int
+            goalsFor: Int
+            goalsAgainst: Int
+            goalsDifference: Int
+         }`,
         `type PouleJson implements Node {
-            teams: [TeamJson] @link
+            teams: [TeamScore]
          }`,
         schema.buildObjectType({
             name: 'PouleJson',
@@ -31,9 +42,10 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
                 games: {
                     type: '[GameJson]',
                     resolve(source, args, context, info) {
+                        const teamIds = source.teams.map(teamScore => teamScore.teamId)
                         return context.nodeModel
                             .getAllNodes({ type: 'GameJson' })
-                            .filter(game => source.teams.includes(game.homeTeamId))
+                            .filter(game => teamIds.includes(game.homeTeamId))
                     }
                 }
             }

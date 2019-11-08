@@ -61,13 +61,24 @@ export const query = graphql`
             id
             name
             teams {
-                id
-                name
-                fullName
-                club {
+                team {
                     id
                     name
+                    fullName
+                    club {
+                        id
+                        name
+                    }
                 }
+                rank
+                points
+                gamesPlayed
+                gamesWon
+                gamesLost
+                gamesDraw
+                goalsFor
+                goalsAgainst
+                goalsDifference
             }
             games {
                 id
@@ -77,6 +88,8 @@ export const query = graphql`
                     venue
                     city
                 }
+                homeScore
+                awayScore
                 homeTeam {
                     id
                     name

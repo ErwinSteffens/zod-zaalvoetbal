@@ -79,6 +79,8 @@ export const query = graphql`
                 location {
                     id
                 }
+                homeScore
+                awayScore
                 homeTeam {
                     id
                     name
