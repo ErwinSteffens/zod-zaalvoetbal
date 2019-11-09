@@ -1081,25 +1081,25 @@
                 "teamId": "vv-sweel_jo9-1",
                 "rank": 0,
                 "points": 0,
-                "gamesPlayed": 1,
+                "gamesPlayed": 0,
                 "gamesWon": 0,
-                "gamesLost": 1,
+                "gamesLost": 0,
                 "gamesDraw": 0,
-                "goalsFor": 3,
-                "goalsAgainst": 4,
-                "goalsDifference": -1
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
             },
             {
                 "teamId": "vv-raptim_jo8-1",
                 "rank": 0,
-                "points": 3,
-                "gamesPlayed": 1,
-                "gamesWon": 1,
+                "points": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0,
                 "gamesLost": 0,
                 "gamesDraw": 0,
-                "goalsFor": 4,
-                "goalsAgainst": 3,
-                "goalsDifference": 1
+                "goalsFor": 0,
+                "goalsAgainst": 0,
+                "goalsDifference": 0
             },
             {
                 "teamId": "vv-raptim_jo9-2",

@@ -1,0 +1,13 @@
+{
+    "name": "erwin/scripts",
+    "authors": [
+        {
+            "name": "Erwin Steffens",
+            "email": "erwin@zuludesk.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.5",
+        "cakephp/chronos": "^1.2"
+    }
+}

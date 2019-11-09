@@ -12,9 +12,9 @@
         "round": 1,
         "time": "2019-12-21T09:24:00+00:00",
         "homeTeamId": "vv-raptim_jo8-1",
-        "homeScore": 4,
+        "homeScore": null,
         "awayTeamId": "vv-sweel_jo9-1",
-        "awayScore": 3,
+        "awayScore": null,
         "locationId": "sporthal-erica"
     },
     {
