@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import { List } from 'immutable'
 import moment from 'moment'
 import Toggle from 'react-toggle'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Alert } from 'react-bootstrap'
 
 import Layout from '../components/Layout'
 import ClubLogo from '../components/ClubLogo'
@@ -40,7 +40,7 @@ export default ({ data }) => {
             <div className="clearfix">
                 <ClubLogo className="page-header" club={team.club} />
                 <h3>{team.fullName}</h3>
-                <h6>{poule.name}</h6>
+                <h6 className="subtitle">{poule.name}</h6>
             </div>
             <h4 className="mb-4">Stand</h4>
             <Standings poule={poule} highlightTeamId={team.id} />
@@ -54,6 +54,14 @@ export default ({ data }) => {
                         <Toggle checked={showAll} onChange={e => setShowAll(e.target.checked)} />
                         <span className="label-text">Toon alle poule wedstrijden</span>
                     </label>
+                </Col>
+            </Row>
+
+            <Row>
+                <Col>
+                    <Alert variant="warning">
+                        Let op! De speelschemas zijn nog niet definitief.
+                    </Alert>
                 </Col>
             </Row>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { List } from 'immutable'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Alert } from 'react-bootstrap'
 import moment from 'moment'
 import { Helmet } from 'react-helmet'
 
@@ -50,6 +50,14 @@ export default ({ data }) => {
             </Row>
 
             <h4 className="mb-4">Wedstrijden</h4>
+            <Row>
+                <Col>
+                    <Alert variant="warning">
+                        Let op! De speelschemas zijn nog niet definitief.
+                    </Alert>
+                </Col>
+            </Row>
+
             {games.entrySeq().map(([date, games]) => {
                 return (
                     <>
