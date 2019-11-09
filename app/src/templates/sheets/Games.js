@@ -51,13 +51,13 @@ export default ({ data }) => {
                                                 {homeTeam.fullName}
                                             </div>
                                             <div className="item logo">
-                                                <ClubLogo club={homeTeam.club} />
+                                                <ClubLogo club={homeTeam.club} small />
                                             </div>
                                             <div className="item time">
                                                 {moment(game.time).format('LT')}
                                             </div>
                                             <div className="item logo">
-                                                <ClubLogo club={awayTeam.club} />
+                                                <ClubLogo club={awayTeam.club} small />
                                             </div>
                                             <div className="item team away">
                                                 {awayTeam.fullName}

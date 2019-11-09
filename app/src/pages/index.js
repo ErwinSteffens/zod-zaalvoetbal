@@ -47,7 +47,7 @@ export default ({ data }) => {
                                                 as={Link}
                                                 to={`/${club.id}/${team.name}`}
                                             >
-                                                <ClubLogo club={club} className="small mr-2" />
+                                                <ClubLogo club={club} className="mr-2" small />
                                                 {team.fullName}
                                             </Link>
                                         </li>

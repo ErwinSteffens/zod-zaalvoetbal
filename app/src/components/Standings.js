@@ -79,7 +79,7 @@ const Standings = ({ poule, highlightTeamId }) => {
                         >
                             <div className="value position">{index + 1}</div>
                             <div className="value logo">
-                                <ClubLogo club={team.club} />
+                                <ClubLogo club={team.club} small />
                             </div>
                             <div xs={6} className="value team">
                                 {team.fullName}

@@ -50,7 +50,7 @@ export default () => {
                         {data.allClubJson.nodes.map(club => {
                             return (
                                 <NavDropdown.Item key={club.id} as={Link} to={`/${club.id}`}>
-                                    <ClubLogo club={club} className="small mr-2" />
+                                    <ClubLogo club={club} className="mr-2" small />
                                     {club.name}
                                 </NavDropdown.Item>
                             )
