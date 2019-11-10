@@ -8,6 +8,8 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 $inputFileName = "../files/2019-2020/Zaalschema 2019-2020 v1.xlsx";
 $outputDir = "../app/src/data";
 
+$timeZone = new DateTimeZone("Europe/Amsterdam");
+
 $locationData = json_decode(file_get_contents("input/locations.json"), true);
 $clubData = json_decode(file_get_contents("input/clubs.json"), true);
 
@@ -162,8 +164,8 @@ while (true) {
             for ($rowIndex = 0; $rowIndex < $timeRows; $rowIndex++) {
                 $timeValue = $gameSheet->getCellByColumnAndRow(1, $row + $rowIndex + 2)->getValue();
                 $time = \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($timeValue);
-
-                $timestamp = new DateTime($date->format('Y-m-d') . ' ' . $time->format('H:i:s'));
+                
+                $timestamp = new DateTime($date->format('Y-m-d') . ' ' . $time->format('H:i:s'), $timeZone);
 
                 $homeTeam = trim($gameSheet->getCellByColumnAndRow($column + 0, $row + $rowIndex + 2)->getValue());
                 $awayTeam = trim($gameSheet->getCellByColumnAndRow($column + 1, $row + $rowIndex + 2)->getValue());
