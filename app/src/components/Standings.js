@@ -56,7 +56,7 @@ const Standings = ({ poule, highlightTeamId }) => {
                     </OverlayTrigger>
                 </div>
             </div>
-            {poule.teams
+            {poule.teamScores
                 .sort((a, b) => {
                     if (a.rank < b.rank) {
                         return -1
