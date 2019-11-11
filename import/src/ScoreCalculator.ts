@@ -1,58 +1,93 @@
-import TeamName from './input/TeamName'
 import GameCollection, { Game } from './input/GameCollection'
-import TeamCollection from './input/TeamCollection'
 import PouleCollection, { Poule, TeamScore } from './input/PouleCollection'
 
 class ScoreCalculator {
-    teams: TeamCollection
     games: GameCollection
     poules: PouleCollection
 
-    constructor(teams: TeamCollection, games: GameCollection, poules: PouleCollection) {
-        this.teams = teams
+    constructor(games: GameCollection, poules: PouleCollection) {
         this.games = games
         this.poules = poules
     }
 
-    processGames() {
-        for (const game of this.games.games) {
+    processGames(): Poule[] {
+        for (const game of this.games.items) {
             this.processGame(game)
         }
 
-        for (const poule of this.poules.poules) {
-            poule.teamScores = this.sortTeamScores(poule)
+        for (const poule of this.poules.items) {
+            let teamScores = this.sortTeamScores(poule)
+
+            poule.teamScores = teamScores.map((ts, index) => {
+                ts.rank = index
+                return ts
+            })
         }
 
-        return this.poules
+        return this.poules.items
     }
 
     sortTeamScores(poule: Poule): TeamScore[] {
         return poule.teamScores.sort((a, b) => {
             if (a.points < b.points) {
-                return -1
+                return 1
             }
             if (a.points > b.points) {
-                return 1
+                return -1
             }
 
             if (a.goalsDifference < b.goalsDifference) {
-                return -1
+                return 1
             }
             if (a.goalsDifference > b.goalsDifference) {
-                return 1
+                return -1
             }
 
             if (a.goalsFor < b.goalsFor) {
-                return -1
-            }
-            if (a.goalsFor > b.goalsFor) {
                 return 1
             }
+            if (a.goalsFor > b.goalsFor) {
+                return -1
+            }
 
-            // TODO: Sort based on game results
+            const test = this.games.items.filter(
+                g =>
+                    (g.homeTeamId === a.teamId && g.awayTeamId == b.teamId) ||
+                    (g.awayTeamId === a.teamId && g.homeTeamId == b.teamId)
+            )
+
+            let pointsA = 0
+            let pointsB = 0
+            for (const game of test) {
+                pointsA += this.getPointsForGame(a.teamId, game)
+                pointsB += this.getPointsForGame(b.teamId, game)
+            }
+
+            if (pointsA < pointsB) {
+                return 1
+            }
+            if (pointsA > pointsB) {
+                return -1
+            }
 
             return 0
         })
+    }
+
+    getPointsForGame(teamId: string, game: Game): number {
+        var goalsFor = game.homeTeamId == teamId ? game.homeScore : game.awayScore
+        var goalsAgainst = game.homeTeamId == teamId ? game.awayScore : game.homeScore
+
+        if (goalsFor == null || goalsAgainst == null) {
+            return 0
+        }
+
+        if (goalsFor > goalsAgainst) {
+            return 3
+        } else if (goalsFor < goalsAgainst) {
+            return 0
+        }
+        return 1
     }
 
     private processGame(game: Game) {
@@ -60,18 +95,15 @@ class ScoreCalculator {
             return
         }
 
-        this.processScore(game.homeTeamId, game.homeScore, game.awayScore)
-        this.processScore(game.awayTeamId, game.awayScore, game.homeScore)
+        this.processScore(game.pouleId, game.homeTeamId, game.homeScore, game.awayScore)
+        this.processScore(game.pouleId, game.awayTeamId, game.awayScore, game.homeScore)
     }
 
-    private processScore(teamId: string, goalsFor: number, goalsAgainst: number) {
-        const team = this.teams.findById(teamId)
-        const pouleId = team.pouleId
-
+    private processScore(pouleId: string, teamId: string, goalsFor: number, goalsAgainst: number) {
         const poule = this.poules.findById(pouleId)
-        const teamScore = poule.teamScores.find(t => t.teamId === team.id)
+        const teamScore = poule.teamScores.find(t => t.teamId === teamId)
         if (!teamScore) {
-            throw new Error(`Failed to find team '${team.id}' in poule '${pouleId}'`)
+            throw new Error(`Failed to find team '${teamId}' in poule '${pouleId}'`)
         }
 
         teamScore.gamesPlayed++

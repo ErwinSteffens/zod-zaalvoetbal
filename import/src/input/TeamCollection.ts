@@ -8,19 +8,18 @@ export interface Team {
 }
 
 class TeamCollection {
-    inputFile: string
-    teams: Team[]
+    private items: Team[]
 
     constructor() {
-        this.teams = []
+        this.items = []
     }
 
     add(game: Team) {
-        this.teams.push(game)
+        this.items.push(game)
     }
 
     findById(teamId: string) {
-        const team = this.teams.find(t => t.id == teamId)
+        const team = this.items.find(t => t.id == teamId)
         if (!team) {
             throw new Error(`Team with ID '${teamId}' not found`)
         }
@@ -28,9 +27,9 @@ class TeamCollection {
     }
 
     save(outputDir: string) {
-        console.log(`Saving '${this.teams.length}' teams`)
+        console.log(`Saving '${this.items.length}' teams`)
 
-        const json = JSON.stringify(this.teams, null, 2)
+        const json = JSON.stringify(this.items, null, 2)
         fs.writeFileSync(`${outputDir}/team.json`, json)
     }
 }

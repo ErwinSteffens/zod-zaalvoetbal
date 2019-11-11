@@ -24,29 +24,32 @@ export class Poule {
 }
 
 class PouleCollection {
-    inputFile: string
-    poules: Poule[]
+    items: Poule[]
 
     constructor() {
-        this.poules = []
+        this.items = []
     }
 
     add(poule: Poule) {
-        this.poules.push(poule)
+        this.items.push(poule)
     }
 
     findById(pouleId: string) {
-        const poule = this.poules.find(t => t.id == pouleId)
+        const poule = this.items.find(t => t.id == pouleId)
         if (!poule) {
             throw new Error(`Team with ID '${pouleId}' not found`)
         }
         return poule
     }
 
-    save(outputDir: string) {
-        console.log(`Saving '${this.poules.length}' poules`)
+    getPouleForTeam(homeTeamId: string): Poule {
+        return this.items.find(p => p.teamScores.some(t => t.teamId == homeTeamId))
+    }
 
-        const json = JSON.stringify(this.poules, null, 2)
+    save(outputDir: string) {
+        console.log(`Saving '${this.items.length}' poules`)
+
+        const json = JSON.stringify(this.items, null, 2)
         fs.writeFileSync(`${outputDir}/poule.json`, json)
     }
 }

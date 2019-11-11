@@ -1,52 +1,56 @@
 import * as XLSX from 'xlsx'
 import { WorkSheet } from 'xlsx'
 
-import { slug } from './utils'
-import TeamName from './input/TeamName'
-import ClubCollection from './input/ClubCollection'
-import LocationCollection from './input/LocationCollection'
-import GameCollection from './input/GameCollection'
-import TeamCollection from './input/TeamCollection'
-import PouleCollection, { Poule, TeamScore } from './input/PouleCollection'
+export interface SheetPoule {
+    name: string
+}
+
+export interface SheetTeam {
+    name: string
+    poule: string
+}
+
+export interface SheetGame {
+    round: number
+    time: Date
+    location: string
+    homeTeam: string
+    awayTeam: string
+    homeScore: number | null
+    awayScore: number | null
+}
 
 class SheetParser {
     readonly gameSheetName: string = 'wedstrijdoverzicht'
     readonly timeRows: number = 20
 
     workbook: XLSX.WorkBook
-    clubs: ClubCollection
-    locations: LocationCollection
-    games: GameCollection
-    poules: PouleCollection
-    teams: TeamCollection
+
+    pouleFound: (poule: SheetPoule) => void
+    teamFound: (team: SheetTeam) => void
+    gameFound: (game: SheetGame) => void
 
     constructor(inputFile: string) {
         this.workbook = XLSX.readFile(inputFile)
-
-        this.init()
     }
 
-    init() {
-        this.clubs = new ClubCollection('./data/clubs.json')
-        this.locations = new LocationCollection('./data/locations.json')
-        this.games = new GameCollection()
-        this.poules = new PouleCollection()
-        this.teams = new TeamCollection()
+    parse() {
+        this.parsePoules()
+        this.parseGames()
     }
 
-    parsePoules() {
+    private parsePoules() {
         this.workbook.SheetNames.filter(name => name != this.gameSheetName).forEach(name => {
             const sheet: WorkSheet = this.workbook.Sheets[name]
 
             const parts = name.split('-')
             const pouleName = `${parts[0]} Poule ${parts[1]}`
-            const poule: Poule = {
-                id: slug(pouleName),
-                name: pouleName,
-                teamScores: []
-            }
 
-            console.debug(`  Poule: ${pouleName}`)
+            if (this.pouleFound) {
+                this.pouleFound({
+                    name: pouleName
+                })
+            }
 
             let rowIndex = 0
             while (true) {
@@ -55,33 +59,19 @@ class SheetParser {
                     break
                 }
 
-                const teamName = new TeamName(value)
-
-                const clubInfo = this.clubs.findByInputName(teamName.clubName)
-
-                const teamId = slug(`${clubInfo.name}-${teamName.teamName}`)
-                const clubId = slug(clubInfo.name)
-
-                console.debug(`  Team: Id: ${teamId}`)
-                console.debug(`        Name: ${teamName.clubName} ${teamName.teamName}`)
-
-                this.teams.add({
-                    id: teamId,
-                    clubId: clubId,
-                    name: teamName.teamName,
-                    pouleId: poule.id
-                })
-
-                poule.teamScores.push(new TeamScore(teamId))
+                if (this.teamFound) {
+                    this.teamFound({
+                        name: value,
+                        poule: pouleName
+                    })
+                }
 
                 rowIndex++
             }
-
-            this.poules.add(poule)
         })
     }
 
-    parseGames() {
+    private parseGames() {
         const gameSheet = this.workbook.Sheets[this.gameSheetName]
 
         let round = 0
@@ -99,9 +89,7 @@ class SheetParser {
                         break
                     }
 
-                    const locationInputName = locationCell.v
-                    const location = this.locations.findByInputName(locationInputName)
-
+                    const location = locationCell.v
                     for (let rowIndex = 0; rowIndex < this.timeRows; rowIndex++) {
                         const timeCode = XLSX.SSF.parse_date_code(
                             this.getCellValue(gameSheet, 0, row + rowIndex + 2)
@@ -137,18 +125,17 @@ class SheetParser {
                                 row + rowIndex + 2
                             )
 
-                            const homeTeamId = this.getTeamId(new TeamName(homeTeam))
-                            const awayTeamId = this.getTeamId(new TeamName(awayTeam))
-
-                            this.games.add({
-                                round: round,
-                                time: time,
-                                homeTeamId: homeTeamId,
-                                homeScore: homeScore,
-                                awayTeamId: awayTeamId,
-                                awayScore: awayScore,
-                                locationId: slug(location.venue)
-                            })
+                            if (this.gameFound) {
+                                this.gameFound({
+                                    round: round,
+                                    time: time,
+                                    location: location,
+                                    homeTeam: homeTeam,
+                                    awayTeam: awayTeam,
+                                    homeScore: homeScore,
+                                    awayScore: awayScore
+                                })
+                            }
                         }
                     }
 
@@ -161,13 +148,6 @@ class SheetParser {
             row += this.timeRows + 3
             round++
         }
-
-        this.sortTeamsInPoule()
-    }
-
-    private sortTeamsInPoule() {
-        for (const poule of this.poules.poules) {
-        }
     }
 
     private getCellValue(sheet: XLSX.WorkSheet, column: number, row: number) {
@@ -176,12 +156,6 @@ class SheetParser {
             return null
         }
         return cell.v
-    }
-
-    private getTeamId(info: TeamName): string {
-        const clubInfo = this.clubs.findByInputName(info.clubName)
-
-        return slug(`${clubInfo.name}-${info.teamName}`)
     }
 }
 

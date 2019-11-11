@@ -3,6 +3,7 @@ import * as fs from 'fs'
 export interface Game {
     round: number
     time: Date
+    pouleId: string
     homeTeamId: string
     homeScore: number
     awayTeamId: string
@@ -11,22 +12,21 @@ export interface Game {
 }
 
 class GameCollection {
-    inputFile: string
-    games: Game[]
+    items: Game[]
 
     constructor() {
-        this.games = []
+        this.items = []
     }
 
     add(game: Game) {
-        this.games.push(game)
+        this.items.push(game)
     }
 
     save(outputDir: string) {
-        console.log(`Saving '${this.games.length}' games`)
+        console.log(`Saving '${this.items.length}' games`)
 
         const json = JSON.stringify(
-            this.games,
+            this.items,
             (key, value) => {
                 if (key === 'inputName') {
                     return undefined

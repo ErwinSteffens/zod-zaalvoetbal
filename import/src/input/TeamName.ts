@@ -1,4 +1,4 @@
-class TeamName {
+class TeamNameParser {
     inputName: string
     teamName: string
     clubName: string
@@ -21,4 +21,4 @@ class TeamName {
     }
 }
 
-export default TeamName
+export default TeamNameParser

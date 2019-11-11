@@ -12,29 +12,24 @@ export interface GameLocation {
 }
 
 class LocationCollection {
-    inputFile: string
-    locations: GameLocation[]
+    private items: GameLocation[]
 
     constructor(inputFile: string) {
-        this.inputFile = inputFile
-
-        this.read()
+        this.read(inputFile)
     }
 
-    private read() {
-        this.locations = JSON.parse(
-            fs.readFileSync('./input/locations.json').toString()
-        ) as GameLocation[]
+    private read(inputFile: string) {
+        this.items = JSON.parse(fs.readFileSync(inputFile).toString()) as GameLocation[]
 
-        this.locations = this.locations.map(c => {
+        this.items = this.items.map(c => {
             return Object.assign({ id: slug(c.venue) }, c)
         })
 
-        console.log(`Found ${this.locations.length} locations in input`)
+        console.log(`Found ${this.items.length} locations in input`)
     }
 
     findByInputName(inputName: string) {
-        const result = this.locations.find(c => c.inputName == inputName)
+        const result = this.items.find(c => c.inputName == inputName)
         if (!result) {
             throw new Error(`Location with input name ${inputName} not found`)
         }
@@ -42,10 +37,10 @@ class LocationCollection {
     }
 
     save(outputDir: string) {
-        console.log(`Saving '${this.locations.length}' locations`)
+        console.log(`Saving '${this.items.length}' locations`)
 
         const json = JSON.stringify(
-            this.locations,
+            this.items,
             (key, value) => {
                 if (key === 'inputName') {
                     return undefined
