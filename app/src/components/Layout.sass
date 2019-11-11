@@ -205,7 +205,6 @@ body
         margin-bottom: 0
 
 .games-header
-    font-size: 12pt
     display: block
     text-align: center
     border-bottom: 2px solid #eee
@@ -213,6 +212,7 @@ body
     margin-bottom: 0
 
     h6
+        font-size: 1.2rem
         margin-bottom: 2px
 
         &::first-letter
@@ -227,6 +227,16 @@ body
     @include media-breakpoint-down(xs) 
         font-size: .8rem
         margin-bottom: 40px
+
+    h4
+        &.poule
+            font-weight: 700
+            text-align: center
+            font-size: 0.9rem
+            padding-bottom: 10px
+            margin-bottom: 10px
+            margin-top: 20px
+            border-bottom: 1px solid #eee
 
     .game
         display: flex
@@ -326,6 +336,14 @@ body
 
     .games
         page-break-inside: avoid
+
+    .games-table
+        page-break-inside: avoid
+
+    .location
+        .games-table
+            page-break-inside: avoid
+            page-break-after: always
 
     .location-info
         page-break-after: always

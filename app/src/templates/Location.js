@@ -22,7 +22,7 @@ export default ({ data }) => {
     const mapsUrl = `https://www.google.com/maps/embed/v1/place?q=place_id:${location.placeId}&key=AIzaSyCzh-2XRTB_MQdXyBPpEXQkyAxQz_FOibY`
 
     return (
-        <Layout>
+        <Layout className="location">
             <Helmet>
                 <title>ZOD Zaalvoetbal - {location.venue}</title>
             </Helmet>
@@ -64,7 +64,7 @@ export default ({ data }) => {
                         <div key={`${date}_header`} className="games-header">
                             <h6>{moment(date).format('dddd LL')}</h6>
                         </div>
-                        <Games key={date} date={date} games={games} />
+                        <Games key={date} date={date} games={games} showPoules />
                     </>
                 )
             })}
@@ -84,6 +84,10 @@ export const query = graphql`
             games {
                 id
                 time
+                poule {
+                    id
+                    name
+                }
                 location {
                     id
                 }

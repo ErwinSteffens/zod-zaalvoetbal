@@ -10,6 +10,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
             games: [GameJson] @link(by: "locationId", from: "id")
          }`,
         `type GameJson implements Node {
+            poule: PouleJson @link(from: "pouleId")
             homeTeam: TeamJson @link(from: "homeTeamId")
             homeScore: Int
             awayTeam: TeamJson @link(from: "awayTeamId")
