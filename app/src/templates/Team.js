@@ -100,7 +100,7 @@ export const query = graphql`
             poule {
                 id
                 name
-                teams {
+                teamScores {
                     team {
                         id
                         name

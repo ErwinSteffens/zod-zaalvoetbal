@@ -68,7 +68,7 @@ export const query = graphql`
         pouleJson(id: { eq: $id }) {
             id
             name
-            teams {
+            teamScores {
                 team {
                     id
                     name

@@ -35,7 +35,6 @@
         "react-recaptcha-google": "^1.1.1",
         "react-toggle": "^4.1.1",
         "rimraf": "^3.0.0",
-        "typescript": "^3.7.2",
         "wait-on": "^3.3.0"
     },
     "devDependencies": {

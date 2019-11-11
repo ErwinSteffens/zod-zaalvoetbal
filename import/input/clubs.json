@@ -1,68 +1,79 @@
-{
-    "Dalen/DSC": {
+[
+    {
+        "inputName": "Dalen/DSC",
         "name": "Dalen-DSC",
         "contact": "Tanja Mulder",
         "contactPhone": "06-52180562",
         "contactEmail": "tanja.lamberts@outlook.com"
     },
-    "SC Erica": {
+    {
+        "inputName": "SC Erica",
         "name": "Sc Erica",
         "contact": "Raymond Rolink",
         "contactPhone": "06-11008724",
         "contactEmail": "rrolink@volkerwessels.com"
     },
-    "Germ/CSVC": {
+    {
+        "inputName": "Germ/CSVC",
         "name": "Germanicus-CSVC",
         "contact": "Johan Kosters",
         "contactPhone": "06-14534769",
         "contactEmail": "johekosters@hotmail.com"
     },
-    "KSC": {
+    {
+        "inputName": "KSC",
         "name": "KSC",
         "contact": "Gerrit Jan Eising",
         "contactPhone": "06-13724862",
         "contactEmail": "gj_ensing@live.nl"
     },
-    "NKVV/Protos": {
+    {
+        "inputName": "NKVV/Protos",
         "name": "NKvv Protos",
         "contact": "Harry Alting",
         "contactPhone": "06-11268194",
         "contactEmail": "harryalting@home.nl"
     },
-    "Raptim": {
+    {
+        "inputName": "Raptim",
         "name": "vv Raptim",
         "contact": "Nick Nannen",
         "contactPhone": "06-20962085",
         "contactEmail": "nick@nnsports.nl"
     },
-    "SVV'04": {
+    {
+        "inputName": "SVV'04",
         "name": "SVV'04",
         "contact": "Hellen Kloeze",
         "contactPhone": "06-12942369",
         "contactEmail": "hek@ows.no"
     },
-    "Sleen": {
+    {
+        "inputName": "Sleen",
         "name": "VV Sleen",
         "contact": "Marcel Hilgers",
         "contactPhone": "06-28074158",
         "contactEmail": "secretariaatjeugd@vvsleen.nl"
     },
-    "Sweel": {
+    {
+        "inputName": "Sweel",
         "name": "vv Sweel",
         "contact": "Henk Nijenbanning",
         "contactPhone": "06-50452701",
         "contactEmail": "jeugdzaken@vvsweel.nl"
     },
-    "SV Twedo": {
+    {
+        "inputName": "SV Twedo",
         "name": "SV Twedo",
         "contact": "Edwin Guit",
         "contactPhone": "06-41869325",
         "contactEmail": "eguit@ziggo.nl"
     },
-    "VIOS": {
+    {
+        "inputName": "VIOS",
         "name": "VIOS",
         "contact": "Erik Holties",
         "contactPhone": "06-53285358",
         "contactEmail": "erikenrenateholties@gmail.com"
     }
-}
+]
