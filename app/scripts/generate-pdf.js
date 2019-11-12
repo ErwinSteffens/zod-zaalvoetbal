@@ -7,6 +7,8 @@ const waitOn = require('wait-on')
 
 const baseUrl = 'http://localhost:9000/'
 
+process.env.TZ = 'Europe/Amsterdam'
+
 async function runGatsby() {
     console.log('Starting Gatsby serve')
 
@@ -37,12 +39,7 @@ const mkdir = path => {
 }
 
 const createPdfFile = async (url, filePath) => {
-    const browser = await puppeteer.launch({
-        env: {
-            TZ: 'Europe/Amsterdam',
-            ...process.env
-        }
-    })
+    const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page.goto(url)
     await page.pdf({
