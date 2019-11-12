@@ -37,7 +37,12 @@ const mkdir = path => {
 }
 
 const createPdfFile = async (url, filePath) => {
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({
+        env: {
+            TZ: 'Europe/Amsterdam',
+            ...process.env
+        }
+    })
     const page = await browser.newPage()
     await page.goto(url)
     await page.pdf({
