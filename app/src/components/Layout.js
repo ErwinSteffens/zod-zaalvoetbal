@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Alert } from 'react-bootstrap'
 import 'moment/locale/nl'
 
 import Navigation from './Navigation'
@@ -45,7 +45,13 @@ export default ({ children, className }) => (
             <Navigation></Navigation>
             <Row>
                 <Col>
-                    <div className="content">{children}</div>
+                    <div className="content">
+                        <Alert variant="warning">
+                            Let op! De speelschemas zijn nog niet definitief.
+                        </Alert>
+                        <br />
+                        {children}
+                    </div>
                 </Col>
             </Row>
             <Row>
