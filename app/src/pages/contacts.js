@@ -14,7 +14,6 @@ export default ({ data }) => {
             <Layout className="contacts-page">
                 <h3>Contact</h3>
 
-                <h4 className="mt-5">Contact personen</h4>
                 <Row>
                     <Col md={6} lg={4}>
                         <Contact
