@@ -47,7 +47,7 @@ export default ({ children, className }) => (
                 <Col>
                     <div className="content">
                         <Alert variant="warning">
-                            Let op! De speelschemas zijn nog niet definitief.
+                            Let op! De speelschema's zijn nog niet definitief.
                         </Alert>
                         <br />
                         {children}
