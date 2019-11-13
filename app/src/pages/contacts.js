@@ -26,7 +26,7 @@ export default ({ data }) => {
                     <Col md={6} lg={4}>
                         <Contact
                             header="Organisatie"
-                            name="Edwin Guijt"
+                            name="Edwin Guit"
                             email="eguit@ziggo.nl"
                             phone="06-41869325"
                         />

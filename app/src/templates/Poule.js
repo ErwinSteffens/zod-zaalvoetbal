@@ -30,7 +30,7 @@ export default ({ data }) => {
             <h4>Stand</h4>
             <Standings poule={poule} />
 
-            <h4>Wedtrijden</h4>
+            <h4>Wedstrijden</h4>
             {games.entrySeq().map(([key, games]) => {
                 // Get date and location from first item as they are grouped by location and date
                 const first = games.first()
