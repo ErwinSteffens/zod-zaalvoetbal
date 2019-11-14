@@ -25,6 +25,7 @@ export default ({ data }) => {
             </Helmet>
             {games.entrySeq().map(([date, games]) => {
                 let lastPoule = null
+                let lastField = null
                 return (
                     <div className="page">
                         <h3>{moment(date).format('dddd LL')}</h3>
@@ -48,17 +49,30 @@ export default ({ data }) => {
                                 })
                                 lastPoule = poule.id
 
+                                let fieldHeader =
+                                    game.field && game.field !== lastField ? (
+                                        <h6 className="field-header">Veld {game.field}</h6>
+                                    ) : null
+                                lastField = game.field
+
                                 return (
-                                    <div key={game.id} className={classes}>
-                                        <div className="item time">
-                                            {moment(game.time).format('LT')}
+                                    <>
+                                        {fieldHeader}
+                                        <div key={game.id} className={classes}>
+                                            <div className="item time">
+                                                {moment(game.time).format('LT')}
+                                            </div>
+                                            <div className="item poule">{poule.name}</div>
+                                            <div className="item team home">
+                                                {homeTeam.fullName}
+                                            </div>
+                                            <div className="item team away">
+                                                {awayTeam.fullName}
+                                            </div>
+                                            <div className="item score"></div>
+                                            <div className="item score"></div>
                                         </div>
-                                        <div className="item poule">{poule.name}</div>
-                                        <div className="item team home">{homeTeam.fullName}</div>
-                                        <div className="item team away">{awayTeam.fullName}</div>
-                                        <div className="item score"></div>
-                                        <div className="item score"></div>
-                                    </div>
+                                    </>
                                 )
                             })}
                         </div>
@@ -85,6 +99,7 @@ export const query = graphql`
                 location {
                     id
                 }
+                field
                 homeTeam {
                     id
                     name

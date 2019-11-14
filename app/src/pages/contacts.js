@@ -44,13 +44,13 @@ export default ({ data }) => {
                 <Row>
                     {clubContacts.map(club => {
                         return (
-                            <Col md={6} lg={4}>
+                            <Col key={club.id} md={6} lg={4}>
                                 <Contact
                                     header={
-                                        <h5 className="mt-5">
+                                        <>
                                             <ClubLogo className="mr-2" club={club} />
                                             {club.name}
-                                        </h5>
+                                        </>
                                     }
                                     name={club.contact}
                                     email={club.contactEmail}

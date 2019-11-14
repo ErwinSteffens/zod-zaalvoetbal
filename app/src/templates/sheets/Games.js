@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import { List } from 'immutable'
+import { Row, Col } from 'react-bootstrap'
 import moment from 'moment'
 import { Helmet } from 'react-helmet'
 
 import Layout from '../../components/SheetLayout'
-import ClubLogo from '../../components/ClubLogo'
+import Games from '../../components/Games'
 
 export default ({ data }) => {
     const location = data.locationJson
@@ -16,61 +17,57 @@ export default ({ data }) => {
                 .startOf('day')
                 .toDate()
         })
+        .map(games =>
+            games
+                .groupBy(game => {
+                    return game.field
+                })
+                .map(games =>
+                    games.groupBy(game => {
+                        return game.poule.id
+                    })
+                )
+        )
         .sortBy((_v, k) => k)
 
     return (
-        <Layout className="games">
+        <Layout className="page">
             <Helmet>
                 <title>Programma - {location.venue}</title>
             </Helmet>
-            {games.entrySeq().map(([date, games]) => {
-                let lastPoule = null
+            {games.entrySeq().map(([date, gamesOnDate]) => {
                 return (
-                    <div className="page">
-                        <h3>Programma</h3>
-                        <h5>
-                            {moment(date).format('dddd LL')} - {location.venue}
-                        </h5>
-
-                        <div className="games-table">
-                            {games.map(game => {
-                                const { homeTeam, awayTeam } = game
-                                const poule = homeTeam.poule
-
-                                let pouleHeader = null
-                                if (lastPoule === null || lastPoule !== poule.id) {
-                                    pouleHeader = <h4 className="poule">{poule.name}</h4>
-                                }
-                                lastPoule = poule.id
-
+                    <Row key={date.toString()} className="games">
+                        <Col>
+                            <h3>Programma</h3>
+                            <h6 className="games-header">{location.venue}</h6>
+                            <h6 className="games-header date">{moment(date).format('dddd LL')}</h6>
+                            {gamesOnDate.entrySeq().map(([field, gamesOnField]) => {
                                 return (
-                                    <>
-                                        {pouleHeader}
-                                        <div key={game.id} className="game">
-                                            <div className="item team home">
-                                                {homeTeam.fullName}
-                                            </div>
-                                            <div className="item logo">
-                                                <ClubLogo club={homeTeam.club} small />
-                                            </div>
-                                            <div className="item time">
-                                                {moment(game.time).format('LT')}
-                                            </div>
-                                            <div className="item logo">
-                                                <ClubLogo club={awayTeam.club} small />
-                                            </div>
-                                            <div className="item team away">
-                                                {awayTeam.fullName}
-                                            </div>
-                                        </div>
-                                    </>
+                                    <Fragment key={field || 'field'}>
+                                        {field && <h6 className="games-header">Veld {field}</h6>}
+                                        {gamesOnField.entrySeq().map(([pouleId, gamesByPoule]) => {
+                                            const poule = gamesByPoule.first().poule
+                                            return (
+                                                <Fragment key={pouleId}>
+                                                    <h6 className="games-header last">
+                                                        {poule.name}
+                                                    </h6>
+                                                    <Games
+                                                        games={gamesByPoule}
+                                                        showScores={false}
+                                                    />
+                                                </Fragment>
+                                            )
+                                        })}
+                                    </Fragment>
                                 )
                             })}
-                        </div>
-                        <div className="info">
-                            Kijk voor een volledig programma op <u>www.zodzaalvoetbal.nl</u>.
-                        </div>
-                    </div>
+                            <div className="info">
+                                Kijk voor een volledig programma op <u>www.zodzaalvoetbal.nl</u>.
+                            </div>
+                        </Col>
+                    </Row>
                 )
             })}
         </Layout>
@@ -85,9 +82,14 @@ export const query = graphql`
             games {
                 id
                 time
+                poule {
+                    id
+                    name
+                }
                 location {
                     id
                 }
+                field
                 homeTeam {
                     id
                     name

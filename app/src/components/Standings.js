@@ -5,7 +5,7 @@ import cn from 'classnames'
 
 import ClubLogo from './ClubLogo'
 
-const Standings = ({ poule, highlightTeamId }) => {
+const Standings = ({ poule, teamId }) => {
     return (
         <div className="standings">
             <div className="standings-row header">
@@ -69,7 +69,7 @@ const Standings = ({ poule, highlightTeamId }) => {
                 .map((teamScore, index) => {
                     let team = teamScore.team
                     let classes = cn('standings-row', {
-                        highlight: team.id === highlightTeamId
+                        highlight: team.id === teamId
                     })
                     return (
                         <Link

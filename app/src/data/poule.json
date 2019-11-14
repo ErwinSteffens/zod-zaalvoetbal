@@ -1504,5 +1504,95 @@
         "teamId": "germanicus-csvc-jo8-3"
       }
     ]
+  },
+  {
+    "id": "minis",
+    "name": "Mini's",
+    "teamScores": [
+      {
+        "rank": 0,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "svv04-m1"
+      },
+      {
+        "rank": 1,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "vv-raptim-m1"
+      },
+      {
+        "rank": 2,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "dalen-dsc-m1"
+      },
+      {
+        "rank": 3,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "sc-erica-m1"
+      },
+      {
+        "rank": 4,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "svv04-m2"
+      },
+      {
+        "rank": 5,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "germanicus-csvc-m1"
+      },
+      {
+        "rank": 6,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "vios-m1"
+      }
+    ]
   }
 ]

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { List } from 'immutable'
 import moment from 'moment'
 import Toggle from 'react-toggle'
@@ -8,7 +8,7 @@ import { Row, Col } from 'react-bootstrap'
 import Layout from '../components/Layout'
 import ClubLogo from '../components/ClubLogo'
 import Standings from '../components/Standings'
-import Games from '../components/Games'
+import PouleGames from '../components/PouleGames'
 import { Helmet } from 'react-helmet'
 
 export default ({ data }) => {
@@ -22,13 +22,23 @@ export default ({ data }) => {
         games = games.filter(g => g.homeTeam.id === team.id || g.awayTeam.id === team.id)
     }
 
-    games = List(games).groupBy(game => {
-        const date = moment(game.time)
-            .startOf('day')
-            .toDate()
-
-        return `${date}__${game.location.id}`
-    })
+    games = List(games)
+        .groupBy(game => {
+            return moment(game.time)
+                .startOf('day')
+                .toDate()
+        })
+        .map(games => {
+            return games
+                .groupBy(game => {
+                    return game.location.id
+                })
+                .map(games =>
+                    games.groupBy(game => {
+                        return game.field
+                    })
+                )
+        })
 
     games = games.sortBy((_v, k) => k)
 
@@ -43,8 +53,7 @@ export default ({ data }) => {
                 <h6 className="subtitle">{poule.name}</h6>
             </div>
             <h4 className="mb-4">Stand</h4>
-            <Standings poule={poule} highlightTeamId={team.id} />
-
+            <Standings poule={poule} teamId={team.id} />
             <Row className="mb-4">
                 <Col xs={12} md={6}>
                     <h4>Wedstrijden</h4>
@@ -56,25 +65,7 @@ export default ({ data }) => {
                     </label>
                 </Col>
             </Row>
-
-            {games.entrySeq().map(([key, games]) => {
-                // Get date and location from first item as they are grouped by location and date
-                const first = games.first()
-                const date = first.time
-                const location = first.location
-
-                return (
-                    <>
-                        <div key={`${key}_header`} className="games-header">
-                            <h6>{moment(date).format('dddd LL')}</h6>
-                            <Link className="location" to={`/locaties/${location.id}`}>
-                                {location.venue}
-                            </Link>
-                        </div>
-                        <Games key={key} games={games} highlightTeamId={team.id} />
-                    </>
-                )
-            })}
+            <PouleGames games={games} teamId={team.id} />
         </Layout>
     )
 }
@@ -121,6 +112,7 @@ export const query = graphql`
                         venue
                         city
                     }
+                    field
                     homeScore
                     awayScore
                     homeTeam {

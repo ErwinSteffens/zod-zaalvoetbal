@@ -688,5 +688,47 @@
     "clubId": "germanicus-csvc",
     "name": "JO8-3",
     "pouleId": "o8-poule-c"
+  },
+  {
+    "id": "svv04-m1",
+    "clubId": "svv04",
+    "name": "M1",
+    "pouleId": "minis"
+  },
+  {
+    "id": "vv-raptim-m1",
+    "clubId": "vv-raptim",
+    "name": "M1",
+    "pouleId": "minis"
+  },
+  {
+    "id": "dalen-dsc-m1",
+    "clubId": "dalen-dsc",
+    "name": "M1",
+    "pouleId": "minis"
+  },
+  {
+    "id": "sc-erica-m1",
+    "clubId": "sc-erica",
+    "name": "M1",
+    "pouleId": "minis"
+  },
+  {
+    "id": "svv04-m2",
+    "clubId": "svv04",
+    "name": "M2",
+    "pouleId": "minis"
+  },
+  {
+    "id": "germanicus-csvc-m1",
+    "clubId": "germanicus-csvc",
+    "name": "M1",
+    "pouleId": "minis"
+  },
+  {
+    "id": "vios-m1",
+    "clubId": "vios",
+    "name": "M1",
+    "pouleId": "minis"
   }
 ]

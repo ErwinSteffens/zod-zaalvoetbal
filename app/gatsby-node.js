@@ -38,6 +38,9 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
                 sortId: {
                     type: 'Int',
                     resolve(source, args, context, info) {
+                        if (source.name === "Mini's") {
+                            return 0
+                        }
                         let regex = /O(\d+) Poule ([A-Z]{1})/
                         let result = source.name.match(regex)
                         return parseInt(result[1]) * 100 + result[2].charCodeAt(0)
@@ -74,7 +77,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
                 sortId: {
                     type: 'Int',
                     resolve(source, args, context, info) {
-                        let regex = /(JO|MO)(\d+)-(\d+)/
+                        let regex = /(JO|MO|M)(\d+)(?:-(\d+))?/
                         let result = source.name.match(regex)
                         return parseInt(result[2]) * 10 + parseInt(result[3])
                     }

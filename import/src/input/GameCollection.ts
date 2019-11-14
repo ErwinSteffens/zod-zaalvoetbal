@@ -9,6 +9,7 @@ export interface Game {
     awayTeamId: string
     awayScore: number
     locationId: string
+    field: number | null
 }
 
 class GameCollection {

@@ -10,7 +10,7 @@ class TeamNameParser {
     }
 
     private parse(name: string) {
-        const regex = /(.+) ([JM]O\d+-\d+)/
+        const regex = /(.+) ((?:JO|MO|M)\d+(?:-\d+)?)/
         const matches = name.match(regex)
         if (!matches) {
             throw new Error(`Team name failed to match regex: ${name}`)

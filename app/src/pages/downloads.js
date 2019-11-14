@@ -17,7 +17,7 @@ export default ({ data }) => {
             <ul className="list">
                 {locations.map(location => {
                     return (
-                        <li>
+                        <li key={location.id}>
                             <a
                                 key={location.id}
                                 href={`/downloads/scores/Uitslagen - ${location.venue}.pdf`}
@@ -36,7 +36,7 @@ export default ({ data }) => {
             <ul className="list">
                 {locations.map(location => {
                     return (
-                        <li>
+                        <li key={location.id}>
                             <a
                                 key={location.id}
                                 href={`/downloads/games/Programma - ${location.venue}.pdf`}
@@ -48,13 +48,11 @@ export default ({ data }) => {
                 })}
             </ul>
             <h4 className="mt-5">Spelregels</h4>
-            <p>
-                <ul>
-                    <li>
-                        <a href={`/downloads/Spelregels.pdf`}>Spelregels 2019/2020</a>
-                    </li>
-                </ul>
-            </p>
+            <ul>
+                <li>
+                    <a href={`/downloads/Spelregels.pdf`}>Spelregels 2019/2020</a>
+                </li>
+            </ul>
         </Layout>
     )
 }

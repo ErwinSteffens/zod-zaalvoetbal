@@ -14,6 +14,7 @@ export interface SheetGame {
     round: number
     time: Date
     location: string
+    field: number | null
     homeTeam: string
     awayTeam: string
     homeScore: number | null
@@ -40,33 +41,38 @@ class SheetParser {
     }
 
     private parsePoules() {
-        this.workbook.SheetNames.filter(name => name != this.gameSheetName).forEach(name => {
-            const sheet: WorkSheet = this.workbook.Sheets[name]
+        this.workbook.SheetNames.forEach(name => {
+            const matches = name.match(/(O\d+)-([A-Z])/)
+            if (matches || name == "Mini's") {
+                const sheet: WorkSheet = this.workbook.Sheets[name]
 
-            const parts = name.split('-')
-            const pouleName = `${parts[0]} Poule ${parts[1]}`
-
-            if (this.pouleFound) {
-                this.pouleFound({
-                    name: pouleName
-                })
-            }
-
-            let rowIndex = 0
-            while (true) {
-                const value = this.getCellValue(sheet, 1, 1 + rowIndex)
-                if (!value || value === 'speeldagen') {
-                    break
+                let pouleName = name
+                if (matches) {
+                    pouleName = `${matches[1]} Poule ${matches[2]}`
                 }
 
-                if (this.teamFound) {
-                    this.teamFound({
-                        name: value,
-                        poule: pouleName
+                if (this.pouleFound) {
+                    this.pouleFound({
+                        name: pouleName
                     })
                 }
 
-                rowIndex++
+                let rowIndex = 0
+                while (true) {
+                    const value = this.getCellValue(sheet, 1, 1 + rowIndex)
+                    if (!value || value === 'speeldagen') {
+                        break
+                    }
+
+                    if (this.teamFound) {
+                        this.teamFound({
+                            name: value,
+                            poule: pouleName
+                        })
+                    }
+
+                    rowIndex++
+                }
             }
         })
     }
@@ -84,16 +90,26 @@ class SheetParser {
 
                 let column = 2
                 while (true) {
-                    const locationCell = gameSheet[XLSX.utils.encode_cell({ c: column, r: row })]
-                    if (!locationCell || locationCell.v === 'Totaal') {
+                    let location = this.getCellValue(gameSheet, column, row)
+                    if (!location || location === 'Totaal') {
                         break
                     }
 
-                    const location = locationCell.v
-                    for (let rowIndex = 0; rowIndex < this.timeRows; rowIndex++) {
-                        const timeCode = XLSX.SSF.parse_date_code(
-                            this.getCellValue(gameSheet, 0, row + rowIndex + 2)
-                        )
+                    let field: number | null = null
+                    let fieldMatch = location.match(/([\w- ]+)(?: \(Veld (\d+)\))?$/)
+                    if (fieldMatch) {
+                        location = fieldMatch[1]
+                        field = parseInt(fieldMatch[2])
+                    }
+
+                    let rowIndex = 0
+                    while (true) {
+                        const timeValue = this.getCellValue(gameSheet, 0, row + rowIndex + 2)
+                        if (!timeValue) {
+                            break
+                        }
+
+                        const timeCode = XLSX.SSF.parse_date_code(timeValue)
                         const time = new Date(
                             dateCode.y,
                             dateCode.m - 1,
@@ -130,6 +146,7 @@ class SheetParser {
                                     round: round,
                                     time: time,
                                     location: location,
+                                    field: field,
                                     homeTeam: homeTeam,
                                     awayTeam: awayTeam,
                                     homeScore: homeScore,
@@ -137,6 +154,8 @@ class SheetParser {
                                 })
                             }
                         }
+
+                        rowIndex++
                     }
 
                     column += 5
@@ -145,7 +164,17 @@ class SheetParser {
                 break
             }
 
-            row += this.timeRows + 3
+            // Update the rows until we do not find a time value anymore
+            row += 2
+            while (true) {
+                const timeValue = this.getCellValue(gameSheet, 0, row)
+                if (!timeValue) {
+                    break
+                }
+                row++
+            }
+
+            row++
             round++
         }
     }

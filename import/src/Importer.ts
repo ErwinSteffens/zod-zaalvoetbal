@@ -94,7 +94,8 @@ class Importer {
             homeScore: sheetGame.homeScore,
             awayTeamId: awayTeamId,
             awayScore: sheetGame.awayScore,
-            locationId: locationId
+            locationId: locationId,
+            field: sheetGame.field
         })
     }
 

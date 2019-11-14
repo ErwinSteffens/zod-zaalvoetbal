@@ -41,7 +41,7 @@ export default ({ data }) => {
                             <ul className="team-list">
                                 {teams.map(team => {
                                     return (
-                                        <li>
+                                        <li key={team.id}>
                                             <Link
                                                 key={team.id}
                                                 as={Link}

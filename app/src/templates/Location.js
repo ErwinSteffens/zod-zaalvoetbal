@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import { List } from 'immutable'
 import { Row, Col } from 'react-bootstrap'
@@ -17,6 +17,17 @@ export default ({ data }) => {
                 .startOf('day')
                 .toDate()
         })
+        .map(games =>
+            games
+                .groupBy(game => {
+                    return game.field
+                })
+                .map(games =>
+                    games.groupBy(game => {
+                        return game.poule.id
+                    })
+                )
+        )
         .sortBy((_v, k) => k)
 
     const mapsUrl = `https://www.google.com/maps/embed/v1/place?q=place_id:${location.placeId}&key=AIzaSyCzh-2XRTB_MQdXyBPpEXQkyAxQz_FOibY`
@@ -50,14 +61,31 @@ export default ({ data }) => {
             </Row>
 
             <h4 className="mb-4">Wedstrijden</h4>
-            {games.entrySeq().map(([date, games]) => {
+            {games.entrySeq().map(([date, gamesOnDate]) => {
                 return (
-                    <>
-                        <div key={`${date}_header`} className="games-header">
-                            <h6>{moment(date).format('dddd LL')}</h6>
-                        </div>
-                        <Games key={date} date={date} games={games} showPoules />
-                    </>
+                    <Row key={date.toString()} className="games">
+                        <Col>
+                            <h6 className="games-header">{moment(date).format('dddd LL')}</h6>
+                            {gamesOnDate.entrySeq().map(([field, gamesOnField]) => {
+                                return (
+                                    <Fragment key={field || 'field'}>
+                                        {field && <h6 className="games-header">Veld {field}</h6>}
+                                        {gamesOnField.entrySeq().map(([pouleId, gamesByPoule]) => {
+                                            const poule = gamesByPoule.first().poule
+                                            return (
+                                                <Fragment key={pouleId}>
+                                                    <h6 className="games-header last">
+                                                        {poule.name}
+                                                    </h6>
+                                                    <Games games={gamesByPoule} />
+                                                </Fragment>
+                                            )
+                                        })}
+                                    </Fragment>
+                                )
+                            })}
+                        </Col>
+                    </Row>
                 )
             })}
         </Layout>
@@ -83,6 +111,7 @@ export const query = graphql`
                 location {
                     id
                 }
+                field
                 homeScore
                 awayScore
                 homeTeam {
