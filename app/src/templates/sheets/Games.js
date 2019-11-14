@@ -31,13 +31,13 @@ export default ({ data }) => {
         .sortBy((_v, k) => k)
 
     return (
-        <Layout className="page">
+        <Layout>
             <Helmet>
                 <title>Programma - {location.venue}</title>
             </Helmet>
             {games.entrySeq().map(([date, gamesOnDate]) => {
                 return (
-                    <Row key={date.toString()} className="games">
+                    <Row key={date.toString()} className="games page">
                         <Col>
                             <h3>Programma</h3>
                             <h6 className="games-header">{location.venue}</h6>
