@@ -56,4 +56,8 @@ const Games = ({ games, teamId, showScores }) => {
     )
 }
 
+Games.defaultProps = {
+    showScores: true
+}
+
 export default Games
