@@ -13,7 +13,7 @@
         "import": "cd ../import && npm run import",
         "import:watch": "cd ../import && npm run watch:files",
         "pdf": "node scripts/generate-pdf.js",
-        "release": "run-s import build pdf build"
+        "release": "run-s build pdf build"
     },
     "dependencies": {
         "bootstrap-scss": "^4.3.1",
