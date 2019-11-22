@@ -264,8 +264,8 @@
     "pouleId": "o11-poule-a"
   },
   {
-    "id": "germanicus-csvc-jo11-1",
-    "clubId": "germanicus-csvc",
+    "id": "svv04-jo11-1",
+    "clubId": "svv04",
     "name": "JO11-1",
     "pouleId": "o11-poule-a"
   },
@@ -294,8 +294,8 @@
     "pouleId": "o11-poule-b"
   },
   {
-    "id": "svv04-jo11-1",
-    "clubId": "svv04",
+    "id": "germanicus-csvc-jo11-1",
+    "clubId": "germanicus-csvc",
     "name": "JO11-1",
     "pouleId": "o11-poule-b"
   },

@@ -11,7 +11,6 @@
         "start": "run-p develop import:watch",
         "serve": "gatsby serve",
         "import": "cd ../import && npm run import",
-        "import:watch": "cd ../import && npm run watch:files",
         "pdf": "node scripts/generate-pdf.js",
         "release": "run-s build pdf build",
         "deploy": "node deploy"
