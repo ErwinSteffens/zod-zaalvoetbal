@@ -14,7 +14,8 @@ const config = {
     include: ['**/*'],
     exclude: [],
     deleteRemote: false,
-    continueOnError: false
+    continueOnError: true,
+    forcePasv: true
 }
 
 ftpDeploy.on('uploading', function(data) {
@@ -23,7 +24,11 @@ ftpDeploy.on('uploading', function(data) {
     )
 })
 
+ftpDeploy.on('upload-error', function(data) {
+    console.log(`Error: ${data.filename} - ${data.err}`)
+})
+
 ftpDeploy
     .deploy(config)
-    .then(res => console.log('Deploy finished:', res))
+    .then(res => console.log('Deployment done'))
     .catch(err => console.log(err))
