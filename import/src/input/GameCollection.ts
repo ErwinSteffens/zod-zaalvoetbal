@@ -23,6 +23,12 @@ class GameCollection {
         this.items.push(game)
     }
 
+    getGamesForTeam(teamId: string) {
+        return this.items.filter(game => {
+            return game.homeTeamId === teamId || game.awayTeamId === teamId
+        })
+    }
+
     save(outputDir: string) {
         console.log(`Saving '${this.items.length}' games`)
 

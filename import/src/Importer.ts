@@ -34,6 +34,8 @@ class Importer {
     toOutputDir(outputDir: string) {
         this.sheetParser.parse()
 
+        this.check()
+
         let scoreCalc = new ScoreCalculator(this.games, this.poules)
         this.poules.items = scoreCalc.processGames()
 
@@ -53,6 +55,7 @@ class Importer {
         this.poules.add({
             id: slug(sheetPoule.name),
             name: sheetPoule.name,
+            halfCompetition: sheetPoule.halfCompetition,
             teamScores: []
         })
     }
@@ -96,6 +99,24 @@ class Importer {
             awayScore: sheetGame.awayScore,
             locationId: locationId,
             field: sheetGame.field
+        })
+    }
+
+    private check() {
+        this.teams.items.forEach(team => {
+            let poule = this.poules.findById(team.pouleId)
+            let teamsInPoule = poule.teamScores.length
+            let gamesForTeam = this.games.getGamesForTeam(team.id).length
+            let gamesForTeamExpected = teamsInPoule - 1
+            if (!poule.halfCompetition) {
+                gamesForTeamExpected *= 2
+            }
+
+            if (gamesForTeam !== gamesForTeamExpected) {
+                console.warn(
+                    `Expected ${gamesForTeamExpected} but found ${gamesForTeam} for team ${team.id}`
+                )
+            }
         })
     }
 

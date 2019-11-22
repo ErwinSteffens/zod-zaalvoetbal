@@ -8,7 +8,7 @@ export interface Team {
 }
 
 class TeamCollection {
-    private items: Team[]
+    public items: Team[]
 
     constructor() {
         this.items = []
