@@ -30,7 +30,7 @@ export default ({ data }) => {
         )
         .sortBy((_v, k) => k)
 
-    const mapsUrl = `https://www.google.com/maps/embed/v1/place?q=place_id:${location.placeId}&key=AIzaSyCzh-2XRTB_MQdXyBPpEXQkyAxQz_FOibY`
+    const mapsUrl = `https://www.google.com/maps/embed/v1/place?q=place_id:${location.placeId}&key=AIzaSyBDzIwI9DF0jwZeOogBeZBuypWV9zbDIsM`
 
     return (
         <Layout className="location">
