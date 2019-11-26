@@ -46,10 +46,10 @@ export default ({ children, className }) => (
             <Row>
                 <Col>
                     <div className="content">
-                        <Alert variant="warning">
+                        {/* <Alert variant="warning">
                             Let op! De speelschema's zijn nog niet definitief.
                         </Alert>
-                        <br />
+                        <br /> */}
                         {children}
                     </div>
                 </Col>
