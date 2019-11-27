@@ -4,8 +4,6 @@
 
 https://zodzaalvoetbal.nl
 
-![](app/static/zod.png | width=200)
-
 This is a website for a local soccer competition for youth players in Zuid-Oost Drenthe, The Netherlands.
 
 The site is build around Gatsby, and has the following features:
