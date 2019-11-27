@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
 import Standings from '../components/Standings'
 import PouleGames from '../components/PouleGames'
+import TemporaryWarning from '../components/TemporaryWarning'
 
 export default ({ data }) => {
     const poule = data.pouleJson
@@ -38,6 +39,7 @@ export default ({ data }) => {
             <h4>Stand</h4>
             <Standings poule={poule} />
             <h4>Wedstrijden</h4>
+            {poule.temporary && <TemporaryWarning />}
             <PouleGames games={games} />
         </Layout>
     )
@@ -48,6 +50,7 @@ export const query = graphql`
         pouleJson(id: { eq: $id }) {
             id
             name
+            temporary
             teamScores {
                 team {
                     id

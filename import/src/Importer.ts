@@ -56,6 +56,7 @@ class Importer {
             id: slug(sheetPoule.name),
             name: sheetPoule.name,
             halfCompetition: sheetPoule.halfCompetition,
+            temporary: sheetPoule.temporary,
             teamScores: []
         })
     }

@@ -3,6 +3,7 @@
     "id": "o13-poule-a",
     "name": "O13 Poule A",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -70,6 +71,7 @@
     "id": "o13-poule-b",
     "name": "O13 Poule B",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -149,6 +151,7 @@
     "id": "o13-poule-c",
     "name": "O13 Poule C",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -216,6 +219,7 @@
     "id": "o13-poule-d",
     "name": "O13 Poule D",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -283,6 +287,7 @@
     "id": "o13-poule-e",
     "name": "O13 Poule E",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -350,6 +355,7 @@
     "id": "o13-poule-f",
     "name": "O13 Poule F",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -429,6 +435,7 @@
     "id": "o12-poule-a",
     "name": "O12 Poule A",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -496,6 +503,7 @@
     "id": "o12-poule-b",
     "name": "O12 Poule B",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -563,6 +571,7 @@
     "id": "o11-poule-a",
     "name": "O11 Poule A",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -630,6 +639,7 @@
     "id": "o11-poule-b",
     "name": "O11 Poule B",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -709,6 +719,7 @@
     "id": "o11-poule-c",
     "name": "O11 Poule C",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -788,6 +799,7 @@
     "id": "o11-poule-d",
     "name": "O11 Poule D",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -867,6 +879,7 @@
     "id": "o10-poule-a",
     "name": "O10 Poule A",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -934,6 +947,7 @@
     "id": "o10-poule-b",
     "name": "O10 Poule B",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -1001,6 +1015,7 @@
     "id": "o10-poule-c",
     "name": "O10 Poule C",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -1068,6 +1083,7 @@
     "id": "o9-poule-a",
     "name": "O9 Poule A",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -1147,6 +1163,7 @@
     "id": "o9-poule-b",
     "name": "O9 Poule B",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -1226,6 +1243,7 @@
     "id": "o9-poule-c",
     "name": "O9 Poule C",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -1305,6 +1323,7 @@
     "id": "o8-poule-a",
     "name": "O8 Poule A",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -1372,6 +1391,7 @@
     "id": "o8-poule-b",
     "name": "O8 Poule B",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -1451,6 +1471,7 @@
     "id": "o8-poule-c",
     "name": "O8 Poule C",
     "halfCompetition": false,
+    "temporary": false,
     "teamScores": [
       {
         "rank": 0,
@@ -1530,6 +1551,7 @@
     "id": "minis",
     "name": "Mini's",
     "halfCompetition": true,
+    "temporary": true,
     "teamScores": [
       {
         "rank": 0,

@@ -4,12 +4,13 @@ import { List } from 'immutable'
 import moment from 'moment'
 import Toggle from 'react-toggle'
 import { Row, Col } from 'react-bootstrap'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 import ClubLogo from '../components/ClubLogo'
 import Standings from '../components/Standings'
 import PouleGames from '../components/PouleGames'
-import { Helmet } from 'react-helmet'
+import TemporaryWarning from '../components/TemporaryWarning'
 
 export default ({ data }) => {
     const [showAll, setShowAll] = useState(true)
@@ -65,6 +66,7 @@ export default ({ data }) => {
                     </label>
                 </Col>
             </Row>
+            {poule.temporary && <TemporaryWarning />}
             <PouleGames games={games} teamId={team.id} />
         </Layout>
     )
@@ -83,6 +85,7 @@ export const query = graphql`
             poule {
                 id
                 name
+                temporary
                 teamScores {
                     team {
                         id

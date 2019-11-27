@@ -8,7 +8,7 @@
         "build": "gatsby build",
         "develop": "gatsby develop",
         "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-        "start": "run-p develop import:watch",
+        "start": "npm run develop",
         "serve": "gatsby serve",
         "import": "cd ../import && npm run import",
         "pdf": "node scripts/generate-pdf.js",

@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 import Games from '../components/Games'
+import TemporaryWarning from '../components/TemporaryWarning'
 
 export default ({ data }) => {
     const location = data.locationJson
@@ -77,6 +78,7 @@ export default ({ data }) => {
                                                     <h6 className="games-header last">
                                                         {poule.name}
                                                     </h6>
+                                                    {poule.temporary && <TemporaryWarning />}
                                                     <Games games={gamesByPoule} />
                                                 </Fragment>
                                             )
@@ -107,6 +109,7 @@ export const query = graphql`
                 poule {
                     id
                     name
+                    temporary
                 }
                 location {
                     id

@@ -21,6 +21,7 @@ export class Poule {
     id: string
     name: string
     halfCompetition: boolean
+    temporary: boolean
     teamScores: TeamScore[]
 }
 

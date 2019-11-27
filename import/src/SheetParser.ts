@@ -4,6 +4,7 @@ import { WorkSheet } from 'xlsx'
 export interface SheetPoule {
     name: string
     halfCompetition: boolean
+    temporary: boolean
 }
 
 export interface SheetTeam {
@@ -53,11 +54,13 @@ class SheetParser {
                 }
 
                 const half = this.getCellValue(sheet, 1, 0) === 'Halve competitie'
+                const temporary = this.getCellValue(sheet, 2, 0) === 'Tijdelijk'
 
                 if (this.pouleFound) {
                     this.pouleFound({
                         name: pouleName,
-                        halfCompetition: half
+                        halfCompetition: half,
+                        temporary: temporary
                     })
                 }
 
