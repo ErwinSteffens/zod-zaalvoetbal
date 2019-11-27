@@ -5728,7 +5728,7 @@
     "awayTeamId": "vv-raptim-m1",
     "awayScore": null,
     "locationId": "sporthal-drostenhal",
-    "field": 1
+    "field": null
   },
   {
     "round": 10,
@@ -5739,95 +5739,62 @@
     "awayTeamId": "dalen-dsc-m1",
     "awayScore": null,
     "locationId": "sporthal-drostenhal",
-    "field": 1
+    "field": null
   },
   {
     "round": 10,
     "time": "2019-12-21T08:30:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "svv04-m2",
-    "homeScore": null,
-    "awayTeamId": "vios-m1",
-    "awayScore": null,
-    "locationId": "sporthal-drostenhal",
-    "field": 1
-  },
-  {
-    "round": 10,
-    "time": "2019-12-21T08:45:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "svv04-m2",
-    "homeScore": null,
-    "awayTeamId": "germanicus-csvc-m1",
-    "awayScore": null,
-    "locationId": "sporthal-drostenhal",
-    "field": 1
-  },
-  {
-    "round": 10,
-    "time": "2019-12-21T09:00:00.000Z",
     "pouleId": "minis",
     "homeTeamId": "vios-m1",
     "homeScore": null,
     "awayTeamId": "svv04-m1",
     "awayScore": null,
     "locationId": "sporthal-drostenhal",
-    "field": 1
-  },
-  {
-    "round": 10,
-    "time": "2019-12-21T08:00:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "dalen-dsc-m1",
-    "homeScore": null,
-    "awayTeamId": "svv04-m2",
-    "awayScore": null,
-    "locationId": "sporthal-drostenhal",
-    "field": 2
-  },
-  {
-    "round": 10,
-    "time": "2019-12-21T08:15:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "germanicus-csvc-m1",
-    "homeScore": null,
-    "awayTeamId": "vios-m1",
-    "awayScore": null,
-    "locationId": "sporthal-drostenhal",
-    "field": 2
-  },
-  {
-    "round": 10,
-    "time": "2019-12-21T08:30:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "svv04-m1",
-    "homeScore": null,
-    "awayTeamId": "sc-erica-m1",
-    "awayScore": null,
-    "locationId": "sporthal-drostenhal",
-    "field": 2
+    "field": null
   },
   {
     "round": 10,
     "time": "2019-12-21T08:45:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "dalen-dsc-m1",
-    "homeScore": null,
-    "awayTeamId": "sc-erica-m1",
-    "awayScore": null,
-    "locationId": "sporthal-drostenhal",
-    "field": 2
-  },
-  {
-    "round": 10,
-    "time": "2019-12-21T09:00:00.000Z",
     "pouleId": "minis",
     "homeTeamId": "vv-raptim-m1",
     "homeScore": null,
     "awayTeamId": "germanicus-csvc-m1",
     "awayScore": null,
     "locationId": "sporthal-drostenhal",
-    "field": 2
+    "field": null
+  },
+  {
+    "round": 10,
+    "time": "2019-12-21T09:00:00.000Z",
+    "pouleId": "minis",
+    "homeTeamId": "svv04-m1",
+    "homeScore": null,
+    "awayTeamId": "sc-erica-m1",
+    "awayScore": null,
+    "locationId": "sporthal-drostenhal",
+    "field": null
+  },
+  {
+    "round": 10,
+    "time": "2019-12-21T09:15:00.000Z",
+    "pouleId": "minis",
+    "homeTeamId": "germanicus-csvc-m1",
+    "homeScore": null,
+    "awayTeamId": "vios-m1",
+    "awayScore": null,
+    "locationId": "sporthal-drostenhal",
+    "field": null
+  },
+  {
+    "round": 10,
+    "time": "2019-12-21T09:30:00.000Z",
+    "pouleId": "minis",
+    "homeTeamId": "dalen-dsc-m1",
+    "homeScore": null,
+    "awayTeamId": "sc-erica-m1",
+    "awayScore": null,
+    "locationId": "sporthal-drostenhal",
+    "field": null
   },
   {
     "round": 11,
@@ -5838,7 +5805,7 @@
     "awayTeamId": "sc-erica-m1",
     "awayScore": null,
     "locationId": "sporthal-erica",
-    "field": 1
+    "field": null
   },
   {
     "round": 11,
@@ -5849,95 +5816,40 @@
     "awayTeamId": "germanicus-csvc-m1",
     "awayScore": null,
     "locationId": "sporthal-erica",
-    "field": 1
+    "field": null
   },
   {
     "round": 11,
     "time": "2020-01-11T08:30:00.000Z",
+    "pouleId": "minis",
+    "homeTeamId": "germanicus-csvc-m1",
+    "homeScore": null,
+    "awayTeamId": "sc-erica-m1",
+    "awayScore": null,
+    "locationId": "sporthal-erica",
+    "field": null
+  },
+  {
+    "round": 11,
+    "time": "2020-01-11T08:45:00.000Z",
     "pouleId": "minis",
     "homeTeamId": "vios-m1",
     "homeScore": null,
     "awayTeamId": "vv-raptim-m1",
     "awayScore": null,
     "locationId": "sporthal-erica",
-    "field": 1
-  },
-  {
-    "round": 11,
-    "time": "2020-01-11T08:45:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "germanicus-csvc-m1",
-    "homeScore": null,
-    "awayTeamId": "sc-erica-m1",
-    "awayScore": null,
-    "locationId": "sporthal-erica",
-    "field": 1
+    "field": null
   },
   {
     "round": 11,
     "time": "2020-01-11T09:00:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "svv04-m2",
-    "homeScore": null,
-    "awayTeamId": "svv04-m1",
-    "awayScore": null,
-    "locationId": "sporthal-erica",
-    "field": 1
-  },
-  {
-    "round": 11,
-    "time": "2020-01-11T09:15:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "svv04-m1",
-    "homeScore": null,
-    "awayTeamId": "germanicus-csvc-m1",
-    "awayScore": null,
-    "locationId": "sporthal-erica",
-    "field": 1
-  },
-  {
-    "round": 11,
-    "time": "2020-01-11T08:00:00.000Z",
     "pouleId": "minis",
     "homeTeamId": "svv04-m1",
     "homeScore": null,
     "awayTeamId": "dalen-dsc-m1",
     "awayScore": null,
     "locationId": "sporthal-erica",
-    "field": 2
-  },
-  {
-    "round": 11,
-    "time": "2020-01-11T08:15:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "sc-erica-m1",
-    "homeScore": null,
-    "awayTeamId": "svv04-m2",
-    "awayScore": null,
-    "locationId": "sporthal-erica",
-    "field": 2
-  },
-  {
-    "round": 11,
-    "time": "2020-01-11T08:45:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "dalen-dsc-m1",
-    "homeScore": null,
-    "awayTeamId": "vios-m1",
-    "awayScore": null,
-    "locationId": "sporthal-erica",
-    "field": 2
-  },
-  {
-    "round": 11,
-    "time": "2020-01-11T09:00:00.000Z",
-    "pouleId": "minis",
-    "homeTeamId": "vv-raptim-m1",
-    "homeScore": null,
-    "awayTeamId": "svv04-m2",
-    "awayScore": null,
-    "locationId": "sporthal-erica",
-    "field": 2
+    "field": null
   },
   {
     "round": 11,
@@ -5948,6 +5860,28 @@
     "awayTeamId": "vios-m1",
     "awayScore": null,
     "locationId": "sporthal-erica",
-    "field": 2
+    "field": null
+  },
+  {
+    "round": 11,
+    "time": "2020-01-11T09:30:00.000Z",
+    "pouleId": "minis",
+    "homeTeamId": "svv04-m1",
+    "homeScore": null,
+    "awayTeamId": "germanicus-csvc-m1",
+    "awayScore": null,
+    "locationId": "sporthal-erica",
+    "field": null
+  },
+  {
+    "round": 11,
+    "time": "2020-01-11T09:45:00.000Z",
+    "pouleId": "minis",
+    "homeTeamId": "dalen-dsc-m1",
+    "homeScore": null,
+    "awayTeamId": "vios-m1",
+    "awayScore": null,
+    "locationId": "sporthal-erica",
+    "field": null
   }
 ]

@@ -16,6 +16,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
             awayTeam: TeamJson @link(from: "awayTeamId")
             awayScore: Int
             location: LocationJson @link(from: "locationId")
+            field: Int
          }`,
         `type TeamScore {
             team: TeamJson @link(from: "teamId")
