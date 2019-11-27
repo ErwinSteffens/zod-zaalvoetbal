@@ -4,7 +4,7 @@
 
 https://zodzaalvoetbal.nl
 
-![](app/static/zod.png)
+![](app/static/zod.png | width=200)
 
 This is a website for a local soccer competition for youth players in Zuid-Oost Drenthe, The Netherlands.
 
