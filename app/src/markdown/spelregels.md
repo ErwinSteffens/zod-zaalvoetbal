@@ -70,7 +70,9 @@ Omdat we niet de mogelijkheid hebben om wedstrijden in te halen op een later tij
 
 #### Scheidsrechters
 
--   Bij de JO8 en JO9- jeugd ben je spelleider.
+-   Bij de JO12 en JO13 moeten scheidsrechters door de vereniging geregeld worden.
+-   Bij alle andere teams moet het thuis spelende team voor een scheidsrechter zorgen. Dit is het team dat als eerste genoemd staat bij een wedstrijd.
+-   Bij de JO8 en JO9 jeugd ben je spelleider.
 -   Hoe meer je fluit hoe minder er gevoetbald wordt.
 -   Hoe minder je fluit, hoe groter de spelvreugde.
 -   Fluit wel hard en duidelijk wanneer er gefloten moet worden.
