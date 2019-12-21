@@ -13,11 +13,17 @@ const PouleGames = ({ games, teamId }) => {
                 </h6>
                 {gamesByDate.entrySeq().map(([locationId, gamesByLocation]) => {
                     const location = gamesByLocation.first().first().location
+
+                    var locationName = location.venue
+                    if (!locationName.includes(location.city)) {
+                        locationName += ` - ${location.city}`
+                    }
+
                     return (
                         <Fragment key={locationId}>
                             <h6 className="games-header sub">
                                 <Link className="location" to={`/locaties/${location.id}`}>
-                                    {location.venue} - {location.city}
+                                    {locationName}
                                 </Link>
                             </h6>
                             {gamesByLocation.entrySeq().map(([field, gamesByField]) => {
