@@ -17,7 +17,7 @@ const PouleGames = ({ games, teamId }) => {
                         <Fragment key={locationId}>
                             <h6 className="games-header sub">
                                 <Link className="location" to={`/locaties/${location.id}`}>
-                                    {location.venue}
+                                    {location.venue} - {location.city}
                                 </Link>
                             </h6>
                             {gamesByLocation.entrySeq().map(([field, gamesByField]) => {
