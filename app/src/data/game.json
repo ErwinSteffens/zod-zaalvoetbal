@@ -169,9 +169,9 @@
     "time": "2019-12-21T08:00:00.000Z",
     "pouleId": "o10-poule-c",
     "homeTeamId": "dalen-dsc-jo10-3",
-    "homeScore": null,
+    "homeScore": 3,
     "awayTeamId": "ksc-jo10-1",
-    "awayScore": null,
+    "awayScore": 0,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -180,9 +180,9 @@
     "time": "2019-12-21T08:24:00.000Z",
     "pouleId": "o10-poule-c",
     "homeTeamId": "ksc-jo10-1",
-    "homeScore": null,
+    "homeScore": 1,
     "awayTeamId": "germanicus-csvc-jo10-2",
-    "awayScore": null,
+    "awayScore": 1,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -191,9 +191,9 @@
     "time": "2019-12-21T08:48:00.000Z",
     "pouleId": "o10-poule-c",
     "homeTeamId": "nkvv-protos-jo10-1",
-    "homeScore": null,
+    "homeScore": 3,
     "awayTeamId": "dalen-dsc-jo10-3",
-    "awayScore": null,
+    "awayScore": 2,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -202,9 +202,9 @@
     "time": "2019-12-21T09:12:00.000Z",
     "pouleId": "o10-poule-c",
     "homeTeamId": "germanicus-csvc-jo10-2",
-    "homeScore": null,
+    "homeScore": 1,
     "awayTeamId": "svv04-jo10-2",
-    "awayScore": null,
+    "awayScore": 1,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -213,9 +213,9 @@
     "time": "2019-12-21T09:36:00.000Z",
     "pouleId": "o10-poule-c",
     "homeTeamId": "svv04-jo10-2",
-    "homeScore": null,
+    "homeScore": 0,
     "awayTeamId": "nkvv-protos-jo10-1",
-    "awayScore": null,
+    "awayScore": 1,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -224,9 +224,9 @@
     "time": "2019-12-21T10:00:00.000Z",
     "pouleId": "o10-poule-b",
     "homeTeamId": "dalen-dsc-jo10-2",
-    "homeScore": null,
+    "homeScore": 3,
     "awayTeamId": "vv-raptim-jo10-2",
-    "awayScore": null,
+    "awayScore": 1,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -235,9 +235,9 @@
     "time": "2019-12-21T10:24:00.000Z",
     "pouleId": "o10-poule-b",
     "homeTeamId": "vv-raptim-jo10-2",
-    "homeScore": null,
+    "homeScore": 0,
     "awayTeamId": "sv-twedo-jo9-1",
-    "awayScore": null,
+    "awayScore": 3,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -246,9 +246,9 @@
     "time": "2019-12-21T10:48:00.000Z",
     "pouleId": "o10-poule-b",
     "homeTeamId": "germanicus-csvc-jo9-1",
-    "homeScore": null,
+    "homeScore": 2,
     "awayTeamId": "dalen-dsc-jo10-2",
-    "awayScore": null,
+    "awayScore": 2,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -257,9 +257,9 @@
     "time": "2019-12-21T11:12:00.000Z",
     "pouleId": "o10-poule-b",
     "homeTeamId": "sv-twedo-jo9-1",
-    "homeScore": null,
+    "homeScore": 6,
     "awayTeamId": "svv04-jo10-1",
-    "awayScore": null,
+    "awayScore": 0,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -268,9 +268,9 @@
     "time": "2019-12-21T11:36:00.000Z",
     "pouleId": "o10-poule-b",
     "homeTeamId": "svv04-jo10-1",
-    "homeScore": null,
+    "homeScore": 2,
     "awayTeamId": "germanicus-csvc-jo9-1",
-    "awayScore": null,
+    "awayScore": 2,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -279,9 +279,9 @@
     "time": "2019-12-21T12:00:00.000Z",
     "pouleId": "o13-poule-f",
     "homeTeamId": "germanicus-csvc-jo13-4",
-    "homeScore": null,
+    "homeScore": 0,
     "awayTeamId": "dalen-dsc-jo13-6",
-    "awayScore": null,
+    "awayScore": 1,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -290,9 +290,9 @@
     "time": "2019-12-21T12:24:00.000Z",
     "pouleId": "o13-poule-f",
     "homeTeamId": "nkvv-protos-jo13-2",
-    "homeScore": null,
+    "homeScore": 2,
     "awayTeamId": "germanicus-csvc-jo13-4",
-    "awayScore": null,
+    "awayScore": 1,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -301,9 +301,9 @@
     "time": "2019-12-21T12:48:00.000Z",
     "pouleId": "o13-poule-f",
     "homeTeamId": "sv-twedo-jo13-4",
-    "homeScore": null,
+    "homeScore": 5,
     "awayTeamId": "dalen-dsc-jo13-6",
-    "awayScore": null,
+    "awayScore": 0,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -312,9 +312,9 @@
     "time": "2019-12-21T13:12:00.000Z",
     "pouleId": "o13-poule-f",
     "homeTeamId": "ksc-jo13-2",
-    "homeScore": null,
+    "homeScore": 1,
     "awayTeamId": "nkvv-protos-jo13-2",
-    "awayScore": null,
+    "awayScore": 3,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -323,9 +323,9 @@
     "time": "2019-12-21T13:36:00.000Z",
     "pouleId": "o13-poule-f",
     "homeTeamId": "sv-twedo-jo13-4",
-    "homeScore": null,
+    "homeScore": 3,
     "awayTeamId": "ksc-jo13-2",
-    "awayScore": null,
+    "awayScore": 2,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -403,7 +403,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sweel-jo9-3",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -414,7 +414,7 @@
     "homeScore": null,
     "awayTeamId": "germanicus-csvc-jo9-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -425,7 +425,7 @@
     "homeScore": null,
     "awayTeamId": "vios-jo9-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -436,7 +436,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sleen-jo9-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -447,7 +447,7 @@
     "homeScore": null,
     "awayTeamId": "svv04-jo9-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -458,7 +458,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo8-5",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -469,7 +469,7 @@
     "homeScore": null,
     "awayTeamId": "sv-twedo-jo8-3",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -480,7 +480,7 @@
     "homeScore": null,
     "awayTeamId": "sc-erica-jo8-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -491,7 +491,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo8-6",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -502,7 +502,7 @@
     "homeScore": null,
     "awayTeamId": "dalen-dsc-jo8-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -513,7 +513,7 @@
     "homeScore": null,
     "awayTeamId": "germanicus-csvc-jo8-3",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -524,7 +524,7 @@
     "homeScore": null,
     "awayTeamId": "svv04-jo8-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -1998,7 +1998,7 @@
     "homeScore": null,
     "awayTeamId": "vios-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2009,7 +2009,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sweel-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2020,7 +2020,7 @@
     "homeScore": null,
     "awayTeamId": "sc-erica-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2031,7 +2031,7 @@
     "homeScore": null,
     "awayTeamId": "germanicus-csvc-jo13-3",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2042,7 +2042,7 @@
     "homeScore": null,
     "awayTeamId": "dalen-dsc-jo13-4",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2053,7 +2053,7 @@
     "homeScore": null,
     "awayTeamId": "sv-twedo-jo13-4",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2064,7 +2064,7 @@
     "homeScore": null,
     "awayTeamId": "germanicus-csvc-jo13-4",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2075,7 +2075,7 @@
     "homeScore": null,
     "awayTeamId": "ksc-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2086,7 +2086,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo13-4",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2097,7 +2097,7 @@
     "homeScore": null,
     "awayTeamId": "dalen-dsc-jo13-6",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2108,7 +2108,7 @@
     "homeScore": null,
     "awayTeamId": "nkvv-protos-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2119,7 +2119,7 @@
     "homeScore": null,
     "awayTeamId": "vios-jo12-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2130,7 +2130,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sweel-mo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2141,7 +2141,7 @@
     "homeScore": null,
     "awayTeamId": "svv04-jo12-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2152,7 +2152,7 @@
     "homeScore": null,
     "awayTeamId": "germanicus-csvc-mo12-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -2163,7 +2163,7 @@
     "homeScore": null,
     "awayTeamId": "germanicus-csvc-mo12-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -3219,7 +3219,7 @@
     "homeScore": null,
     "awayTeamId": "dalen-dsc-jo10-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -3230,7 +3230,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo10-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -3241,7 +3241,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo9-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -3252,7 +3252,7 @@
     "homeScore": null,
     "awayTeamId": "germanicus-csvc-jo10-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -3263,7 +3263,7 @@
     "homeScore": null,
     "awayTeamId": "vios-jo10-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -3274,7 +3274,7 @@
     "homeScore": null,
     "awayTeamId": "vios-jo13-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -3285,7 +3285,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -3296,7 +3296,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sweel-jo13-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -3307,7 +3307,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sleen-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -3318,7 +3318,7 @@
     "homeScore": null,
     "awayTeamId": "dalen-dsc-jo13-3",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4143,7 +4143,7 @@
     "homeScore": null,
     "awayTeamId": "sc-erica-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4154,7 +4154,7 @@
     "homeScore": null,
     "awayTeamId": "vios-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4165,7 +4165,7 @@
     "homeScore": null,
     "awayTeamId": "dalen-dsc-jo13-4",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4176,7 +4176,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sweel-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4187,7 +4187,7 @@
     "homeScore": null,
     "awayTeamId": "germanicus-csvc-jo13-3",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4198,7 +4198,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sleen-jo12-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4209,7 +4209,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sweel-mo13-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4220,7 +4220,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo12-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4231,7 +4231,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo12-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4242,7 +4242,7 @@
     "homeScore": null,
     "awayTeamId": "vios-jo12-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4253,7 +4253,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sweel-jo13-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4264,7 +4264,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4275,7 +4275,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sleen-jo13-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4286,7 +4286,7 @@
     "homeScore": null,
     "awayTeamId": "dalen-dsc-jo13-3",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -4297,7 +4297,7 @@
     "homeScore": null,
     "awayTeamId": "vios-jo13-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5001,7 +5001,7 @@
     "homeScore": null,
     "awayTeamId": "svv04-jo8-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5012,7 +5012,7 @@
     "homeScore": null,
     "awayTeamId": "sv-twedo-jo8-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5023,7 +5023,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sweel-jo8-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5034,7 +5034,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo8-4",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5045,7 +5045,7 @@
     "homeScore": null,
     "awayTeamId": "vios-jo8-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5056,7 +5056,7 @@
     "homeScore": null,
     "awayTeamId": "germanicus-csvc-jo8-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5067,7 +5067,7 @@
     "homeScore": null,
     "awayTeamId": "vv-sweel-jo9-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5078,7 +5078,7 @@
     "homeScore": null,
     "awayTeamId": "sv-twedo-jo9-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5089,7 +5089,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo9-2",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5100,7 +5100,7 @@
     "homeScore": null,
     "awayTeamId": "dalen-dsc-jo9-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5111,7 +5111,7 @@
     "homeScore": null,
     "awayTeamId": "sc-erica-jo9-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5122,7 +5122,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo8-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5133,7 +5133,7 @@
     "homeScore": null,
     "awayTeamId": "ksc-jo13-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5144,7 +5144,7 @@
     "homeScore": null,
     "awayTeamId": "nkvv-protos-jo13-1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5155,7 +5155,7 @@
     "homeScore": null,
     "awayTeamId": "dalen-dsc-jo13-5",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5166,7 +5166,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-jo13-3",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5177,7 +5177,7 @@
     "homeScore": null,
     "awayTeamId": "sv-twedo-jo13-3",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5727,7 +5727,7 @@
     "homeScore": null,
     "awayTeamId": "vv-raptim-m1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5738,7 +5738,7 @@
     "homeScore": null,
     "awayTeamId": "dalen-dsc-m1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5749,7 +5749,7 @@
     "homeScore": null,
     "awayTeamId": "svv04-m1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5760,7 +5760,7 @@
     "homeScore": null,
     "awayTeamId": "germanicus-csvc-m1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5771,7 +5771,7 @@
     "homeScore": null,
     "awayTeamId": "sc-erica-m1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5782,7 +5782,7 @@
     "homeScore": null,
     "awayTeamId": "vios-m1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
@@ -5793,7 +5793,7 @@
     "homeScore": null,
     "awayTeamId": "sc-erica-m1",
     "awayScore": null,
-    "locationId": "de-goorn-oosterhesselen",
+    "locationId": "sporthal-de-goorn",
     "field": null
   },
   {
