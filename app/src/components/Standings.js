@@ -39,20 +39,17 @@ const Standings = ({ poule, teamId }) => {
                 </div>
                 <div className="value goals">
                     <OverlayTrigger placement="top" overlay={<Tooltip>Doelpunten voor</Tooltip>}>
-                        <span>DV</span>
+                        <span>+</span>
                     </OverlayTrigger>
                 </div>
                 <div className="value goals">
                     <OverlayTrigger placement="top" overlay={<Tooltip>Doelpunten tegen</Tooltip>}>
-                        <span>DT</span>
+                        <span>-</span>
                     </OverlayTrigger>
                 </div>
                 <div className="value goals">
-                    <OverlayTrigger
-                        placement="top"
-                        overlay={<Tooltip>Doelpunten verschil</Tooltip>}
-                    >
-                        <span>DV</span>
+                    <OverlayTrigger placement="top" overlay={<Tooltip>Doelsaldo</Tooltip>}>
+                        <span>DS</span>
                     </OverlayTrigger>
                 </div>
             </div>
