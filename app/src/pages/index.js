@@ -1,12 +1,19 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Alert } from 'react-bootstrap'
+import moment from 'moment'
 
 import Layout from '../components/Layout'
 import ClubLogo from '../components/ClubLogo'
 
 export default ({ data }) => {
     const clubs = data.allClubJson
+    const updates = data.allUpdatesYaml.edges
+
+    let lastUpdate = null
+    if (updates.length) {
+        lastUpdate = updates[0].node
+    }
 
     return (
         <Layout>
@@ -23,6 +30,18 @@ export default ({ data }) => {
                 Op deze site zijn de programma's, uitslagen en standen voor alle teams te vinden.
                 Klik op een van de onderstaande teams om deze te bekijken.
             </p>
+            {lastUpdate && (
+                <>
+                    <br />
+                    <Alert variant="info" className="small">
+                        Bijgewerkt {moment(lastUpdate.time).calendar()}: {lastUpdate.message}
+                        <br />
+                        <Link className="alert-link" to="/updates">
+                            Alle updates
+                        </Link>
+                    </Alert>
+                </>
+            )}
             <h4 className="mt-5">Teams</h4>
             <Row>
                 {clubs.nodes.map(club => {
@@ -73,6 +92,14 @@ export const query = graphql`
                     name
                     fullName
                     sortId
+                }
+            }
+        }
+        allUpdatesYaml(sort: { fields: time, order: DESC }, limit: 1) {
+            edges {
+                node {
+                    time
+                    message
                 }
             }
         }
