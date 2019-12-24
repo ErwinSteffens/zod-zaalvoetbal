@@ -6,7 +6,6 @@ import moment from 'moment'
 import Layout from '../components/Layout'
 
 export default ({ data }) => {
-    console.log(data.allUpdatesYaml)
     const updates = data.allUpdatesYaml.edges
 
     return (
