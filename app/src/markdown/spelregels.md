@@ -22,7 +22,10 @@ className: game-rules
     - Vanuit eenvrije trap kan nooit rechtstreeksineigen doel worden gescoord. Er is dan sprake van een achterbal en moet er hoekschop worden gegeven.
 14. Indribbelen vanaf de zijlijn en uit gooien van de keeper moeten binnen 4 seconden worden genomen.
 15. De intrap dient te worden genomen op de plaats waar de bal buiten het speelveld is gegaan. De bal moet op de zijlijn worden gelegd. De speler moet bij de intrap wel achter de zijlijn staan.
-16. Bij de volgende situaties mogen de JO8 t/m JO11 de bal in dribbelen: - als de balver de zijlijn is, bij een corner en bij een vrije bal. - van uit een corner magrechtstreeks gescoord worden. - In alle drie de gevallen mag er gescoord worden.
+16. Bij de volgende situaties mogen de JO8 t/m JO11 de bal in dribbelen:
+    - als de balver de zijlijn is, bij een corner en bij een vrije bal.
+    - van uit een corner magrechtstreeks gescoord worden.
+    - In alle drie de gevallen mag er gescoord worden.
 17. Komt de bal tegen het plafond dan wordt er een intrap genomen op de zijlijn t.h.v. de plaats waar de bal het plafond heeft geraakt. De speler die de bal het laatst heeft geraakt krijgt de intrap tegen.
 18. De volgende overtredingen leveren een vrije trap op:
     - zwaar lichamelijk contact
