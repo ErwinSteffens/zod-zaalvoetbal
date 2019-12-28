@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import { List } from 'immutable'
+import moment from 'moment'
 
+import Games from '../components/Games'
 import Layout from '../components/Layout'
 import ClubLogo from '../components/ClubLogo'
 
@@ -17,6 +20,14 @@ export default ({ data }) => {
         }
         return 0
     })
+
+    let games = List(teams)
+        .flatMap(team => team.games)
+        .groupBy(game => {
+            return moment(game.time)
+                .startOf('day')
+                .toDate()
+        })
 
     return (
         <Layout className="club-page">
@@ -50,6 +61,52 @@ export default ({ data }) => {
                     )
                 })}
             </ul>
+            <br />
+            <h4>Wedstrijden</h4>
+            {games.entrySeq().map(([date, gamesByDate]) => {
+                let allPlayed = gamesByDate.every(
+                    game => game.homeScore != null && game.awayScore != null
+                )
+
+                let games
+                if (allPlayed) {
+                    games = <Games games={gamesByDate} clubId={club.id} />
+                } else {
+                    let gamesByLocation = gamesByDate.groupBy(game => {
+                        return game.location.id
+                    })
+
+                    games = gamesByLocation.entrySeq().map(([locationId, gamesTest]) => {
+                        const location = gamesTest.first().location
+
+                        var locationName = location.venue
+                        if (!locationName.includes(location.city)) {
+                            locationName += ` - ${location.city}`
+                        }
+
+                        return (
+                            <Fragment key={locationId}>
+                                <h6 className="games-header sub">
+                                    <Link className="location" to={`/locaties/${location.id}`}>
+                                        {locationName}
+                                    </Link>
+                                </h6>
+                                <Games games={gamesTest} clubId={club.id} />
+                            </Fragment>
+                        )
+                    })
+                }
+
+                return (
+                    <Fragment key={date}>
+                        <h6 key={date} className="games-header date">
+                            {moment(date).format('dddd LL')}
+                        </h6>
+                        {games}
+                        <br />
+                    </Fragment>
+                )
+            })}
         </Layout>
     )
 }
@@ -67,6 +124,38 @@ export const query = graphql`
                 name
                 fullName
                 sortId
+                games {
+                    id
+                    time
+                    location {
+                        id
+                        venue
+                        city
+                    }
+                    field
+                    homeScore
+                    awayScore
+                    homeTeam {
+                        id
+                        name
+                        fullName
+                        category
+                        club {
+                            id
+                            name
+                        }
+                    }
+                    awayTeam {
+                        id
+                        name
+                        fullName
+                        category
+                        club {
+                            id
+                            name
+                        }
+                    }
+                }
             }
         }
     }

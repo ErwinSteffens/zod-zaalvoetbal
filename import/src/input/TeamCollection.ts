@@ -5,6 +5,7 @@ export interface Team {
     clubId: string
     name: string
     pouleId: string
+    category: string
 }
 
 class TeamCollection {

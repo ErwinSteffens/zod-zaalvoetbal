@@ -6,52 +6,50 @@ import ClubLogo from './ClubLogo'
 
 import 'react-toggle/style.css'
 
-const Games = ({ games, teamId, showScores }) => {
+const Games = ({ games, teamId, clubId, showScores }) => {
     return (
         <div className="games-table">
-            {games
-                .sortBy(g => g.time)
-                .map(game => {
-                    const { homeTeam, homeScore, awayTeam, awayScore } = game
+            {games.map(game => {
+                const { homeTeam, homeScore, awayTeam, awayScore } = game
 
-                    const isPlayed = showScores && homeScore != null && awayScore != null
-                    const middleClasses = cn('item', 'middle', {
-                        score: isPlayed,
-                        time: !isPlayed
-                    })
+                const isPlayed = showScores && homeScore != null && awayScore != null
+                const middleClasses = cn('item', 'middle', {
+                    score: isPlayed,
+                    time: !isPlayed
+                })
 
-                    const middleContent = isPlayed
-                        ? `${homeScore} - ${awayScore}`
-                        : moment(game.time).format('LT')
+                const middleContent = isPlayed
+                    ? `${homeScore} - ${awayScore}`
+                    : moment(game.time).format('LT')
 
-                    return (
-                        <Fragment key={game.id}>
-                            <div className="game">
-                                <div
-                                    className={cn('item', 'team', 'home', {
-                                        highlight: teamId === homeTeam.id
-                                    })}
-                                >
-                                    {homeTeam.fullName}
-                                </div>
-                                <div className="item logo">
-                                    <ClubLogo club={homeTeam.club} />
-                                </div>
-                                <div className={middleClasses}>{middleContent}</div>
-                                <div className="item logo">
-                                    <ClubLogo club={awayTeam.club} />
-                                </div>
-                                <div
-                                    className={cn('item', 'team', 'away', {
-                                        highlight: teamId === awayTeam.id
-                                    })}
-                                >
-                                    {awayTeam.fullName}
-                                </div>
+                return (
+                    <Fragment key={game.id}>
+                        <div className="game">
+                            <div
+                                className={cn('item', 'team', 'home', {
+                                    highlight: teamId === homeTeam.id || clubId === homeTeam.club.id
+                                })}
+                            >
+                                {homeTeam.fullName}
                             </div>
-                        </Fragment>
-                    )
-                })}
+                            <div className="item logo">
+                                <ClubLogo club={homeTeam.club} />
+                            </div>
+                            <div className={middleClasses}>{middleContent}</div>
+                            <div className="item logo">
+                                <ClubLogo club={awayTeam.club} />
+                            </div>
+                            <div
+                                className={cn('item', 'team', 'away', {
+                                    highlight: teamId === awayTeam.id || clubId === awayTeam.club.id
+                                })}
+                            >
+                                {awayTeam.fullName}
+                            </div>
+                        </div>
+                    </Fragment>
+                )
+            })}
         </div>
     )
 }

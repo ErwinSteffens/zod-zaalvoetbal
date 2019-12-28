@@ -207,7 +207,7 @@ body
 .games-header
     display: block
     text-align: center
-    padding-bottom: 5px
+    padding-bottom: 15px
     margin-bottom: 0
     font-size: 1.3rem
     margin-bottom: 0
@@ -215,9 +215,13 @@ body
     &::first-letter
         text-transform: uppercase
 
+    &.date
+        font-size: 1.4rem 
+
     &.sub
-        font-size: 0.9rem
-        padding-bottom: 20px
+        font-size: 1rem
+        padding-top: 10px
+        padding-bottom: 10px
 
     &.last
         margin-top: 10px
@@ -225,7 +229,7 @@ body
         font-size: 1.1rem
     
 .games-table
-    margin-bottom: 40px
+    margin-bottom: 20px
     border-top: 1px solid #eee
 
     @include media-breakpoint-down(xs) 
@@ -438,50 +442,3 @@ body
                 .item
                     &.time
                         font-size: 1.2rem
-        // .games-table
-        //     margin-bottom: 40px
-        //     font-size: 1.3rem
-
-        //     .game
-        //         display: flex
-        //         flex-wrap: wrap
-        //         align-items: center
-        //         padding-top: 8px
-        //         padding-bottom: 8px
-        //         border-bottom: none
-
-        //         .item
-        //             width: 10%
-        //             display: flex
-        //             flex-direction: column
-        //             text-align: center
-
-        //             &.time
-        //                 width: 6%
-
-        //             &.logo
-        //                 width: 12%
-
-        //             &.team
-        //                 width: 35%
-        //                 padding-left: 6px
-        //                 padding-right: 6px
-
-        //                 &.highlight
-        //                     font-weight: 700
-
-        //                 &.home
-        //                     text-align: right
-                        
-        //                 &.away
-        //                     text-align: left
-
-        //             .club-logo
-        //                 width: 32px
-        //                 height: 32px
-        //                 display: block
-        //                 margin-left: auto
-        //                 margin-right: auto
-
-        //         .middle
-        //             text-align: center

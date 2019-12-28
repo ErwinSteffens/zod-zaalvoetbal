@@ -74,7 +74,8 @@ class Importer {
             id: teamId,
             clubId: clubId,
             name: teamInfo.teamName,
-            pouleId: pouleId
+            pouleId: pouleId,
+            category: teamInfo.category
         })
 
         const poule = this.poules.findById(pouleId)
