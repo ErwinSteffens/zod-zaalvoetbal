@@ -19,12 +19,12 @@ className: game-rules
 13. Er kan niet rechtstreeks gescoord worden uit:
     - De aftrap.
     - Intrap vanaf de zijlijn.
-    - Vanuit eenvrije trap kan nooit rechtstreeksineigen doel worden gescoord. Er is dan sprake van een achterbal en moet er hoekschop worden gegeven.
-14. Indribbelen vanaf de zijlijn en uit gooien van de keeper moeten binnen 4 seconden worden genomen.
+    - Vanuit een vrije trap kan nooit rechtstreeks in eigen doel worden gescoord. Er is dan sprake van een achterbal en moet er hoekschop worden gegeven.
+14. In-dribbelen vanaf de zijlijn en uit gooien van de keeper moeten binnen 4 seconden worden genomen.
 15. De intrap dient te worden genomen op de plaats waar de bal buiten het speelveld is gegaan. De bal moet op de zijlijn worden gelegd. De speler moet bij de intrap wel achter de zijlijn staan.
 16. Bij de volgende situaties mogen de JO8 t/m JO11 de bal in dribbelen:
     - als de balver de zijlijn is, bij een corner en bij een vrije bal.
-    - van uit een corner magrechtstreeks gescoord worden.
+    - van uit een corner mag rechtstreeks gescoord worden.
     - In alle drie de gevallen mag er gescoord worden.
 17. Komt de bal tegen het plafond dan wordt er een intrap genomen op de zijlijn t.h.v. de plaats waar de bal het plafond heeft geraakt. De speler die de bal het laatst heeft geraakt krijgt de intrap tegen.
 18. De volgende overtredingen leveren een vrije trap op:
@@ -35,7 +35,7 @@ className: game-rules
     - onvoldoende afstand nemen bij vrije bal.
 19. Een overtreding binnen de cirkel (6 meter) moet bestraft worden met een strafschop.
 20. In het zaalvoetbal is er wel degelijk sprake van een voordeelregel nl. wanneer de partij waartegen de overtreding wordt begaan toch in een kansrijke positie komt, dan mag er voordeel worden gegeven.
-21. Spelers kunnen voor overtredingen worden gestraft met tijdstraffen van 2 minuten of met een veldverwijdering voor de duur van de rest van de wedstrijd. Gestrafte spelers dienen plaats te nemen aan de tafel bij de wedstrijdsecretaris/ordedienst. De laatstgenoemde houdt de tijd bij.
+21. Spelers kunnen voor overtredingen worden gestraft met tijdstraffen van 2 minuten of met een veld verwijdering voor de duur van de rest van de wedstrijd. Gestrafte spelers dienen plaats te nemen aan de tafel bij de wedstrijdsecretaris/ordedienst. De laatstgenoemde houdt de tijd bij.
 22. Indien een team te weinig spelers heeft dient men het team aan te vullen met één of meerdere spelers **uit een lager ingedeeld team**.
 23. Wanneer een team een onrechtmatige speler opstelt en dit wordt geconstateerd, resulteert dit automatisch in een 3-0 verlies voor dit team.
 
