@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { List } from 'immutable'
 import { Row, Col } from 'react-bootstrap'
 import moment from 'moment'
@@ -66,7 +66,7 @@ export default ({ data }) => {
                 return (
                     <Row key={date.toString()} className="games">
                         <Col>
-                            <h6 className="games-header">{moment(date).format('dddd LL')}</h6>
+                            <h6 className="games-header date">{moment(date).format('dddd LL')}</h6>
                             {gamesOnDate.entrySeq().map(([field, gamesOnField]) => {
                                 return (
                                     <Fragment key={field || 'field'}>
@@ -76,7 +76,12 @@ export default ({ data }) => {
                                             return (
                                                 <Fragment key={pouleId}>
                                                     <h6 className="games-header last">
-                                                        {poule.name}
+                                                        <Link
+                                                            className="location"
+                                                            to={`/poules/${poule.id}`}
+                                                        >
+                                                            {poule.name}
+                                                        </Link>
                                                     </h6>
                                                     {poule.temporary && <TemporaryWarning />}
                                                     <Games games={gamesByPoule} />

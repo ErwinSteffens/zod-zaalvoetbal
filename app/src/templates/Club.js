@@ -28,6 +28,7 @@ export default ({ data }) => {
                 .startOf('day')
                 .toDate()
         })
+        .sortBy((v, k) => k)
 
     return (
         <Layout className="club-page">

@@ -20,7 +20,7 @@ export default ({ children, className }) => (
                 rel="stylesheet"
             />
         </Helmet>
-        <Container fluid className={cn(className)}>
+        <Container fluid className={cn('content', className)}>
             {children}
         </Container>
     </>

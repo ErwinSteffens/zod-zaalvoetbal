@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from 'gatsby'
 import cn from 'classnames'
 import moment from 'moment'
 
@@ -13,9 +14,9 @@ const Games = ({ games, teamId, clubId, showScores }) => {
                 const { homeTeam, homeScore, awayTeam, awayScore } = game
 
                 const isPlayed = showScores && homeScore != null && awayScore != null
-                const middleClasses = cn('item', 'middle', {
-                    score: isPlayed,
-                    time: !isPlayed
+                const middleClasses = cn('game-content', {
+                    'game-content-score': isPlayed,
+                    'game-content-time': !isPlayed
                 })
 
                 const middleContent = isPlayed
@@ -25,27 +26,25 @@ const Games = ({ games, teamId, clubId, showScores }) => {
                 return (
                     <Fragment key={game.id}>
                         <div className="game">
-                            <div
-                                className={cn('item', 'team', 'home', {
+                            <Link
+                                className={cn('game-team', 'game-team-home', {
                                     highlight: teamId === homeTeam.id || clubId === homeTeam.club.id
                                 })}
+                                to={`/${homeTeam.club.id}/${homeTeam.name}`}
                             >
-                                {homeTeam.fullName}
-                            </div>
-                            <div className="item logo">
+                                <div className="game-team-name">{homeTeam.fullName}</div>
                                 <ClubLogo club={homeTeam.club} />
-                            </div>
+                            </Link>
                             <div className={middleClasses}>{middleContent}</div>
-                            <div className="item logo">
-                                <ClubLogo club={awayTeam.club} />
-                            </div>
-                            <div
-                                className={cn('item', 'team', 'away', {
+                            <Link
+                                className={cn('game-team', 'game-team-away', {
                                     highlight: teamId === awayTeam.id || clubId === awayTeam.club.id
                                 })}
+                                to={`/${awayTeam.club.id}/${awayTeam.name}`}
                             >
-                                {awayTeam.fullName}
-                            </div>
+                                <ClubLogo club={awayTeam.club} />
+                                <div className="game-team-name">{awayTeam.fullName}</div>
+                            </Link>
                         </div>
                     </Fragment>
                 )

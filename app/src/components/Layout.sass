@@ -90,7 +90,7 @@ body
         margin-bottom: 30px
         
     h4
-        margin-bottom: 10px
+        margin-bottom: 20px
 
     h6.subtitle
         margin-top: -25px
@@ -210,12 +210,12 @@ body
     padding-bottom: 15px
     margin-bottom: 0
     font-size: 1.3rem
-    margin-bottom: 0
 
     &::first-letter
         text-transform: uppercase
 
     &.date
+        margin-top: 30px
         font-size: 1.4rem 
 
     &.sub
@@ -234,7 +234,7 @@ body
 
     @include media-breakpoint-down(xs) 
         font-size: .8rem
-        margin-bottom: 40px
+        margin-bottom: 20px
 
     h4
         &.poule
@@ -246,67 +246,71 @@ body
             margin-top: 20px
             border-bottom: 1px solid #eee
 
+    a
+        text-decoration: none
+
+        &:hover
+            background-color: #eee
+
     .game
         display: flex
-        flex-wrap: wrap
         align-items: center
-        padding-top: 8px
-        padding-bottom: 8px
         border-bottom: 1px solid #eee
 
-        .item
-            width: 10%
+        .game-team
+            width: 46%
             display: flex
-            flex-direction: column
-            text-align: center
+            padding-top: 8px
+            padding-bottom: 8px
+            
+            @include media-breakpoint-down(xs) 
+                width: 43%
 
-            &.logo
-                width: 8%
-
-                @include media-breakpoint-down(xs) 
-                    width: 6%
-
-            &.middle
-                width: 8%
-                font-size: .9rem
-
-                &.score
-                    font-size: 1.2rem
-
-                @include media-breakpoint-down(xs) 
-                    width: 14%
-                    font-size: .8rem
-
-            &.team
-                width: 38%
-                padding-left: 6px
-                padding-right: 6px
-
-                @include media-breakpoint-down(xs) 
-                    width: 37%
-
-                &.highlight
-                    font-weight: 700
-
-                &.home
-                    text-align: right
-                
-                &.away
-                    text-align: left
+            .game-team-name
+                display: flex
+                align-self: stretch
+                line-height: 28px
 
             .club-logo
                 width: 28px
                 height: 28px
-                display: block
-                margin-left: auto
-                margin-right: auto
+                display: flex
+                flex-basis: auto
+                align-self: center
+                margin-left: 8px
+                margin-right: 8px
 
                 @include media-breakpoint-down(xs) 
                     width: 20px
                     height: 20px
 
-        .middle
+            &.highlight
+                font-weight: 700
+
+            &.game-team-home
+                text-align: right
+
+                .game-team-name
+                    margin-left: auto
+                
+            &.game-team-away
+                text-align: left
+
+                .game-team-name
+                    margin-right: auto
+
+        .game-content
+            width: 8%
+            font-size: .9rem
             text-align: center
+
+            &.game-content-score
+                text-align: center
+                font-size: 1.1rem
+
+            @include media-breakpoint-down(xs) 
+                width: 14%
+                font-size: .8rem
 
 .team-list
     list-style-type: none
@@ -435,10 +439,10 @@ body
             font-size: 1.1rem
 
             .game
-                padding-top: 8px
-                padding-bottom: 8px
                 border: none
+                margin-top: 2px
+                margin-bottom: 2px
 
-                .item
-                    &.time
-                        font-size: 1.2rem
+                .game-content
+                    &.game-content-time
+                        font-size: 1.1rem
