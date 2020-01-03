@@ -11,9 +11,9 @@ const Games = ({ games, teamId, clubId, showScores }) => {
     return (
         <div className="games-table">
             {games.map(game => {
-                const { homeTeam, homeScore, awayTeam, awayScore } = game
+                const { status, homeTeam, homeScore, awayTeam, awayScore } = game
 
-                const isPlayed = showScores && homeScore != null && awayScore != null
+                const isPlayed = showScores && status !== 'planned'
                 const middleClasses = cn('game-content', {
                     'game-content-score': isPlayed,
                     'game-content-time': !isPlayed
@@ -22,6 +22,13 @@ const Games = ({ games, teamId, clubId, showScores }) => {
                 const middleContent = isPlayed
                     ? `${homeScore} - ${awayScore}`
                     : moment(game.time).format('LT')
+
+                let footerTxt = null
+                if (status === 'home-team-no-show') {
+                    footerTxt = `${homeTeam.fullName} niet op komen dagen.`
+                } else if (status === 'away-team-no-show') {
+                    footerTxt = `${awayTeam.fullName} niet op komen dagen.`
+                }
 
                 return (
                     <Fragment key={game.id}>
@@ -45,6 +52,9 @@ const Games = ({ games, teamId, clubId, showScores }) => {
                                 <ClubLogo club={awayTeam.club} />
                                 <div className="game-team-name">{awayTeam.fullName}</div>
                             </Link>
+                            {footerTxt && (
+                                <div className="game-footer text-danger">{footerTxt}</div>
+                            )}
                         </div>
                     </Fragment>
                 )

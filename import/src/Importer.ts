@@ -94,6 +94,7 @@ class Importer {
         this.games.add({
             round: sheetGame.round,
             time: sheetGame.time,
+            status: sheetGame.status,
             pouleId: pouleId,
             homeTeamId: homeTeamId,
             homeScore: sheetGame.homeScore,

@@ -111,6 +111,7 @@ export const query = graphql`
             games {
                 id
                 time
+                status
                 poule {
                     id
                     name

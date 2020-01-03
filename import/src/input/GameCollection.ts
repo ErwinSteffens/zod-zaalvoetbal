@@ -1,8 +1,16 @@
 import * as fs from 'fs'
 
+export enum GameStatus {
+    Planned = 'planned',
+    Played = 'played',
+    HomeTeamNoShow = 'home-team-no-show',
+    AwayTeamNoShow = 'away-team-no-show'
+}
+
 export interface Game {
     round: number
     time: Date
+    status: GameStatus
     pouleId: string
     homeTeamId: string
     homeScore: number

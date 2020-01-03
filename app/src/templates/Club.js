@@ -128,6 +128,7 @@ export const query = graphql`
                 games {
                     id
                     time
+                    status
                     location {
                         id
                         venue
