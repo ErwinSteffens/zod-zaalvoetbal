@@ -19,7 +19,7 @@ export default ({ data }) => {
                         <Contact
                             header="Organisatie"
                             name="Hellen Kloeze"
-                            email="hek@aws.no"
+                            email="hek@ows.no"
                             phone="06-12942369"
                         />
                     </Col>
