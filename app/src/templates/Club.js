@@ -65,9 +65,7 @@ export default ({ data }) => {
             <br />
             <h4>Wedstrijden</h4>
             {games.entrySeq().map(([date, gamesByDate]) => {
-                let allPlayed = gamesByDate.every(
-                    game => game.homeScore != null && game.awayScore != null
-                )
+                let allPlayed = gamesByDate.every(game => game.status !== 'planned')
 
                 let games
                 if (allPlayed) {
