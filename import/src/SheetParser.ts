@@ -1,5 +1,6 @@
 import * as XLSX from 'xlsx'
 import { WorkSheet } from 'xlsx'
+import { GameStatus } from './input/GameCollection'
 
 export interface SheetPoule {
     name: string
@@ -15,6 +16,7 @@ export interface SheetTeam {
 export interface SheetGame {
     round: number
     time: Date
+    status: GameStatus
     location: string
     field: number | null
     homeTeam: string
@@ -137,21 +139,38 @@ class SheetParser {
                         )
 
                         if (homeTeam && awayTeam) {
-                            const homeScore = this.getCellValue(
+                            let status: GameStatus = GameStatus.Planned
+
+                            let homeScore = this.getCellValue(
                                 gameSheet,
                                 column + 2,
                                 row + rowIndex + 2
                             )
-                            const awayScore = this.getCellValue(
+                            let awayScore = this.getCellValue(
                                 gameSheet,
                                 column + 3,
                                 row + rowIndex + 2
                             )
 
+                            if (homeScore !== null || awayScore !== null) {
+                                if (homeScore === 'x') {
+                                    homeScore = 0
+                                    awayScore = 3
+                                    status = GameStatus.HomeTeamNoShow
+                                } else if (awayScore === 'x') {
+                                    homeScore = 3
+                                    awayScore = 0
+                                    status = GameStatus.AwayTeamNoShow
+                                } else {
+                                    status = GameStatus.Played
+                                }
+                            }
+
                             if (this.gameFound) {
                                 this.gameFound({
                                     round: round,
                                     time: time,
+                                    status: status,
                                     location: location,
                                     field: field,
                                     homeTeam: homeTeam,

@@ -144,8 +144,9 @@ body
     a
         text-decoration: none
 
-        &:hover
-            background-color: #eee
+        @media (hover: hover)
+            &:hover
+                background-color: #eee
 
     .value
         width: 6%
@@ -249,11 +250,13 @@ body
     a
         text-decoration: none
 
-        &:hover
-            background-color: #eee
+        @media (hover: hover)
+            &:hover
+                background-color: #eee
 
     .game
         display: flex
+        flex-wrap: wrap
         align-items: center
         border-bottom: 1px solid #eee
 
@@ -311,6 +314,14 @@ body
             @include media-breakpoint-down(xs) 
                 width: 14%
                 font-size: .8rem
+
+        .game-footer
+            display: flex
+            margin-left: auto
+            margin-right: auto
+            margin-top: -2px
+            margin-bottom: 5px
+            font-size: .8rem
 
 .team-list
     list-style-type: none
