@@ -67,6 +67,8 @@ export default ({ data }) => {
             {games.entrySeq().map(([date, gamesByDate]) => {
                 let allPlayed = gamesByDate.every(game => game.status !== 'planned')
 
+                gamesByDate = gamesByDate.sortBy(v => v.time)
+
                 let games
                 if (allPlayed) {
                     games = <Games games={gamesByDate} clubId={club.id} />
