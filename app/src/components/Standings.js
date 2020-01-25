@@ -23,32 +23,32 @@ const Standings = ({ poule, teamId }) => {
                         <span>GS</span>
                     </OverlayTrigger>
                 </div>
-                <div className="value">
+                <div className="value d-none">
                     <OverlayTrigger placement="top" overlay={<Tooltip>Winst</Tooltip>}>
                         <span>W</span>
                     </OverlayTrigger>
                 </div>
-                <div className="value">
+                <div className="value d-none">
                     <OverlayTrigger placement="top" overlay={<Tooltip>Gelijk</Tooltip>}>
                         <span>G</span>
                     </OverlayTrigger>
                 </div>
-                <div className="value">
+                <div className="value d-none">
                     <OverlayTrigger placement="top" overlay={<Tooltip>Verloren</Tooltip>}>
                         <span>V</span>
                     </OverlayTrigger>
                 </div>
-                <div className="value goals">
+                <div className="value">
                     <OverlayTrigger placement="top" overlay={<Tooltip>Doelpunten voor</Tooltip>}>
                         <span>+</span>
                     </OverlayTrigger>
                 </div>
-                <div className="value goals">
+                <div className="value">
                     <OverlayTrigger placement="top" overlay={<Tooltip>Doelpunten tegen</Tooltip>}>
                         <span>-</span>
                     </OverlayTrigger>
                 </div>
-                <div className="value goals">
+                <div className="value">
                     <OverlayTrigger placement="top" overlay={<Tooltip>Doelsaldo</Tooltip>}>
                         <span>DS</span>
                     </OverlayTrigger>
@@ -85,9 +85,9 @@ const Standings = ({ poule, teamId }) => {
                             </div>
                             <div className="value points">{teamScore.points}</div>
                             <div className="value">{teamScore.gamesPlayed}</div>
-                            <div className="value">{teamScore.gamesWon}</div>
-                            <div className="value">{teamScore.gamesDraw}</div>
-                            <div className="value">{teamScore.gamesLost}</div>
+                            <div className="value d-none">{teamScore.gamesWon}</div>
+                            <div className="value d-none">{teamScore.gamesDraw}</div>
+                            <div className="value d-none">{teamScore.gamesLost}</div>
                             <div className="value goals">{teamScore.goalsFor}</div>
                             <div className="value goals">{teamScore.goalsAgainst}</div>
                             <div className="value goals">{teamScore.goalsDifference}</div>
