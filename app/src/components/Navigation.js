@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
-import ClubLogo from './ClubLogo'
+import ClubIcon from './ClubIcon'
 
 export default () => {
     const data = useStaticQuery(graphql`
@@ -50,7 +50,7 @@ export default () => {
                         {data.allClubJson.nodes.map(club => {
                             return (
                                 <NavDropdown.Item key={club.id} as={Link} to={`/${club.id}`}>
-                                    <ClubLogo club={club} className="mr-2" small />
+                                    <ClubIcon club={club} className="mr-2" small />
                                     {club.name}
                                 </NavDropdown.Item>
                             )

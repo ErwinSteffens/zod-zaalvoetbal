@@ -99,7 +99,7 @@ body
         width: 100%
         height: 300px
 
-.club-logo
+.club-icon
     width: 256px
     height: 256px
 
@@ -116,6 +116,11 @@ body
         @include media-breakpoint-down(sm) 
             width: 120px
             height: 120px
+
+.champion-icon
+    width: 20px
+    height: 20px
+    display: inline
         
 .standings
     margin-bottom: 50px
@@ -185,7 +190,7 @@ body
             @include media-breakpoint-down(xs) 
                 display: none
 
-    .club-logo
+    .club-icon
         width: 28px
         height: 28px
         display: block
@@ -274,7 +279,7 @@ body
                 align-self: stretch
                 line-height: 28px
 
-            .club-logo
+            .club-icon
                 width: 28px
                 height: 28px
                 display: flex
@@ -326,6 +331,8 @@ body
 .team-list
     list-style-type: none
     padding: 0
+    line-height: 24px
+    vertical-align: middle
 
     li
         padding: 2px
@@ -349,7 +356,7 @@ body
             column-count: 1
 
 .contacts-page
-    .club-logo
+    .club-icon
         width: 32px
         height: 32px
 

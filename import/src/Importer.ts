@@ -1,12 +1,13 @@
 import * as fs from 'fs'
 
 import { slug } from './utils'
+import { List } from 'immutable'
 import SheetParser, { SheetPoule, SheetTeam, SheetGame } from './SheetParser'
 import TeamNameParser from './input/TeamName'
 import TeamCollection from './input/TeamCollection'
 import ClubCollection from './input/ClubCollection'
 import LocationCollection from './input/LocationCollection'
-import GameCollection from './input/GameCollection'
+import GameCollection, { GameStatus } from './input/GameCollection'
 import PouleCollection, { Poule, TeamScore } from './input/PouleCollection'
 import ScoreCalculator from './ScoreCalculator'
 
@@ -56,6 +57,7 @@ class Importer {
             id: slug(sheetPoule.name),
             name: sheetPoule.name,
             halfCompetition: sheetPoule.halfCompetition,
+            isFinished: false,
             temporary: sheetPoule.temporary,
             teamScores: []
         })
@@ -106,6 +108,34 @@ class Importer {
     }
 
     private check() {
+        this.teams.items.forEach(team => {
+            let poule = this.poules.findById(team.pouleId)
+            let teamsInPoule = poule.teamScores.length
+            let gamesForTeam = this.games.getGamesForTeam(team.id).length
+            let gamesForTeamExpected = teamsInPoule - 1
+            if (!poule.halfCompetition) {
+                gamesForTeamExpected *= 2
+            }
+
+            if (gamesForTeam !== gamesForTeamExpected) {
+                console.warn(
+                    `Expected ${gamesForTeamExpected} but found ${gamesForTeam} for team ${team.id}`
+                )
+            }
+        })
+
+        this.poules.items = this.poules.items.map(poule => {
+            let gamesForPoule = List(this.games.items).filter(game => game.pouleId == poule.id)
+            let isFinished = gamesForPoule.every(game => game.status !== GameStatus.Planned)
+
+            return {
+                ...poule,
+                ...{
+                    isFinished: isFinished
+                }
+            }
+        })
+
         this.teams.items.forEach(team => {
             let poule = this.poules.findById(team.pouleId)
             let teamsInPoule = poule.teamScores.length

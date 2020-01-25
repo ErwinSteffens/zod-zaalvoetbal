@@ -56,6 +56,7 @@ export const query = graphql`
                     id
                     name
                     fullName
+                    isChampion
                     club {
                         id
                         name

@@ -3,7 +3,8 @@ import { Link } from 'gatsby'
 import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 import cn from 'classnames'
 
-import ClubLogo from './ClubLogo'
+import ClubIcon from './ClubIcon'
+import ChampionIcon from './ChampionIcon'
 
 const Standings = ({ poule, teamId }) => {
     return (
@@ -76,10 +77,11 @@ const Standings = ({ poule, teamId }) => {
                         >
                             <div className="value position">{index + 1}</div>
                             <div className="value logo">
-                                <ClubLogo club={team.club} small />
+                                <ClubIcon club={team.club} small />
                             </div>
                             <div xs={6} className="value team">
                                 {team.fullName}
+                                {team.isChampion && <ChampionIcon className="ml-2" />}
                             </div>
                             <div className="value points">{teamScore.points}</div>
                             <div className="value">{teamScore.gamesPlayed}</div>

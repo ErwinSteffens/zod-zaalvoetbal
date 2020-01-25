@@ -7,7 +7,7 @@ import { Row, Col } from 'react-bootstrap'
 import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
-import ClubLogo from '../components/ClubLogo'
+import ClubIcon from '../components/ClubIcon'
 import Standings from '../components/Standings'
 import PouleGames from '../components/PouleGames'
 import TemporaryWarning from '../components/TemporaryWarning'
@@ -49,7 +49,7 @@ export default ({ data }) => {
                 <title>ZOD Zaalvoetbal - {team.fullName}</title>
             </Helmet>
             <div className="clearfix">
-                <ClubLogo className="page-header" club={team.club} />
+                <ClubIcon className="page-header" club={team.club} />
                 <h3>{team.fullName}</h3>
                 <h6 className="subtitle">{poule.name}</h6>
             </div>
@@ -60,8 +60,12 @@ export default ({ data }) => {
                     <h4>Wedstrijden</h4>
                 </Col>
                 <Col xs={12} md={6} className="text-md-right">
-                    <label className="game-toggle">
-                        <Toggle checked={showAll} onChange={e => setShowAll(e.target.checked)} />
+                    <label for="game-toggle" className="game-toggle">
+                        <Toggle
+                            name="game-toggle"
+                            checked={showAll}
+                            onChange={e => setShowAll(e.target.checked)}
+                        />
                         <span className="label-text">Toon alle poule wedstrijden</span>
                     </label>
                 </Col>
@@ -91,6 +95,7 @@ export const query = graphql`
                         id
                         name
                         fullName
+                        isChampion
                         club {
                             id
                             name

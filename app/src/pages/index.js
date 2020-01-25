@@ -4,7 +4,8 @@ import { Row, Col, Alert } from 'react-bootstrap'
 import moment from 'moment'
 
 import Layout from '../components/Layout'
-import ClubLogo from '../components/ClubLogo'
+import ClubIcon from '../components/ClubIcon'
+import ChampionIcon from '../components/ChampionIcon'
 
 export default ({ data }) => {
     const clubs = data.allClubJson
@@ -56,7 +57,7 @@ export default ({ data }) => {
                     })
 
                     return (
-                        <Col key={club.id} xs={12} md={6} lg={4} xl={3} className="mb-2 mt-2">
+                        <Col key={club.id} xs={12} md={6} lg={4} className="mb-2 mt-2">
                             <ul className="team-list">
                                 {teams.map(team => {
                                     return (
@@ -66,8 +67,11 @@ export default ({ data }) => {
                                                 as={Link}
                                                 to={`/${club.id}/${team.name}`}
                                             >
-                                                <ClubLogo club={club} className="mr-2" small />
+                                                <ClubIcon club={club} className="mr-2" small />
                                                 {team.fullName}
+                                                {team.isChampion && (
+                                                    <ChampionIcon className="ml-2" />
+                                                )}
                                             </Link>
                                         </li>
                                     )
@@ -92,6 +96,7 @@ export const query = graphql`
                     name
                     fullName
                     sortId
+                    isChampion
                 }
             }
         }

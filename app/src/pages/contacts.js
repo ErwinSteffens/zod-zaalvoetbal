@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import ClubLogo from '../components/ClubLogo'
+import ClubIcon from '../components/ClubIcon'
 import Contact from '../components/Contact'
 
 export default ({ data }) => {
@@ -48,7 +48,7 @@ export default ({ data }) => {
                                 <Contact
                                     header={
                                         <>
-                                            <ClubLogo className="mr-2" club={club} />
+                                            <ClubIcon className="mr-2" club={club} />
                                             {club.name}
                                         </>
                                     }

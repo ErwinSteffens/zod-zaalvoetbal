@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import cn from 'classnames'
 import moment from 'moment'
 
-import ClubLogo from './ClubLogo'
+import ClubIcon from './ClubIcon'
 
 import 'react-toggle/style.css'
 
@@ -40,7 +40,7 @@ const Games = ({ games, teamId, clubId, showScores }) => {
                                 to={`/${homeTeam.club.id}/${homeTeam.name}`}
                             >
                                 <div className="game-team-name">{homeTeam.fullName}</div>
-                                <ClubLogo club={homeTeam.club} />
+                                <ClubIcon club={homeTeam.club} />
                             </Link>
                             <div className={middleClasses}>{middleContent}</div>
                             <Link
@@ -49,7 +49,7 @@ const Games = ({ games, teamId, clubId, showScores }) => {
                                 })}
                                 to={`/${awayTeam.club.id}/${awayTeam.name}`}
                             >
-                                <ClubLogo club={awayTeam.club} />
+                                <ClubIcon club={awayTeam.club} />
                                 <div className="game-team-name">{awayTeam.fullName}</div>
                             </Link>
                             {footerTxt && (

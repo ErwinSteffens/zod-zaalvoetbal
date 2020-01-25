@@ -6,7 +6,8 @@ import moment from 'moment'
 
 import Games from '../components/Games'
 import Layout from '../components/Layout'
-import ClubLogo from '../components/ClubLogo'
+import ClubIcon from '../components/ClubIcon'
+import ChampionIcon from '../components/ChampionIcon'
 
 export default ({ data }) => {
     const club = data.clubJson
@@ -36,7 +37,7 @@ export default ({ data }) => {
                 <title>ZOD Zaalvoetbal - {club.name}</title>
             </Helmet>
             <div className="clearfix">
-                <ClubLogo className="page-header" club={club} />
+                <ClubIcon className="page-header" club={club} />
                 <h3>{club.name}</h3>
                 <b>Contactpersoon:</b>
                 <br />
@@ -55,8 +56,9 @@ export default ({ data }) => {
                     return (
                         <li>
                             <Link key={team.id} as={Link} to={`/${club.id}/${team.name}`}>
-                                <ClubLogo club={club} className="mr-2" small />
+                                <ClubIcon club={club} className="mr-2" small />
                                 {team.fullName}
+                                {team.isChampion && <ChampionIcon className="ml-2" />}
                             </Link>
                         </li>
                     )
@@ -124,6 +126,7 @@ export const query = graphql`
                 id
                 name
                 fullName
+                isChampion
                 sortId
                 games {
                     id

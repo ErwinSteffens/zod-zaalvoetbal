@@ -75,6 +75,21 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
                         return `${club.name} ${source.name}`
                     }
                 },
+                isChampion: {
+                    type: 'Boolean',
+                    resolve(source, args, context, info) {
+                        let poule = context.nodeModel.getNodeById({
+                            id: source.pouleId,
+                            type: 'PouleJson'
+                        })
+
+                        if (poule.isFinished) {
+                            let teamScore = poule.teamScores.find(ts => ts.teamId === source.id)
+                            return teamScore.rank === 0
+                        }
+                        return false
+                    }
+                },
                 sortId: {
                     type: 'Int',
                     resolve(source, args, context, info) {
