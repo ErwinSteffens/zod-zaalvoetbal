@@ -24,7 +24,9 @@ const Games = ({ games, teamId, clubId, showScores }) => {
                     : moment(game.time).format('LT')
 
                 let footerTxt = null
-                if (status === 'home-team-no-show') {
+                if (status === 'both-team-no-show') {
+                    footerTxt = `Beide niet op komen dagen.`
+                } else if (status === 'home-team-no-show') {
                     footerTxt = `${homeTeam.fullName} niet op komen dagen.`
                 } else if (status === 'away-team-no-show') {
                     footerTxt = `${awayTeam.fullName} niet op komen dagen.`

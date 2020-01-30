@@ -1,4 +1,4 @@
-import GameCollection, { Game } from './input/GameCollection'
+import GameCollection, { Game, GameStatus } from './input/GameCollection'
 import PouleCollection, { Poule, TeamScore } from './input/PouleCollection'
 
 class ScoreCalculator {
@@ -95,11 +95,29 @@ class ScoreCalculator {
             return
         }
 
-        this.processScore(game.pouleId, game.homeTeamId, game.homeScore, game.awayScore)
-        this.processScore(game.pouleId, game.awayTeamId, game.awayScore, game.homeScore)
+        this.processScore(
+            game.pouleId,
+            game.homeTeamId,
+            game.homeScore,
+            game.awayScore,
+            game.status
+        )
+        this.processScore(
+            game.pouleId,
+            game.awayTeamId,
+            game.awayScore,
+            game.homeScore,
+            game.status
+        )
     }
 
-    private processScore(pouleId: string, teamId: string, goalsFor: number, goalsAgainst: number) {
+    private processScore(
+        pouleId: string,
+        teamId: string,
+        goalsFor: number,
+        goalsAgainst: number,
+        status: GameStatus
+    ) {
         const poule = this.poules.findById(pouleId)
         const teamScore = poule.teamScores.find(t => t.teamId === teamId)
         if (!teamScore) {
@@ -112,14 +130,16 @@ class ScoreCalculator {
         teamScore.goalsAgainst += goalsAgainst
         teamScore.goalsDifference += goalsFor - goalsAgainst
 
-        if (goalsFor > goalsAgainst) {
-            teamScore.points += 3
-            teamScore.gamesWon++
-        } else if (goalsFor < goalsAgainst) {
-            teamScore.gamesLost++
-        } else {
-            teamScore.points += 1
-            teamScore.gamesDraw++
+        if (status !== GameStatus.BothTeamNoShow) {
+            if (goalsFor > goalsAgainst) {
+                teamScore.points += 3
+                teamScore.gamesWon++
+            } else if (goalsFor < goalsAgainst) {
+                teamScore.gamesLost++
+            } else {
+                teamScore.points += 1
+                teamScore.gamesDraw++
+            }
         }
     }
 }

@@ -153,7 +153,11 @@ class SheetParser {
                             )
 
                             if (homeScore !== null || awayScore !== null) {
-                                if (homeScore === 'x') {
+                                if (homeScore === 'x' && awayScore === 'x') {
+                                    homeScore = 0
+                                    awayScore = 0
+                                    status = GameStatus.BothTeamNoShow
+                                } else if (homeScore === 'x') {
                                     homeScore = 0
                                     awayScore = 3
                                     status = GameStatus.HomeTeamNoShow

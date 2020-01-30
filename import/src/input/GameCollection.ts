@@ -3,6 +3,7 @@ import * as fs from 'fs'
 export enum GameStatus {
     Planned = 'planned',
     Played = 'played',
+    BothTeamNoShow = 'both-team-no-show',
     HomeTeamNoShow = 'home-team-no-show',
     AwayTeamNoShow = 'away-team-no-show'
 }
