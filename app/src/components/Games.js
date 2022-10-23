@@ -10,13 +10,13 @@ import 'react-toggle/style.css'
 const Games = ({ games, teamId, clubId, showScores }) => {
     return (
         <div className="games-table">
-            {games.map(game => {
+            {games.map((game) => {
                 const { status, homeTeam, homeScore, awayTeam, awayScore } = game
 
                 const isPlayed = showScores && status !== 'planned'
                 const middleClasses = cn('game-content', {
                     'game-content-score': isPlayed,
-                    'game-content-time': !isPlayed
+                    'game-content-time': !isPlayed,
                 })
 
                 const middleContent = isPlayed
@@ -33,13 +33,15 @@ const Games = ({ games, teamId, clubId, showScores }) => {
                 }
 
                 return (
-                    <Fragment key={game.id}>
+                    <Fragment key={game.jsonId}>
                         <div className="game">
                             <Link
                                 className={cn('game-team', 'game-team-home', {
-                                    highlight: teamId === homeTeam.id || clubId === homeTeam.club.id
+                                    highlight:
+                                        teamId === homeTeam.jsonId ||
+                                        clubId === homeTeam.club.jsonId,
                                 })}
-                                to={`/${homeTeam.club.id}/${homeTeam.name}`}
+                                to={`/${homeTeam.club.jsonId}/${homeTeam.name}`}
                             >
                                 <div className="game-team-name">{homeTeam.fullName}</div>
                                 <ClubIcon club={homeTeam.club} />
@@ -47,9 +49,11 @@ const Games = ({ games, teamId, clubId, showScores }) => {
                             <div className={middleClasses}>{middleContent}</div>
                             <Link
                                 className={cn('game-team', 'game-team-away', {
-                                    highlight: teamId === awayTeam.id || clubId === awayTeam.club.id
+                                    highlight:
+                                        teamId === awayTeam.jsonId ||
+                                        clubId === awayTeam.club.jsonId,
                                 })}
-                                to={`/${awayTeam.club.id}/${awayTeam.name}`}
+                                to={`/${awayTeam.club.jsonId}/${awayTeam.name}`}
                             >
                                 <ClubIcon club={awayTeam.club} />
                                 <div className="game-team-name">{awayTeam.fullName}</div>
@@ -66,7 +70,7 @@ const Games = ({ games, teamId, clubId, showScores }) => {
 }
 
 Games.defaultProps = {
-    showScores: true
+    showScores: true,
 }
 
 export default Games

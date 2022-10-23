@@ -9,22 +9,20 @@ import Standings from '../components/Standings'
 import PouleGames from '../components/PouleGames'
 import TemporaryWarning from '../components/TemporaryWarning'
 
-export default ({ data }) => {
+const PouleTemplate = ({ data }) => {
     const poule = data.pouleJson
 
     let games = List(poule.games)
-        .groupBy(game => {
-            return moment(game.time)
-                .startOf('day')
-                .toDate()
+        .groupBy((game) => {
+            return moment(game.time).startOf('day').toDate()
         })
-        .map(games => {
+        .map((games) => {
             return games
-                .groupBy(game => {
-                    return game.location.id
+                .groupBy((game) => {
+                    return game.location.jsonId
                 })
-                .map(games =>
-                    games.groupBy(game => {
+                .map((games) =>
+                    games.groupBy((game) => {
                         return game.field
                     })
                 )
@@ -46,19 +44,19 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-    query($id: String!) {
-        pouleJson(id: { eq: $id }) {
-            id
+    query ($id: String!) {
+        pouleJson(jsonId: { eq: $id }) {
+            jsonId
             name
             temporary
             teamScores {
                 team {
-                    id
+                    jsonId
                     name
                     fullName
                     isChampion
                     club {
-                        id
+                        jsonId
                         name
                     }
                 }
@@ -73,11 +71,10 @@ export const query = graphql`
                 goalsDifference
             }
             games {
-                id
                 time
                 status
                 location {
-                    id
+                    jsonId
                     venue
                     city
                 }
@@ -85,20 +82,20 @@ export const query = graphql`
                 homeScore
                 awayScore
                 homeTeam {
-                    id
+                    jsonId
                     name
                     fullName
                     club {
-                        id
+                        jsonId
                         name
                     }
                 }
                 awayTeam {
-                    id
+                    jsonId
                     name
                     fullName
                     club {
-                        id
+                        jsonId
                         name
                     }
                 }
@@ -106,3 +103,5 @@ export const query = graphql`
         }
     }
 `
+
+export default PouleTemplate

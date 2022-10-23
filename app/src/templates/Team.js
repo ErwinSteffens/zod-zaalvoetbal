@@ -12,7 +12,7 @@ import Standings from '../components/Standings'
 import PouleGames from '../components/PouleGames'
 import TemporaryWarning from '../components/TemporaryWarning'
 
-export default ({ data }) => {
+const TeamTemplate = ({ data }) => {
     const [showAll, setShowAll] = useState(true)
 
     const team = data.teamJson
@@ -20,22 +20,22 @@ export default ({ data }) => {
 
     var games = poule.games
     if (!showAll) {
-        games = games.filter(g => g.homeTeam.id === team.id || g.awayTeam.id === team.id)
+        games = games.filter(
+            (g) => g.homeTeam.jsonId === team.jsonId || g.awayTeam.jsonId === team.jsonId
+        )
     }
 
     games = List(games)
-        .groupBy(game => {
-            return moment(game.time)
-                .startOf('day')
-                .toDate()
+        .groupBy((game) => {
+            return moment(game.time).startOf('day').toDate()
         })
-        .map(games => {
+        .map((games) => {
             return games
-                .groupBy(game => {
-                    return game.location.id
+                .groupBy((game) => {
+                    return game.location.jsonId
                 })
-                .map(games =>
-                    games.groupBy(game => {
+                .map((games) =>
+                    games.groupBy((game) => {
                         return game.field
                     })
                 )
@@ -54,7 +54,7 @@ export default ({ data }) => {
                 <h6 className="subtitle">{poule.name}</h6>
             </div>
             <h4 className="mb-4">Stand</h4>
-            <Standings poule={poule} teamId={team.id} />
+            <Standings poule={poule} teamId={team.jsonId} />
             <Row className="mb-4">
                 <Col xs={12} md={6}>
                     <h4>Wedstrijden</h4>
@@ -64,40 +64,40 @@ export default ({ data }) => {
                         <Toggle
                             name="game-toggle"
                             checked={showAll}
-                            onChange={e => setShowAll(e.target.checked)}
+                            onChange={(e) => setShowAll(e.target.checked)}
                         />
                         <span className="label-text">Toon alle poule wedstrijden</span>
                     </label>
                 </Col>
             </Row>
             {poule.temporary && <TemporaryWarning />}
-            <PouleGames games={games} teamId={team.id} />
+            <PouleGames games={games} teamId={team.jsonId} />
         </Layout>
     )
 }
 
 export const query = graphql`
-    query($id: String!) {
-        teamJson(id: { eq: $id }) {
-            id
+    query ($id: String!) {
+        teamJson(jsonId: { eq: $id }) {
+            jsonId
             name
             fullName
             club {
-                id
+                jsonId
                 name
             }
             poule {
-                id
+                jsonId
                 name
                 temporary
                 teamScores {
                     team {
-                        id
+                        jsonId
                         name
                         fullName
                         isChampion
                         club {
-                            id
+                            jsonId
                             name
                         }
                     }
@@ -112,12 +112,11 @@ export const query = graphql`
                     goalsDifference
                 }
                 games {
-                    id
                     time
                     status
                     round
                     location {
-                        id
+                        jsonId
                         venue
                         city
                     }
@@ -125,20 +124,20 @@ export const query = graphql`
                     homeScore
                     awayScore
                     homeTeam {
-                        id
+                        jsonId
                         name
                         fullName
                         club {
-                            id
+                            jsonId
                             name
                         }
                     }
                     awayTeam {
-                        id
+                        jsonId
                         name
                         fullName
                         club {
-                            id
+                            jsonId
                             name
                         }
                     }
@@ -147,3 +146,5 @@ export const query = graphql`
         }
     }
 `
+
+export default TeamTemplate

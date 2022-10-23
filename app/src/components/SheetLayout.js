@@ -6,11 +6,11 @@ import 'moment/locale/nl'
 
 import './Layout.sass'
 
-export default ({ children, className }) => (
+const SheetLayout = ({ children, className }) => (
     <>
         <Helmet
             bodyAttributes={{
-                class: 'sheet'
+                class: 'sheet',
             }}
         >
             <title>ZOD Zaalvoetbal</title>
@@ -25,3 +25,5 @@ export default ({ children, className }) => (
         </Container>
     </>
 )
+
+export default SheetLayout

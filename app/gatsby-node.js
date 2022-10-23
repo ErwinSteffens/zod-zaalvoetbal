@@ -2,24 +2,25 @@ const path = require(`path`)
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
     const { createTypes } = actions
+
     const typeDefs = [
         `type ClubJson implements Node {
-            teams: [TeamJson] @link(by: "clubId", from: "id")
+            teams: [TeamJson] @link(by: "clubId", from: "jsonId")
          }`,
         `type LocationJson implements Node {
-            games: [GameJson] @link(by: "locationId", from: "id")
+            games: [GameJson] @link(by: "locationId", from: "jsonId")
          }`,
         `type GameJson implements Node {
-            poule: PouleJson @link(from: "pouleId")
-            homeTeam: TeamJson @link(from: "homeTeamId")
+            poule: PouleJson @link(by: "jsonId", from: "pouleId")
+            homeTeam: TeamJson @link(by: "jsonId", from: "homeTeamId")
             homeScore: Int
-            awayTeam: TeamJson @link(from: "awayTeamId")
+            awayTeam: TeamJson @link(by: "jsonId", from: "awayTeamId")
             awayScore: Int
-            location: LocationJson @link(from: "locationId")
+            location: LocationJson @link(by: "jsonId", from: "locationId")
             field: Int
          }`,
         `type TeamScore {
-            team: TeamJson @link(from: "teamId")
+            team: TeamJson @link(by: "jsonId", from: "teamId")
             rank: Int
             points: Int
             gamesPlayed: Int
@@ -45,72 +46,89 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
                         let regex = /O(\d+) Poule ([A-Z]{1})/
                         let result = source.name.match(regex)
                         return parseInt(result[1]) * 100 + result[2].charCodeAt(0)
-                    }
+                    },
                 },
                 games: {
                     type: '[GameJson]',
-                    resolve(source, args, context, info) {
-                        const teamIds = source.teamScores.map(teamScore => teamScore.teamId)
-                        return context.nodeModel
-                            .getAllNodes({ type: 'GameJson' })
-                            .filter(game => teamIds.includes(game.homeTeamId))
-                    }
-                }
-            }
+                    resolve: async (source, args, context, info) => {
+                        const teamIds = source.teamScores.map((teamScore) => teamScore.teamId)
+                        let games = await context.nodeModel.findAll({ type: 'GameJson' })
+
+                        return games.entries.filter((game) => teamIds.includes(game.homeTeamId))
+                    },
+                },
+            },
         }),
         `type TeamJson implements Node {
-            club: ClubJson @link(from: "clubId")
-            poule: PouleJson @link(from: "pouleId")
+            club: ClubJson @link(by: "jsonId", from: "clubId")
+            poule: PouleJson @link(by: "jsonId", from: "pouleId")
          }`,
         schema.buildObjectType({
             name: 'TeamJson',
             fields: {
                 fullName: {
                     type: 'String',
-                    resolve(source, args, context, info) {
-                        let club = context.nodeModel.getNodeById({
-                            id: source.clubId,
-                            type: 'ClubJson'
+                    resolve: async (source, args, context, info) => {
+                        let club = await context.nodeModel.findOne({
+                            query: {
+                                filter: {
+                                    jsonId: { eq: source.clubId },
+                                },
+                            },
+                            type: 'ClubJson',
                         })
                         return `${club.name} ${source.name}`
-                    }
+                    },
                 },
                 isChampion: {
                     type: 'Boolean',
-                    resolve(source, args, context, info) {
-                        let poule = context.nodeModel.getNodeById({
-                            id: source.pouleId,
-                            type: 'PouleJson'
+                    resolve: async (source, args, context, info) => {
+                        let poule = await context.nodeModel.findOne({
+                            query: {
+                                filter: {
+                                    jsonId: { eq: source.pouleId },
+                                },
+                            },
+                            type: 'PouleJson',
                         })
 
                         if (poule.isFinished) {
-                            let teamScore = poule.teamScores.find(ts => ts.teamId === source.id)
+                            let teamScore = poule.teamScores.find(
+                                (ts) => ts.teamId === source.jsonId
+                            )
                             return teamScore.rank === 0
                         }
                         return false
-                    }
+                    },
                 },
                 sortId: {
                     type: 'Int',
-                    resolve(source, args, context, info) {
+                    resolve: (source, args, context, info) => {
                         let regex = /(JO|MO|M)(\d+)(?:-(\d+))?/
                         let result = source.name.match(regex)
+
+                        let teamType = result[1]
+                        if (teamType === 'M') {
+                            return parseInt(result[2])
+                        }
+
                         return parseInt(result[2]) * 10 + parseInt(result[3])
-                    }
+                    },
                 },
                 games: {
                     type: '[GameJson]',
-                    resolve(source, args, context, info) {
-                        return context.nodeModel
-                            .getAllNodes({ type: 'GameJson' })
-                            .filter(
-                                game =>
-                                    game.homeTeamId === source.id || game.awayTeamId === source.id
-                            )
-                    }
-                }
-            }
-        })
+                    resolve: async (source, args, context, info) => {
+                        var games = await context.nodeModel.findAll({ type: 'GameJson' })
+
+                        return games.entries.filter(
+                            (game) =>
+                                game.homeTeamId === source.jsonId ||
+                                game.awayTeamId === source.jsonId
+                        )
+                    },
+                },
+            },
+        }),
     ]
     createTypes(typeDefs)
 }
@@ -123,7 +141,7 @@ exports.createPages = async ({ graphql, actions }) => {
             allClubJson {
                 edges {
                     node {
-                        id
+                        jsonId
                     }
                 }
             }
@@ -132,11 +150,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
     clubs.data.allClubJson.edges.forEach(({ node }) => {
         createPage({
-            path: `/${node.id}`,
-            component: path.resolve(`./src/templates/Club.js`),
+            path: `/${node.jsonId}`,
+            component: path.resolve(`./src/templates/club.js`),
             context: {
-                id: node.id
-            }
+                id: node.jsonId,
+            },
         })
     })
 
@@ -145,10 +163,10 @@ exports.createPages = async ({ graphql, actions }) => {
             allTeamJson {
                 edges {
                     node {
-                        id
+                        jsonId
                         name
                         club {
-                            id
+                            jsonId
                         }
                     }
                 }
@@ -158,11 +176,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
     teams.data.allTeamJson.edges.forEach(({ node }) => {
         createPage({
-            path: `${node.club.id}/${node.name}`,
-            component: path.resolve(`./src/templates/Team.js`),
+            path: `${node.club.jsonId}/${node.name}`,
+            component: path.resolve(`./src/templates/team.js`),
             context: {
-                id: node.id
-            }
+                id: node.jsonId,
+            },
         })
     })
 
@@ -171,7 +189,7 @@ exports.createPages = async ({ graphql, actions }) => {
             allPouleJson {
                 edges {
                     node {
-                        id
+                        jsonId
                         name
                     }
                 }
@@ -181,11 +199,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
     poules.data.allPouleJson.edges.forEach(({ node }) => {
         createPage({
-            path: `poules/${node.id}`,
-            component: path.resolve(`./src/templates/Poule.js`),
+            path: `poules/${node.jsonId}`,
+            component: path.resolve(`./src/templates/poule.js`),
             context: {
-                id: node.id
-            }
+                id: node.jsonId,
+            },
         })
     })
 
@@ -194,7 +212,7 @@ exports.createPages = async ({ graphql, actions }) => {
             allLocationJson {
                 edges {
                     node {
-                        id
+                        jsonId
                     }
                 }
             }
@@ -203,31 +221,31 @@ exports.createPages = async ({ graphql, actions }) => {
 
     locations.data.allLocationJson.edges.forEach(({ node }) => {
         createPage({
-            path: `locaties/${node.id}`,
-            component: path.resolve(`./src/templates/Location.js`),
+            path: `locaties/${node.jsonId}`,
+            component: path.resolve(`./src/templates/location.js`),
             context: {
-                id: node.id
-            }
+                id: node.jsonId,
+            },
         })
     })
 
     locations.data.allLocationJson.edges.forEach(({ node }) => {
         createPage({
-            path: `sheets/scores/${node.id}`,
-            component: path.resolve(`./src/templates/sheets/Scores.js`),
+            path: `sheets/scores/${node.jsonId}`,
+            component: path.resolve(`./src/templates/sheets/scores.js`),
             context: {
-                id: node.id
-            }
+                id: node.jsonId,
+            },
         })
     })
 
     locations.data.allLocationJson.edges.forEach(({ node }) => {
         createPage({
-            path: `sheets/games/${node.id}`,
-            component: path.resolve(`./src/templates/sheets/Games.js`),
+            path: `sheets/games/${node.jsonId}`,
+            component: path.resolve(`./src/templates/sheets/games.js`),
             context: {
-                id: node.id
-            }
+                id: node.jsonId,
+            },
         })
     })
 
@@ -253,8 +271,8 @@ exports.createPages = async ({ graphql, actions }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
             path: node.frontmatter.path,
-            component: path.resolve(`src/templates/Page.js`),
-            context: {}
+            component: path.resolve(`src/templates/page.js`),
+            context: {},
         })
     })
 }

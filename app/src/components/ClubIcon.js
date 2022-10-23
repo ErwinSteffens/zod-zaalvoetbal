@@ -3,9 +3,9 @@ import cn from 'classnames'
 
 const ClubIcon = ({ club, className, small }) => {
     const classes = cn('club-icon', className, {
-        small: small
+        small: small,
     })
-    const path = small ? `/logo/small/${club.id}.png` : `/logo/${club.id}.png`
+    const path = small ? `/logo/small/${club.jsonId}.png` : `/logo/${club.jsonId}.png`
     return <img src={path} alt={club.name} className={classes} />
 }
 

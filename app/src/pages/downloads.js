@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 
-export default ({ data }) => {
+const DownloadsPage = ({ data }) => {
     const locations = data.allLocationJson.nodes
 
     return (
@@ -15,11 +15,11 @@ export default ({ data }) => {
                 van de uitslagen van de wedstrijden.
             </p>
             <ul className="list">
-                {locations.map(location => {
+                {locations.map((location) => {
                     return (
-                        <li key={location.id}>
+                        <li key={location.jsonId}>
                             <a
-                                key={location.id}
+                                key={location.jsonId}
                                 href={`/downloads/scores/Uitslagen - ${location.venue}.pdf`}
                             >
                                 {location.venue}
@@ -34,11 +34,11 @@ export default ({ data }) => {
                 programma's voor alle speeldagen.
             </p>
             <ul className="list">
-                {locations.map(location => {
+                {locations.map((location) => {
                     return (
-                        <li key={location.id}>
+                        <li key={location.jsonId}>
                             <a
-                                key={location.id}
+                                key={location.jsonId}
                                 href={`/downloads/games/Programma - ${location.venue}.pdf`}
                             >
                                 {location.venue}
@@ -61,9 +61,11 @@ export const query = graphql`
     query {
         allLocationJson(sort: { fields: city }) {
             nodes {
-                id
+                jsonId
                 venue
             }
         }
     }
 `
+
+export default DownloadsPage

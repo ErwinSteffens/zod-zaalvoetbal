@@ -14,7 +14,7 @@ async function runGatsby() {
 
     let gatsby = spawn('gatsby', ['serve'], { detached: false, stdio: 'inherit' })
 
-    gatsby.on('exit', code => {
+    gatsby.on('exit', (code) => {
         console.log(`child process exited with code ${code}`)
         process.exit(1)
     })
@@ -25,7 +25,7 @@ async function runGatsby() {
         resources: [baseUrl],
         delay: 1000,
         interval: 100,
-        timeout: 30000
+        timeout: 30000,
     })
 
     console.log('Gatsby is running')
@@ -33,7 +33,7 @@ async function runGatsby() {
     return gatsby
 }
 
-const mkdir = path => {
+const mkdir = (path) => {
     rimraf.sync(path)
     fs.mkdirSync(path, { recursive: true })
 }
@@ -41,6 +41,7 @@ const mkdir = path => {
 const createPdfFile = async (url, filePath) => {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
+
     await page.goto(url)
     await page.pdf({
         path: `static/downloads/${filePath}`,
@@ -49,8 +50,8 @@ const createPdfFile = async (url, filePath) => {
             top: '40px',
             bottom: '40px',
             left: '40px',
-            right: '40px'
-        }
+            right: '40px',
+        },
     })
     await browser.close()
 }
@@ -72,7 +73,7 @@ const run = async () => {
     console.log('Start creating game sheets')
 
     mkdir('static/downloads/games')
-    const promisesGames = locations.map(location => {
+    const promisesGames = locations.map((location) => {
         return createPdfFile(
             `${baseUrl}/sheets/games/${location.id}`,
             `games/Programma - ${location.venue}.pdf`
@@ -85,7 +86,7 @@ const run = async () => {
     console.log('Creating score sheets')
 
     mkdir('static/downloads/scores')
-    const promisesScores = locations.map(location => {
+    const promisesScores = locations.map((location) => {
         return createPdfFile(
             `${baseUrl}/sheets/scores/${location.id}`,
             `scores/Uitslagen - ${location.venue}.pdf`
@@ -106,7 +107,7 @@ run()
     .then(() => {
         process.exit(0)
     })
-    .catch(err => {
+    .catch((err) => {
         console.error(err)
         process.exit(1)
     })

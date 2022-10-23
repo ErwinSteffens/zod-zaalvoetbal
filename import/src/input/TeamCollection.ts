@@ -20,7 +20,7 @@ class TeamCollection {
     }
 
     findById(teamId: string) {
-        const team = this.items.find(t => t.id == teamId)
+        const team = this.items.find((t) => t.id == teamId)
         if (!team) {
             throw new Error(`Team with ID '${teamId}' not found`)
         }

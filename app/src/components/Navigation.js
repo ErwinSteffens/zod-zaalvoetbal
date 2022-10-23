@@ -4,24 +4,24 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 import ClubIcon from './ClubIcon'
 
-export default () => {
+const Navigation = () => {
     const data = useStaticQuery(graphql`
         query {
             allClubJson(sort: { fields: name }) {
                 nodes {
-                    id
+                    jsonId
                     name
                 }
             }
             allPouleJson(sort: { fields: sortId }) {
                 nodes {
-                    id
+                    jsonId
                     name
                 }
             }
             allLocationJson(sort: { fields: city }) {
                 nodes {
-                    id
+                    jsonId
                     venue
                     city
                 }
@@ -38,18 +38,26 @@ export default () => {
                         Home
                     </Nav.Link>
                     <NavDropdown title="Poules">
-                        {data.allPouleJson.nodes.map(node => {
+                        {data.allPouleJson.nodes.map((node) => {
                             return (
-                                <NavDropdown.Item key={node.id} as={Link} to={`/poules/${node.id}`}>
+                                <NavDropdown.Item
+                                    key={node.jsonId}
+                                    as={Link}
+                                    to={`/poules/${node.jsonId}`}
+                                >
                                     {node.name}
                                 </NavDropdown.Item>
                             )
                         })}
                     </NavDropdown>
                     <NavDropdown title="Clubs">
-                        {data.allClubJson.nodes.map(club => {
+                        {data.allClubJson.nodes.map((club) => {
                             return (
-                                <NavDropdown.Item key={club.id} as={Link} to={`/${club.id}`}>
+                                <NavDropdown.Item
+                                    key={club.jsonId}
+                                    as={Link}
+                                    to={`/${club.jsonId}`}
+                                >
                                     <ClubIcon club={club} className="mr-2" small />
                                     {club.name}
                                 </NavDropdown.Item>
@@ -57,12 +65,12 @@ export default () => {
                         })}
                     </NavDropdown>
                     <NavDropdown title="Locaties">
-                        {data.allLocationJson.nodes.map(node => {
+                        {data.allLocationJson.nodes.map((node) => {
                             return (
                                 <NavDropdown.Item
-                                    key={node.id}
+                                    key={node.jsonId}
                                     as={Link}
-                                    to={`/locaties/${node.id}`}
+                                    to={`/locaties/${node.jsonId}`}
                                 >
                                     {node.city} - {node.venue}
                                 </NavDropdown.Item>
@@ -83,3 +91,5 @@ export default () => {
         </Navbar>
     )
 }
+
+export default Navigation

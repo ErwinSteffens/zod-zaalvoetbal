@@ -20,7 +20,7 @@ class ClubCollection {
     private fromFile(inputFile: string) {
         this.items = JSON.parse(fs.readFileSync(inputFile).toString()) as Club[]
 
-        this.items = this.items.map(c => {
+        this.items = this.items.map((c) => {
             return Object.assign({ id: slug(c.name) }, c)
         })
 
@@ -28,7 +28,7 @@ class ClubCollection {
     }
 
     findByInputName(inputName: string) {
-        const result = this.items.find(c => c.inputName == inputName)
+        const result = this.items.find((c) => c.inputName == inputName)
         if (!result) {
             throw new Error(`Club with input name ${inputName} not found`)
         }

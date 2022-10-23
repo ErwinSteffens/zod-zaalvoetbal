@@ -22,7 +22,7 @@ const PouleGames = ({ games, teamId }) => {
                     return (
                         <Fragment key={locationId}>
                             <h6 className="games-header sub">
-                                <Link className="location" to={`/locaties/${location.id}`}>
+                                <Link className="location" to={`/locaties/${location.jsonId}`}>
                                     {locationName}
                                 </Link>
                             </h6>

@@ -38,7 +38,7 @@ class PouleCollection {
     }
 
     findById(pouleId: string) {
-        const poule = this.items.find(t => t.id == pouleId)
+        const poule = this.items.find((t) => t.id == pouleId)
         if (!poule) {
             throw new Error(`Team with ID '${pouleId}' not found`)
         }
@@ -46,7 +46,7 @@ class PouleCollection {
     }
 
     getPouleForTeam(homeTeamId: string): Poule {
-        return this.items.find(p => p.teamScores.some(t => t.teamId == homeTeamId))
+        return this.items.find((p) => p.teamScores.some((t) => t.teamId == homeTeamId))
     }
 
     save(outputDir: string) {

@@ -8,23 +8,21 @@ import { Helmet } from 'react-helmet'
 import Layout from '../../components/SheetLayout'
 import Games from '../../components/Games'
 
-export default ({ data }) => {
+const GamesTemplate = ({ data }) => {
     const location = data.locationJson
 
     const games = List(location.games)
-        .groupBy(game => {
-            return moment(game.time)
-                .startOf('day')
-                .toDate()
+        .groupBy((game) => {
+            return moment(game.time).startOf('day').toDate()
         })
-        .map(games =>
+        .map((games) =>
             games
-                .groupBy(game => {
+                .groupBy((game) => {
                     return game.field
                 })
-                .map(games =>
-                    games.groupBy(game => {
-                        return game.poule.id
+                .map((games) =>
+                    games.groupBy((game) => {
+                        return game.poule.jsonId
                     })
                 )
         )
@@ -75,40 +73,39 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-    query($id: String!) {
-        locationJson(id: { eq: $id }) {
-            id
+    query ($id: String!) {
+        locationJson(jsonId: { eq: $id }) {
+            jsonId
             venue
             games {
-                id
                 time
                 poule {
-                    id
+                    jsonId
                     name
                 }
                 location {
-                    id
+                    jsonId
                 }
                 field
                 homeTeam {
-                    id
+                    jsonId
                     name
                     fullName
                     club {
-                        id
+                        jsonId
                         name
                     }
                     poule {
-                        id
+                        jsonId
                         name
                     }
                 }
                 awayTeam {
-                    id
+                    jsonId
                     name
                     fullName
                     club {
-                        id
+                        jsonId
                         name
                     }
                 }
@@ -116,3 +113,5 @@ export const query = graphql`
         }
     }
 `
+
+export default GamesTemplate

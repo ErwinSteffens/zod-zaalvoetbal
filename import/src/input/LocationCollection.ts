@@ -21,7 +21,7 @@ class LocationCollection {
     private read(inputFile: string) {
         this.items = JSON.parse(fs.readFileSync(inputFile).toString()) as GameLocation[]
 
-        this.items = this.items.map(c => {
+        this.items = this.items.map((c) => {
             return Object.assign({ id: slug(c.venue) }, c)
         })
 
@@ -29,7 +29,7 @@ class LocationCollection {
     }
 
     findByInputName(inputName: string) {
-        const result = this.items.find(c => c.inputName == inputName)
+        const result = this.items.find((c) => c.inputName == inputName)
         if (!result) {
             throw new Error(`Location with input name ${inputName} not found`)
         }

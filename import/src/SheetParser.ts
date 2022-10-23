@@ -45,7 +45,7 @@ class SheetParser {
     }
 
     private parsePoules() {
-        this.workbook.SheetNames.forEach(name => {
+        this.workbook.SheetNames.forEach((name) => {
             const matches = name.match(/(O\d+)-([A-Z])/)
             if (matches || name == "Mini's") {
                 const sheet: WorkSheet = this.workbook.Sheets[name]
@@ -62,7 +62,7 @@ class SheetParser {
                     this.pouleFound({
                         name: pouleName,
                         halfCompetition: half,
-                        temporary: temporary
+                        temporary: temporary,
                     })
                 }
 
@@ -76,7 +76,7 @@ class SheetParser {
                     if (this.teamFound) {
                         this.teamFound({
                             name: value,
-                            poule: pouleName
+                            poule: pouleName,
                         })
                     }
 
@@ -180,7 +180,7 @@ class SheetParser {
                                     homeTeam: homeTeam,
                                     awayTeam: awayTeam,
                                     homeScore: homeScore,
-                                    awayScore: awayScore
+                                    awayScore: awayScore,
                                 })
                             }
                         }

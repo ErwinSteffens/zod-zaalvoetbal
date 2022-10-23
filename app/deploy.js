@@ -15,20 +15,20 @@ const config = {
     exclude: [],
     deleteRemote: false,
     continueOnError: true,
-    forcePasv: true
+    forcePasv: true,
 }
 
-ftpDeploy.on('uploading', function(data) {
+ftpDeploy.on('uploading', function (data) {
     console.log(
         `Uploading: ${data.filename} - ${data.transferredFileCount} of ${data.totalFilesCount}`
     )
 })
 
-ftpDeploy.on('upload-error', function(data) {
+ftpDeploy.on('upload-error', function (data) {
     console.log(`Error: ${data.filename} - ${data.err}`)
 })
 
 ftpDeploy
     .deploy(config)
-    .then(res => console.log('Deployment done'))
-    .catch(err => console.log(err))
+    .then((res) => console.log('Deployment done'))
+    .catch((err) => console.log(err))

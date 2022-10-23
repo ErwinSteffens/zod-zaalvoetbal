@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 
-export default function Template({ data }) {
+const PageTemplate = ({ data }) => {
     const { markdownRemark } = data
     const { frontmatter, html } = markdownRemark
 
@@ -21,8 +21,9 @@ export default function Template({ data }) {
         </Layout>
     )
 }
+
 export const pageQuery = graphql`
-    query($path: String!) {
+    query ($path: String!) {
         markdownRemark(frontmatter: { path: { eq: $path } }) {
             html
             frontmatter {
@@ -33,3 +34,5 @@ export const pageQuery = graphql`
         }
     }
 `
+
+export default PageTemplate

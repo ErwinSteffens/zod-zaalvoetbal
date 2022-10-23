@@ -5,7 +5,7 @@ export enum GameStatus {
     Played = 'played',
     BothTeamNoShow = 'both-team-no-show',
     HomeTeamNoShow = 'home-team-no-show',
-    AwayTeamNoShow = 'away-team-no-show'
+    AwayTeamNoShow = 'away-team-no-show',
 }
 
 export interface Game {
@@ -33,7 +33,7 @@ class GameCollection {
     }
 
     getGamesForTeam(teamId: string) {
-        return this.items.filter(game => {
+        return this.items.filter((game) => {
             return game.homeTeamId === teamId || game.awayTeamId === teamId
         })
     }

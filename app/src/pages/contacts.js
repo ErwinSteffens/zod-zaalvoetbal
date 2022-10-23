@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import ClubIcon from '../components/ClubIcon'
 import Contact from '../components/Contact'
 
-export default ({ data }) => {
+const ContactsPage = ({ data }) => {
     const clubContacts = data.allClubJson.nodes
 
     return (
@@ -42,9 +42,9 @@ export default ({ data }) => {
                 </Row>
                 <h4 className="mt-5">Club coördinatoren</h4>
                 <Row>
-                    {clubContacts.map(club => {
+                    {clubContacts.map((club) => {
                         return (
-                            <Col key={club.id} md={6} lg={4}>
+                            <Col key={club.jsonId} md={6} lg={4}>
                                 <Contact
                                     header={
                                         <>
@@ -69,7 +69,7 @@ export const query = graphql`
     query {
         allClubJson(sort: { fields: name }) {
             nodes {
-                id
+                jsonId
                 name
                 contact
                 contactPhone
@@ -78,3 +78,5 @@ export const query = graphql`
         }
     }
 `
+
+export default ContactsPage

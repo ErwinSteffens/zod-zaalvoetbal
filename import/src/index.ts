@@ -10,16 +10,16 @@ const exportLink = `${link}/export?format=xlsx`
 
 const schemaFile = './schema.xlsx'
 
-const downloadFile = async url => {
+const downloadFile = async (url) => {
     const response = await fetch(url)
 
     const fileStream = fs.createWriteStream(schemaFile)
     await new Promise((resolve, reject) => {
         response.body.pipe(fileStream)
-        response.body.on('error', err => {
+        response.body.on('error', (err) => {
             reject(err)
         })
-        fileStream.on('finish', function() {
+        fileStream.on('finish', function () {
             resolve()
         })
     })

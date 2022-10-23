@@ -5,7 +5,7 @@ import moment from 'moment'
 
 import Layout from '../components/Layout'
 
-export default ({ data }) => {
+const UpdatesPage = ({ data }) => {
     const updates = data.allUpdatesYaml.edges
 
     return (
@@ -14,7 +14,7 @@ export default ({ data }) => {
                 <h3>Site updates</h3>
                 <Row>
                     <Col sm={12}>
-                        {updates.map(node => {
+                        {updates.map((node) => {
                             const update = node.node
                             return (
                                 <p key={update.time}>
@@ -42,3 +42,5 @@ export const query = graphql`
         }
     }
 `
+
+export default UpdatesPage

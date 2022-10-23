@@ -7,14 +7,12 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../../components/SheetLayout'
 
-export default ({ data }) => {
+const ScoresTemplate = ({ data }) => {
     const location = data.locationJson
 
     const games = List(location.games)
-        .groupBy(game => {
-            return moment(game.time)
-                .startOf('day')
-                .toDate()
+        .groupBy((game) => {
+            return moment(game.time).startOf('day').toDate()
         })
         .sortBy((_v, k) => k)
 
@@ -40,14 +38,14 @@ export default ({ data }) => {
                                 <div className="item score">Uitslag</div>
                             </div>
 
-                            {games.map(game => {
+                            {games.map((game) => {
                                 const { homeTeam, awayTeam } = game
                                 const poule = homeTeam.poule
 
                                 let classes = cn('game', {
-                                    'mt-4': lastPoule !== null && lastPoule !== poule.id
+                                    'mt-4': lastPoule !== null && lastPoule !== poule.jsonId,
                                 })
-                                lastPoule = poule.id
+                                lastPoule = poule.jsonId
 
                                 let fieldHeader =
                                     game.field && game.field !== lastField ? (
@@ -58,7 +56,7 @@ export default ({ data }) => {
                                 return (
                                     <>
                                         {fieldHeader}
-                                        <div key={game.id} className={classes}>
+                                        <div key={game.jsonId} className={classes}>
                                             <div className="item time">
                                                 {moment(game.time).format('LT')}
                                             </div>
@@ -89,36 +87,35 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-    query($id: String!) {
-        locationJson(id: { eq: $id }) {
-            id
+    query ($id: String!) {
+        locationJson(jsonId: { eq: $id }) {
+            jsonId
             venue
             games {
-                id
                 time
                 location {
-                    id
+                    jsonId
                 }
                 field
                 homeTeam {
-                    id
+                    jsonId
                     name
                     fullName
                     club {
-                        id
+                        jsonId
                         name
                     }
                     poule {
-                        id
+                        jsonId
                         name
                     }
                 }
                 awayTeam {
-                    id
+                    jsonId
                     name
                     fullName
                     club {
-                        id
+                        jsonId
                         name
                     }
                 }
@@ -126,3 +123,5 @@ export const query = graphql`
         }
     }
 `
+
+export default ScoresTemplate

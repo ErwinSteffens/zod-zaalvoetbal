@@ -9,23 +9,21 @@ import Layout from '../components/Layout'
 import Games from '../components/Games'
 import TemporaryWarning from '../components/TemporaryWarning'
 
-export default ({ data }) => {
+const LocationTemplate = ({ data }) => {
     const location = data.locationJson
 
     const games = List(location.games)
-        .groupBy(game => {
-            return moment(game.time)
-                .startOf('day')
-                .toDate()
+        .groupBy((game) => {
+            return moment(game.time).startOf('day').toDate()
         })
-        .map(games =>
+        .map((games) =>
             games
-                .groupBy(game => {
+                .groupBy((game) => {
                     return game.field
                 })
-                .map(games =>
-                    games.groupBy(game => {
-                        return game.poule.id
+                .map((games) =>
+                    games.groupBy((game) => {
+                        return game.poule.jsonId
                     })
                 )
         )
@@ -78,7 +76,7 @@ export default ({ data }) => {
                                                     <h6 className="games-header last">
                                                         <Link
                                                             className="location"
-                                                            to={`/poules/${poule.id}`}
+                                                            to={`/poules/${poule.jsonId}`}
                                                         >
                                                             {poule.name}
                                                         </Link>
@@ -100,44 +98,43 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-    query($id: String!) {
-        locationJson(id: { eq: $id }) {
-            id
+    query ($id: String!) {
+        locationJson(jsonId: { eq: $id }) {
+            jsonId
             venue
             address
             postalCode
             city
             placeId
             games {
-                id
                 time
                 status
                 poule {
-                    id
+                    jsonId
                     name
                     temporary
                 }
                 location {
-                    id
+                    jsonId
                 }
                 field
                 homeScore
                 awayScore
                 homeTeam {
-                    id
+                    jsonId
                     name
                     fullName
                     club {
-                        id
+                        jsonId
                         name
                     }
                 }
                 awayTeam {
-                    id
+                    jsonId
                     name
                     fullName
                     club {
-                        id
+                        jsonId
                         name
                     }
                 }
@@ -145,3 +142,5 @@ export const query = graphql`
         }
     }
 `
+
+export default LocationTemplate

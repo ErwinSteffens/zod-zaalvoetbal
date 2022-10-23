@@ -7,7 +7,7 @@ import Navigation from './Navigation'
 
 import './Layout.sass'
 
-export default ({ children, className }) => (
+const Layout = ({ children, className }) => (
     <>
         <Helmet>
             <title>ZOD Zaalvoetbal</title>
@@ -60,3 +60,5 @@ export default ({ children, className }) => (
         </Container>
     </>
 )
+
+export default Layout

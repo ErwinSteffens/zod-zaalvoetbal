@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import ClubIcon from '../components/ClubIcon'
 import ChampionIcon from '../components/ChampionIcon'
 
-export default ({ data }) => {
+const RootPage = ({ data }) => {
     const clubs = data.allClubJson
     const updates = data.allUpdatesYaml.edges
 
@@ -45,7 +45,7 @@ export default ({ data }) => {
             )}
             <h4 className="mt-5">Teams</h4>
             <Row>
-                {clubs.nodes.map(club => {
+                {clubs.nodes.map((club) => {
                     const teams = club.teams.sort((a, b) => {
                         if (a.sortId < b.sortId) {
                             return -1
@@ -57,15 +57,15 @@ export default ({ data }) => {
                     })
 
                     return (
-                        <Col key={club.id} xs={12} md={6} lg={4} className="mb-2 mt-2">
+                        <Col key={club.jsonId} xs={12} md={6} lg={4} className="mb-2 mt-2">
                             <ul className="team-list">
-                                {teams.map(team => {
+                                {teams.map((team) => {
                                     return (
-                                        <li key={team.id}>
+                                        <li key={team.jsonId}>
                                             <Link
-                                                key={team.id}
+                                                key={team.jsonId}
                                                 as={Link}
-                                                to={`/${club.id}/${team.name}`}
+                                                to={`/${club.jsonId}/${team.name}`}
                                             >
                                                 <ClubIcon club={club} className="mr-2" small />
                                                 {team.fullName}
@@ -89,10 +89,10 @@ export const query = graphql`
     query {
         allClubJson(sort: { fields: teams___children, order: DESC }) {
             nodes {
-                id
+                jsonId
                 name
                 teams {
-                    id
+                    jsonId
                     name
                     fullName
                     sortId
@@ -110,3 +110,5 @@ export const query = graphql`
         }
     }
 `
+
+export default RootPage

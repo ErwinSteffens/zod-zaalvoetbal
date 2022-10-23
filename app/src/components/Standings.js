@@ -67,13 +67,13 @@ const Standings = ({ poule, teamId }) => {
                 .map((teamScore, index) => {
                     let team = teamScore.team
                     let classes = cn('standings-row', {
-                        highlight: team.id === teamId
+                        highlight: team.jsonId === teamId,
                     })
                     return (
                         <Link
-                            key={team.id}
+                            key={team.jsonId}
                             className={classes}
-                            to={`/${team.club.id}/${team.name}`}
+                            to={`/${team.club.jsonId}/${team.name}`}
                         >
                             <div className="value position">{index + 1}</div>
                             <div className="value logo">

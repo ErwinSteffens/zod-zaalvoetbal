@@ -9,7 +9,7 @@ import Layout from '../components/Layout'
 import ClubIcon from '../components/ClubIcon'
 import ChampionIcon from '../components/ChampionIcon'
 
-export default ({ data }) => {
+const ClubTemplate = ({ data }) => {
     const club = data.clubJson
 
     const teams = club.teams.sort((a, b) => {
@@ -23,11 +23,9 @@ export default ({ data }) => {
     })
 
     let games = List(teams)
-        .flatMap(team => team.games)
-        .groupBy(game => {
-            return moment(game.time)
-                .startOf('day')
-                .toDate()
+        .flatMap((team) => team.games)
+        .groupBy((game) => {
+            return moment(game.time).startOf('day').toDate()
         })
         .sortBy((v, k) => k)
 
@@ -52,10 +50,10 @@ export default ({ data }) => {
             <h4>Teams</h4>
 
             <ul className="team-list">
-                {teams.map(team => {
+                {teams.map((team) => {
                     return (
                         <li>
-                            <Link key={team.id} as={Link} to={`/${club.id}/${team.name}`}>
+                            <Link key={team.jsonId} as={Link} to={`/${club.jsonId}/${team.name}`}>
                                 <ClubIcon club={club} className="mr-2" small />
                                 {team.fullName}
                                 {team.isChampion && <ChampionIcon className="ml-2" />}
@@ -67,16 +65,16 @@ export default ({ data }) => {
             <br />
             <h4>Wedstrijden</h4>
             {games.entrySeq().map(([date, gamesByDate]) => {
-                let allPlayed = gamesByDate.every(game => game.status !== 'planned')
+                let allPlayed = gamesByDate.every((game) => game.status !== 'planned')
 
-                gamesByDate = gamesByDate.sortBy(v => v.time)
+                gamesByDate = gamesByDate.sortBy((v) => v.time)
 
                 let games
                 if (allPlayed) {
-                    games = <Games games={gamesByDate} clubId={club.id} />
+                    games = <Games games={gamesByDate} clubId={club.jsonId} />
                 } else {
-                    let gamesByLocation = gamesByDate.groupBy(game => {
-                        return game.location.id
+                    let gamesByLocation = gamesByDate.groupBy((game) => {
+                        return game.location.jsonId
                     })
 
                     games = gamesByLocation.entrySeq().map(([locationId, gamesTest]) => {
@@ -90,11 +88,11 @@ export default ({ data }) => {
                         return (
                             <Fragment key={locationId}>
                                 <h6 className="games-header sub">
-                                    <Link className="location" to={`/locaties/${location.id}`}>
+                                    <Link className="location" to={`/locaties/${location.jsonId}`}>
                                         {locationName}
                                     </Link>
                                 </h6>
-                                <Games games={gamesTest} clubId={club.id} />
+                                <Games games={gamesTest} clubId={club.jsonId} />
                             </Fragment>
                         )
                     })
@@ -115,25 +113,24 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-    query($id: String!) {
-        clubJson(id: { eq: $id }) {
-            id
+    query ($id: String!) {
+        clubJson(jsonId: { eq: $id }) {
+            jsonId
             name
             contact
             contactEmail
             contactPhone
             teams {
-                id
+                jsonId
                 name
                 fullName
                 isChampion
                 sortId
                 games {
-                    id
                     time
                     status
                     location {
-                        id
+                        jsonId
                         venue
                         city
                     }
@@ -141,22 +138,22 @@ export const query = graphql`
                     homeScore
                     awayScore
                     homeTeam {
-                        id
+                        jsonId
                         name
                         fullName
                         category
                         club {
-                            id
+                            jsonId
                             name
                         }
                     }
                     awayTeam {
-                        id
+                        jsonId
                         name
                         fullName
                         category
                         club {
-                            id
+                            jsonId
                             name
                         }
                     }
@@ -165,3 +162,5 @@ export const query = graphql`
         }
     }
 `
+
+export default ClubTemplate

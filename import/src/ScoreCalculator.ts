@@ -51,7 +51,7 @@ class ScoreCalculator {
             }
 
             const test = this.games.items.filter(
-                g =>
+                (g) =>
                     (g.homeTeamId === a.teamId && g.awayTeamId == b.teamId) ||
                     (g.awayTeamId === a.teamId && g.homeTeamId == b.teamId)
             )
@@ -119,7 +119,7 @@ class ScoreCalculator {
         status: GameStatus
     ) {
         const poule = this.poules.findById(pouleId)
-        const teamScore = poule.teamScores.find(t => t.teamId === teamId)
+        const teamScore = poule.teamScores.find((t) => t.teamId === teamId)
         if (!teamScore) {
             throw new Error(`Failed to find team '${teamId}' in poule '${pouleId}'`)
         }
