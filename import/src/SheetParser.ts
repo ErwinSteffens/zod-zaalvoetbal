@@ -47,7 +47,8 @@ class SheetParser {
     private parsePoules() {
         this.workbook.SheetNames.forEach((name) => {
             const matches = name.match(/(O\d+)-([A-Z])/)
-            if (matches || name == "Mini's") {
+            console.log('Blaat', name)
+            if (matches || name == 'Minis') {
                 const sheet: WorkSheet = this.workbook.Sheets[name]
 
                 let pouleName = name

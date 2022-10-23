@@ -1,7 +1,8 @@
 import * as fs from 'fs'
-import fetch from 'node-fetch'
 import Importer from './Importer'
 import * as dotenv from 'dotenv'
+
+const axios = require('axios')
 
 dotenv.config()
 
@@ -11,12 +12,16 @@ const exportLink = `${link}/export?format=xlsx`
 const schemaFile = './schema.xlsx'
 
 const downloadFile = async (url) => {
-    const response = await fetch(url)
-
     const fileStream = fs.createWriteStream(schemaFile)
-    await new Promise((resolve, reject) => {
-        response.body.pipe(fileStream)
-        response.body.on('error', (err) => {
+
+    const { data } = await axios({
+        url,
+        responseType: 'stream',
+    })
+
+    await new Promise<void>((resolve, reject) => {
+        data.pipe(fileStream)
+        data.on('error', (err) => {
             reject(err)
         })
         fileStream.on('finish', function () {

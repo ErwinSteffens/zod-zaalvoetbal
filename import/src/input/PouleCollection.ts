@@ -40,13 +40,17 @@ class PouleCollection {
     findById(pouleId: string) {
         const poule = this.items.find((t) => t.id == pouleId)
         if (!poule) {
-            throw new Error(`Team with ID '${pouleId}' not found`)
+            throw new Error(`Poule not found for id '${pouleId}'`)
         }
         return poule
     }
 
-    getPouleForTeam(homeTeamId: string): Poule {
-        return this.items.find((p) => p.teamScores.some((t) => t.teamId == homeTeamId))
+    getPouleForTeam(teamId: string): Poule {
+        var poule = this.items.find((p) => p.teamScores.some((t) => t.teamId == teamId))
+        if (!poule) {
+            throw new Error(`Poule not found for team with id '${teamId}'`)
+        }
+        return poule
     }
 
     save(outputDir: string) {
