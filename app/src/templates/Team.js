@@ -60,7 +60,7 @@ const TeamTemplate = ({ data }) => {
                     <h4>Wedstrijden</h4>
                 </Col>
                 <Col xs={12} md={6} className="text-md-right">
-                    <label for="game-toggle" className="game-toggle">
+                    <label htmlFor="game-toggle" className="game-toggle">
                         <Toggle
                             name="game-toggle"
                             checked={showAll}

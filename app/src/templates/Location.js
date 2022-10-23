@@ -29,7 +29,7 @@ const LocationTemplate = ({ data }) => {
         )
         .sortBy((_v, k) => k)
 
-    const mapsUrl = `https://www.google.com/maps/embed/v1/place?q=place_id:${location.placeId}&key=AIzaSyBDzIwI9DF0jwZeOogBeZBuypWV9zbDIsM`
+    const mapsUrl = `https://www.google.com/maps/embed/v1/place?q=place_id:${location.placeId}&key=${process.env.GOOGLE_MAPS_KEY}`
 
     return (
         <Layout className="location">

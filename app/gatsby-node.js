@@ -40,7 +40,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
                 sortId: {
                     type: 'Int',
                     resolve(source, args, context, info) {
-                        if (source.name === "Mini's") {
+                        if (source.name === 'Minis') {
                             return 0
                         }
                         let regex = /O(\d+) Poule ([A-Z]{1})/
@@ -151,7 +151,7 @@ exports.createPages = async ({ graphql, actions }) => {
     clubs.data.allClubJson.edges.forEach(({ node }) => {
         createPage({
             path: `/${node.jsonId}`,
-            component: path.resolve(`./src/templates/club.js`),
+            component: path.resolve(`./src/templates/Club.js`),
             context: {
                 id: node.jsonId,
             },
@@ -177,7 +177,7 @@ exports.createPages = async ({ graphql, actions }) => {
     teams.data.allTeamJson.edges.forEach(({ node }) => {
         createPage({
             path: `${node.club.jsonId}/${node.name}`,
-            component: path.resolve(`./src/templates/team.js`),
+            component: path.resolve(`./src/templates/Team.js`),
             context: {
                 id: node.jsonId,
             },
@@ -200,7 +200,7 @@ exports.createPages = async ({ graphql, actions }) => {
     poules.data.allPouleJson.edges.forEach(({ node }) => {
         createPage({
             path: `poules/${node.jsonId}`,
-            component: path.resolve(`./src/templates/poule.js`),
+            component: path.resolve(`./src/templates/Poule.js`),
             context: {
                 id: node.jsonId,
             },
@@ -222,7 +222,7 @@ exports.createPages = async ({ graphql, actions }) => {
     locations.data.allLocationJson.edges.forEach(({ node }) => {
         createPage({
             path: `locaties/${node.jsonId}`,
-            component: path.resolve(`./src/templates/location.js`),
+            component: path.resolve(`./src/templates/Location.js`),
             context: {
                 id: node.jsonId,
             },
@@ -232,7 +232,7 @@ exports.createPages = async ({ graphql, actions }) => {
     locations.data.allLocationJson.edges.forEach(({ node }) => {
         createPage({
             path: `sheets/scores/${node.jsonId}`,
-            component: path.resolve(`./src/templates/sheets/scores.js`),
+            component: path.resolve(`./src/templates/sheets/Scores.js`),
             context: {
                 id: node.jsonId,
             },
@@ -242,7 +242,7 @@ exports.createPages = async ({ graphql, actions }) => {
     locations.data.allLocationJson.edges.forEach(({ node }) => {
         createPage({
             path: `sheets/games/${node.jsonId}`,
-            component: path.resolve(`./src/templates/sheets/games.js`),
+            component: path.resolve(`./src/templates/sheets/Games.js`),
             context: {
                 id: node.jsonId,
             },
@@ -271,7 +271,7 @@ exports.createPages = async ({ graphql, actions }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
             path: node.frontmatter.path,
-            component: path.resolve(`src/templates/page.js`),
+            component: path.resolve(`src/templates/Page.js`),
             context: {},
         })
     })
