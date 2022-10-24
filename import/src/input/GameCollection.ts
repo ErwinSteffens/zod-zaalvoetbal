@@ -1,58 +1,58 @@
 import * as fs from 'fs'
 
 export enum GameStatus {
-    Planned = 'planned',
-    Played = 'played',
-    BothTeamNoShow = 'both-team-no-show',
-    HomeTeamNoShow = 'home-team-no-show',
-    AwayTeamNoShow = 'away-team-no-show',
+  Planned = 'planned',
+  Played = 'played',
+  BothTeamNoShow = 'both-team-no-show',
+  HomeTeamNoShow = 'home-team-no-show',
+  AwayTeamNoShow = 'away-team-no-show',
 }
 
 export interface Game {
-    round: number
-    time: Date
-    status: GameStatus
-    pouleId: string
-    homeTeamId: string
-    homeScore: number
-    awayTeamId: string
-    awayScore: number
-    locationId: string
-    field: number | null
+  round: number
+  time: Date
+  status: GameStatus
+  pouleId: string
+  homeTeamId: string
+  homeScore: number
+  awayTeamId: string
+  awayScore: number
+  locationId: string
+  field: number | null
 }
 
 class GameCollection {
-    items: Game[]
+  items: Game[]
 
-    constructor() {
-        this.items = []
-    }
+  constructor() {
+    this.items = []
+  }
 
-    add(game: Game) {
-        this.items.push(game)
-    }
+  add(game: Game) {
+    this.items.push(game)
+  }
 
-    getGamesForTeam(teamId: string) {
-        return this.items.filter((game) => {
-            return game.homeTeamId === teamId || game.awayTeamId === teamId
-        })
-    }
+  getGamesForTeam(teamId: string) {
+    return this.items.filter((game) => {
+      return game.homeTeamId === teamId || game.awayTeamId === teamId
+    })
+  }
 
-    save(outputDir: string) {
-        console.log(`Saving '${this.items.length}' games`)
+  save(outputDir: string) {
+    console.log(`Saving '${this.items.length}' games`)
 
-        const json = JSON.stringify(
-            this.items,
-            (key, value) => {
-                if (key === 'inputName') {
-                    return undefined
-                }
-                return value
-            },
-            2
-        )
-        fs.writeFileSync(`${outputDir}/game.json`, json)
-    }
+    const json = JSON.stringify(
+      this.items,
+      (key, value) => {
+        if (key === 'inputName') {
+          return undefined
+        }
+        return value
+      },
+      2
+    )
+    fs.writeFileSync(`${outputDir}/game.json`, json)
+  }
 }
 
 export default GameCollection

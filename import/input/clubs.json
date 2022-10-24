@@ -1,79 +1,79 @@
 [
-    {
-        "inputName": "Dalen/DSC",
-        "name": "Dalen-DSC",
-        "contact": "Tanja Mulder",
-        "contactPhone": "06-52180562",
-        "contactEmail": "tanja.lamberts@outlook.com"
-    },
-    {
-        "inputName": "SC Erica",
-        "name": "Sc Erica",
-        "contact": "Raymond Rolink",
-        "contactPhone": "06-11008724",
-        "contactEmail": "rrolink@volkerwessels.com"
-    },
-    {
-        "inputName": "Germ/CSVC",
-        "name": "Germanicus-CSVC",
-        "contact": "Johan Kosters",
-        "contactPhone": "06-14534769",
-        "contactEmail": "johekosters@hotmail.com"
-    },
-    {
-        "inputName": "KSC",
-        "name": "KSC",
-        "contact": "Nick Alting",
-        "contactPhone": "06-28872511",
-        "contactEmail": "altingnick@hotmail.com"
-    },
-    {
-        "inputName": "NKVV/Protos",
-        "name": "NKvv Protos",
-        "contact": "André Wessel",
-        "contactPhone": "06-17579632",
-        "contactEmail": "nkvvprotos@gmail.com"
-    },
-    {
-        "inputName": "Raptim",
-        "name": "vv Raptim",
-        "contact": "Nick Nannen",
-        "contactPhone": "06-20962085",
-        "contactEmail": "nick@nnsports.nl"
-    },
-    {
-        "inputName": "SVV'04",
-        "name": "SVV'04",
-        "contact": "Hellen Kloeze",
-        "contactPhone": "06-12942369",
-        "contactEmail": "hek@ows.no"
-    },
-    {
-        "inputName": "Sleen",
-        "name": "VV Sleen",
-        "contact": "Marcel Hilgers",
-        "contactPhone": "06-28074158",
-        "contactEmail": "secretariaatjeugd@vvsleen.nl"
-    },
-    {
-        "inputName": "Sweel",
-        "name": "vv Sweel",
-        "contact": "Henk Nijenbanning",
-        "contactPhone": "06-50452701",
-        "contactEmail": "jeugdzaken@vvsweel.nl"
-    },
-    {
-        "inputName": "SV Twedo",
-        "name": "SV Twedo",
-        "contact": "Edwin Guit",
-        "contactPhone": "06-41869325",
-        "contactEmail": "eguit@ziggo.nl"
-    },
-    {
-        "inputName": "VIOS",
-        "name": "VIOS",
-        "contact": "Ineke Lugies",
-        "contactPhone": "06-28952933",
-        "contactEmail": "ilugies@hotmail.com"
-    }
+  {
+    "inputName": "Dalen/DSC",
+    "name": "Dalen-DSC",
+    "contact": "Tanja Mulder",
+    "contactPhone": "06-52180562",
+    "contactEmail": "tanja.lamberts@outlook.com"
+  },
+  {
+    "inputName": "SC Erica",
+    "name": "Sc Erica",
+    "contact": "Raymond Rolink",
+    "contactPhone": "06-11008724",
+    "contactEmail": "rrolink@volkerwessels.com"
+  },
+  {
+    "inputName": "Germ/CSVC",
+    "name": "Germanicus-CSVC",
+    "contact": "Johan Kosters",
+    "contactPhone": "06-14534769",
+    "contactEmail": "johekosters@hotmail.com"
+  },
+  {
+    "inputName": "KSC",
+    "name": "KSC",
+    "contact": "Nick Alting",
+    "contactPhone": "06-28872511",
+    "contactEmail": "altingnick@hotmail.com"
+  },
+  {
+    "inputName": "NKVV/Protos",
+    "name": "NKvv Protos",
+    "contact": "André Wessel",
+    "contactPhone": "06-17579632",
+    "contactEmail": "nkvvprotos@gmail.com"
+  },
+  {
+    "inputName": "Raptim",
+    "name": "vv Raptim",
+    "contact": "Nick Nannen",
+    "contactPhone": "06-20962085",
+    "contactEmail": "nick@nnsports.nl"
+  },
+  {
+    "inputName": "SVV'04",
+    "name": "SVV'04",
+    "contact": "Hellen Kloeze",
+    "contactPhone": "06-12942369",
+    "contactEmail": "hek@ows.no"
+  },
+  {
+    "inputName": "Sleen",
+    "name": "VV Sleen",
+    "contact": "Marcel Hilgers",
+    "contactPhone": "06-28074158",
+    "contactEmail": "secretariaatjeugd@vvsleen.nl"
+  },
+  {
+    "inputName": "Sweel",
+    "name": "vv Sweel",
+    "contact": "Henk Nijenbanning",
+    "contactPhone": "06-50452701",
+    "contactEmail": "jeugdzaken@vvsweel.nl"
+  },
+  {
+    "inputName": "SV Twedo",
+    "name": "SV Twedo",
+    "contact": "Edwin Guit",
+    "contactPhone": "06-41869325",
+    "contactEmail": "eguit@ziggo.nl"
+  },
+  {
+    "inputName": "VIOS",
+    "name": "VIOS",
+    "contact": "Ineke Lugies",
+    "contactPhone": "06-28952933",
+    "contactEmail": "ilugies@hotmail.com"
+  }
 ]

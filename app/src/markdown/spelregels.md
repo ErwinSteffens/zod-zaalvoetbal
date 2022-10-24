@@ -41,11 +41,11 @@ className: game-rules
 
 De eindstand in de poule wordt bepaald door het aantal behaalde punten. Bij een gelijk aantal behaalde punten, geldt de volgende regeling:
 
--   Is dit gelijk dan is het doelsaldo over de gehele competitie beslissend.
--   Is dit ook gelijk, dan is het aantal &quot;voor&quot; gescoorde doelpunten beslissend.
--   Is dit ook gelijk, dan is het resultaat in de onderlinge wedstrijden beslissend.
--   Is dit ook gelijk dan worden er per team 3 strafschoppen genomen.
--   Bij gelijke stand van de strafschoppenreeks wordt er om en om strafschoppen genomen tot er een speler is die de strafschop niet weet te benutten.
+- Is dit gelijk dan is het doelsaldo over de gehele competitie beslissend.
+- Is dit ook gelijk, dan is het aantal &quot;voor&quot; gescoorde doelpunten beslissend.
+- Is dit ook gelijk, dan is het resultaat in de onderlinge wedstrijden beslissend.
+- Is dit ook gelijk dan worden er per team 3 strafschoppen genomen.
+- Bij gelijke stand van de strafschoppenreeks wordt er om en om strafschoppen genomen tot er een speler is die de strafschop niet weet te benutten.
 
 Bij terugtrekken van een team worden wel de kosten van de zaalhuur wel doorberekend. Bij niet opkomen voor een wedstrijd verliest men de wedstrijd met 3-0.
 
@@ -55,9 +55,9 @@ Bij terugtrekken van een team worden wel de kosten van de zaalhuur wel doorberek
 
 Omdat we niet de mogelijkheid hebben om wedstrijden in te halen op een later tijdstip zijn deze regels bepaald door de organisatie:
 
--   Bij niet opkomen dagen wegens weersomstandigheden van 1 team betekent het dat dit team verliest met 1-0. 3 punten voor het team dat wel is komen opdagen.
-    -   Uitzondering op bovenstaande is als een team dat wel komt opdagen uit dezelfde plaats komt als dat van de sporthal. Er wordt dan regel 2 gehanteerd.
--   Als beide teams niet komen opdagen wegens weersomstandigheden wordt genoteerd dat deze wedstrijd niet is gespeeld. Nul punten dus voor beide teams.
+- Bij niet opkomen dagen wegens weersomstandigheden van 1 team betekent het dat dit team verliest met 1-0. 3 punten voor het team dat wel is komen opdagen.
+  - Uitzondering op bovenstaande is als een team dat wel komt opdagen uit dezelfde plaats komt als dat van de sporthal. Er wordt dan regel 2 gehanteerd.
+- Als beide teams niet komen opdagen wegens weersomstandigheden wordt genoteerd dat deze wedstrijd niet is gespeeld. Nul punten dus voor beide teams.
 
 **In alle bijzondere gevallen beslist uitsluitend de toernooicommissie.**
 
@@ -65,19 +65,19 @@ Omdat we niet de mogelijkheid hebben om wedstrijden in te halen op een later tij
 
 #### Leiders
 
--   Coaches/leiders mogen zich tijdens de wedstrijden niet op het speelveld bevinden maar moeten op de bank zitten of in de buurt van de bank staan.
-    -   Bij overtreding zal er maximaal 2x gewaarschuwd worden en dan zal de betreffende coach verwijderd worden door de ordedienst.
--   De coaches/leiders van de teams moeten er op toezien dat de spelers en wisselspelers niet op toestellen, scheidsrechters stoelen, etc. klimmen.
--   Coaches/leiders die moeten fluiten dienen zich terughoudend op te stellen in het veld naar hun team v.w.b. aanwijzingen. Men dient de coaching bij voorkeur over te laten aan de 2e coach/leider.
--   Bij het niet spelen van een wedstrijd moet de leider toezicht houden op de spelers van zijn/haar team.
+- Coaches/leiders mogen zich tijdens de wedstrijden niet op het speelveld bevinden maar moeten op de bank zitten of in de buurt van de bank staan.
+  - Bij overtreding zal er maximaal 2x gewaarschuwd worden en dan zal de betreffende coach verwijderd worden door de ordedienst.
+- De coaches/leiders van de teams moeten er op toezien dat de spelers en wisselspelers niet op toestellen, scheidsrechters stoelen, etc. klimmen.
+- Coaches/leiders die moeten fluiten dienen zich terughoudend op te stellen in het veld naar hun team v.w.b. aanwijzingen. Men dient de coaching bij voorkeur over te laten aan de 2e coach/leider.
+- Bij het niet spelen van een wedstrijd moet de leider toezicht houden op de spelers van zijn/haar team.
 
 #### Scheidsrechters
 
--   Bij de JO12 en JO13 moeten scheidsrechters door de vereniging geregeld worden.
--   Bij alle andere teams moet het thuis spelende team voor een scheidsrechter zorgen. Dit is het team dat als eerste genoemd staat bij een wedstrijd.
--   Bij de JO8 en JO9 jeugd ben je spelleider.
--   Hoe meer je fluit hoe minder er gevoetbald wordt.
--   Hoe minder je fluit, hoe groter de spelvreugde.
--   Fluit wel hard en duidelijk wanneer er gefloten moet worden.
--   Geef duidelijke instructies.
--   Geef uitleg wanneer nodig.
+- Bij de JO12 en JO13 moeten scheidsrechters door de vereniging geregeld worden.
+- Bij alle andere teams moet het thuis spelende team voor een scheidsrechter zorgen. Dit is het team dat als eerste genoemd staat bij een wedstrijd.
+- Bij de JO8 en JO9 jeugd ben je spelleider.
+- Hoe meer je fluit hoe minder er gevoetbald wordt.
+- Hoe minder je fluit, hoe groter de spelvreugde.
+- Fluit wel hard en duidelijk wanneer er gefloten moet worden.
+- Geef duidelijke instructies.
+- Geef uitleg wanneer nodig.

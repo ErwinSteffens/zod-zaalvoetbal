@@ -3,7 +3,7 @@ import { PropsWithChildren } from 'react'
 
 export const Head = ({ title, children }: PropsWithChildren<{ title?: string | string[] }>) => {
   let pageTitle = 'ZOD Zaalvoetbalcompetitie'
-  console.log(title)
+
   if (Array.isArray(title)) {
     pageTitle = `ZOD | ${title.join(' | ')}`
   } else if (title) {

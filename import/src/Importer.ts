@@ -12,151 +12,151 @@ import PouleCollection, { Poule, TeamScore } from './input/PouleCollection'
 import ScoreCalculator from './ScoreCalculator'
 
 class Importer {
-    sheetParser: SheetParser
-    clubs: ClubCollection
-    locations: LocationCollection
-    games: GameCollection
-    poules: PouleCollection
-    teams: TeamCollection
+  sheetParser: SheetParser
+  clubs: ClubCollection
+  locations: LocationCollection
+  games: GameCollection
+  poules: PouleCollection
+  teams: TeamCollection
 
-    constructor(inputFile: string) {
-        this.clubs = new ClubCollection('./input/clubs.json')
-        this.locations = new LocationCollection('./input/locations.json')
-        this.games = new GameCollection()
-        this.poules = new PouleCollection()
-        this.teams = new TeamCollection()
+  constructor(inputFile: string) {
+    this.clubs = new ClubCollection('./input/clubs.json')
+    this.locations = new LocationCollection('./input/locations.json')
+    this.games = new GameCollection()
+    this.poules = new PouleCollection()
+    this.teams = new TeamCollection()
 
-        this.sheetParser = new SheetParser(inputFile)
-        this.sheetParser.pouleFound = (poule) => this.pouleFound(poule)
-        this.sheetParser.teamFound = (team) => this.teamFound(team)
-        this.sheetParser.gameFound = (game) => this.gameFound(game)
+    this.sheetParser = new SheetParser(inputFile)
+    this.sheetParser.pouleFound = (poule) => this.pouleFound(poule)
+    this.sheetParser.teamFound = (team) => this.teamFound(team)
+    this.sheetParser.gameFound = (game) => this.gameFound(game)
+  }
+
+  toOutputDir(outputDir: string) {
+    this.sheetParser.parse()
+
+    this.check()
+
+    let scoreCalc = new ScoreCalculator(this.games, this.poules)
+    this.poules.items = scoreCalc.processGames()
+
+    // Create the output directory
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir)
     }
 
-    toOutputDir(outputDir: string) {
-        this.sheetParser.parse()
+    this.clubs.save(outputDir)
+    this.locations.save(outputDir)
+    this.poules.save(outputDir)
+    this.teams.save(outputDir)
+    this.games.save(outputDir)
+  }
 
-        this.check()
+  private pouleFound(sheetPoule: SheetPoule) {
+    this.poules.add({
+      id: slug(sheetPoule.name),
+      name: sheetPoule.name,
+      halfCompetition: sheetPoule.halfCompetition,
+      isFinished: false,
+      temporary: sheetPoule.temporary,
+      teamScores: [],
+    })
+  }
 
-        let scoreCalc = new ScoreCalculator(this.games, this.poules)
-        this.poules.items = scoreCalc.processGames()
+  private teamFound(sheetTeam: SheetTeam) {
+    const teamInfo = new TeamNameParser(sheetTeam.name)
 
-        // Create the output directory
-        if (!fs.existsSync(outputDir)) {
-            fs.mkdirSync(outputDir)
-        }
+    const club = this.clubs.findByInputName(teamInfo.clubName)
 
-        this.clubs.save(outputDir)
-        this.locations.save(outputDir)
-        this.poules.save(outputDir)
-        this.teams.save(outputDir)
-        this.games.save(outputDir)
-    }
+    const teamId = slug(`${club.name}-${teamInfo.teamName}`)
+    const clubId = slug(club.name)
+    const pouleId = slug(sheetTeam.poule)
 
-    private pouleFound(sheetPoule: SheetPoule) {
-        this.poules.add({
-            id: slug(sheetPoule.name),
-            name: sheetPoule.name,
-            halfCompetition: sheetPoule.halfCompetition,
-            isFinished: false,
-            temporary: sheetPoule.temporary,
-            teamScores: [],
-        })
-    }
+    this.teams.add({
+      id: teamId,
+      clubId: clubId,
+      name: teamInfo.teamName,
+      pouleId: pouleId,
+      category: teamInfo.category,
+    })
 
-    private teamFound(sheetTeam: SheetTeam) {
-        const teamInfo = new TeamNameParser(sheetTeam.name)
+    const poule = this.poules.findById(pouleId)
+    poule.teamScores.push(new TeamScore(teamId))
+  }
 
-        const club = this.clubs.findByInputName(teamInfo.clubName)
+  private gameFound(sheetGame: SheetGame) {
+    const location = this.locations.findByInputName(sheetGame.location)
 
-        const teamId = slug(`${club.name}-${teamInfo.teamName}`)
-        const clubId = slug(club.name)
-        const pouleId = slug(sheetTeam.poule)
+    const locationId = slug(location.venue)
+    const homeTeamId = this.getTeamId(new TeamNameParser(sheetGame.homeTeam))
+    const awayTeamId = this.getTeamId(new TeamNameParser(sheetGame.awayTeam))
 
-        this.teams.add({
-            id: teamId,
-            clubId: clubId,
-            name: teamInfo.teamName,
-            pouleId: pouleId,
-            category: teamInfo.category,
-        })
+    const pouleId = this.poules.getPouleForTeam(homeTeamId).id
 
-        const poule = this.poules.findById(pouleId)
-        poule.teamScores.push(new TeamScore(teamId))
-    }
+    this.games.add({
+      round: sheetGame.round,
+      time: sheetGame.time,
+      status: sheetGame.status,
+      pouleId: pouleId,
+      homeTeamId: homeTeamId,
+      homeScore: sheetGame.homeScore,
+      awayTeamId: awayTeamId,
+      awayScore: sheetGame.awayScore,
+      locationId: locationId,
+      field: sheetGame.field,
+    })
+  }
 
-    private gameFound(sheetGame: SheetGame) {
-        const location = this.locations.findByInputName(sheetGame.location)
+  private check() {
+    this.teams.items.forEach((team) => {
+      let poule = this.poules.findById(team.pouleId)
+      let teamsInPoule = poule.teamScores.length
+      let gamesForTeam = this.games.getGamesForTeam(team.id).length
+      let gamesForTeamExpected = teamsInPoule - 1
+      if (!poule.halfCompetition) {
+        gamesForTeamExpected *= 2
+      }
 
-        const locationId = slug(location.venue)
-        const homeTeamId = this.getTeamId(new TeamNameParser(sheetGame.homeTeam))
-        const awayTeamId = this.getTeamId(new TeamNameParser(sheetGame.awayTeam))
+      if (gamesForTeam !== gamesForTeamExpected) {
+        console.warn(
+          `Expected ${gamesForTeamExpected} but found ${gamesForTeam} for team ${team.id}`
+        )
+      }
+    })
 
-        const pouleId = this.poules.getPouleForTeam(homeTeamId).id
+    this.poules.items = this.poules.items.map((poule) => {
+      let gamesForPoule = List(this.games.items).filter((game) => game.pouleId == poule.id)
+      let isFinished = gamesForPoule.every((game) => game.status !== GameStatus.Planned)
 
-        this.games.add({
-            round: sheetGame.round,
-            time: sheetGame.time,
-            status: sheetGame.status,
-            pouleId: pouleId,
-            homeTeamId: homeTeamId,
-            homeScore: sheetGame.homeScore,
-            awayTeamId: awayTeamId,
-            awayScore: sheetGame.awayScore,
-            locationId: locationId,
-            field: sheetGame.field,
-        })
-    }
+      return {
+        ...poule,
+        ...{
+          isFinished: isFinished,
+        },
+      }
+    })
 
-    private check() {
-        this.teams.items.forEach((team) => {
-            let poule = this.poules.findById(team.pouleId)
-            let teamsInPoule = poule.teamScores.length
-            let gamesForTeam = this.games.getGamesForTeam(team.id).length
-            let gamesForTeamExpected = teamsInPoule - 1
-            if (!poule.halfCompetition) {
-                gamesForTeamExpected *= 2
-            }
+    this.teams.items.forEach((team) => {
+      let poule = this.poules.findById(team.pouleId)
+      let teamsInPoule = poule.teamScores.length
+      let gamesForTeam = this.games.getGamesForTeam(team.id).length
+      let gamesForTeamExpected = teamsInPoule - 1
+      if (!poule.halfCompetition) {
+        gamesForTeamExpected *= 2
+      }
 
-            if (gamesForTeam !== gamesForTeamExpected) {
-                console.warn(
-                    `Expected ${gamesForTeamExpected} but found ${gamesForTeam} for team ${team.id}`
-                )
-            }
-        })
+      if (gamesForTeam !== gamesForTeamExpected) {
+        console.warn(
+          `Expected ${gamesForTeamExpected} but found ${gamesForTeam} for team ${team.id}`
+        )
+      }
+    })
+  }
 
-        this.poules.items = this.poules.items.map((poule) => {
-            let gamesForPoule = List(this.games.items).filter((game) => game.pouleId == poule.id)
-            let isFinished = gamesForPoule.every((game) => game.status !== GameStatus.Planned)
-
-            return {
-                ...poule,
-                ...{
-                    isFinished: isFinished,
-                },
-            }
-        })
-
-        this.teams.items.forEach((team) => {
-            let poule = this.poules.findById(team.pouleId)
-            let teamsInPoule = poule.teamScores.length
-            let gamesForTeam = this.games.getGamesForTeam(team.id).length
-            let gamesForTeamExpected = teamsInPoule - 1
-            if (!poule.halfCompetition) {
-                gamesForTeamExpected *= 2
-            }
-
-            if (gamesForTeam !== gamesForTeamExpected) {
-                console.warn(
-                    `Expected ${gamesForTeamExpected} but found ${gamesForTeam} for team ${team.id}`
-                )
-            }
-        })
-    }
-
-    private getTeamId(info: TeamNameParser): string {
-        const clubInfo = this.clubs.findByInputName(info.clubName)
-        return slug(`${clubInfo.name}-${info.teamName}`)
-    }
+  private getTeamId(info: TeamNameParser): string {
+    const clubInfo = this.clubs.findByInputName(info.clubName)
+    return slug(`${clubInfo.name}-${info.teamName}`)
+  }
 }
 
 export default Importer

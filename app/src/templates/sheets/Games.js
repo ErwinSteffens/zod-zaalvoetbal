@@ -49,10 +49,7 @@ const GamesTemplate = ({ data }) => {
                       return (
                         <Fragment key={pouleId}>
                           <h6 className="games-header last">{poule.name}</h6>
-                          <Games
-                            games={gamesByPoule.filter(notEmpty).toArray()}
-                            showScores={false}
-                          />
+                          <Games games={gamesByPoule.toArray()} showScores={false} />
                         </Fragment>
                       )
                     })}
