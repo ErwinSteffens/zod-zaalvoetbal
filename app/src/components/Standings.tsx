@@ -11,7 +11,7 @@ const Standings = ({ poule, teamId }: { poule: Queries.PouleJson; teamId?: strin
     throw new Error('No poule with team scores given')
   }
 
-  let scores = poule.teamScores.filter(notEmpty)
+  let scores = poule.teamScores
 
   return (
     <div className="standings">
@@ -66,7 +66,7 @@ const Standings = ({ poule, teamId }: { poule: Queries.PouleJson; teamId?: strin
           </OverlayTrigger>
         </div>
       </div>
-      {scores
+      {[...scores]
         .sort((a, b) => {
           if (a.rank! < b.rank!) {
             return -1

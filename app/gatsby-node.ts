@@ -44,7 +44,7 @@ exports.createSchemaCustomization = ({ actions, schema }: CreateSchemaCustomizat
     }`,
     `type PouleJson implements Node {
       jsonId: String!
-      teamScores: [TeamScore]!
+      teamScores: [TeamScore!]!
     }`,
     schema.buildObjectType({
       name: 'PouleJson',
