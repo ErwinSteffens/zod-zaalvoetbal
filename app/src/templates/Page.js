@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import cn from 'classnames'
-import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
+import { Head as DefaultHead } from '../components/Head'
 
 const PageTemplate = ({ data }) => {
     const { markdownRemark } = data
@@ -11,15 +11,18 @@ const PageTemplate = ({ data }) => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>ZOD Zaalvoetbal - {frontmatter.title}</title>
-            </Helmet>
             <div className={cn('page', frontmatter.className)}>
                 <h3>{frontmatter.title}</h3>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
             </div>
         </Layout>
     )
+}
+
+export function Head({ data }) {
+    const { markdownRemark } = data
+    const { frontmatter } = markdownRemark
+    return <DefaultHead title={frontmatter.title} />
 }
 
 export const pageQuery = graphql`

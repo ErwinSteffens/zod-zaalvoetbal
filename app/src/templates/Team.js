@@ -4,13 +4,13 @@ import { List } from 'immutable'
 import moment from 'moment'
 import Toggle from 'react-toggle'
 import { Row, Col } from 'react-bootstrap'
-import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 import ClubIcon from '../components/ClubIcon'
 import Standings from '../components/Standings'
 import PouleGames from '../components/PouleGames'
 import TemporaryWarning from '../components/TemporaryWarning'
+import { Head as DefaultHead } from '../components/Head'
 
 const TeamTemplate = ({ data }) => {
     const [showAll, setShowAll] = useState(true)
@@ -45,9 +45,6 @@ const TeamTemplate = ({ data }) => {
 
     return (
         <Layout className="team">
-            <Helmet>
-                <title>ZOD Zaalvoetbal - {team.fullName}</title>
-            </Helmet>
             <div className="clearfix">
                 <ClubIcon className="page-header" club={team.club} />
                 <h3>{team.fullName}</h3>
@@ -74,6 +71,11 @@ const TeamTemplate = ({ data }) => {
             <PouleGames games={games} teamId={team.jsonId} />
         </Layout>
     )
+}
+
+export function Head({ data }) {
+    const team = data.teamJson
+    return <DefaultHead title={team.fullName} />
 }
 
 export const query = graphql`

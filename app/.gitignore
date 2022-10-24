@@ -71,3 +71,5 @@ yarn-error.log
 
 # Downloads folder
 static/downloads/*
+
+src/gatsby-types.d.ts

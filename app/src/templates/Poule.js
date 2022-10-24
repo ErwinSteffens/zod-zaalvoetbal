@@ -1,38 +1,37 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { graphql } from 'gatsby'
 import { List } from 'immutable'
 import moment from 'moment'
-import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 import Standings from '../components/Standings'
 import PouleGames from '../components/PouleGames'
 import TemporaryWarning from '../components/TemporaryWarning'
+import { Head as DefaultHead } from '../components/Head'
 
 const PouleTemplate = ({ data }) => {
     const poule = data.pouleJson
 
-    let games = List(poule.games)
-        .groupBy((game) => {
-            return moment(game.time).startOf('day').toDate()
-        })
-        .map((games) => {
-            return games
-                .groupBy((game) => {
-                    return game.location.jsonId
-                })
-                .map((games) =>
-                    games.groupBy((game) => {
-                        return game.field
+    const games = useMemo(() => {
+        return List(poule.games)
+            .groupBy((game) => {
+                return moment(game.time).startOf('day').toDate()
+            })
+            .map((games) => {
+                return games
+                    .groupBy((game) => {
+                        return game.location.jsonId
                     })
-                )
-        })
+                    .map((games) =>
+                        games.groupBy((game) => {
+                            return game.field
+                        })
+                    )
+            })
+    }, [poule])
 
     return (
         <Layout>
-            <Helmet>
-                <title>ZOD Zaalvoetbal - {poule.name}</title>
-            </Helmet>
             <h3>{poule.name}</h3>
             <h4>Stand</h4>
             <Standings poule={poule} />
@@ -41,6 +40,11 @@ const PouleTemplate = ({ data }) => {
             <PouleGames games={games} />
         </Layout>
     )
+}
+
+export function Head({ data }) {
+    const poule = data.pouleJson
+    return <DefaultHead title={['Poule', poule.name]} />
 }
 
 export const query = graphql`
