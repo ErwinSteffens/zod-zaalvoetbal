@@ -8,7 +8,10 @@ import Contact from '../components/Contact'
 import { Head as DefaultHead } from '../components/Head'
 
 const ContactsPage = ({ data }: PageProps<Queries.ContactsPageQuery>) => {
-  const clubContacts = data.allClubJson.nodes
+  const contacts = data.allContactJson.nodes
+
+  const nonClubContacts = contacts.filter((c) => c.description)
+  const clubContacts = contacts.filter((c) => !!c.club)
 
   return (
     <>
@@ -16,46 +19,34 @@ const ContactsPage = ({ data }: PageProps<Queries.ContactsPageQuery>) => {
         <h3>Contact</h3>
 
         <Row>
-          <Col md={6} lg={4}>
-            <Contact
-              header="Organisatie"
-              name="Hellen Kloeze"
-              email="hek@ows.no"
-              phone="06-12942369"
-            />
-          </Col>
-          <Col md={6} lg={4}>
-            <Contact
-              header="Organisatie"
-              name="Edwin Guit"
-              email="eguit@ziggo.nl"
-              phone="06-41869325"
-            />
-          </Col>
-          <Col md={6} lg={4}>
-            <Contact
-              header="Website + Uitslagen"
-              name="Erwin Steffens"
-              email="erwinsteffens@gmail.com"
-              phone="06-48482334"
-            />
-          </Col>
+          {nonClubContacts.map((contact) => {
+            return (
+              <Col key={contact.name} md={6} lg={4}>
+                <Contact
+                  header={<>{contact.description}</>}
+                  name={contact.name}
+                  email={contact.email}
+                  phone={contact.phone}
+                />
+              </Col>
+            )
+          })}
         </Row>
         <h4 className="mt-5">Club coördinatoren</h4>
         <Row>
-          {clubContacts.map((club) => {
+          {clubContacts.map((contact) => {
             return (
-              <Col key={club.jsonId} md={6} lg={4}>
+              <Col key={contact.name} md={6} lg={4}>
                 <Contact
                   header={
                     <>
-                      <ClubIcon className="mr-2" club={club} />
-                      {club.name}
+                      <ClubIcon className="mr-2" club={contact.club!} />
+                      {contact.name}
                     </>
                   }
-                  name={club.contact}
-                  email={club.contactEmail}
-                  phone={club.contactPhone}
+                  name={contact.name}
+                  email={contact.email}
+                  phone={contact.phone}
                 />
               </Col>
             )
@@ -72,13 +63,16 @@ export function Head() {
 
 export const query = graphql`
   query ContactsPage {
-    allClubJson(sort: { fields: name }) {
+    allContactJson {
       nodes {
-        jsonId
+        description
         name
-        contact
-        contactPhone
-        contactEmail
+        phone
+        email
+        club {
+          jsonId
+          name
+        }
       }
     }
   }

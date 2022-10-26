@@ -11,6 +11,7 @@ import { Head as DefaultHead } from '../components/Head'
 
 const ClubTemplate = ({ data }) => {
   const club = data.clubJson
+  const { contact } = club
 
   const teams = [...club.teams].sort((a, b) => {
     if (a.sortId < b.sortId) {
@@ -34,14 +35,18 @@ const ClubTemplate = ({ data }) => {
       <div className="clearfix">
         <ClubIcon className="page-header" club={club} />
         <h3>{club.name}</h3>
-        <b>Contactpersoon:</b>
-        <br />
-        {club.contact}
-        <br />
-        {club.contactEmail}
-        <br />
-        Tel: {club.contactPhone}
-        <br />
+        {club.contact && (
+          <>
+            <b>Contactpersoon:</b>
+            <br />
+            {contact.contact}
+            <br />
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+            <br />
+            Tel: {contact.phone}
+            <br />
+          </>
+        )}
         <br />
       </div>
       <h4>Teams</h4>
@@ -117,9 +122,11 @@ export const query = graphql`
     clubJson(jsonId: { eq: $id }) {
       jsonId
       name
-      contact
-      contactEmail
-      contactPhone
+      contact {
+        name
+        phone
+        email
+      }
       teams {
         jsonId
         name

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 const Contact = ({
   header,
@@ -6,19 +6,27 @@ const Contact = ({
   email,
   phone,
 }: {
-  header: string
+  header: ReactNode
   name: string
-  email: string
-  phone: string
+  email: string | null
+  phone: string | null
 }) => {
   return (
     <>
       <h5 className="mt-5">{header}</h5>
       {name}
-      <br />
-      <a href={`mailto:${email}`}>{email}</a>
-      <br />
-      Tel: {phone}
+      {email && (
+        <>
+          <br />
+          <a href={`mailto:${email}`}>{email}</a>
+        </>
+      )}
+      {phone && (
+        <>
+          <br />
+          Tel: {phone}
+        </>
+      )}
     </>
   )
 }

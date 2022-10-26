@@ -1,79 +1,46 @@
 [
   {
-    "id": "dalen-dsc",
-    "name": "Dalen-DSC",
-    "contact": "Tanja Mulder",
-    "contactPhone": "06-52180562",
-    "contactEmail": "tanja.lamberts@outlook.com"
+    "id": "dalendsc",
+    "name": "Dalen/DSC"
   },
   {
     "id": "sc-erica",
-    "name": "Sc Erica",
-    "contact": "Raymond Rolink",
-    "contactPhone": "06-11008724",
-    "contactEmail": "rrolink@volkerwessels.com"
+    "name": "Sc Erica"
   },
   {
-    "id": "germanicus-csvc",
-    "name": "Germanicus-CSVC",
-    "contact": "Johan Kosters",
-    "contactPhone": "06-14534769",
-    "contactEmail": "johekosters@hotmail.com"
+    "id": "fc-coevorden",
+    "name": "FC Coevorden"
   },
   {
     "id": "ksc",
-    "name": "KSC",
-    "contact": "Nick Alting",
-    "contactPhone": "06-28872511",
-    "contactEmail": "altingnick@hotmail.com"
+    "name": "KSC"
   },
   {
     "id": "nkvv-protos",
-    "name": "NKvv Protos",
-    "contact": "André Wessel",
-    "contactPhone": "06-17579632",
-    "contactEmail": "nkvvprotos@gmail.com"
+    "name": "NKvv Protos"
   },
   {
     "id": "vv-raptim",
-    "name": "vv Raptim",
-    "contact": "Nick Nannen",
-    "contactPhone": "06-20962085",
-    "contactEmail": "nick@nnsports.nl"
+    "name": "vv Raptim"
   },
   {
     "id": "svv04",
-    "name": "SVV'04",
-    "contact": "Hellen Kloeze",
-    "contactPhone": "06-12942369",
-    "contactEmail": "hek@ows.no"
+    "name": "SVV'04"
   },
   {
     "id": "vv-sleen",
-    "name": "VV Sleen",
-    "contact": "Marcel Hilgers",
-    "contactPhone": "06-28074158",
-    "contactEmail": "secretariaatjeugd@vvsleen.nl"
+    "name": "VV Sleen"
   },
   {
     "id": "vv-sweel",
-    "name": "vv Sweel",
-    "contact": "Henk Nijenbanning",
-    "contactPhone": "06-50452701",
-    "contactEmail": "jeugdzaken@vvsweel.nl"
+    "name": "vv Sweel"
   },
   {
     "id": "sv-twedo",
-    "name": "SV Twedo",
-    "contact": "Edwin Guit",
-    "contactPhone": "06-41869325",
-    "contactEmail": "eguit@ziggo.nl"
+    "name": "SV Twedo"
   },
   {
     "id": "vios",
-    "name": "VIOS",
-    "contact": "Ineke Lugies",
-    "contactPhone": "06-28952933",
-    "contactEmail": "ilugies@hotmail.com"
+    "name": "VIOS"
   }
 ]

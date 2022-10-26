@@ -14,6 +14,7 @@ const ClubIcon = ({
   const classes = cn('club-icon', className, {
     small: small,
   })
+  console.log(club.jsonId)
   const path = small ? `/logo/small/${club.jsonId}.png` : `/logo/${club.jsonId}.png`
   return <img src={path} alt={club.name ?? ''} className={classes} />
 }

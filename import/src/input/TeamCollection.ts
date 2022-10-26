@@ -27,6 +27,17 @@ class TeamCollection {
     return team
   }
 
+  update(id: string, updater: (team: Team) => void) {
+    for (const team of this.items) {
+      if (team.id === id) {
+        updater(team)
+        return
+      }
+    }
+
+    throw new Error(`Team to update with id '${id}' not found in collection.`)
+  }
+
   save(outputDir: string) {
     console.log(`Saving '${this.items.length}' teams`)
 

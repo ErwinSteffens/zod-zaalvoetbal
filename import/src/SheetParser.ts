@@ -2,6 +2,14 @@ import * as XLSX from 'xlsx'
 import { WorkSheet } from 'xlsx'
 import { GameStatus } from './input/GameCollection'
 
+export interface SheetContact {
+  description: string
+  name: string
+  email: string
+  phone: string
+  clubName: string
+}
+
 export interface SheetPoule {
   name: string
   halfCompetition: boolean
@@ -26,13 +34,18 @@ export interface SheetGame {
 }
 
 class SheetParser {
+  readonly contactsSheetName: string = 'OVERZICHT'
+  readonly teamsSheetName: string = 'OVERZICHT Teams'
   readonly gameSheetName: string = 'wedstrijdoverzicht'
   readonly timeRows: number = 20
 
   workbook: XLSX.WorkBook
+  teamList: Set<string>
 
+  contactFound: (contact: SheetContact) => void
   pouleFound: (poule: SheetPoule) => void
-  teamFound: (team: SheetTeam) => void
+  teamFound: (team: string) => void
+  teamFoundInPoule: (team: SheetTeam) => void
   gameFound: (game: SheetGame) => void
 
   constructor(inputFile: string) {
@@ -40,8 +53,78 @@ class SheetParser {
   }
 
   parse() {
-    this.parsePoules()
-    this.parseGames()
+    this.log('contacts', () => this.parseContacts())
+    this.log('teams', () => this.parseTeams())
+    this.log('poules', () => this.parsePoules())
+    this.log('games', () => this.parseGames())
+  }
+
+  private log(itemName: string, handler: () => void) {
+    console.log(`Start parsing ${itemName}.`)
+
+    handler()
+
+    console.log('Done.')
+  }
+
+  private parseContacts() {
+    const teamsSheet = this.workbook.Sheets[this.contactsSheetName]
+    let rowIndex = 2
+    while (true) {
+      const name = this.getCellValue(teamsSheet, 0, rowIndex)
+      if (!name) {
+        break
+      }
+
+      console.log(`  - Contact found: ${name}.`)
+
+      const clubName = this.getCellValue(teamsSheet, 1, rowIndex)
+      const description = this.getCellValue(teamsSheet, 2, rowIndex)
+      const phone = this.getCellValue(teamsSheet, 3, rowIndex)
+      const email = this.getCellValue(teamsSheet, 4, rowIndex)
+
+      if (this.teamFound) {
+        this.contactFound({
+          clubName,
+          name,
+          description,
+          phone,
+          email,
+        })
+      }
+
+      rowIndex++
+    }
+  }
+
+  private parseTeams() {
+    const teamsSheet = this.workbook.Sheets[this.teamsSheetName]
+
+    let rowIndex = 0
+    let columnIndex = 0
+    while (true) {
+      const category = this.getCellValue(teamsSheet, columnIndex, 0)
+      if (!category) {
+        break
+      }
+
+      console.log(`  - Teams category found: ${category}.`)
+
+      for (let index = 0; index < 50; index++) {
+        const teamName = this.getCellValue(teamsSheet, columnIndex, index + 2)
+        if (!teamName) {
+          continue
+        }
+
+        console.log(`    - Team found: ${teamName}.`)
+
+        if (this.teamFound) {
+          this.teamFound(teamName)
+        }
+      }
+
+      columnIndex += 2
+    }
   }
 
   private parsePoules() {
@@ -74,8 +157,8 @@ class SheetParser {
             break
           }
 
-          if (this.teamFound) {
-            this.teamFound({
+          if (this.teamFoundInPoule) {
+            this.teamFoundInPoule({
               name: value,
               poule: pouleName,
             })
@@ -94,7 +177,7 @@ class SheetParser {
     let row = 0
     while (true) {
       const cell = gameSheet[XLSX.utils.encode_cell({ c: 0, r: row })]
-      if (cell && cell.v === 'sporthal') {
+      if (cell && cell.v === 'Sporthal') {
         const dateCell = gameSheet[XLSX.utils.encode_cell({ c: 0, r: row + 1 })]
         const dateCode = XLSX.SSF.parse_date_code(dateCell.v)
 
@@ -104,6 +187,8 @@ class SheetParser {
           if (!location || location === 'Totaal') {
             break
           }
+
+          console.log(`  - Parsing games for location '${location}'.`)
 
           let field: number | null = null
           let fieldMatch = location.match(/([\w- ]+)(?: \(Veld (\d+)\))?$/)

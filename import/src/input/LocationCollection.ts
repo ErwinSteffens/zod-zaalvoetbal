@@ -25,7 +25,7 @@ class LocationCollection {
       return Object.assign({ id: slug(c.venue) }, c)
     })
 
-    console.log(`Found ${this.items.length} locations in input`)
+    console.log(`  - Found ${this.items.length} locations in input`)
   }
 
   findByInputName(inputName: string) {

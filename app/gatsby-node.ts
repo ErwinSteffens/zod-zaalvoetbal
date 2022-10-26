@@ -9,7 +9,12 @@ exports.createSchemaCustomization = ({ actions, schema }: CreateSchemaCustomizat
     `type ClubJson implements Node {
       jsonId: String!
       name: String!
+      contact: ContactJson @link(from: "clubId")
       teams: [TeamJson!]! @link(by: "clubId", from: "jsonId")
+    }`,
+    `type ContactJson implements Node {
+      name: String!
+      club: ClubJson @link(by: "jsonId", from: "clubId")
     }`,
     `type LocationJson implements Node {
       jsonId: String!

@@ -31,17 +31,17 @@ const downloadFile = async (url) => {
 }
 
 const runImport = async () => {
-  console.log('Downloading latest sheet')
+  console.log('Downloading latest sheet.')
 
   await downloadFile(exportLink)
 
-  console.log('Importing data from sheet')
+  console.log('Start importing data from sheet.')
 
   const outputDir = '../app/src/data'
   const importer = new Importer(schemaFile)
   importer.toOutputDir(outputDir)
 
-  console.log('Done')
+  console.log('Done.')
 }
 
 runImport()
