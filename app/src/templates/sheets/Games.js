@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { graphql, PageProps } from 'gatsby'
+import { graphql } from 'gatsby'
 import { List } from 'immutable'
 import { Row, Col } from 'react-bootstrap'
 import moment from 'moment'

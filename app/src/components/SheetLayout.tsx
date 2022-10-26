@@ -5,22 +5,13 @@ import 'moment/locale/nl'
 
 import './Layout.sass'
 import { Head as DefaultHead } from './Head'
-import { PluginOptions, RenderBodyArgs } from 'gatsby'
 
 const SheetLayout = ({ children, className }: PropsWithChildren<{ className?: string }>) => (
-  <Container fluid className={cn('content', className)}>
-    {children}
-  </Container>
+  <div className="sheet">
+    <Container fluid className={cn('content', className)}>
+      {children}
+    </Container>
+  </div>
 )
-
-export function Head() {
-  return <DefaultHead />
-}
-
-exports.onRenderBody = ({ setBodyAttributes }: RenderBodyArgs) => {
-  setBodyAttributes({
-    className: 'sheet',
-  })
-}
 
 export default SheetLayout

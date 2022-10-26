@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, PageProps } from 'gatsby'
+import { graphql } from 'gatsby'
 import { List } from 'immutable'
 import cn from 'classnames'
 import moment from 'moment'
@@ -82,6 +82,12 @@ const ScoresTemplate = ({ data }) => {
       })}
     </Layout>
   )
+}
+
+export const onRenderBody = ({ setBodyAttributes }) => {
+  setBodyAttributes({
+    className: 'sheet',
+  })
 }
 
 export function Head({ data }) {
