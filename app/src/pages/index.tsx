@@ -1,11 +1,7 @@
 import React from 'react'
-import { Link, graphql, PageProps } from 'gatsby'
-import { Row, Col, Alert } from 'react-bootstrap'
-import moment from 'moment'
+import { Alert } from 'react-bootstrap'
 
 import Layout from '../components/Layout'
-import ClubIcon from '../components/ClubIcon'
-import ChampionIcon from '../components/ChampionIcon'
 import { Head as DefaultHead } from '../components/Head'
 
 const RootPage = () => {
