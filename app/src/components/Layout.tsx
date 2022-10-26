@@ -10,8 +10,13 @@ import TemporaryWarning from './TemporaryWarning'
 const Layout = ({
   children,
   showNavigation = true,
+  showTemporary = true,
   className,
-}: PropsWithChildren<{ className?: string; showNavigation?: boolean }>) => (
+}: PropsWithChildren<{
+  className?: string
+  showNavigation?: boolean
+  showTemporary?: boolean
+}>) => (
   <Container className={className}>
     <Row>
       <Col>
@@ -24,7 +29,7 @@ const Layout = ({
     <Row>
       <Col>
         <div className="content">
-          <TemporaryWarning />
+          {showTemporary && <TemporaryWarning />}
           {children}
         </div>
       </Col>

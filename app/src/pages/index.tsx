@@ -10,7 +10,7 @@ import { Head as DefaultHead } from '../components/Head'
 
 const RootPage = () => {
   return (
-    <Layout showNavigation={false}>
+    <Layout showNavigation={false} showTemporary={false}>
       <h3>Welkom</h3>
       <Alert variant="warning" className="text-center">
         We zijn druk bezig met de competitie voor de winter van 2022/2023. Hou de site in de gaten
