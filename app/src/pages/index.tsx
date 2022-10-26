@@ -18,7 +18,7 @@ const RootPage = () => {
         <br />
         De ZOD zaalvoetbalcompetitie is ontstaan uit een onderlinge samenwerking van
         voetbalverenigingen uit Zuid-Oost Drenthe. Het doel van deze competitie is om de JO-6 t/m
-        JO-13 in de winterperiode te kunnen laten voetballen!
+        JO-11 in de winterperiode te kunnen laten voetballen!
       </p>
     </Layout>
   )
