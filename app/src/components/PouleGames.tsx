@@ -1,55 +1,72 @@
-import React, { Fragment } from 'react'
-import { Link } from 'gatsby'
-import moment from 'moment'
+import React, { Fragment, useMemo } from 'react';
+import moment from 'moment';
 
-import Games from './Games'
-import Immutable from 'immutable'
+import Games from './Games';
+import { LocationName } from './LocationName';
+import { graphql, useStaticQuery } from 'gatsby';
+
+type GamesByDayMap = Map<Date, GamesByLocationMap>;
+type GamesByLocationMap = Map<string, GamesByFieldMap>;
+type GamesByFieldMap = Map<string, Queries.GameJson[]>;
 
 const PouleGames = ({
   games,
   teamId,
 }: {
-  games: Immutable.Seq.Keyed<
-    Date,
-    Immutable.Seq.Keyed<string, Immutable.Seq.Keyed<string, Queries.GameJson>>
-  >
-  teamId: string
+  games: GamesByDayMap;
+  teamId: string;
 }) => {
-  return games.entrySeq().map(([date, gamesByDate]) => {
+  const data = useStaticQuery<{
+    allLocationJson: Queries.LocationJsonConnection;
+  }>(graphql`
+    query {
+      allLocationJson(sort: { fields: city }) {
+        nodes {
+          jsonId
+          venue
+          city
+        }
+      }
+    }
+  `);
+
+  const locationsMap = useMemo(() => {
+    return new Map(data.allLocationJson.nodes.map((l) => [l.jsonId, l]));
+  }, [data]);
+
+  return Array.from(games).map(([date, gamesByDate]) => {
     return (
       <Fragment key={date.toString()}>
         <h6 key={date.toString()} className="games-header date">
           {moment(date).format('dddd LL')}
         </h6>
-        {gamesByDate.entrySeq().map(([locationId, gamesByLocation]) => {
-          const location = gamesByLocation.first().first()!.location
-
-          var locationName = location.venue
-          if (!locationName.includes(location.city)) {
-            locationName += ` - ${location.city}`
+        {Array.from(gamesByDate).map(([locationId, gamesByLocation]) => {
+          const location = locationsMap.get(locationId);
+          if (!location) {
+            throw new Error(`Location ${locationId} not found`);
           }
 
           return (
             <Fragment key={locationId}>
               <h6 className="games-header sub">
-                <Link className="location" to={`/locaties/${location.jsonId}`}>
-                  {locationName}
-                </Link>
+                <LocationName location={location} />
               </h6>
-              {gamesByLocation.entrySeq().map(([field, gamesByField]) => {
+              {Array.from(gamesByLocation).map(([field, gamesByField]) => {
                 return (
                   <Fragment key={field || 'field'}>
-                    {field && <h6 className="games-header last">Veld {field}</h6>}
+                    {field && (
+                      <h6 className="games-header last">Veld {field}</h6>
+                    )}
                     <Games games={gamesByField} teamId={teamId} />
                   </Fragment>
-                )
+                );
               })}
             </Fragment>
-          )
+          );
         })}
       </Fragment>
-    )
-  })
-}
+    );
+  });
+};
 
-export default PouleGames
+export default PouleGames;

@@ -1,13 +1,13 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import cn from 'classnames'
+import React from 'react';
+import { graphql } from 'gatsby';
+import cn from 'classnames';
 
-import Layout from '../components/Layout'
-import { Head as DefaultHead } from '../components/Head'
+import Layout from '../components/Layout';
+import { Head as DefaultHead } from '../components/Head';
 
 const PageTemplate = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { markdownRemark } = data;
+  const { frontmatter, html } = markdownRemark;
 
   return (
     <Layout>
@@ -16,13 +16,13 @@ const PageTemplate = ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export function Head({ data }) {
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
-  return <DefaultHead title={frontmatter.title} />
+  const { markdownRemark } = data;
+  const { frontmatter } = markdownRemark;
+  return <DefaultHead title={frontmatter.title} />;
 }
 
 export const pageQuery = graphql`
@@ -36,6 +36,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default PageTemplate
+export default PageTemplate;

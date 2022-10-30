@@ -1,11 +1,11 @@
-import React, { PropsWithChildren } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import 'moment/locale/nl'
+import React, { PropsWithChildren } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import 'moment/locale/nl';
 
-import Navigation from './Navigation'
+import Navigation from './Navigation';
 
-import './Layout.sass'
-import TemporaryWarning from './TemporaryWarning'
+import './Layout.sass';
+import TemporaryWarning from './TemporaryWarning';
 
 const Layout = ({
   children,
@@ -13,9 +13,9 @@ const Layout = ({
   showTemporary = true,
   className,
 }: PropsWithChildren<{
-  className?: string
-  showNavigation?: boolean
-  showTemporary?: boolean
+  className?: string;
+  showNavigation?: boolean;
+  showTemporary?: boolean;
 }>) => (
   <Container className={className}>
     <Row>
@@ -39,11 +39,13 @@ const Layout = ({
         <div className="footer">
           Copyright © 2022
           <br />
-          <a href="https://github.com/erwinsteffens/zod-zaalvoetbal">source code</a>
+          <a href="https://github.com/erwinsteffens/zod-zaalvoetbal">
+            source code
+          </a>
         </div>
       </Col>
     </Row>
   </Container>
-)
+);
 
-export default Layout
+export default Layout;

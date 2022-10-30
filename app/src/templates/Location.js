@@ -1,35 +1,35 @@
-import React, { Fragment } from 'react'
-import { graphql, Link } from 'gatsby'
-import { List } from 'immutable'
-import { Row, Col } from 'react-bootstrap'
-import moment from 'moment'
+import React, { Fragment } from 'react';
+import { graphql, Link } from 'gatsby';
+import { List } from 'immutable';
+import { Row, Col } from 'react-bootstrap';
+import moment from 'moment';
 
-import Layout from '../components/Layout'
-import Games from '../components/Games'
-import TemporaryWarning from '../components/TemporaryWarning'
-import { Head as DefaultHead } from '../components/Head'
+import Layout from '../components/Layout';
+import Games from '../components/Games';
+import TemporaryWarning from '../components/TemporaryWarning';
+import { Head as DefaultHead } from '../components/Head';
 
 const LocationTemplate = ({ data }) => {
-  const location = data.locationJson
+  const location = data.locationJson;
 
   const games = List(location.games)
     .groupBy((game) => {
-      return moment(game.time).startOf('day').toDate()
+      return moment(game.time).startOf('day').toDate();
     })
     .map((games) =>
       games
         .groupBy((game) => {
-          return game.field
+          return game.field;
         })
         .map((games) =>
           games.groupBy((game) => {
-            return game.poule.jsonId
-          })
-        )
+            return game.poule.jsonId;
+          }),
+        ),
     )
-    .sortBy((_v, k) => k)
+    .sortBy((_v, k) => k);
 
-  const mapsUrl = `https://www.google.com/maps/embed/v1/place?q=place_id:${location.placeId}&key=${process.env.GATSBY_GOOGLE_MAPS_KEY}`
+  const mapsUrl = `https://www.google.com/maps/embed/v1/place?q=place_id:${location.placeId}&key=${process.env.GATSBY_GOOGLE_MAPS_KEY}`;
 
   return (
     <Layout className="location">
@@ -61,40 +61,45 @@ const LocationTemplate = ({ data }) => {
         return (
           <Row key={date.toString()} className="games">
             <Col>
-              <h6 className="games-header date">{moment(date).format('dddd LL')}</h6>
+              <h6 className="games-header date">
+                {moment(date).format('dddd LL')}
+              </h6>
               {gamesOnDate.entrySeq().map(([field, gamesOnField]) => {
                 return (
                   <Fragment key={field || 'field'}>
                     {field && <h6 className="games-header">Veld {field}</h6>}
                     {gamesOnField.entrySeq().map(([pouleId, gamesByPoule]) => {
-                      const poule = gamesByPoule.first().poule
+                      const poule = gamesByPoule.first().poule;
                       return (
                         <Fragment key={pouleId}>
                           <h6 className="games-header last">
-                            <Link className="location" to={`/poules/${poule.jsonId}`}>
+                            <Link
+                              className="location"
+                              to={`/poules/${poule.jsonId}`}
+                            >
                               {poule.name}
                             </Link>
                           </h6>
                           {poule.temporary && <TemporaryWarning />}
                           <Games games={gamesByPoule} />
                         </Fragment>
-                      )
+                      );
                     })}
                   </Fragment>
-                )
+                );
               })}
             </Col>
           </Row>
-        )
+        );
       })}
     </Layout>
-  )
-}
+  );
+};
 
 export const Head = ({ data }) => {
-  const location = data.locationJson
-  return <DefaultHead title={location.venue} />
-}
+  const location = data.locationJson;
+  return <DefaultHead title={location.venue} />;
+};
 
 export const query = graphql`
   query ($id: String!) {
@@ -140,6 +145,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default LocationTemplate
+export default LocationTemplate;

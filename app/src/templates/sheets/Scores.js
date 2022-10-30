@@ -1,31 +1,31 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { List } from 'immutable'
-import cn from 'classnames'
-import moment from 'moment'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { List } from 'immutable';
+import cn from 'classnames';
+import moment from 'moment';
 
-import Layout from '../../components/SheetLayout'
-import { Head as DefaultHead } from '../../components/Head'
+import Layout from '../../components/SheetLayout';
+import { Head as DefaultHead } from '../../components/Head';
 
 const ScoresTemplate = ({ data }) => {
-  const location = data.locationJson
+  const location = data.locationJson;
   if (!location || !location.games) {
-    throw new Error('No location or games given')
+    throw new Error('No location or games given');
   }
 
   const games = List(location.games)
     .groupBy((game) => {
-      return moment(game.time).startOf('day').toDate()
+      return moment(game.time).startOf('day').toDate();
     })
-    .sortBy((_v, k) => k)
+    .sortBy((_v, k) => k);
 
   return (
     <Layout className="scores">
       {games.entrySeq().map(([date, games]) => {
-        let lastPouleId = null
-        let lastFieldId = null
+        let lastPouleId = null;
+        let lastFieldId = null;
         return (
-          <div className="page">
+          <div key={date.toISOString()} className="page">
             <h3>{moment(date).format('dddd LL')}</h3>
             <h5>{location.venue}</h5>
 
@@ -40,19 +40,20 @@ const ScoresTemplate = ({ data }) => {
                 </div>
 
                 {games.map((game) => {
-                  const { time, field, homeTeam, awayTeam } = game
-                  const poule = homeTeam.poule
+                  const { time, field, homeTeam, awayTeam } = game;
+                  const poule = homeTeam.poule;
 
-                  let classes = cn('game', {
-                    'mt-4': lastPouleId !== null && lastPouleId !== poule.jsonId,
-                  })
-                  lastPouleId = poule.jsonId
+                  const classes = cn('game', {
+                    'mt-4':
+                      lastPouleId !== null && lastPouleId !== poule.jsonId,
+                  });
+                  lastPouleId = poule.jsonId;
 
-                  let fieldHeader =
+                  const fieldHeader =
                     field && field !== lastFieldId ? (
                       <h6 className="field-header">Veld {field}</h6>
-                    ) : null
-                  lastFieldId = field
+                    ) : null;
+                  lastFieldId = field;
 
                   return (
                     <>
@@ -61,38 +62,39 @@ const ScoresTemplate = ({ data }) => {
                         key={`${homeTeam.jsonId}|${awayTeam.jsonId}|${time}`}
                         className={classes}
                       >
-                        <div className="item time">{moment(time).format('LT')}</div>
+                        <div className="item time">
+                          {moment(time).format('LT')}
+                        </div>
                         <div className="item poule">{poule.name}</div>
-                        <div className="item team home">{homeTeam.fullName}</div>
-                        <div className="item team away">{awayTeam.fullName}</div>
+                        <div className="item team home">
+                          {homeTeam.fullName}
+                        </div>
+                        <div className="item team away">
+                          {awayTeam.fullName}
+                        </div>
                         <div className="item score"></div>
                         <div className="item score"></div>
                       </div>
                     </>
-                  )
+                  );
                 })}
               </>
             </div>
             <div className="info">
-              Uitslagen kunnen worden doorgegeven door een foto van dit formulier te maken en te
-              versturen via e-mail (erwinsteffens@gmail.com) of WhatsApp (06-48482334).
+              Uitslagen kunnen worden doorgegeven door een foto van dit
+              formulier te maken en te versturen via e-mail
+              (erwinsteffens@gmail.com) of WhatsApp (06-48482334).
             </div>
           </div>
-        )
+        );
       })}
     </Layout>
-  )
-}
-
-export const onRenderBody = ({ setBodyAttributes }) => {
-  setBodyAttributes({
-    className: 'sheet',
-  })
-}
+  );
+};
 
 export function Head({ data }) {
-  const location = data.locationJson
-  return <DefaultHead title={['Scores', location.venue]} />
+  const location = data.locationJson;
+  return <DefaultHead title={['Scores', location.venue]} />;
 }
 
 export const query = graphql`
@@ -131,6 +133,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default ScoresTemplate
+export default ScoresTemplate;

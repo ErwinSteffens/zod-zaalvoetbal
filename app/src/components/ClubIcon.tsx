@@ -1,21 +1,22 @@
-import React from 'react'
-import cn from 'classnames'
-import { Node } from 'gatsby'
+import React from 'react';
+import cn from 'classnames';
 
 const ClubIcon = ({
   club,
   className,
   small = false,
 }: {
-  club: { jsonId: string | null; name: string }
-  className?: string
-  small?: boolean
+  club: { jsonId: string | null; name: string };
+  className?: string;
+  small?: boolean;
 }) => {
   const classes = cn('club-icon', className, {
-    small: small,
-  })
-  const path = small ? `/logo/small/${club.jsonId}.png` : `/logo/${club.jsonId}.png`
-  return <img src={path} alt={club.name ?? ''} className={classes} />
-}
+    small,
+  });
+  const path = small
+    ? `/logo/small/${club.jsonId}.png`
+    : `/logo/${club.jsonId}.png`;
+  return <img src={path} alt={club.name ?? ''} className={classes} />;
+};
 
-export default ClubIcon
+export default ClubIcon;

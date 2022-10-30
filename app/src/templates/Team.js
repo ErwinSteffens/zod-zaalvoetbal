@@ -1,47 +1,48 @@
-import React, { useState } from 'react'
-import { graphql } from 'gatsby'
-import { List } from 'immutable'
-import moment from 'moment'
-import Toggle from 'react-toggle'
-import { Row, Col } from 'react-bootstrap'
+import React, { useState } from 'react';
+import { graphql } from 'gatsby';
+import { List } from 'immutable';
+import moment from 'moment';
+import Toggle from 'react-toggle';
+import { Row, Col } from 'react-bootstrap';
 
-import Layout from '../components/Layout'
-import ClubIcon from '../components/ClubIcon'
-import Standings from '../components/Standings'
-import PouleGames from '../components/PouleGames'
-import TemporaryWarning from '../components/TemporaryWarning'
-import { Head as DefaultHead } from '../components/Head'
+import Layout from '../components/Layout';
+import ClubIcon from '../components/ClubIcon';
+import Standings from '../components/Standings';
+import PouleGames from '../components/PouleGames';
+import TemporaryWarning from '../components/TemporaryWarning';
+import { Head as DefaultHead } from '../components/Head';
 
 const TeamTemplate = ({ data }) => {
-  const [showAll, setShowAll] = useState(true)
+  const [showAll, setShowAll] = useState(true);
 
-  const team = data.teamJson
-  const poule = team.poule
+  const team = data.teamJson;
+  const poule = team.poule;
 
-  var games = poule.games
+  let games = poule.games;
   if (!showAll) {
     games = games.filter(
-      (g) => g.homeTeam.jsonId === team.jsonId || g.awayTeam.jsonId === team.jsonId
-    )
+      (g) =>
+        g.homeTeam.jsonId === team.jsonId || g.awayTeam.jsonId === team.jsonId,
+    );
   }
 
   games = List(games)
     .groupBy((game) => {
-      return moment(game.time).startOf('day').toDate()
+      return moment(game.time).startOf('day').toDate();
     })
     .map((games) => {
       return games
         .groupBy((game) => {
-          return game.location.jsonId
+          return game.location.jsonId;
         })
         .map((games) =>
           games.groupBy((game) => {
-            return game.field
-          })
-        )
-    })
+            return game.field;
+          }),
+        );
+    });
 
-  games = games.sortBy((_v, k) => k)
+  games = games.sortBy((_v, k) => k);
 
   return (
     <Layout className="team">
@@ -70,12 +71,12 @@ const TeamTemplate = ({ data }) => {
       {poule.temporary && <TemporaryWarning />}
       <PouleGames games={games} teamId={team.jsonId} />
     </Layout>
-  )
-}
+  );
+};
 
 export function Head({ data }) {
-  const team = data.teamJson
-  return <DefaultHead title={team.fullName} />
+  const team = data.teamJson;
+  return <DefaultHead title={team.fullName} />;
 }
 
 export const query = graphql`
@@ -147,6 +148,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default TeamTemplate
+export default TeamTemplate;

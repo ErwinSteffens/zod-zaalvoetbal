@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from 'react';
 
 const Contact = ({
   header,
@@ -6,10 +6,10 @@ const Contact = ({
   email,
   phone,
 }: {
-  header: ReactNode
-  name: string
-  email: string | null
-  phone: string | null
+  header: ReactNode;
+  name: string;
+  email: string | null;
+  phone: string | null;
 }) => {
   return (
     <>
@@ -28,7 +28,7 @@ const Contact = ({
         </>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

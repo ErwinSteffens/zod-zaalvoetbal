@@ -1,14 +1,14 @@
-import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import React from 'react';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
-import ClubIcon from './ClubIcon'
+import ClubIcon from './ClubIcon';
 
 const Navigation = () => {
   const data = useStaticQuery<{
-    allClubJson: Queries.ClubJsonConnection
-    allPouleJson: Queries.PouleJsonConnection
-    allLocationJson: Queries.LocationJsonConnection
+    allClubJson: Queries.ClubJsonConnection;
+    allPouleJson: Queries.PouleJsonConnection;
+    allLocationJson: Queries.LocationJsonConnection;
   }>(graphql`
     query Navigation {
       allClubJson(sort: { fields: name }) {
@@ -31,7 +31,7 @@ const Navigation = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Navbar bg="dark" expand="lg" variant="dark">
@@ -44,29 +44,41 @@ const Navigation = () => {
           <NavDropdown id="nav-poules" title="Poules">
             {data.allPouleJson.nodes.map((node: Queries.PouleJson) => {
               return (
-                <NavDropdown.Item key={node.jsonId} as={Link} to={`/poules/${node.jsonId}`}>
+                <NavDropdown.Item
+                  key={node.jsonId}
+                  as={Link}
+                  to={`/poules/${node.jsonId}`}
+                >
                   {node.name}
                 </NavDropdown.Item>
-              )
+              );
             })}
           </NavDropdown>
           <NavDropdown id="nav-clubs" title="Clubs">
             {data.allClubJson.nodes.map((club: Queries.ClubJson) => {
               return (
-                <NavDropdown.Item key={club.jsonId} as={Link} to={`/${club.jsonId}`}>
+                <NavDropdown.Item
+                  key={club.jsonId}
+                  as={Link}
+                  to={`/${club.jsonId}`}
+                >
                   <ClubIcon club={club} className="mr-2" small />
                   {club.name}
                 </NavDropdown.Item>
-              )
+              );
             })}
           </NavDropdown>
           <NavDropdown id="nav-locations" title="Locaties">
             {data.allLocationJson.nodes.map((node: Queries.LocationJson) => {
               return (
-                <NavDropdown.Item key={node.jsonId} as={Link} to={`/locaties/${node.jsonId}`}>
+                <NavDropdown.Item
+                  key={node.jsonId}
+                  as={Link}
+                  to={`/locaties/${node.jsonId}`}
+                >
                   {node.city} - {node.venue}
                 </NavDropdown.Item>
-              )
+              );
             })}
           </NavDropdown>
           <Nav.Link as={Link} to="/spelregels">
@@ -81,7 +93,7 @@ const Navigation = () => {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

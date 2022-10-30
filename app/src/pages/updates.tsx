@@ -1,13 +1,12 @@
-import React from 'react'
-import { Row, Col } from 'react-bootstrap'
-import { graphql, PageProps } from 'gatsby'
-import moment from 'moment'
+import { Row, Col } from 'react-bootstrap';
+import { graphql, PageProps } from 'gatsby';
+import moment from 'moment';
 
-import Layout from '../components/Layout'
-import { Head as DefaultHead } from '../components/Head'
+import Layout from '../components/Layout';
+import { Head as DefaultHead } from '../components/Head';
 
 const UpdatesPage = ({ data }: PageProps<Queries.UpdatesPageQuery>) => {
-  const updates = data.allUpdatesYaml.edges
+  const updates = data.allUpdatesYaml.edges;
 
   return (
     <>
@@ -16,23 +15,23 @@ const UpdatesPage = ({ data }: PageProps<Queries.UpdatesPageQuery>) => {
         <Row>
           <Col sm={12}>
             {updates.map((node) => {
-              const update = node.node
+              const update = node.node;
               return (
                 <p key={update.time}>
                   <h5>{moment(update.time).format('LLL')}</h5>
                   {update.message}
                 </p>
-              )
+              );
             })}
           </Col>
         </Row>
       </Layout>
     </>
-  )
-}
+  );
+};
 
 export function Head() {
-  return <DefaultHead title="Updates" />
+  return <DefaultHead title="Updates" />;
 }
 
 export const query = graphql`
@@ -46,6 +45,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default UpdatesPage
+export default UpdatesPage;

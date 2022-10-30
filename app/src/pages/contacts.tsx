@@ -1,17 +1,16 @@
-import React from 'react'
-import { Row, Col } from 'react-bootstrap'
-import { graphql, PageProps } from 'gatsby'
+import { Row, Col } from 'react-bootstrap';
+import { graphql, PageProps } from 'gatsby';
 
-import Layout from '../components/Layout'
-import ClubIcon from '../components/ClubIcon'
-import Contact from '../components/Contact'
-import { Head as DefaultHead } from '../components/Head'
+import Layout from '../components/Layout';
+import ClubIcon from '../components/ClubIcon';
+import Contact from '../components/Contact';
+import { Head as DefaultHead } from '../components/Head';
 
 const ContactsPage = ({ data }: PageProps<Queries.ContactsPageQuery>) => {
-  const contacts = data.allContactJson.nodes
+  const contacts = data.allContactJson.nodes;
 
-  const nonClubContacts = contacts.filter((c) => c.description)
-  const clubContacts = contacts.filter((c) => !!c.club)
+  const nonClubContacts = contacts.filter((c) => c.description);
+  const clubContacts = contacts.filter((c) => !!c.club);
 
   return (
     <>
@@ -29,7 +28,7 @@ const ContactsPage = ({ data }: PageProps<Queries.ContactsPageQuery>) => {
                   phone={contact.phone}
                 />
               </Col>
-            )
+            );
           })}
         </Row>
         <h4 className="mt-5">Club coördinatoren</h4>
@@ -49,16 +48,16 @@ const ContactsPage = ({ data }: PageProps<Queries.ContactsPageQuery>) => {
                   phone={contact.phone}
                 />
               </Col>
-            )
+            );
           })}
         </Row>
       </Layout>
     </>
-  )
-}
+  );
+};
 
 export function Head() {
-  return <DefaultHead title="Contact" />
+  return <DefaultHead title="Contact" />;
 }
 
 export const query = graphql`
@@ -76,6 +75,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default ContactsPage
+export default ContactsPage;
