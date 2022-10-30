@@ -1,3 +1,4 @@
+import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { graphql, PageProps } from 'gatsby';
 import moment from 'moment';
