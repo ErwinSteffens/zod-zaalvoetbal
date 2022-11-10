@@ -197,6 +197,8 @@ class Importer {
       }
     });
 
+    this.teams.items = this.teams.items.filter((t) => !!t.pouleId);
+
     this.poules.items = this.poules.items.map((poule) => {
       let gamesForPoule = Array.from(this.games.items).filter(
         (game) => game.pouleId == poule.id,

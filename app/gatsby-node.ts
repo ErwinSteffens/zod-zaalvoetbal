@@ -1,9 +1,16 @@
-import { Actions, CreatePagesArgs, CreateSchemaCustomizationArgs } from 'gatsby'
+import {
+  Actions,
+  CreatePagesArgs,
+  CreateSchemaCustomizationArgs,
+} from 'gatsby';
 
-const path = require(`path`)
+const path = require(`path`);
 
-exports.createSchemaCustomization = ({ actions, schema }: CreateSchemaCustomizationArgs) => {
-  const { createTypes } = actions
+exports.createSchemaCustomization = ({
+  actions,
+  schema,
+}: CreateSchemaCustomizationArgs) => {
+  const { createTypes } = actions;
 
   const typeDefs = [
     `type ClubJson implements Node {
@@ -58,20 +65,26 @@ exports.createSchemaCustomization = ({ actions, schema }: CreateSchemaCustomizat
           type: 'Int!',
           resolve(source, args, context, info) {
             if (source.name === 'Minis') {
-              return 0
+              return 0;
             }
-            let regex = /O(\d+) Poule ([A-Z]{1})/
-            let result = source.name.match(regex)
-            return parseInt(result[1]) * 100 + result[2].charCodeAt(0)
+            let regex = /O(\d+) Poule ([A-Z]{1})/;
+            let result = source.name.match(regex);
+            return parseInt(result[1]) * 100 + result[2].charCodeAt(0);
           },
         },
         games: {
           type: '[GameJson]!',
           resolve: async (source, args, context, info) => {
-            const teamIds = source.teamScores.map((teamScore: any) => teamScore.teamId)
-            let games: any = await context.nodeModel.findAll({ type: 'GameJson' })
+            const teamIds = source.teamScores.map(
+              (teamScore: any) => teamScore.teamId,
+            );
+            let games: any = await context.nodeModel.findAll({
+              type: 'GameJson',
+            });
 
-            return games.entries.filter((game: any) => teamIds.includes(game.homeTeamId))
+            return games.entries.filter((game: any) =>
+              teamIds.includes(game.homeTeamId),
+            );
           },
         },
       },
@@ -94,8 +107,8 @@ exports.createSchemaCustomization = ({ actions, schema }: CreateSchemaCustomizat
                 },
               },
               type: 'ClubJson',
-            })
-            return `${club.name} ${source.name}`
+            });
+            return `${club.name} ${source.name}`;
           },
         },
         isChampion: {
@@ -108,47 +121,55 @@ exports.createSchemaCustomization = ({ actions, schema }: CreateSchemaCustomizat
                 },
               },
               type: 'PouleJson',
-            })
+            });
 
-            if (poule.isFinished) {
-              let teamScore = poule.teamScores.find((ts: any) => ts.teamId === source.jsonId)
-              return teamScore.rank === 0
+            if (poule?.isFinished ?? false) {
+              let teamScore = poule.teamScores.find(
+                (ts: any) => ts.teamId === source.jsonId,
+              );
+              return teamScore.rank === 0;
             }
-            return false
+            return false;
           },
         },
         sortId: {
           type: 'Int!',
           resolve: (source, args, context, info) => {
-            let regex = /(JO|MO|M)(\d+)(?:-(\d+))?/
-            let result = source.name.match(regex)
+            let regex = /(JO|MO|M)(\d+)(?:-(\d+))?/;
+            let result = source.name.match(regex);
 
-            let teamType = result[1]
+            let teamType = result[1];
             if (teamType === 'M') {
-              return parseInt(result[2])
+              return parseInt(result[2]);
             }
 
-            return parseInt(result[2]) * 10 + parseInt(result[3])
+            return parseInt(result[2]) * 10 + parseInt(result[3]);
           },
         },
         games: {
           type: '[GameJson!]!',
           resolve: async (source, args, context, info) => {
-            var games = await context.nodeModel.findAll({ type: 'GameJson' })
+            var games = await context.nodeModel.findAll({ type: 'GameJson' });
 
             return games.entries.filter(
-              (game: any) => game.homeTeamId === source.jsonId || game.awayTeamId === source.jsonId
-            )
+              (game: any) =>
+                game.homeTeamId === source.jsonId ||
+                game.awayTeamId === source.jsonId,
+            );
           },
         },
       },
     }),
-  ]
-  createTypes(typeDefs)
-}
+  ];
+  createTypes(typeDefs);
+};
 
-exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) => {
-  const { createPage } = actions
+exports.createPages = async ({
+  graphql,
+  actions,
+  reporter,
+}: CreatePagesArgs) => {
+  const { createPage } = actions;
 
   const clubs = await graphql<any>(`
     query {
@@ -160,7 +181,7 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
         }
       }
     }
-  `)
+  `);
 
   clubs.data.allClubJson.edges.forEach(({ node }: { node: any }) => {
     createPage({
@@ -169,8 +190,8 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
       context: {
         id: node.jsonId,
       },
-    })
-  })
+    });
+  });
 
   const teams = await graphql<any>(`
     query {
@@ -186,7 +207,7 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
         }
       }
     }
-  `)
+  `);
 
   teams.data.allTeamJson.edges.forEach(({ node }: { node: any }) => {
     createPage({
@@ -195,8 +216,8 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
       context: {
         id: node.jsonId,
       },
-    })
-  })
+    });
+  });
 
   const poules = await graphql<any>(`
     query {
@@ -209,7 +230,7 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
         }
       }
     }
-  `)
+  `);
 
   poules.data.allPouleJson.edges.forEach(({ node }: { node: any }) => {
     createPage({
@@ -218,8 +239,8 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
       context: {
         id: node.jsonId,
       },
-    })
-  })
+    });
+  });
 
   const locations = await graphql<any>(`
     query {
@@ -231,7 +252,7 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
         }
       }
     }
-  `)
+  `);
 
   locations.data.allLocationJson.edges.forEach(({ node }: { node: any }) => {
     createPage({
@@ -240,8 +261,8 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
       context: {
         id: node.jsonId,
       },
-    })
-  })
+    });
+  });
 
   locations.data.allLocationJson.edges.forEach(({ node }: { node: any }) => {
     createPage({
@@ -250,8 +271,8 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
       context: {
         id: node.jsonId,
       },
-    })
-  })
+    });
+  });
 
   locations.data.allLocationJson.edges.forEach(({ node }: { node: any }) => {
     createPage({
@@ -260,8 +281,8 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
       context: {
         id: node.jsonId,
       },
-    })
-  })
+    });
+  });
 
   const result = await graphql<any>(`
     {
@@ -275,11 +296,11 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
         }
       }
     }
-  `)
+  `);
 
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }: { node: any }) => {
@@ -287,6 +308,6 @@ exports.createPages = async ({ graphql, actions, reporter }: CreatePagesArgs) =>
       path: node.frontmatter.path,
       component: path.resolve(`src/templates/Page.js`),
       context: {},
-    })
-  })
-}
+    });
+  });
+};
