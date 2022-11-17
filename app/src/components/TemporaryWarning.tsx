@@ -6,8 +6,8 @@ const TemporaryWarning = () => {
     <Row>
       <Col xs={12}>
         <Alert className="text-center" variant="warning">
-          Let op! We zijn nog druk bezig met de site en de speelschema&apos;s.
-          Deze zijn dus nog niet definitief!
+          Let op! Het kan zijn dat er in de komende periode nog wat kleine
+          wijzigingen plaats vinden in het schema.
         </Alert>
         <br />
       </Col>
