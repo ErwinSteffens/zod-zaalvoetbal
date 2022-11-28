@@ -164,7 +164,7 @@
     "id": "vv-sweel-jo9-1",
     "clubId": "vv-sweel",
     "name": "JO9-1",
-    "pouleId": "o9-poule-b",
+    "pouleId": "o9-poule-c",
     "category": "JO9"
   },
   {
@@ -235,13 +235,6 @@
     "clubId": "ksc",
     "name": "JO9-1",
     "pouleId": "o9-poule-a",
-    "category": "JO9"
-  },
-  {
-    "id": "ksc-jo9-2",
-    "clubId": "ksc",
-    "name": "JO9-2",
-    "pouleId": "o9-poule-c",
     "category": "JO9"
   },
   {
@@ -423,6 +416,13 @@
     "id": "vv-raptim-jo11-3",
     "clubId": "vv-raptim",
     "name": "JO11-3",
+    "pouleId": "o11-poule-c",
+    "category": "JO11"
+  },
+  {
+    "id": "vv-raptim-jo11-4",
+    "clubId": "vv-raptim",
+    "name": "JO11-4",
     "pouleId": "o11-poule-c",
     "category": "JO11"
   },
