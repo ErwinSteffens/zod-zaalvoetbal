@@ -64,12 +64,12 @@ exports.createSchemaCustomization = ({
         sortId: {
           type: 'Int!',
           resolve(source, args, context, info) {
-            if (source.name === 'Minis') {
-              return 0;
-            }
             let regex = /O(\d+) Poule ([A-Z]{1})/;
             let result = source.name.match(regex);
-            return parseInt(result[1]) * 100 + result[2].charCodeAt(0);
+            if (result) {
+              return parseInt(result[1]) * 100 + result[2].charCodeAt(0);
+            }
+            return 0;
           },
         },
         games: {

@@ -1,5 +1,68 @@
 [
   {
+    "id": "svv04-m1",
+    "clubId": "svv04",
+    "name": "M1",
+    "pouleId": "mini",
+    "category": "M1"
+  },
+  {
+    "id": "svv04-m2",
+    "clubId": "svv04",
+    "name": "M2",
+    "pouleId": "mini",
+    "category": "M2"
+  },
+  {
+    "id": "vv-raptim-m1",
+    "clubId": "vv-raptim",
+    "name": "M1",
+    "pouleId": "mini",
+    "category": "M1"
+  },
+  {
+    "id": "vv-raptim-m2",
+    "clubId": "vv-raptim",
+    "name": "M2",
+    "pouleId": "mini",
+    "category": "M2"
+  },
+  {
+    "id": "fc-coevorden-m1",
+    "clubId": "fc-coevorden",
+    "name": "M1",
+    "pouleId": "mini",
+    "category": "M1"
+  },
+  {
+    "id": "fc-coevorden-m2",
+    "clubId": "fc-coevorden",
+    "name": "M2",
+    "pouleId": "mini",
+    "category": "M2"
+  },
+  {
+    "id": "vv-sweel-m1",
+    "clubId": "vv-sweel",
+    "name": "M1",
+    "pouleId": "mini",
+    "category": "M1"
+  },
+  {
+    "id": "dalendsc-m1",
+    "clubId": "dalendsc",
+    "name": "M1",
+    "pouleId": "mini",
+    "category": "M1"
+  },
+  {
+    "id": "ksc-m1",
+    "clubId": "ksc",
+    "name": "M1",
+    "pouleId": "mini",
+    "category": "M1"
+  },
+  {
     "id": "sc-erica-jo8-1",
     "clubId": "sc-erica",
     "name": "JO8-1",
