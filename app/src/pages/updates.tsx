@@ -20,7 +20,11 @@ const UpdatesPage = ({ data }: PageProps<Queries.UpdatesPageQuery>) => {
               return (
                 <p key={update.time}>
                   <h5>{moment(update.time).format('LLL')}</h5>
-                  {update.message}
+                  <ul>
+                    {update.message?.map((m) => (
+                      <li>{m}</li>
+                    ))}
+                  </ul>
                 </p>
               );
             })}
