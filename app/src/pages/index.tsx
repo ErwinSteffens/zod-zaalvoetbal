@@ -38,9 +38,12 @@ const RootPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
         <>
           <br />
           <Alert variant="info" className="small">
-            Bijgewerkt {moment(lastUpdate.time).calendar()}:{' '}
-            {lastUpdate.message}
-            <br />
+            <b>Bijgewerkt {moment(lastUpdate.time).calendar()}: </b>
+            <ul>
+              {lastUpdate.message?.map((m) => (
+                <li>{m}</li>
+              ))}
+            </ul>
             <Link className="alert-link" to="/updates">
               Alle updates
             </Link>

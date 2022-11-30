@@ -1,87 +1,87 @@
-import * as XLSX from 'xlsx'
-import { WorkSheet } from 'xlsx'
-import { GameStatus } from './input/GameCollection'
+import * as XLSX from 'xlsx';
+import { WorkSheet } from 'xlsx';
+import { GameStatus } from './input/GameCollection';
 
 export interface SheetContact {
-  description: string
-  name: string
-  email: string
-  phone: string
-  clubName: string
+  description: string;
+  name: string;
+  email: string;
+  phone: string;
+  clubName: string;
 }
 
 export interface SheetPoule {
-  name: string
-  halfCompetition: boolean
-  temporary: boolean
+  name: string;
+  halfCompetition: boolean;
+  temporary: boolean;
 }
 
 export interface SheetTeam {
-  name: string
-  poule: string
+  name: string;
+  poule: string;
 }
 
 export interface SheetGame {
-  round: number
-  time: Date
-  status: GameStatus
-  location: string
-  field: number | null
-  homeTeam: string
-  awayTeam: string
-  homeScore: number | null
-  awayScore: number | null
+  round: number;
+  time: Date;
+  status: GameStatus;
+  location: string;
+  field: number | null;
+  homeTeam: string;
+  awayTeam: string;
+  homeScore: number | null;
+  awayScore: number | null;
 }
 
 class SheetParser {
-  readonly contactsSheetName: string = 'OVERZICHT'
-  readonly teamsSheetName: string = 'OVERZICHT Teams'
-  readonly gameSheetName: string = 'wedstrijdoverzicht'
-  readonly timeRows: number = 20
+  readonly contactsSheetName: string = 'OVERZICHT';
+  readonly teamsSheetName: string = 'OVERZICHT Teams';
+  readonly gameSheetName: string = 'wedstrijdoverzicht';
+  readonly timeRows: number = 20;
 
-  workbook: XLSX.WorkBook
-  teamList: Set<string>
+  workbook: XLSX.WorkBook;
+  teamList: Set<string>;
 
-  contactFound: (contact: SheetContact) => void
-  pouleFound: (poule: SheetPoule) => void
-  teamFound: (team: string) => void
-  teamFoundInPoule: (team: SheetTeam) => void
-  gameFound: (game: SheetGame) => void
+  contactFound: (contact: SheetContact) => void;
+  pouleFound: (poule: SheetPoule) => void;
+  teamFound: (team: string) => void;
+  teamFoundInPoule: (team: SheetTeam) => void;
+  gameFound: (game: SheetGame) => void;
 
   constructor(inputFile: string) {
-    this.workbook = XLSX.readFile(inputFile)
+    this.workbook = XLSX.readFile(inputFile);
   }
 
   parse() {
-    this.log('contacts', () => this.parseContacts())
-    this.log('teams', () => this.parseTeams())
-    this.log('poules', () => this.parsePoules())
-    this.log('games', () => this.parseGames())
+    this.log('contacts', () => this.parseContacts());
+    this.log('teams', () => this.parseTeams());
+    this.log('poules', () => this.parsePoules());
+    this.log('games', () => this.parseGames());
   }
 
   private log(itemName: string, handler: () => void) {
-    console.log(`Start parsing ${itemName}.`)
+    console.log(`Start parsing ${itemName}.`);
 
-    handler()
+    handler();
 
-    console.log('Done.')
+    console.log('Done.');
   }
 
   private parseContacts() {
-    const teamsSheet = this.workbook.Sheets[this.contactsSheetName]
-    let rowIndex = 2
+    const teamsSheet = this.workbook.Sheets[this.contactsSheetName];
+    let rowIndex = 2;
     while (true) {
-      const name = this.getCellValue(teamsSheet, 0, rowIndex)
+      const name = this.getCellValue(teamsSheet, 0, rowIndex);
       if (!name) {
-        break
+        break;
       }
 
-      console.log(`  - Contact found: ${name}.`)
+      console.log(`  - Contact found: ${name}.`);
 
-      const clubName = this.getCellValue(teamsSheet, 1, rowIndex)
-      const description = this.getCellValue(teamsSheet, 2, rowIndex)
-      const phone = this.getCellValue(teamsSheet, 3, rowIndex)
-      const email = this.getCellValue(teamsSheet, 4, rowIndex)
+      const clubName = this.getCellValue(teamsSheet, 1, rowIndex);
+      const description = this.getCellValue(teamsSheet, 2, rowIndex);
+      const phone = this.getCellValue(teamsSheet, 3, rowIndex);
+      const email = this.getCellValue(teamsSheet, 4, rowIndex);
 
       if (this.teamFound) {
         this.contactFound({
@@ -90,147 +90,174 @@ class SheetParser {
           description,
           phone,
           email,
-        })
+        });
       }
 
-      rowIndex++
+      rowIndex++;
     }
   }
 
   private parseTeams() {
-    const teamsSheet = this.workbook.Sheets[this.teamsSheetName]
+    const teamsSheet = this.workbook.Sheets[this.teamsSheetName];
 
-    let rowIndex = 0
-    let columnIndex = 0
+    let rowIndex = 0;
+    let columnIndex = 0;
     while (true) {
-      const category = this.getCellValue(teamsSheet, columnIndex, 0)
+      const category = this.getCellValue(teamsSheet, columnIndex, 0);
       if (!category) {
-        break
+        break;
       }
 
-      console.log(`  - Teams category found: ${category}.`)
+      console.log(`  - Teams category found: ${category}.`);
 
       for (let index = 0; index < 50; index++) {
-        const teamName = this.getCellValue(teamsSheet, columnIndex, index + 2)
+        const teamName = this.getCellValue(teamsSheet, columnIndex, index + 2);
         if (!teamName) {
-          continue
+          continue;
         }
 
-        console.log(`    - Team found: ${teamName}.`)
+        console.log(`    - Team found: ${teamName}.`);
 
         if (this.teamFound) {
-          this.teamFound(teamName)
+          this.teamFound(teamName);
         }
       }
 
-      columnIndex += 2
+      columnIndex += 2;
     }
   }
 
   private parsePoules() {
     this.workbook.SheetNames.forEach((name) => {
-      const matches = name.match(/(O\d+)-([A-Z])/)
+      const matches = name.match(/(O\d+)-([A-Z])/);
 
-      if (matches || name == 'Minis') {
-        const sheet: WorkSheet = this.workbook.Sheets[name]
+      if (matches || name == 'Mini') {
+        const sheet: WorkSheet = this.workbook.Sheets[name];
 
-        let pouleName = name
+        let pouleName = name;
         if (matches) {
-          pouleName = `${matches[1]} Poule ${matches[2]}`
+          pouleName = `${matches[1]} Poule ${matches[2]}`;
         }
 
-        const half = this.getCellValue(sheet, 1, 0) === 'Halve competitie'
-        const temporary = this.getCellValue(sheet, 2, 0) === 'Tijdelijk'
+        const half = this.getCellValue(sheet, 1, 0) === 'Halve competitie';
+        const temporary = this.getCellValue(sheet, 2, 0) === 'Tijdelijk';
 
         if (this.pouleFound) {
           this.pouleFound({
             name: pouleName,
             halfCompetition: half,
             temporary: temporary,
-          })
+          });
         }
 
-        let rowIndex = 0
+        let rowIndex = 0;
         while (true) {
-          const value = this.getCellValue(sheet, 1, 1 + rowIndex)
+          const value = this.getCellValue(sheet, 1, 1 + rowIndex);
           if (!value || value === 'speeldagen') {
-            break
+            break;
           }
 
           if (this.teamFoundInPoule) {
             this.teamFoundInPoule({
               name: value,
               poule: pouleName,
-            })
+            });
           }
 
-          rowIndex++
+          rowIndex++;
         }
       }
-    })
+    });
   }
 
   private parseGames() {
-    const gameSheet = this.workbook.Sheets[this.gameSheetName]
+    const gameSheet = this.workbook.Sheets[this.gameSheetName];
 
-    let round = 0
-    let row = 0
+    let round = 0;
+    let row = 0;
     while (true) {
-      const cell = gameSheet[XLSX.utils.encode_cell({ c: 0, r: row })]
+      const cell = gameSheet[XLSX.utils.encode_cell({ c: 0, r: row })];
       if (cell && cell.v === 'Sporthal') {
-        const dateCell = gameSheet[XLSX.utils.encode_cell({ c: 0, r: row + 1 })]
-        const dateCode = XLSX.SSF.parse_date_code(dateCell.v)
+        const dateCell =
+          gameSheet[XLSX.utils.encode_cell({ c: 0, r: row + 1 })];
+        const dateCode = XLSX.SSF.parse_date_code(dateCell.v);
 
-        let column = 2
+        let column = 2;
         while (true) {
-          let location = this.getCellValue(gameSheet, column, row)
+          let location = this.getCellValue(gameSheet, column, row);
           if (!location || location === 'Totaal') {
-            break
+            break;
           }
 
-          console.log(`  - Parsing games for location '${location}'.`)
+          console.log(`  - Parsing games for location '${location}'.`);
 
-          let field: number | null = null
-          let fieldMatch = location.match(/([\w- ]+)(?: \(Veld (\d+)\))?$/)
+          let field: number | null = null;
+          let fieldMatch = location.match(/([\w- ]+)(?: \(Veld (\d+)\))?$/);
           if (fieldMatch) {
-            location = fieldMatch[1]
-            field = parseInt(fieldMatch[2])
+            location = fieldMatch[1];
+            field = parseInt(fieldMatch[2]);
           }
 
-          let rowIndex = 0
+          let rowIndex = 0;
           while (true) {
-            const timeValue = this.getCellValue(gameSheet, 0, row + rowIndex + 2)
+            const timeValue = this.getCellValue(
+              gameSheet,
+              0,
+              row + rowIndex + 2,
+            );
             if (!timeValue) {
-              break
+              break;
             }
 
-            const timeCode = XLSX.SSF.parse_date_code(timeValue)
-            const time = new Date(dateCode.y, dateCode.m - 1, dateCode.d, timeCode.H, timeCode.M)
+            const timeCode = XLSX.SSF.parse_date_code(timeValue);
+            const time = new Date(
+              dateCode.y,
+              dateCode.m - 1,
+              dateCode.d,
+              timeCode.H,
+              timeCode.M,
+            );
 
-            const homeTeam = this.getCellValue(gameSheet, column + 0, row + rowIndex + 2)
-            const awayTeam = this.getCellValue(gameSheet, column + 1, row + rowIndex + 2)
+            const homeTeam = this.getCellValue(
+              gameSheet,
+              column + 0,
+              row + rowIndex + 2,
+            );
+            const awayTeam = this.getCellValue(
+              gameSheet,
+              column + 1,
+              row + rowIndex + 2,
+            );
 
             if (homeTeam && awayTeam) {
-              let status: GameStatus = GameStatus.Planned
+              let status: GameStatus = GameStatus.Planned;
 
-              let homeScore = this.getCellValue(gameSheet, column + 2, row + rowIndex + 2)
-              let awayScore = this.getCellValue(gameSheet, column + 3, row + rowIndex + 2)
+              let homeScore = this.getCellValue(
+                gameSheet,
+                column + 2,
+                row + rowIndex + 2,
+              );
+              let awayScore = this.getCellValue(
+                gameSheet,
+                column + 3,
+                row + rowIndex + 2,
+              );
 
               if (homeScore !== null || awayScore !== null) {
                 if (homeScore === 'x' && awayScore === 'x') {
-                  homeScore = 0
-                  awayScore = 0
-                  status = GameStatus.BothTeamNoShow
+                  homeScore = 0;
+                  awayScore = 0;
+                  status = GameStatus.BothTeamNoShow;
                 } else if (homeScore === 'x') {
-                  homeScore = 0
-                  awayScore = 3
-                  status = GameStatus.HomeTeamNoShow
+                  homeScore = 0;
+                  awayScore = 3;
+                  status = GameStatus.HomeTeamNoShow;
                 } else if (awayScore === 'x') {
-                  homeScore = 3
-                  awayScore = 0
-                  status = GameStatus.AwayTeamNoShow
+                  homeScore = 3;
+                  awayScore = 0;
+                  status = GameStatus.AwayTeamNoShow;
                 } else {
-                  status = GameStatus.Played
+                  status = GameStatus.Played;
                 }
               }
 
@@ -245,41 +272,41 @@ class SheetParser {
                   awayTeam: awayTeam,
                   homeScore: homeScore,
                   awayScore: awayScore,
-                })
+                });
               }
             }
 
-            rowIndex++
+            rowIndex++;
           }
 
-          column += 5
+          column += 5;
         }
       } else {
-        break
+        break;
       }
 
       // Update the rows until we do not find a time value anymore
-      row += 2
+      row += 2;
       while (true) {
-        const timeValue = this.getCellValue(gameSheet, 0, row)
+        const timeValue = this.getCellValue(gameSheet, 0, row);
         if (!timeValue) {
-          break
+          break;
         }
-        row++
+        row++;
       }
 
-      row++
-      round++
+      row++;
+      round++;
     }
   }
 
   private getCellValue(sheet: XLSX.WorkSheet, column: number, row: number) {
-    const cell = sheet[XLSX.utils.encode_cell({ c: column, r: row })]
+    const cell = sheet[XLSX.utils.encode_cell({ c: column, r: row })];
     if (!cell) {
-      return null
+      return null;
     }
-    return cell.v
+    return cell.v;
   }
 }
 
-export default SheetParser
+export default SheetParser;

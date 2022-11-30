@@ -1,5 +1,122 @@
 [
   {
+    "id": "mini",
+    "name": "Mini",
+    "halfCompetition": true,
+    "isFinished": false,
+    "temporary": false,
+    "teamScores": [
+      {
+        "rank": 0,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "svv04-m1"
+      },
+      {
+        "rank": 1,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "svv04-m2"
+      },
+      {
+        "rank": 2,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "vv-raptim-m1"
+      },
+      {
+        "rank": 3,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "vv-raptim-m2"
+      },
+      {
+        "rank": 4,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "fc-coevorden-m1"
+      },
+      {
+        "rank": 5,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "fc-coevorden-m2"
+      },
+      {
+        "rank": 6,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "vv-sweel-m1"
+      },
+      {
+        "rank": 7,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "dalendsc-m1"
+      },
+      {
+        "rank": 8,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "ksc-m1"
+      }
+    ]
+  },
+  {
     "id": "o8-poule-a",
     "name": "O8 Poule A",
     "halfCompetition": false,
@@ -397,7 +514,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "vv-sweel-jo9-1"
+        "teamId": "vv-raptim-jo9-2"
       },
       {
         "rank": 2,
@@ -409,7 +526,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "vv-raptim-jo9-2"
+        "teamId": "fc-coevorden-jo9-2"
       },
       {
         "rank": 3,
@@ -421,22 +538,10 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "fc-coevorden-jo9-2"
-      },
-      {
-        "rank": 4,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
         "teamId": "vv-sleen-jo9-1"
       },
       {
-        "rank": 5,
+        "rank": 4,
         "points": 0,
         "gamesPlayed": 0,
         "gamesWon": 0,
@@ -490,7 +595,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "ksc-jo9-2"
+        "teamId": "vv-sweel-jo9-1"
       },
       {
         "rank": 3,
@@ -965,6 +1070,18 @@
         "goalsAgainst": 0,
         "goalsDifference": 0,
         "teamId": "svv04-jo11-1"
+      },
+      {
+        "rank": 5,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "vv-raptim-jo11-4"
       }
     ]
   }
