@@ -1,6 +1,6 @@
 ---
 path: '/spelregels-mini'
-title: "Spelregels Mini's 2022/2023"
+title: "Spelregels Mini's"
 className: game-rules
 ---
 

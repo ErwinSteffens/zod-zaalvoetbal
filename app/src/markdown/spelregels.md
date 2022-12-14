@@ -1,6 +1,6 @@
 ---
 path: '/spelregels'
-title: 'Spelregels 2022/2023'
+title: 'Spelregels JO8-JO11'
 className: game-rules
 ---
 
