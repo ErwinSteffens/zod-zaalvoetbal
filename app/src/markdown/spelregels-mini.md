@@ -21,8 +21,7 @@ Het belangrijkste is dat **alle** kinderen een leuke dag hebben. Op deze leeftij
 3. Er wordt op een half zaalveld gespeeld. 
 4. De aftrap van het wedstrijdje wordt genomen door één van de teams in het midden van het veld. Dit gebeurt door middel van een dribbel of een pass. De tegenstander staat op minimaal 3m afstand.
 5. Een achterbal wordt door een speler naast het doel ingedribbeld.
-6. Hoekschoppen worden vanaf de hoekpunten van het speelveld genomen door de bal in te dribbelen, in te
-passen of in te schieten.
+6. Hoekschoppen worden vanaf de hoekpunten van het speelveld genomen door de bal in te dribbelen, in te passen of in te schieten.
 7. Bij een uitbal wordt het spel hervat door in te dribbelen.
 8. Nadat er is gescoord dribbelt een speler van het team dat een tegendoelpunt heeft gekregen de bal in naast het eigen doel. Spelers van de tegenpartij beginnen op de eigen helft.
 9. Een vrije bal wordt alleen bij hoge uitzondering gegeven. Deze mag genomen worden door de bal in te dribbelen, in te passen of te schieten vanaf de plek waar de vrije bal is gegeven.
