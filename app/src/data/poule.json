@@ -263,27 +263,27 @@
     "teamScores": [
       {
         "rank": 0,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
+        "points": 3,
+        "gamesPlayed": 1,
+        "gamesWon": 1,
         "gamesLost": 0,
         "gamesDraw": 0,
-        "goalsFor": 0,
+        "goalsFor": 3,
         "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "vv-raptim-jo8-3"
+        "goalsDifference": 3,
+        "teamId": "svv04-jo8-1"
       },
       {
         "rank": 1,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
+        "points": 3,
+        "gamesPlayed": 1,
+        "gamesWon": 1,
         "gamesLost": 0,
         "gamesDraw": 0,
-        "goalsFor": 0,
+        "goalsFor": 3,
         "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "fc-coevorden-jo8-2"
+        "goalsDifference": 3,
+        "teamId": "vios-jo8-1"
       },
       {
         "rank": 2,
@@ -295,7 +295,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "svv04-jo8-1"
+        "teamId": "vv-raptim-jo8-3"
       },
       {
         "rank": 3,
@@ -307,19 +307,19 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "vv-sleen-jo8-1"
+        "teamId": "fc-coevorden-jo8-2"
       },
       {
         "rank": 4,
         "points": 0,
-        "gamesPlayed": 0,
+        "gamesPlayed": 2,
         "gamesWon": 0,
-        "gamesLost": 0,
+        "gamesLost": 2,
         "gamesDraw": 0,
         "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "vios-jo8-1"
+        "goalsAgainst": 6,
+        "goalsDifference": -6,
+        "teamId": "vv-sleen-jo8-1"
       }
     ]
   },
@@ -413,51 +413,51 @@
     "teamScores": [
       {
         "rank": 0,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
+        "points": 3,
+        "gamesPlayed": 1,
+        "gamesWon": 1,
         "gamesLost": 0,
         "gamesDraw": 0,
-        "goalsFor": 0,
+        "goalsFor": 3,
         "goalsAgainst": 0,
-        "goalsDifference": 0,
+        "goalsDifference": 3,
         "teamId": "sc-erica-jo9-1"
       },
       {
         "rank": 1,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
+        "points": 3,
+        "gamesPlayed": 1,
+        "gamesWon": 1,
         "gamesLost": 0,
         "gamesDraw": 0,
-        "goalsFor": 0,
+        "goalsFor": 3,
         "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "vv-raptim-jo9-1"
-      },
-      {
-        "rank": 2,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
+        "goalsDifference": 3,
         "teamId": "fc-coevorden-jo9-1"
       },
       {
-        "rank": 3,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
+        "rank": 2,
+        "points": 3,
+        "gamesPlayed": 1,
+        "gamesWon": 1,
         "gamesLost": 0,
         "gamesDraw": 0,
-        "goalsFor": 0,
+        "goalsFor": 3,
         "goalsAgainst": 0,
-        "goalsDifference": 0,
+        "goalsDifference": 3,
         "teamId": "ksc-jo9-1"
+      },
+      {
+        "rank": 3,
+        "points": 3,
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 3,
+        "goalsAgainst": 0,
+        "goalsDifference": 3,
+        "teamId": "dalendsc-jo9-1"
       },
       {
         "rank": 4,
@@ -469,19 +469,19 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "svv04-jo9-1"
+        "teamId": "vv-raptim-jo9-1"
       },
       {
         "rank": 5,
         "points": 0,
-        "gamesPlayed": 0,
+        "gamesPlayed": 4,
         "gamesWon": 0,
-        "gamesLost": 0,
+        "gamesLost": 4,
         "gamesDraw": 0,
         "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "dalendsc-jo9-1"
+        "goalsAgainst": 12,
+        "goalsDifference": -12,
+        "teamId": "svv04-jo9-1"
       }
     ]
   },
@@ -563,63 +563,63 @@
     "teamScores": [
       {
         "rank": 0,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
+        "points": 9,
+        "gamesPlayed": 3,
+        "gamesWon": 3,
         "gamesLost": 0,
         "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "vv-raptim-jo9-3"
+        "goalsFor": 12,
+        "goalsAgainst": 1,
+        "goalsDifference": 11,
+        "teamId": "svv04-jo9-2"
       },
       {
         "rank": 1,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "fc-coevorden-jo9-3"
-      },
-      {
-        "rank": 2,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "vv-sweel-jo9-1"
-      },
-      {
-        "rank": 3,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "points": 4,
+        "gamesPlayed": 3,
+        "gamesWon": 1,
+        "gamesLost": 1,
+        "gamesDraw": 1,
+        "goalsFor": 3,
+        "goalsAgainst": 3,
         "goalsDifference": 0,
         "teamId": "sv-twedo-jo9-1"
       },
       {
+        "rank": 2,
+        "points": 3,
+        "gamesPlayed": 2,
+        "gamesWon": 1,
+        "gamesLost": 1,
+        "gamesDraw": 0,
+        "goalsFor": 3,
+        "goalsAgainst": 4,
+        "goalsDifference": -1,
+        "teamId": "vv-sweel-jo9-1"
+      },
+      {
+        "rank": 3,
+        "points": 1,
+        "gamesPlayed": 2,
+        "gamesWon": 0,
+        "gamesLost": 1,
+        "gamesDraw": 1,
+        "goalsFor": 1,
+        "goalsAgainst": 5,
+        "goalsDifference": -4,
+        "teamId": "fc-coevorden-jo9-3"
+      },
+      {
         "rank": 4,
         "points": 0,
-        "gamesPlayed": 0,
+        "gamesPlayed": 2,
         "gamesWon": 0,
-        "gamesLost": 0,
+        "gamesLost": 2,
         "gamesDraw": 0,
         "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "svv04-jo9-2"
+        "goalsAgainst": 6,
+        "goalsDifference": -6,
+        "teamId": "vv-raptim-jo9-3"
       }
     ]
   },
