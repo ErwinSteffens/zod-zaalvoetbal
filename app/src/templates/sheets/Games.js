@@ -34,40 +34,31 @@ const GamesTemplate = ({ data }) => {
   return (
     <Layout>
       {games.entrySeq().map(([date, gamesOnDate]) => {
-        return (
-          <Row key={date.toString()} className="games page">
-            <Col>
-              <h3>Programma</h3>
-              <h6 className="games-header">{location.venue}</h6>
-              <h6 className="games-header date">
-                {moment(date).format('dddd LL')}
-              </h6>
-              {gamesOnDate.entrySeq().map(([field, gamesOnField]) => {
-                return (
-                  <Fragment key={field || 'field'}>
+        return gamesOnDate.entrySeq().map(([field, gamesOnField]) => {
+          return gamesOnField.entrySeq().map(([pouleId, gamesByPoule]) => {
+            const poule = gamesByPoule.first().poule;
+            return (
+              <Row key={date.toString()} className="games page">
+                <Col>
+                  <Fragment key={pouleId}>
+                    <h3>Programma</h3>
+                    <h6 className="games-header">{location.venue}</h6>
+                    <h6 className="games-header date">
+                      {moment(date).format('dddd LL')}
+                    </h6>
                     {field && <h6 className="games-header">Veld {field}</h6>}
-                    {gamesOnField.entrySeq().map(([pouleId, gamesByPoule]) => {
-                      const poule = gamesByPoule.first().poule;
-                      return (
-                        <Fragment key={pouleId}>
-                          <h6 className="games-header last">{poule.name}</h6>
-                          <Games
-                            games={gamesByPoule.toArray()}
-                            showScores={false}
-                          />
-                        </Fragment>
-                      );
-                    })}
+                    <h6 className="games-header last">{poule.name}</h6>
+                    <Games games={gamesByPoule.toArray()} showScores={false} />
+                    <div className="info">
+                      Kijk voor een volledig programma op{' '}
+                      <u>www.zodzaalvoetbal.nl</u>
+                    </div>
                   </Fragment>
-                );
-              })}
-              <div className="info">
-                Kijk voor een volledig programma op <u>www.zodzaalvoetbal.nl</u>
-                .
-              </div>
-            </Col>
-          </Row>
-        );
+                </Col>
+              </Row>
+            );
+          });
+        });
       })}
     </Layout>
   );

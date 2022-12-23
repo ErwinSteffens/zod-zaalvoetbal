@@ -379,6 +379,9 @@ body
         margin-bottom: 5px
         margin-top: 0
 
+    .content
+        padding: 0
+
     .info 
         text-align: center
 
@@ -430,23 +433,23 @@ body
                         margin-bottom: -9px
                         margin-right: -1px
                         border: 1px solid #aaa
-        
-    .page
-        padding: 30px
-        page-break-after: always
 
     .games
         h1, h2, h3, h4, h5, h6
             text-align: center
 
         h3
-            font-size: 1.8rem
+            font-size: 2.2rem
 
         h6
-            font-size: 1.5rem
+            font-size: 1.8rem
 
             &.last
-                font-size: 1.1rem
+                font-size: 1.4rem
+
+        &.page
+            padding: 50px 0
+            page-break-after: always
 
         .games-header
             &.date
@@ -454,7 +457,7 @@ body
 
         .games-table
             border: none
-            font-size: 1.1rem
+            font-size: 1.4rem
 
             .game
                 border: none
@@ -463,4 +466,20 @@ body
 
                 .game-content
                     &.game-content-time
-                        font-size: 1.1rem
+                        font-size: 1.4rem
+
+                .game-team-name
+                    margin-top: 17px
+
+                .club-icon
+                    width: 64px
+                    height: 64px
+
+                &.game-team-home
+                    .game-team-name
+                        margin-right: 10px
+                    
+                &.game-team-away
+                    .game-team-name
+                        margin-left: 10px
+
