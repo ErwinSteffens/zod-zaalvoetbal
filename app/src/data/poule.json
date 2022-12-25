@@ -1025,14 +1025,14 @@
       },
       {
         "rank": 1,
-        "points": 7,
+        "points": 9,
         "gamesPlayed": 3,
-        "gamesWon": 2,
+        "gamesWon": 3,
         "gamesLost": 0,
-        "gamesDraw": 1,
-        "goalsFor": 8,
+        "gamesDraw": 0,
+        "goalsFor": 13,
         "goalsAgainst": 2,
-        "goalsDifference": 6,
+        "goalsDifference": 11,
         "teamId": "fc-coevorden-jo11-3"
       },
       {
@@ -1061,18 +1061,6 @@
       },
       {
         "rank": 4,
-        "points": 1,
-        "gamesPlayed": 4,
-        "gamesWon": 0,
-        "gamesLost": 3,
-        "gamesDraw": 1,
-        "goalsFor": 2,
-        "goalsAgainst": 21,
-        "goalsDifference": -19,
-        "teamId": "vv-raptim-jo11-3"
-      },
-      {
-        "rank": 5,
         "points": 0,
         "gamesPlayed": 3,
         "gamesWon": 0,
@@ -1082,6 +1070,18 @@
         "goalsAgainst": 9,
         "goalsDifference": -9,
         "teamId": "vv-raptim-jo11-4"
+      },
+      {
+        "rank": 5,
+        "points": 0,
+        "gamesPlayed": 4,
+        "gamesWon": 0,
+        "gamesLost": 4,
+        "gamesDraw": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 26,
+        "goalsDifference": -24,
+        "teamId": "vv-raptim-jo11-3"
       }
     ]
   }
