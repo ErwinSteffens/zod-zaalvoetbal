@@ -1037,18 +1037,30 @@
       },
       {
         "rank": 2,
-        "points": 6,
-        "gamesPlayed": 4,
-        "gamesWon": 2,
+        "points": 9,
+        "gamesPlayed": 5,
+        "gamesWon": 3,
         "gamesLost": 2,
         "gamesDraw": 0,
-        "goalsFor": 8,
+        "goalsFor": 11,
         "goalsAgainst": 9,
-        "goalsDifference": -1,
+        "goalsDifference": 2,
         "teamId": "sv-twedo-jo11-2"
       },
       {
         "rank": 3,
+        "points": 6,
+        "gamesPlayed": 6,
+        "gamesWon": 2,
+        "gamesLost": 4,
+        "gamesDraw": 0,
+        "goalsFor": 8,
+        "goalsAgainst": 26,
+        "goalsDifference": -18,
+        "teamId": "vv-raptim-jo11-3"
+      },
+      {
+        "rank": 4,
         "points": 6,
         "gamesPlayed": 7,
         "gamesWon": 2,
@@ -1060,28 +1072,16 @@
         "teamId": "ksc-jo11-1"
       },
       {
-        "rank": 4,
-        "points": 3,
-        "gamesPlayed": 4,
-        "gamesWon": 1,
-        "gamesLost": 3,
-        "gamesDraw": 0,
-        "goalsFor": 3,
-        "goalsAgainst": 9,
-        "goalsDifference": -6,
-        "teamId": "vv-raptim-jo11-4"
-      },
-      {
         "rank": 5,
         "points": 3,
-        "gamesPlayed": 5,
+        "gamesPlayed": 6,
         "gamesWon": 1,
-        "gamesLost": 4,
+        "gamesLost": 5,
         "gamesDraw": 0,
-        "goalsFor": 5,
-        "goalsAgainst": 26,
-        "goalsDifference": -21,
-        "teamId": "vv-raptim-jo11-3"
+        "goalsFor": 3,
+        "goalsAgainst": 15,
+        "goalsDifference": -12,
+        "teamId": "vv-raptim-jo11-4"
       }
     ]
   }
