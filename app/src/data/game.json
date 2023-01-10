@@ -3100,9 +3100,9 @@
     "time": "2023-01-14T09:36:00.000Z",
     "status": "planned",
     "pouleId": "o8-poule-b",
-    "homeTeamId": "sc-erica-jo8-2",
+    "homeTeamId": "nkvv-protos-jo8-1",
     "homeScore": null,
-    "awayTeamId": "nkvv-protos-jo8-1",
+    "awayTeamId": "vv-raptim-jo8-2",
     "awayScore": null,
     "locationId": "sporthal-drostenhal",
     "field": null
@@ -3124,9 +3124,9 @@
     "time": "2023-01-14T10:24:00.000Z",
     "status": "planned",
     "pouleId": "o8-poule-b",
-    "homeTeamId": "nkvv-protos-jo8-1",
+    "homeTeamId": "sc-erica-jo8-2",
     "homeScore": null,
-    "awayTeamId": "vv-raptim-jo8-2",
+    "awayTeamId": "nkvv-protos-jo8-1",
     "awayScore": null,
     "locationId": "sporthal-drostenhal",
     "field": null
