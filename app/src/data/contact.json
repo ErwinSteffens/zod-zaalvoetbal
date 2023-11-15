@@ -1,85 +1,68 @@
 [
   {
     "clubId": "sc-erica",
-    "name": "Marijke Kleine",
+    "name": "Arnoud Sliekers",
     "description": null,
-    "phone": "06-12559862",
-    "email": "marijke-kleine@outlook.com"
+    "email": null
   },
   {
     "clubId": "vv-sweel",
     "name": "Henri Hooge",
     "description": null,
-    "phone": "06-10159002",
     "email": "jeugdzaken@vvsweel.nl"
   },
   {
     "clubId": "vv-raptim",
     "name": "Bert Nijenbanning",
     "description": "Organisatie",
-    "phone": "06-23029081",
     "email": "jeugdbestuur@vvraptim.nl"
   },
   {
     "clubId": "fc-coevorden",
-    "name": "Richard Winter",
+    "name": "Gerwin Kampherbeek",
     "description": null,
-    "phone": "06-41653798",
     "email": "hoofdjeugdopleiding@fccoevorden.nl"
   },
   {
     "clubId": "nkvv-protos",
     "name": "Andre Wessel",
     "description": null,
-    "phone": "06-17579632",
     "email": "nkvvprotos@gmail.com"
   },
   {
     "clubId": "dalendsc",
     "name": "Michel Boer",
     "description": null,
-    "phone": "06-53605960",
     "email": "jeugdbestuur@vvdalen.nl"
   },
   {
     "clubId": "vv-sleen",
     "name": "Herman Hidding/Alex Witting",
     "description": null,
-    "phone": "06-12220297",
     "email": "secretariaat@vvVV Sleen.nl"
   },
   {
     "clubId": "vios",
     "name": "Ineke Lugies",
     "description": null,
-    "phone": "06-28952933",
     "email": "ilugies@hotmail.com"
   },
   {
     "clubId": "ksc",
     "name": "Lucianne Arling",
     "description": null,
-    "phone": "06-30237961",
     "email": "luciannearling@live.nl"
   },
   {
     "clubId": "sv-twedo",
     "name": "Wilbert van Leeuwen",
     "description": "Organisatie",
-    "phone": "06-54270010",
     "email": "wilberteniemke@gmail.com"
   },
   {
     "clubId": "svv04",
-    "name": "Hellen Kloeze",
-    "description": "Organisatie",
-    "phone": "06-12942369",
-    "email": "hellenkloeze1973@gmail.com"
-  },
-  {
     "name": "Erwin Steffens",
     "description": "Organisatie, website en uitslagen",
-    "phone": "06-48482334",
     "email": "erwinsteffens@gmail.com"
   }
 ]

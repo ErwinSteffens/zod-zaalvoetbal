@@ -20,7 +20,7 @@ export class TeamScore {
 export class Poule {
   id: string
   name: string
-  halfCompetition: boolean
+  gamesMultiplier?: number
   isFinished: boolean
   temporary: boolean
   teamScores: TeamScore[]

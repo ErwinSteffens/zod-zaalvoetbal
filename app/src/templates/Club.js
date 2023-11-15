@@ -44,8 +44,12 @@ const ClubTemplate = ({ data }) => {
             <br />
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
             <br />
-            Tel: {contact.phone}
-            <br />
+            {contact.phone && (
+              <>
+                Tel: {contact.phone}
+                <br />
+              </>
+            )}
           </>
         )}
         <br />
@@ -127,7 +131,6 @@ export const query = graphql`
       name
       contact {
         name
-        phone
         email
       }
       teams {

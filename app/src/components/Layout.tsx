@@ -10,7 +10,7 @@ import TemporaryWarning from './TemporaryWarning';
 const Layout = ({
   children,
   showNavigation = true,
-  showTemporary = false,
+  showTemporary = true,
   className,
 }: PropsWithChildren<{
   className?: string;
@@ -37,7 +37,7 @@ const Layout = ({
     <Row>
       <Col>
         <div className="footer">
-          Copyright © 2022
+          Copyright © 2023
           <br />
           <a href="https://github.com/erwinsteffens/zod-zaalvoetbal">
             source code

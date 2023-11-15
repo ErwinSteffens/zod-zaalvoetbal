@@ -1,6 +1,6 @@
 ---
 path: '/spelregels'
-title: 'Spelregels JO8-JO11'
+title: 'Spelregels JO8-JO13'
 className: game-rules
 ---
 
@@ -19,7 +19,7 @@ className: game-rules
 13. Een vrije bal is altijd direct en mag genomen worden door de bal in te dribbelen, in te passen, of te schieten. De tegenstander staat op minimaal 5 meter afstand.
 14. Bij een achterbal of wanneer de keeper de bal met de handen pakt, wordt deze opnieuw in het veld gebracht door de keeper:
     - Bij de JO8 en JO9 mag de keeper de bal in het spel brengen via een **onderhandse worp** of door de bal in te trappen middels een stuit.
-    - Bij de JO10 en JO11 mag de keeper de bal **alleen met een onderhandse worp** weer in het spel brengen.
+    - Bij de JO10 en JO13 mag de keeper de bal **alleen met een onderhandse worp** weer in het spel brengen.
 15. Een terugspeelbal op de keeper niet met de handen worden opgepakt.
 16. Er kan niet rechtstreeks gescoord worden uit:
     - De aftrap.

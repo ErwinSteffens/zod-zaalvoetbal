@@ -5,7 +5,6 @@ export interface Club {
   inputName: string
   id: string
   name: string
-  phone: string
   email: string
 }
 

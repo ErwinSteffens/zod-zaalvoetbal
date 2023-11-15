@@ -40,8 +40,6 @@ const runImport = async () => {
   const outputDir = '../app/src/data'
   const importer = new Importer(schemaFile)
   importer.toOutputDir(outputDir)
-
-  console.log('Done.')
 }
 
 runImport()

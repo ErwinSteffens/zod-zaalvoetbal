@@ -5,9 +5,9 @@ const TemporaryWarning = () => {
   return (
     <Row>
       <Col xs={12}>
-        <Alert className="text-center" variant="warning">
-          Let op! Het kan zijn dat er in de komende periode nog wat kleine
-          wijzigingen plaats vinden in het speelschema.
+        <Alert className="text-center" variant="danger">
+          <strong>Let op!</strong> Het kan zijn dat er in de komende periode nog
+          wijzigingenplaats vinden in het speelschema!
         </Alert>
         <br />
       </Col>

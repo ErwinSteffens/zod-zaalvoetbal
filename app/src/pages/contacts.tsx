@@ -26,7 +26,6 @@ const ContactsPage = ({ data }: PageProps<Queries.ContactsPageQuery>) => {
                   header={<>{contact.description}</>}
                   name={contact.name}
                   email={contact.email}
-                  phone={contact.phone}
                 />
               </Col>
             );
@@ -46,7 +45,6 @@ const ContactsPage = ({ data }: PageProps<Queries.ContactsPageQuery>) => {
                   }
                   name={contact.name}
                   email={contact.email}
-                  phone={contact.phone}
                 />
               </Col>
             );
@@ -67,7 +65,6 @@ export const query = graphql`
       nodes {
         description
         name
-        phone
         email
         club {
           jsonId

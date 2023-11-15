@@ -8,8 +8,8 @@ const Contact = ({
 }: {
   header: ReactNode;
   name: string;
-  email: string | null;
-  phone: string | null;
+  email?: string | null;
+  phone?: string | null;
 }) => {
   return (
     <>

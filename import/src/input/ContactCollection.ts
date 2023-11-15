@@ -4,7 +4,6 @@ import { slug } from '../utils'
 export interface Contact {
   description?: string
   name: string
-  phone: string
   email: string
   clubName?: string
   clubId?: string

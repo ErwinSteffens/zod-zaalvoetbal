@@ -47,6 +47,7 @@ class Importer {
   toOutputDir(outputDir: string) {
     console.log();
     console.log('Parsing sheet...');
+    console.log();
 
     this.sheetParser.parse();
 
@@ -82,6 +83,7 @@ class Importer {
 
     console.log();
     console.log('Done.');
+    console.log();
   }
 
   private contactFound(sheetPoule: SheetContact) {
@@ -95,7 +97,6 @@ class Importer {
       clubId: clubId,
       name: sheetPoule.name,
       description: sheetPoule.description,
-      phone: sheetPoule.phone,
       email: sheetPoule.email,
     } as Contact);
   }
@@ -106,7 +107,7 @@ class Importer {
     this.poules.add({
       id: slug(sheetPoule.name),
       name: sheetPoule.name,
-      halfCompetition: sheetPoule.halfCompetition,
+      gamesMultiplier: sheetPoule.gamesMultiplier ?? 1,
       isFinished: false,
       temporary: sheetPoule.temporary,
       teamScores: [],
@@ -184,10 +185,7 @@ class Importer {
         let poule = this.poules.findById(team.pouleId);
         let teamsInPoule = poule.teamScores.length;
         let gamesForTeam = this.games.getGamesForTeam(team.id).length;
-        let gamesForTeamExpected = teamsInPoule - 1;
-        if (!poule.halfCompetition) {
-          gamesForTeamExpected *= 2;
-        }
+        let gamesForTeamExpected = (teamsInPoule - 1) * 2 * poule.gamesMultiplier;
 
         if (gamesForTeam !== gamesForTeamExpected) {
           console.warn(
