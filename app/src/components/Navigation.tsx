@@ -38,7 +38,7 @@ const Navigation = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link className="nav-link" as={Link} to="/2023">
+          <Nav.Link className="nav-link" as={Link} to="/">
             Home
           </Nav.Link>
           <NavDropdown id="nav-poules" title="Poules">
