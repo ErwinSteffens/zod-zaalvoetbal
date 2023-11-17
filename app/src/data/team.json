@@ -143,7 +143,7 @@
     "id": "sc-erica-jo9-1",
     "clubId": "sc-erica",
     "name": "JO9-1",
-    "pouleId": "o9-poule-a",
+    "pouleId": "o10-poule-b",
     "category": "JO9"
   },
   {
@@ -493,7 +493,7 @@
     "id": "vv-raptim-jo9-1",
     "clubId": "vv-raptim",
     "name": "JO9-1",
-    "pouleId": "o10-poule-a",
+    "pouleId": "o9-poule-a",
     "category": "JO9"
   },
   {
@@ -759,7 +759,7 @@
     "id": "ksc-jo10-1",
     "clubId": "ksc",
     "name": "JO10-1",
-    "pouleId": "o10-poule-b",
+    "pouleId": "o10-poule-a",
     "category": "JO10"
   },
   {
