@@ -4,7 +4,9 @@ title: 'Spelregels JO8-JO13'
 className: game-rules
 ---
 
-1. Een team bestaat uit 1 keeper en 5 veldspelers en meerdere wisselspelers.
+1. Een team bestaat uit:
+    - **JO8 - JO12:** 1 keeper en 5 veldspelers.
+    - **JO13:** 1 keeper en 4 veldspelers.
 2. De doelverdediger moet onderscheidende kleding dragen.
 3. Het dragen van scheenbeschermers is **verplicht**.
 4. Het is verboden de zaal te betreden met schoenen met zwarte zolen of andere zolen die eveneens strepen achterlaten.
