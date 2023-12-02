@@ -539,8 +539,8 @@
     "category": "JO11"
   },
   {
-    "id": "vv-raptim-jo11-2",
-    "clubId": "vv-raptim",
+    "id": "fc-coevorden-jo11-2",
+    "clubId": "fc-coevorden",
     "name": "JO11-2",
     "pouleId": "o11-poule-c",
     "category": "JO11"
@@ -665,8 +665,8 @@
     "category": "JO11"
   },
   {
-    "id": "fc-coevorden-jo11-2",
-    "clubId": "fc-coevorden",
+    "id": "vv-raptim-jo11-2",
+    "clubId": "vv-raptim",
     "name": "JO11-2",
     "pouleId": "o11-poule-b",
     "category": "JO11"
