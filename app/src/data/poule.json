@@ -1063,7 +1063,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sv-twedo-jo11-2"
+        "teamId": "fc-coevorden-jo11-2"
       },
       {
         "rank": 1,
@@ -1075,7 +1075,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "fc-coevorden-jo11-2"
+        "teamId": "nkvv-protos-jo11-1"
       },
       {
         "rank": 2,
@@ -1087,7 +1087,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "nkvv-protos-jo11-1"
+        "teamId": "vv-sweel-jo11-2"
       },
       {
         "rank": 3,
@@ -1099,7 +1099,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "vv-sweel-jo11-2"
+        "teamId": "vv-raptim-jo11-3"
       },
       {
         "rank": 4,
@@ -1111,19 +1111,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "vv-raptim-jo11-3"
-      },
-      {
-        "rank": 5,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "dalendsc-jo11-3"
+        "teamId": "sv-twedo-jo11-2"
       }
     ]
   },
