@@ -768,5 +768,12 @@
     "name": "JO12-1",
     "pouleId": "o12-poule-a",
     "category": "JO12"
+  },
+  {
+    "id": "ksc-jo12-2",
+    "clubId": "ksc",
+    "name": "JO12-2",
+    "pouleId": "o12-poule-b",
+    "category": "JO12"
   }
 ]
