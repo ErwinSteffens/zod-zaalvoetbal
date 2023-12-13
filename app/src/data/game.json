@@ -4873,7 +4873,7 @@
   },
   {
     "round": 3,
-    "time": "2024-01-13T12:00:00.000Z",
+    "time": "2024-01-13T11:36:00.000Z",
     "status": "planned",
     "pouleId": "o10-poule-b",
     "homeTeamId": "fc-coevorden-jo10-2",
@@ -4885,7 +4885,7 @@
   },
   {
     "round": 3,
-    "time": "2024-01-13T12:24:00.000Z",
+    "time": "2024-01-13T12:00:00.000Z",
     "status": "planned",
     "pouleId": "o10-poule-b",
     "homeTeamId": "sc-erica-jo10-2",
@@ -4897,7 +4897,7 @@
   },
   {
     "round": 3,
-    "time": "2024-01-13T12:48:00.000Z",
+    "time": "2024-01-13T12:24:00.000Z",
     "status": "planned",
     "pouleId": "o10-poule-b",
     "homeTeamId": "sc-erica-jo9-1",
@@ -4909,7 +4909,7 @@
   },
   {
     "round": 3,
-    "time": "2024-01-13T13:12:00.000Z",
+    "time": "2024-01-13T12:48:00.000Z",
     "status": "planned",
     "pouleId": "o10-poule-b",
     "homeTeamId": "sc-erica-jo10-2",
@@ -4921,7 +4921,7 @@
   },
   {
     "round": 3,
-    "time": "2024-01-13T13:36:00.000Z",
+    "time": "2024-01-13T13:12:00.000Z",
     "status": "planned",
     "pouleId": "o10-poule-b",
     "homeTeamId": "sc-erica-jo9-1",
@@ -4933,7 +4933,7 @@
   },
   {
     "round": 3,
-    "time": "2024-01-13T14:00:00.000Z",
+    "time": "2024-01-13T13:36:00.000Z",
     "status": "planned",
     "pouleId": "o11-poule-c",
     "homeTeamId": "vv-sweel-jo11-2",
@@ -4945,7 +4945,7 @@
   },
   {
     "round": 3,
-    "time": "2024-01-13T14:24:00.000Z",
+    "time": "2024-01-13T14:00:00.000Z",
     "status": "planned",
     "pouleId": "o11-poule-c",
     "homeTeamId": "vv-raptim-jo11-3",
@@ -4957,7 +4957,7 @@
   },
   {
     "round": 3,
-    "time": "2024-01-13T14:48:00.000Z",
+    "time": "2024-01-13T14:24:00.000Z",
     "status": "planned",
     "pouleId": "o11-poule-c",
     "homeTeamId": "sv-twedo-jo11-2",
@@ -4969,7 +4969,7 @@
   },
   {
     "round": 3,
-    "time": "2024-01-13T15:12:00.000Z",
+    "time": "2024-01-13T14:48:00.000Z",
     "status": "planned",
     "pouleId": "o11-poule-c",
     "homeTeamId": "vv-raptim-jo11-3",
@@ -4981,7 +4981,7 @@
   },
   {
     "round": 3,
-    "time": "2024-01-13T15:36:00.000Z",
+    "time": "2024-01-13T15:12:00.000Z",
     "status": "planned",
     "pouleId": "o11-poule-c",
     "homeTeamId": "sv-twedo-jo11-2",
@@ -5920,9 +5920,9 @@
     "time": "2024-01-13T10:40:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-a",
-    "homeTeamId": "vv-sweel-jo7-1",
+    "homeTeamId": "sv-twedo-jo7-1",
     "homeScore": null,
-    "awayTeamId": "dalendsc-jo7-1",
+    "awayTeamId": "vv-sweel-jo7-1",
     "awayScore": null,
     "locationId": "sporthal-de-goorn",
     "field": 1
@@ -5935,42 +5935,6 @@
     "homeTeamId": "svv04-jo7-1",
     "homeScore": null,
     "awayTeamId": "vv-sweel-jo7-1",
-    "awayScore": null,
-    "locationId": "sporthal-de-goorn",
-    "field": 1
-  },
-  {
-    "round": 2,
-    "time": "2024-01-13T11:20:00.000Z",
-    "status": "planned",
-    "pouleId": "o7-poule-a",
-    "homeTeamId": "sv-twedo-jo7-1",
-    "homeScore": null,
-    "awayTeamId": "dalendsc-jo7-1",
-    "awayScore": null,
-    "locationId": "sporthal-de-goorn",
-    "field": 1
-  },
-  {
-    "round": 2,
-    "time": "2024-01-13T11:40:00.000Z",
-    "status": "planned",
-    "pouleId": "o7-poule-a",
-    "homeTeamId": "sv-twedo-jo7-1",
-    "homeScore": null,
-    "awayTeamId": "vv-sweel-jo7-1",
-    "awayScore": null,
-    "locationId": "sporthal-de-goorn",
-    "field": 1
-  },
-  {
-    "round": 2,
-    "time": "2024-01-13T12:00:00.000Z",
-    "status": "planned",
-    "pouleId": "o7-poule-a",
-    "homeTeamId": "dalendsc-jo7-1",
-    "homeScore": null,
-    "awayTeamId": "svv04-jo7-1",
     "awayScore": null,
     "locationId": "sporthal-de-goorn",
     "field": 1
@@ -6043,6 +6007,42 @@
     "homeTeamId": "dalendsc-jo7-2",
     "homeScore": null,
     "awayTeamId": "svv04-jo7-3",
+    "awayScore": null,
+    "locationId": "sporthal-de-goorn",
+    "field": 2
+  },
+  {
+    "round": 2,
+    "time": "2024-01-13T10:20:00.000Z",
+    "status": "planned",
+    "pouleId": "o7-poule-a",
+    "homeTeamId": "vv-sweel-jo7-1",
+    "homeScore": null,
+    "awayTeamId": "dalendsc-jo7-1",
+    "awayScore": null,
+    "locationId": "sporthal-de-goorn",
+    "field": 2
+  },
+  {
+    "round": 2,
+    "time": "2024-01-13T10:40:00.000Z",
+    "status": "planned",
+    "pouleId": "o7-poule-a",
+    "homeTeamId": "dalendsc-jo7-1",
+    "homeScore": null,
+    "awayTeamId": "svv04-jo7-1",
+    "awayScore": null,
+    "locationId": "sporthal-de-goorn",
+    "field": 2
+  },
+  {
+    "round": 2,
+    "time": "2024-01-13T11:00:00.000Z",
+    "status": "planned",
+    "pouleId": "o7-poule-a",
+    "homeTeamId": "sv-twedo-jo7-1",
+    "homeScore": null,
+    "awayTeamId": "dalendsc-jo7-1",
     "awayScore": null,
     "locationId": "sporthal-de-goorn",
     "field": 2
