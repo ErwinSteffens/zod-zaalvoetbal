@@ -2377,7 +2377,7 @@
   },
   {
     "round": 1,
-    "time": "2023-12-30T10:24:00.000Z",
+    "time": "2023-12-30T08:00:00.000Z",
     "status": "planned",
     "pouleId": "o13-poule-a",
     "homeTeamId": "svv04-jo13-1",
@@ -2389,7 +2389,7 @@
   },
   {
     "round": 1,
-    "time": "2023-12-30T10:48:00.000Z",
+    "time": "2023-12-30T08:24:00.000Z",
     "status": "planned",
     "pouleId": "o13-poule-a",
     "homeTeamId": "sv-twedo-jo13-2",
@@ -2401,7 +2401,7 @@
   },
   {
     "round": 1,
-    "time": "2023-12-30T11:12:00.000Z",
+    "time": "2023-12-30T08:48:00.000Z",
     "status": "planned",
     "pouleId": "o13-poule-a",
     "homeTeamId": "vv-raptim-jo13-1",
@@ -2413,7 +2413,7 @@
   },
   {
     "round": 1,
-    "time": "2023-12-30T11:36:00.000Z",
+    "time": "2023-12-30T09:12:00.000Z",
     "status": "planned",
     "pouleId": "o13-poule-a",
     "homeTeamId": "sv-twedo-jo13-2",
@@ -2425,7 +2425,7 @@
   },
   {
     "round": 1,
-    "time": "2023-12-30T12:00:00.000Z",
+    "time": "2023-12-30T09:36:00.000Z",
     "status": "planned",
     "pouleId": "o13-poule-a",
     "homeTeamId": "fc-coevorden-jo13-1",
@@ -2437,7 +2437,7 @@
   },
   {
     "round": 1,
-    "time": "2023-12-30T12:24:00.000Z",
+    "time": "2023-12-30T10:00:00.000Z",
     "status": "planned",
     "pouleId": "o13-poule-a",
     "homeTeamId": "vv-raptim-jo13-1",
@@ -2449,7 +2449,7 @@
   },
   {
     "round": 1,
-    "time": "2023-12-30T12:48:00.000Z",
+    "time": "2023-12-30T10:24:00.000Z",
     "status": "planned",
     "pouleId": "o13-poule-a",
     "homeTeamId": "fc-coevorden-jo13-1",
@@ -2461,7 +2461,7 @@
   },
   {
     "round": 1,
-    "time": "2023-12-30T13:12:00.000Z",
+    "time": "2023-12-30T10:48:00.000Z",
     "status": "planned",
     "pouleId": "o13-poule-a",
     "homeTeamId": "dalendsc-jo13-1",
