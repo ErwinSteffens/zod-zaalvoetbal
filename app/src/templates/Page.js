@@ -10,7 +10,7 @@ const PageTemplate = ({ data }) => {
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <Layout>
+    <Layout showTemporary={false}>
       <div className={cn('page', frontmatter.className)}>
         <h3>{frontmatter.title}</h3>
         <div dangerouslySetInnerHTML={{ __html: html }} />
