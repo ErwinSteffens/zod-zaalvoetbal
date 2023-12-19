@@ -37,6 +37,7 @@ const ScoresTemplate = ({ data }) => {
                   <div className={cn('item', 'team', 'home')}>Thuis team</div>
                   <div className={cn('item', 'team', 'away')}>Uit team</div>
                   <div className="item score">Uitslag</div>
+                  <div className="item signature">Handtekening</div>
                 </div>
 
                 {games.map((game) => {
@@ -74,6 +75,7 @@ const ScoresTemplate = ({ data }) => {
                         </div>
                         <div className="item score"></div>
                         <div className="item score"></div>
+                        <div className="item signature"></div>
                       </div>
                     </>
                   );
