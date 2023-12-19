@@ -10,7 +10,7 @@ import TemporaryWarning from './TemporaryWarning';
 const Layout = ({
   children,
   showNavigation = true,
-  showTemporary = true,
+  showTemporary = false,
   className,
 }: PropsWithChildren<{
   className?: string;
