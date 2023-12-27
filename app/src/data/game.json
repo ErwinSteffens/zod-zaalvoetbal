@@ -1577,9 +1577,9 @@
     "status": "played",
     "pouleId": "o11-poule-a",
     "homeTeamId": "fc-coevorden-jo11-1",
-    "homeScore": 2,
+    "homeScore": 0,
     "awayTeamId": "vv-raptim-jo11-1",
-    "awayScore": 0,
+    "awayScore": 3,
     "locationId": "sporthal-de-goorn",
     "field": null
   },
