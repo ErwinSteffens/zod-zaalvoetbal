@@ -893,6 +893,18 @@
     "teamScores": [
       {
         "rank": 0,
+        "points": 5,
+        "gamesPlayed": 3,
+        "gamesWon": 1,
+        "gamesLost": 0,
+        "gamesDraw": 2,
+        "goalsFor": 7,
+        "goalsAgainst": 5,
+        "goalsDifference": 2,
+        "teamId": "sv-twedo-jo11-1"
+      },
+      {
+        "rank": 1,
         "points": 4,
         "gamesPlayed": 2,
         "gamesWon": 1,
@@ -902,18 +914,6 @@
         "goalsAgainst": 2,
         "goalsDifference": 3,
         "teamId": "vv-raptim-jo11-1"
-      },
-      {
-        "rank": 1,
-        "points": 4,
-        "gamesPlayed": 2,
-        "gamesWon": 1,
-        "gamesLost": 0,
-        "gamesDraw": 1,
-        "goalsFor": 4,
-        "goalsAgainst": 2,
-        "goalsDifference": 2,
-        "teamId": "dalendsc-jo11-1"
       },
       {
         "rank": 2,
@@ -941,15 +941,15 @@
       },
       {
         "rank": 4,
-        "points": 2,
-        "gamesPlayed": 3,
+        "points": 1,
+        "gamesPlayed": 2,
         "gamesWon": 0,
         "gamesLost": 1,
-        "gamesDraw": 2,
-        "goalsFor": 5,
-        "goalsAgainst": 7,
+        "gamesDraw": 1,
+        "goalsFor": 2,
+        "goalsAgainst": 4,
         "goalsDifference": -2,
-        "teamId": "sv-twedo-jo11-1"
+        "teamId": "dalendsc-jo11-1"
       },
       {
         "rank": 5,

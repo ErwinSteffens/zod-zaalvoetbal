@@ -1565,9 +1565,9 @@
     "status": "played",
     "pouleId": "o11-poule-a",
     "homeTeamId": "sv-twedo-jo11-1",
-    "homeScore": 1,
+    "homeScore": 3,
     "awayTeamId": "dalendsc-jo11-1",
-    "awayScore": 3,
+    "awayScore": 1,
     "locationId": "sporthal-de-goorn",
     "field": null
   },
