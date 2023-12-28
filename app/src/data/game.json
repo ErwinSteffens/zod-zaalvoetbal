@@ -1445,9 +1445,9 @@
     "status": "played",
     "pouleId": "o9-poule-b",
     "homeTeamId": "dalendsc-jo9-2",
-    "homeScore": 0,
+    "homeScore": 1,
     "awayTeamId": "nkvv-protos-jo9-1",
-    "awayScore": 1,
+    "awayScore": 0,
     "locationId": "sporthal-de-goorn",
     "field": null
   },

@@ -536,6 +536,18 @@
     "teamScores": [
       {
         "rank": 0,
+        "points": 7,
+        "gamesPlayed": 3,
+        "gamesWon": 2,
+        "gamesLost": 0,
+        "gamesDraw": 1,
+        "goalsFor": 5,
+        "goalsAgainst": 2,
+        "goalsDifference": 3,
+        "teamId": "dalendsc-jo9-2"
+      },
+      {
+        "rank": 1,
         "points": 6,
         "gamesPlayed": 3,
         "gamesWon": 2,
@@ -547,7 +559,7 @@
         "teamId": "fc-coevorden-jo9-2"
       },
       {
-        "rank": 1,
+        "rank": 2,
         "points": 4,
         "gamesPlayed": 2,
         "gamesWon": 1,
@@ -557,18 +569,6 @@
         "goalsAgainst": 3,
         "goalsDifference": 4,
         "teamId": "svv04-jo9-1"
-      },
-      {
-        "rank": 2,
-        "points": 4,
-        "gamesPlayed": 3,
-        "gamesWon": 1,
-        "gamesLost": 1,
-        "gamesDraw": 1,
-        "goalsFor": 4,
-        "goalsAgainst": 3,
-        "goalsDifference": 1,
-        "teamId": "dalendsc-jo9-2"
       },
       {
         "rank": 3,
@@ -596,14 +596,14 @@
       },
       {
         "rank": 5,
-        "points": 3,
+        "points": 0,
         "gamesPlayed": 3,
-        "gamesWon": 1,
-        "gamesLost": 2,
+        "gamesWon": 0,
+        "gamesLost": 3,
         "gamesDraw": 0,
-        "goalsFor": 2,
-        "goalsAgainst": 6,
-        "goalsDifference": -4,
+        "goalsFor": 1,
+        "goalsAgainst": 7,
+        "goalsDifference": -6,
         "teamId": "nkvv-protos-jo9-1"
       }
     ]
