@@ -836,26 +836,26 @@
       },
       {
         "rank": 1,
-        "points": 3,
-        "gamesPlayed": 2,
-        "gamesWon": 1,
+        "points": 6,
+        "gamesPlayed": 3,
+        "gamesWon": 2,
         "gamesLost": 1,
         "gamesDraw": 0,
-        "goalsFor": 6,
+        "goalsFor": 9,
         "goalsAgainst": 4,
-        "goalsDifference": 2,
+        "goalsDifference": 5,
         "teamId": "dalendsc-jo10-1"
       },
       {
         "rank": 2,
-        "points": 3,
-        "gamesPlayed": 2,
-        "gamesWon": 1,
+        "points": 6,
+        "gamesPlayed": 3,
+        "gamesWon": 2,
         "gamesLost": 1,
         "gamesDraw": 0,
-        "goalsFor": 5,
+        "goalsFor": 8,
         "goalsAgainst": 6,
-        "goalsDifference": -1,
+        "goalsDifference": 2,
         "teamId": "vv-sleen-jo10-1"
       },
       {
@@ -866,21 +866,21 @@
         "gamesLost": 1,
         "gamesDraw": 1,
         "goalsFor": 0,
-        "goalsAgainst": 3,
-        "goalsDifference": -3,
-        "teamId": "svv04-jo10-2"
+        "goalsAgainst": 5,
+        "goalsDifference": -5,
+        "teamId": "fc-coevorden-jo10-3"
       },
       {
         "rank": 4,
         "points": 1,
-        "gamesPlayed": 2,
+        "gamesPlayed": 4,
         "gamesWon": 0,
-        "gamesLost": 1,
+        "gamesLost": 3,
         "gamesDraw": 1,
         "goalsFor": 0,
-        "goalsAgainst": 5,
-        "goalsDifference": -5,
-        "teamId": "fc-coevorden-jo10-3"
+        "goalsAgainst": 9,
+        "goalsDifference": -9,
+        "teamId": "svv04-jo10-2"
       }
     ]
   },
