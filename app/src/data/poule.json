@@ -1210,9 +1210,9 @@
         "gamesWon": 3,
         "gamesLost": 0,
         "gamesDraw": 1,
-        "goalsFor": 12,
+        "goalsFor": 11,
         "goalsAgainst": 2,
-        "goalsDifference": 10,
+        "goalsDifference": 9,
         "teamId": "vios-jo12-1"
       },
       {
@@ -1229,27 +1229,27 @@
       },
       {
         "rank": 3,
-        "points": 0,
-        "gamesPlayed": 3,
-        "gamesWon": 0,
+        "points": 3,
+        "gamesPlayed": 4,
+        "gamesWon": 1,
         "gamesLost": 3,
         "gamesDraw": 0,
-        "goalsFor": 4,
-        "goalsAgainst": 17,
-        "goalsDifference": -13,
-        "teamId": "sc-erica-jo12-2"
+        "goalsFor": 5,
+        "goalsAgainst": 19,
+        "goalsDifference": -14,
+        "teamId": "ksc-jo12-2"
       },
       {
         "rank": 4,
         "points": 0,
-        "gamesPlayed": 3,
+        "gamesPlayed": 4,
         "gamesWon": 0,
-        "gamesLost": 3,
+        "gamesLost": 4,
         "gamesDraw": 0,
-        "goalsFor": 2,
-        "goalsAgainst": 17,
-        "goalsDifference": -15,
-        "teamId": "ksc-jo12-2"
+        "goalsFor": 6,
+        "goalsAgainst": 19,
+        "goalsDifference": -13,
+        "teamId": "sc-erica-jo12-2"
       }
     ]
   },
