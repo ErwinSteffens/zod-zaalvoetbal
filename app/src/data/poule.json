@@ -341,27 +341,27 @@
       },
       {
         "rank": 2,
-        "points": 9,
+        "points": 10,
         "gamesPlayed": 6,
         "gamesWon": 3,
-        "gamesLost": 3,
-        "gamesDraw": 0,
-        "goalsFor": 8,
-        "goalsAgainst": 6,
-        "goalsDifference": 2,
-        "teamId": "dalendsc-jo8-3"
+        "gamesLost": 2,
+        "gamesDraw": 1,
+        "goalsFor": 14,
+        "goalsAgainst": 8,
+        "goalsDifference": 6,
+        "teamId": "fc-coevorden-jo8-2"
       },
       {
         "rank": 3,
-        "points": 7,
+        "points": 6,
         "gamesPlayed": 6,
         "gamesWon": 2,
-        "gamesLost": 3,
-        "gamesDraw": 1,
-        "goalsFor": 10,
-        "goalsAgainst": 12,
-        "goalsDifference": -2,
-        "teamId": "fc-coevorden-jo8-2"
+        "gamesLost": 4,
+        "gamesDraw": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 10,
+        "goalsDifference": -6,
+        "teamId": "dalendsc-jo8-3"
       },
       {
         "rank": 4,
