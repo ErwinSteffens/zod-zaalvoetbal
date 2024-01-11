@@ -4958,12 +4958,12 @@
   {
     "round": 3,
     "time": "2024-01-13T10:24:00.000Z",
-    "status": "planned",
+    "status": "home-team-no-show",
     "pouleId": "o10-poule-a",
     "homeTeamId": "sv-twedo-jo10-1",
-    "homeScore": null,
+    "homeScore": 0,
     "awayTeamId": "sc-erica-jo10-1",
-    "awayScore": null,
+    "awayScore": 3,
     "locationId": "sporthal-drostenhal",
     "field": null
   },
@@ -4982,12 +4982,12 @@
   {
     "round": 3,
     "time": "2024-01-13T11:12:00.000Z",
-    "status": "planned",
+    "status": "home-team-no-show",
     "pouleId": "o10-poule-a",
     "homeTeamId": "sv-twedo-jo10-1",
-    "homeScore": null,
+    "homeScore": 0,
     "awayTeamId": "vv-raptim-jo10-1",
-    "awayScore": null,
+    "awayScore": 3,
     "locationId": "sporthal-drostenhal",
     "field": null
   },

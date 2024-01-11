@@ -686,26 +686,26 @@
     "teamScores": [
       {
         "rank": 0,
-        "points": 16,
-        "gamesPlayed": 6,
-        "gamesWon": 5,
+        "points": 19,
+        "gamesPlayed": 7,
+        "gamesWon": 6,
         "gamesLost": 0,
         "gamesDraw": 1,
-        "goalsFor": 26,
+        "goalsFor": 29,
         "goalsAgainst": 4,
-        "goalsDifference": 22,
+        "goalsDifference": 25,
         "teamId": "sc-erica-jo10-1"
       },
       {
         "rank": 1,
-        "points": 13,
-        "gamesPlayed": 6,
-        "gamesWon": 4,
+        "points": 16,
+        "gamesPlayed": 7,
+        "gamesWon": 5,
         "gamesLost": 1,
         "gamesDraw": 1,
-        "goalsFor": 25,
+        "goalsFor": 28,
         "goalsAgainst": 5,
-        "goalsDifference": 20,
+        "goalsDifference": 23,
         "teamId": "vv-raptim-jo10-1"
       },
       {
@@ -723,13 +723,13 @@
       {
         "rank": 3,
         "points": 3,
-        "gamesPlayed": 6,
+        "gamesPlayed": 8,
         "gamesWon": 0,
-        "gamesLost": 3,
+        "gamesLost": 5,
         "gamesDraw": 3,
         "goalsFor": 1,
-        "goalsAgainst": 16,
-        "goalsDifference": -15,
+        "goalsAgainst": 22,
+        "goalsDifference": -21,
         "teamId": "sv-twedo-jo10-1"
       },
       {
