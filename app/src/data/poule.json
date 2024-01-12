@@ -1193,6 +1193,18 @@
     "teamScores": [
       {
         "rank": 0,
+        "points": 19,
+        "gamesPlayed": 7,
+        "gamesWon": 6,
+        "gamesLost": 0,
+        "gamesDraw": 1,
+        "goalsFor": 20,
+        "goalsAgainst": 2,
+        "goalsDifference": 18,
+        "teamId": "vios-jo12-1"
+      },
+      {
+        "rank": 1,
         "points": 16,
         "gamesPlayed": 6,
         "gamesWon": 5,
@@ -1204,39 +1216,27 @@
         "teamId": "vv-sleen-jo12-1"
       },
       {
-        "rank": 1,
-        "points": 16,
-        "gamesPlayed": 6,
-        "gamesWon": 5,
-        "gamesLost": 0,
-        "gamesDraw": 1,
-        "goalsFor": 17,
-        "goalsAgainst": 2,
-        "goalsDifference": 15,
-        "teamId": "vios-jo12-1"
-      },
-      {
         "rank": 2,
-        "points": 6,
-        "gamesPlayed": 6,
-        "gamesWon": 2,
+        "points": 9,
+        "gamesPlayed": 7,
+        "gamesWon": 3,
         "gamesLost": 4,
         "gamesDraw": 0,
-        "goalsFor": 13,
+        "goalsFor": 16,
         "goalsAgainst": 14,
-        "goalsDifference": -1,
+        "goalsDifference": 2,
         "teamId": "vv-raptim-jo12-2"
       },
       {
         "rank": 3,
         "points": 4,
-        "gamesPlayed": 6,
+        "gamesPlayed": 8,
         "gamesWon": 1,
-        "gamesLost": 4,
+        "gamesLost": 6,
         "gamesDraw": 1,
         "goalsFor": 8,
-        "goalsAgainst": 27,
-        "goalsDifference": -19,
+        "goalsAgainst": 33,
+        "goalsDifference": -25,
         "teamId": "ksc-jo12-2"
       },
       {
