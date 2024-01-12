@@ -19,26 +19,36 @@ const RootPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
 
   return (
     <Layout>
-      <h3>Welkom</h3>
-      <p>
-        Welkom op de website van de ZOD zaalvoetbalcompetitie!
-        <br />
-        <br />
-        De ZOD zaalvoetbalcompetitie is ontstaan uit een onderlinge samenwerking
-        van voetbalverenigingen uit Zuid-Oost Drenthe. Het doel van deze
-        competitie is om de JO-7 t/m JO-13 in de winterperiode te kunnen laten
-        voetballen!
-        <br />
-        <br />
-        Op deze site zijn de programma&apos;s, uitslagen en standen voor alle
-        teams te vinden. Klik op een van de onderstaande teams om deze te
-        bekijken.
-      </p>
+      <Row>
+        <Col md={12} lg={6}>
+          Welkom op de website van de ZOD zaalvoetbalcompetitie!
+          <br />
+          <br />
+          De ZOD zaalvoetbalcompetitie is ontstaan uit een onderlinge
+          samenwerking van voetbalverenigingen uit Zuid-Oost Drenthe. Het doel
+          van deze competitie is om de JO-7 t/m JO-13 in de winterperiode te
+          kunnen laten voetballen!
+          <br />
+          <br />
+          Op deze site zijn de programma&apos;s, uitslagen en standen voor alle
+          teams te vinden. Klik op een van de onderstaande teams om deze te
+          bekijken.
+        </Col>
+        <Col md={12} lg={6} className="text-center lead mt-sm-4 mt-md-0 mb-3 ">
+          <p>Heb je leuke foto's van het toernooi of van je team?</p>
+          <p>Deel ze met ons op Instagram!</p>
+          <p>
+            <a href="https://instagram.com/zaalvoetbal_zod" target="_blank">
+              <img className="img-fluid instagram" src="/instagram_icon.png" />
+            </a>
+          </p>
+        </Col>
+      </Row>
       {lastUpdate && (
         <>
           <br />
           <Alert variant="info" className="small">
-            <b>Bijgewerkt {moment(lastUpdate.time).calendar()}: </b>
+            <b>Laatst bijgewerkt {moment(lastUpdate.time).calendar()}: </b>
             <ul>
               {lastUpdate.message?.map((m) => (
                 <li>{m}</li>
