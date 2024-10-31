@@ -31,7 +31,8 @@ const ContactsPage = ({ data }: PageProps<Queries.ContactsPageQuery>) => {
             );
           })}
         </Row>
-        <h4 className="mt-5">Club coördinatoren</h4>
+        <br />
+        <h3 className="mt-5">Club coördinatoren</h3>
         <Row>
           {clubContacts.map((contact) => {
             return (
