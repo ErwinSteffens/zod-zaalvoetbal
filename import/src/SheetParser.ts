@@ -33,7 +33,7 @@ export interface SheetGame {
 }
 
 class SheetParser {
-  readonly contactsSheetName: string = 'Sporthallen';
+  readonly contactsSheetName: string = 'Clubs';
   readonly teamsSheetName: string = 'Teams';
   readonly gameSheetNamePrefix: string = 'Schema';
   readonly timeRows: number = 20;
@@ -70,16 +70,16 @@ class SheetParser {
     const teamsSheet = this.workbook.Sheets[this.contactsSheetName];
     let rowIndex = 2;
     while (true) {
-      const name = this.getCellValue(teamsSheet, 0, rowIndex);
-      if (!name) {
+      const clubName = this.getCellValue(teamsSheet, 0, rowIndex);
+      if (!clubName) {
         break;
       }
 
-      console.log(`  Contact: ${name}.`);
-
-      const clubName = this.getCellValue(teamsSheet, 1, rowIndex);
+      const name = this.getCellValue(teamsSheet, 1, rowIndex);
       const description = this.getCellValue(teamsSheet, 2, rowIndex);
       const email = this.getCellValue(teamsSheet, 4, rowIndex);
+
+      console.log(`  Club: ${clubName}, contact: ${name}`);
 
       if (this.teamFound) {
         this.contactFound({

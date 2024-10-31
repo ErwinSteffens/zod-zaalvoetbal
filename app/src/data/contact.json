@@ -1,68 +1,74 @@
 [
   {
-    "clubId": "sc-erica",
-    "name": "Arnoud Sliekers",
-    "description": null,
-    "email": null
-  },
-  {
     "clubId": "vv-sweel",
     "name": "Henri Hooge",
-    "description": null,
+    "description": "Coördinator",
     "email": "jeugdzaken@vvsweel.nl"
   },
   {
     "clubId": "vv-raptim",
     "name": "Bert Nijenbanning",
-    "description": "Organisatie",
+    "description": "Coordinator, organisatie",
     "email": "jeugdbestuur@vvraptim.nl"
   },
   {
     "clubId": "fc-coevorden",
     "name": "Gerwin Kampherbeek",
-    "description": null,
+    "description": "Coördinator",
     "email": "hoofdjeugdopleiding@fccoevorden.nl"
   },
   {
     "clubId": "nkvv-protos",
     "name": "Andre Wessel",
-    "description": null,
+    "description": "Coördinator",
     "email": "nkvvprotos@gmail.com"
   },
   {
     "clubId": "dalendsc",
     "name": "Michel Boer",
-    "description": null,
+    "description": "Coördinator",
     "email": "jeugdbestuur@vvdalen.nl"
   },
   {
     "clubId": "vv-sleen",
     "name": "Jonny Zwaan",
-    "description": null,
-    "email": "secretariaat@vvVV Sleen.nl"
+    "description": "Coördinator",
+    "email": "jonnyzwaan44@gmail.com"
   },
   {
     "clubId": "vios",
-    "name": "Ineke Lugies",
-    "description": null,
-    "email": "ilugies@hotmail.com"
+    "name": "Linda Gubler",
+    "description": "Coördinator",
+    "email": null
   },
   {
     "clubId": "ksc",
     "name": "Lucianne Arling",
-    "description": null,
+    "description": "Coördinator",
     "email": "luciannearling@live.nl"
   },
   {
     "clubId": "sv-twedo",
     "name": "Wilbert van Leeuwen",
-    "description": "Organisatie",
+    "description": "Coördinator, organisatie",
     "email": "wilberteniemke@gmail.com"
   },
   {
     "clubId": "svv04",
     "name": "Erwin Steffens",
-    "description": "Organisatie, website en uitslagen",
+    "description": "Coördinator, organisatie, website",
     "email": "erwinsteffens@gmail.com"
+  },
+  {
+    "clubId": "sjo-swb",
+    "name": "Mariëtte Bruins",
+    "description": "Coördinator",
+    "email": "swbvoetbal@gmail.com"
+  },
+  {
+    "clubId": "sc-elim",
+    "name": "Rob van der Zee",
+    "description": "Coördinator",
+    "email": null
   }
 ]

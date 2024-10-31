@@ -201,7 +201,7 @@ class Importer {
       let gamesForPoule = Array.from(this.games.items).filter(
         (game) => game.pouleId == poule.id,
       );
-      let isFinished = gamesForPoule.every(
+      let isFinished = gamesForPoule.length != 0 && gamesForPoule.every(
         (game) => game.status !== GameStatus.Planned,
       );
 

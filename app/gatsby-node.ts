@@ -33,11 +33,18 @@ exports.createSchemaCustomization = ({
       games: [GameJson!] @link(by: "locationId", from: "jsonId")
     }`,
     `type GameJson implements Node {
+      round: Int
+      time: String
+      status: String
+      pouleId: String
       poule: PouleJson! @link(by: "jsonId", from: "pouleId")
+      homeTeamId: String
       homeTeam: TeamJson! @link(by: "jsonId", from: "homeTeamId")
       homeScore: Int
+      awayTeamId: String
       awayTeam: TeamJson! @link(by: "jsonId", from: "awayTeamId")
       awayScore: Int
+      locationId: String
       location: LocationJson! @link(by: "jsonId", from: "locationId")
       field: Int
     }`,

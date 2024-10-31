@@ -42,5 +42,13 @@
   {
     "inputName": "VIOS",
     "name": "VIOS"
+  },
+  {
+    "inputName": "SC Elim",
+    "name": "SC Elim"
+  },
+  {
+    "inputName": "SJO SWB",
+    "name": "SJO SWB"
   }
 ]

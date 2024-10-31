@@ -42,5 +42,13 @@
   {
     "id": "vios",
     "name": "VIOS"
+  },
+  {
+    "id": "sc-elim",
+    "name": "SC Elim"
+  },
+  {
+    "id": "sjo-swb",
+    "name": "SJO SWB"
   }
 ]

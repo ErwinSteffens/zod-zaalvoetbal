@@ -70,5 +70,13 @@
     "postalCode": "7861 AM",
     "city": "Oosterhesselen",
     "placeId": "ChIJrdK6zjzit0cRrdWRdFWABek"
+  },
+  {
+    "inputName": "Ossehal - Nieuw-Schoonebeek",
+    "venue": "Sporthal Ossehal",
+    "address": "Aalminksweg 5",
+    "postalCode": "7766 AZ",
+    "city": "Nieuw-Schoonebeek",
+    "placeId": "ChIJSwIrEovxt0cRCOpreRiZeRE"
   }
 ]
