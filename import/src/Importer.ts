@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+import { Map, Set } from 'immutable';
 
 import { slug } from './utils';
 import SheetParser, {
@@ -184,14 +185,32 @@ class Importer {
       } else {
         let poule = this.poules.findById(team.pouleId);
         let teamsInPoule = poule.teamScores.length;
-        let gamesForTeam = this.games.getGamesForTeam(team.id).length;
+        let gamesForTeam = this.games.getGamesForTeam(team.id);
         let gamesForTeamExpected = (teamsInPoule - 1) * 2 * poule.gamesMultiplier;
 
-        if (gamesForTeam !== gamesForTeamExpected) {
+        if (gamesForTeam.length !== gamesForTeamExpected) {
           console.warn(
-            `  - WARNING: Expected '${gamesForTeamExpected}' but found '${gamesForTeam}' for team '${team.id}' in poule '${team.pouleId}'`,
+            `  - WARNING: Expected '${gamesForTeamExpected}' but found '${gamesForTeam.length}' for team '${team.id}' in poule '${team.pouleId}'`,
           );
         }
+
+        let dateVenueMap = Map<string, Set<string>>();
+        for (var game of gamesForTeam) {
+          var dateStr = game.time.toDateString();
+
+          if (dateVenueMap.has(dateStr)) {
+            dateVenueMap = dateVenueMap.update(dateStr, set => set.add(game.locationId));
+          }
+          else {
+            dateVenueMap = dateVenueMap.set(dateStr, Set<string>([game.locationId]));
+          }
+        }
+
+        dateVenueMap.forEach((venues, dateStr) => {
+          if (venues.size > 1) {
+            console.warn(`  - WARNING: Multiple venues for team '${team.id}' on date '${dateStr}': '${venues.join(', ')}'`);
+          }
+        });
       }
     });
 
