@@ -6,8 +6,7 @@ import { LocationName } from './LocationName';
 import { graphql, useStaticQuery } from 'gatsby';
 
 type GamesByDayMap = Map<Date, GamesByLocationMap>;
-type GamesByLocationMap = Map<string, GamesByFieldMap>;
-type GamesByFieldMap = Map<string, Queries.GameJson[]>;
+type GamesByLocationMap = Map<string, Queries.GameJson[]>;
 
 const PouleGames = ({
   games,
@@ -51,16 +50,7 @@ const PouleGames = ({
               <h6 className="games-header sub">
                 <LocationName location={location} />
               </h6>
-              {Array.from(gamesByLocation).map(([field, gamesByField]) => {
-                return (
-                  <Fragment key={field || 'field'}>
-                    {field && (
-                      <h6 className="games-header last">Veld {field}</h6>
-                    )}
-                    <Games games={gamesByField} teamId={teamId} />
-                  </Fragment>
-                );
-              })}
+              <Games games={gamesByLocation} teamId={teamId} />
             </Fragment>
           );
         })}

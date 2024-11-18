@@ -31,18 +31,11 @@ const TeamTemplate = ({ data }) => {
       return moment(game.time).startOf('day').toDate();
     })
     .map((games) => {
-      return games
-        .groupBy((game) => {
-          return game.location.jsonId;
-        })
-        .map((games) =>
-          games.groupBy((game) => {
-            return game.field;
-          }),
-        );
-    });
-
-  games = games.sortBy((_v, k) => k);
+      return games.groupBy((game) => {
+        return game.location.jsonId;
+      });
+    })
+    .sortBy((_v, k) => k);
 
   return (
     <Layout className="team">

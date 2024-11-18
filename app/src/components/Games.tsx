@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useMemo } from 'react';
 import { Link } from 'gatsby';
 import cn from 'classnames';
 import moment from 'moment';
@@ -18,15 +18,44 @@ const Games = ({
   clubId?: string;
   showScores?: boolean;
 }) => {
+  const sortedGames = useMemo(() => {
+    return games.sort((a, b) => {
+      if (a.time! < b.time!) {
+        return -1;
+      }
+      if (a.time! > b.time!) {
+        return 1;
+      }
+      if (a.field && b.field) {
+        if (a.field < b.field) {
+          return -1;
+        }
+        if (a.field > b.field) {
+          return 1;
+        }
+      }
+      return 0;
+    });
+  }, [games]);
+
   return (
     <div className="games-table">
-      {games.map((game) => {
-        const { time, status, homeTeam, homeScore, awayTeam, awayScore } = game;
+      {sortedGames.map((game) => {
+        const {
+          time,
+          field,
+          status,
+          homeTeam,
+          homeScore,
+          awayTeam,
+          awayScore,
+        } = game;
 
         const isPlayed = showScores && status !== 'planned';
         const middleClasses = cn('game-content', {
           'game-content-score': isPlayed,
-          'game-content-time': !isPlayed,
+          'game-content-time': !isPlayed && !field,
+          'game-content-time-field': !isPlayed && field,
         });
 
         const middleContent = isPlayed
@@ -58,7 +87,15 @@ const Games = ({
                 <div className="game-team-name">{homeTeam.fullName}</div>
                 <ClubIcon club={homeClub} />
               </Link>
-              <div className={middleClasses}>{middleContent}</div>
+              <div className={middleClasses}>
+                {middleContent}
+                {!isPlayed && field && (
+                  <Fragment>
+                    <br />
+                    <span>Veld {field}</span>
+                  </Fragment>
+                )}
+              </div>
               <Link
                 className={cn('game-team', 'game-team-away', {
                   highlight:

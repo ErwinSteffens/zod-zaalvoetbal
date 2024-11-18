@@ -18,15 +18,9 @@ const PouleTemplate = ({ data }) => {
         return moment(game.time).startOf('day').toDate();
       })
       .map((games) => {
-        return games
-          .groupBy((game) => {
-            return game.location.jsonId;
-          })
-          .map((games) =>
-            games.groupBy((game) => {
-              return game.field;
-            }),
-          );
+        return games.groupBy((game) => {
+          return game.location.jsonId;
+        });
       });
   }, [poule]);
 
