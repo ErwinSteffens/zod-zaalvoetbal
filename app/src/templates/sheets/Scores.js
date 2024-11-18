@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { List } from 'immutable';
 import cn from 'classnames';
@@ -23,65 +23,79 @@ const ScoresTemplate = ({ data }) => {
     <Layout className="scores">
       {games.entrySeq().map(([date, games]) => {
         let lastPouleId = null;
-        let lastFieldId = null;
+
+        // Sort games by time and field
+        const sortedGames = games.sort((a, b) => {
+          if (a.time < b.time) {
+            return -1;
+          }
+          if (a.time > b.time) {
+            return 1;
+          }
+          if (a.field && b.field) {
+            if (a.field < b.field) {
+              return -1;
+            }
+            if (a.field > b.field) {
+              return 1;
+            }
+          }
+          return 0;
+        });
+
+        const hasField = sortedGames.some((game) => game.field);
+
         return (
           <div key={date.toISOString()} className="page">
             <h3>{moment(date).format('dddd LL')}</h3>
             <h5>{location.venue}</h5>
 
             <div className="table">
-              <>
-                <div className="game header">
-                  <div className="item time">Tijd</div>
-                  <div className="item poule">Poule</div>
-                  <div className={cn('item', 'team', 'home')}>Thuis team</div>
-                  <div className={cn('item', 'team', 'away')}>Uit team</div>
-                  <div className="item score">Uitslag</div>
-                  <div className="item signature">Handtekeningen</div>
-                </div>
+              {sortedGames.map((game) => {
+                const { time, field, homeTeam, awayTeam } = game;
+                const poule = homeTeam.poule;
 
-                {games.map((game) => {
-                  const { time, field, homeTeam, awayTeam } = game;
-                  const poule = homeTeam.poule;
+                const showHeader = lastPouleId !== poule.jsonId;
+                lastPouleId = poule.jsonId;
 
-                  const classes = cn('game', {
-                    'mt-4':
-                      lastPouleId !== null && lastPouleId !== poule.jsonId,
-                  });
-                  lastPouleId = poule.jsonId;
-
-                  const fieldHeader =
-                    field && field !== lastFieldId ? (
-                      <h6 className="field-header">Veld {field}</h6>
-                    ) : null;
-                  lastFieldId = field;
-
-                  return (
-                    <>
-                      {fieldHeader}
-                      <div
-                        key={`${homeTeam.jsonId}|${awayTeam.jsonId}|${time}`}
-                        className={classes}
-                      >
-                        <div className="item time">
-                          {moment(time).format('LT')}
+                return (
+                  <>
+                    {showHeader && (
+                      <Fragment>
+                        <h5 className="field-header mb-4">{poule.name}</h5>
+                        <div className="game header">
+                          <div className="item time">Tijd</div>
+                          {hasField && <div className="item field">Veld</div>}
+                          <div className={cn('item', 'team', 'home')}>
+                            Thuis team
+                          </div>
+                          <div className={cn('item', 'team', 'away')}>
+                            Uit team
+                          </div>
+                          <div className="item score">Uitslag</div>
+                          <div className="item signature">Handtekeningen</div>
                         </div>
-                        <div className="item poule">{poule.name}</div>
-                        <div className="item team home">
-                          {homeTeam.fullName}
-                        </div>
-                        <div className="item team away">
-                          {awayTeam.fullName}
-                        </div>
-                        <div className="item score"></div>
-                        <div className="item score"></div>
-                        <div className="item signature first"></div>
-                        <div className="item signature"></div>
+                      </Fragment>
+                    )}
+                    <div
+                      key={`${homeTeam.jsonId}|${awayTeam.jsonId}|${time}`}
+                      className="game"
+                    >
+                      <div className="item time">
+                        {moment(time).format('LT')}
                       </div>
-                    </>
-                  );
-                })}
-              </>
+                      {field && <div className="item field">{field}</div>}
+
+                      <div className="item team home">{homeTeam.fullName}</div>
+                      <div className="item team away">{awayTeam.fullName}</div>
+                      <div className="item score"></div>
+                      <div className="item score"></div>
+                      <div className="item signature first"></div>
+                      <div className="item signature"></div>
+                    </div>
+                  </>
+                );
+              })}
             </div>
             <div className="info">
               Uitslagen kunnen worden doorgegeven door een foto van dit
