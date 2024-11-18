@@ -85,8 +85,8 @@ const Navigation = () => {
             <NavDropdown.Item as={Link} to={`/spelregels`}>
               Spelregels JO8-JO13
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to={`/spelregels-mini`}>
-              Spelregels Mini's
+            <NavDropdown.Item as={Link} to={`/spelregels-jo7`}>
+              Spelregels JO7
             </NavDropdown.Item>
           </NavDropdown>
           <Nav.Link as={Link} to="/downloads">

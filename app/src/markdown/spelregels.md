@@ -5,13 +5,13 @@ className: game-rules
 ---
 
 1. Een team bestaat uit:
-    - **JO8 - JO12:** 1 keeper en 5 veldspelers.
-    - **JO13:** 1 keeper en 4 veldspelers.
+    - **JO8 - JO11:** 1 keeper en 5 veldspelers.
+    - **JO12 - JO13:** 1 keeper en 4 veldspelers.
 2. De doelverdediger moet onderscheidende kleding dragen.
 3. Het dragen van scheenbeschermers is **verplicht**.
-4. Het is verboden de zaal te betreden met schoenen met zwarte zolen of andere zolen die eveneens strepen achterlaten.
+4. Het is verplicht goede zaalschoenen te dragen die geen strepen achterlaten en die schoon zijn.
 5. De thuis spelende team is het team dat als eerste genoemd staat bij een wedstrijd.
-6. De uit spelende ploeg begint met de aftrap. 
+6. De uit spelende ploeg begint met de aftrap.
 7. Een wedstrijd wordt aaneengesloten gespeeld. Er wordt niet van speelhelft gewisseld. **De speeltijd is 20 minuten.**
 8. Er mag onbeperkt en op elk moment worden gewisseld.
 9. **Een wisselspeler mag pas het veld betreden als de te wisselen speler het veld heeft verlaten.** Een overtreding hierop kan worden bestraft met een directe vrije trap voor de tegenstander.
@@ -62,7 +62,7 @@ Bij terugtrekken van een team worden wel de kosten van de zaalhuur wel doorberek
 
 #### Spelbegeleiders
 
-- Het thuis spelende team moet voor een spelbegeleider zorgen. 
+- Het thuis spelende team moet voor een spelbegeleider zorgen.
 - Voor alle teams geld dat je spelbegeleider bent en geen scheidsrechter.
 - Hoe meer je fluit hoe minder er gevoetbald wordt.
 - Hoe minder je fluit, hoe groter de spelvreugde.
