@@ -1,6 +1,7 @@
 [
   {
     "id": "sporthal-drostenhal",
+    "name": "Drostenhal - Coevorden",
     "venue": "Sporthal Drostenhal",
     "address": "Van Pallandtlaan 1",
     "postalCode": "7742 WJ",
@@ -9,6 +10,7 @@
   },
   {
     "id": "sporthal-erica",
+    "name": "Erica - Erica",
     "venue": "Sporthal Erica",
     "address": "Veenschapswijk 25",
     "postalCode": "7887 TZ",
@@ -17,6 +19,7 @@
   },
   {
     "id": "sporthal-de-kampen",
+    "name": "De Kampen - Schoonebeek",
     "venue": "Sporthal De Kampen",
     "address": "De Kampen 18",
     "postalCode": "7761 AJ",
@@ -25,6 +28,7 @@
   },
   {
     "id": "sporthal-veenoord",
+    "name": "Veenoord - Veenoord",
     "city": "Veenoord",
     "venue": "Sporthal Veenoord",
     "address": "Nieuweweg 5",
@@ -33,6 +37,7 @@
   },
   {
     "id": "sporthal-de-swaneburg",
+    "name": "Swaneburg - Coevorden",
     "venue": "Sporthal De Swaneburg",
     "address": "Pampert 2",
     "postalCode": "7742 VV",
@@ -41,6 +46,7 @@
   },
   {
     "id": "sportpark-t-grootveld",
+    "name": "Dalen - Dalen",
     "venue": "Sportpark 't Grootveld",
     "address": "Dalerveensestraat 30b",
     "postalCode": "7751 ZT",
@@ -49,6 +55,7 @@
   },
   {
     "id": "sporthal-broekveld",
+    "name": "Broekveld - Sleen",
     "venue": "Sporthal Broekveld",
     "address": "Oldenhoffstraat 7",
     "postalCode": "7841 AJ",
@@ -57,6 +64,7 @@
   },
   {
     "id": "sporthal-schoonoord",
+    "name": "Schoonoord - Schoonoord",
     "venue": "Sporthal Schoonoord",
     "address": "Sportparklaan 55",
     "postalCode": "7848 BA",
@@ -65,6 +73,7 @@
   },
   {
     "id": "sporthal-de-goorn",
+    "name": "De Goorn - Oosterhesselen",
     "venue": "Sporthal De Goorn",
     "address": "Edveensweg 15",
     "postalCode": "7861 AM",
@@ -73,6 +82,7 @@
   },
   {
     "id": "sporthal-ossehal",
+    "name": "Ossehal - Nieuw-Schoonebeek",
     "venue": "Sporthal Ossehal",
     "address": "Aalminksweg 5",
     "postalCode": "7766 AZ",

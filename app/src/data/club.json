@@ -1,54 +1,80 @@
 [
   {
-    "id": "dalendsc",
-    "name": "Dalen/DSC"
-  },
-  {
     "id": "sc-erica",
-    "name": "Sc Erica"
-  },
-  {
-    "id": "fc-coevorden",
-    "name": "FC Coevorden"
-  },
-  {
-    "id": "ksc",
-    "name": "KSC"
-  },
-  {
-    "id": "nkvv-protos",
-    "name": "NKvv Protos"
-  },
-  {
-    "id": "vv-raptim",
-    "name": "vv Raptim"
-  },
-  {
-    "id": "svv04",
-    "name": "SVV'04"
-  },
-  {
-    "id": "vv-sleen",
-    "name": "VV Sleen"
+    "name": "SC Erica",
+    "email": null,
+    "managedVenue": "Erica - Erica"
   },
   {
     "id": "vv-sweel",
-    "name": "vv Sweel"
+    "name": "vv Sweel",
+    "email": "jeugdzaken@vvsweel.nl",
+    "managedVenue": "De Goorn - Oosterhesselen"
   },
   {
-    "id": "sv-twedo",
-    "name": "SV Twedo"
+    "id": "vv-raptim",
+    "name": "vv Raptim",
+    "email": "jeugdbestuur@vvraptim.nl",
+    "managedVenue": "Drostenhal - Coevorden"
+  },
+  {
+    "id": "fc-coevorden",
+    "name": "FC Coevorden",
+    "email": "hoofdjeugdopleiding@fccoevorden.nl",
+    "managedVenue": "Swaneburg - Coevorden"
+  },
+  {
+    "id": "nkvvprotos",
+    "name": "NKvvProtos",
+    "email": "nkvvprotos@gmail.com",
+    "managedVenue": "Swaneburg - Coevorden"
+  },
+  {
+    "id": "dalendsc",
+    "name": "Dalen/DSC",
+    "email": "jeugdbestuur@vvdalen.nl",
+    "managedVenue": "Dalen - Dalen"
+  },
+  {
+    "id": "vv-sleen",
+    "name": "VV Sleen",
+    "email": "jonnyzwaan44@gmail.com",
+    "managedVenue": "Broekveld - Sleen"
   },
   {
     "id": "vios",
-    "name": "VIOS"
+    "name": "VIOS",
+    "email": null,
+    "managedVenue": "De Goorn - Oosterhesselen"
   },
   {
-    "id": "sc-elim",
-    "name": "SC Elim"
+    "id": "ksc",
+    "name": "KSC",
+    "email": "luciannearling@live.nl",
+    "managedVenue": "Schoonoord - Schoonoord"
+  },
+  {
+    "id": "sv-twedo",
+    "name": "SV Twedo",
+    "email": "wilberteniemke@gmail.com",
+    "managedVenue": "Veenoord - Veenoord"
+  },
+  {
+    "id": "svv04",
+    "name": "SVV'04",
+    "email": "erwinsteffens@gmail.com",
+    "managedVenue": "De Kampen - Schoonebeek"
   },
   {
     "id": "sjo-swb",
-    "name": "SJO SWB"
+    "name": "SJO SWB",
+    "email": "swbvoetbal@gmail.com",
+    "managedVenue": "Ossehal - Nieuw-Schoonebeek"
+  },
+  {
+    "id": "sc-elim",
+    "name": "SC Elim",
+    "email": null,
+    "managedVenue": "Drostenhal - Coevorden"
   }
 ]

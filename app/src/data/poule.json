@@ -316,7 +316,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "nkvv-protos-jo8-1"
+        "teamId": "nkvvprotos-jo8-1"
       },
       {
         "rank": 2,
@@ -547,7 +547,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "nkvv-protos-jo9-1"
+        "teamId": "nkvvprotos-jo9-1"
       },
       {
         "rank": 3,
@@ -766,7 +766,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "svv04-jo10-1"
+        "teamId": "vv-raptim-jo10-1"
       },
       {
         "rank": 2,
@@ -778,7 +778,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sc-erica-jo10-2"
+        "teamId": "dalendsc-jo10-1"
       },
       {
         "rank": 3,
@@ -790,7 +790,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "dalendsc-jo10-1"
+        "teamId": "sv-twedo-jo10-1"
       },
       {
         "rank": 4,
@@ -802,7 +802,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sv-twedo-jo10-1"
+        "teamId": "vv-sleen-jo10-1"
       }
     ]
   },
@@ -871,7 +871,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "vv-sleen-jo10-1"
+        "teamId": "sc-erica-jo10-1"
       }
     ]
   },
@@ -892,7 +892,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sc-erica-jo10-1"
+        "teamId": "svv04-jo10-1"
       },
       {
         "rank": 1,
@@ -904,7 +904,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "nkvv-protos-jo10-1"
+        "teamId": "nkvvprotos-jo10-1"
       },
       {
         "rank": 2,
@@ -1099,7 +1099,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "nkvv-protos-jo11-1"
+        "teamId": "nkvvprotos-jo11-1"
       },
       {
         "rank": 1,
@@ -1135,7 +1135,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sc-erica-jo11-2"
+        "teamId": "vv-raptim-jo11-2"
       },
       {
         "rank": 4,
@@ -1147,7 +1147,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "vv-raptim-jo11-2"
+        "teamId": "sc-elim-jo12-2"
       }
     ]
   },
@@ -1216,7 +1216,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "vv-raptim-jo10-1"
+        "teamId": "sc-erica-jo11-2"
       }
     ]
   },
@@ -1330,7 +1330,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "vios-jo12-2"
+        "teamId": "sjo-swb-jo12-1"
       },
       {
         "rank": 2,
@@ -1342,7 +1342,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sjo-swb-jo12-1"
+        "teamId": "sc-elim-jo12-1"
       },
       {
         "rank": 3,
@@ -1354,22 +1354,10 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sc-elim-jo12-1"
-      },
-      {
-        "rank": 4,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
         "teamId": "vv-sleen-jo12-1"
       },
       {
-        "rank": 5,
+        "rank": 4,
         "points": 0,
         "gamesPlayed": 0,
         "gamesWon": 0,
@@ -1399,7 +1387,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "nkvv-protos-jo12-1"
+        "teamId": "nkvvprotos-jo12-1"
       },
       {
         "rank": 1,
@@ -1447,7 +1435,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sc-elim-jo12-2"
+        "teamId": "vios-jo12-2"
       }
     ]
   },
@@ -1679,6 +1667,18 @@
         "goalsAgainst": 0,
         "goalsDifference": 0,
         "teamId": "sv-twedo-jo13-2"
+      },
+      {
+        "rank": 5,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "svv04-jo13-2"
       }
     ]
   }
