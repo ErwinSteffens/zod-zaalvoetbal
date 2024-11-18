@@ -2,8 +2,8 @@ import * as fs from 'fs'
 import { slug } from '../utils'
 
 export interface GameLocation {
-  inputName: string | null
   id: string
+  name: string | null
   venue: string
   address: string
   postalCode: string
@@ -12,43 +12,38 @@ export interface GameLocation {
 }
 
 class LocationCollection {
-  private items: GameLocation[]
+  private _items: GameLocation[]
 
   constructor(inputFile: string) {
     this.read(inputFile)
   }
 
   private read(inputFile: string) {
-    this.items = JSON.parse(fs.readFileSync(inputFile).toString()) as GameLocation[]
+    this._items = JSON.parse(fs.readFileSync(inputFile).toString()) as GameLocation[]
 
-    this.items = this.items.map((c) => {
+    this._items = this._items.map((c) => {
       return Object.assign({ id: slug(c.venue) }, c)
     })
 
-    console.log(`  - Found ${this.items.length} locations in input`)
+    console.log(`  - Found ${this._items.length} locations in input`)
   }
 
-  findByInputName(inputName: string) {
-    const result = this.items.find((c) => c.inputName == inputName)
+  findByName(name: string) {
+    const result = this._items.find((c) => c.name == name)
     if (!result) {
-      throw new Error(`Location with input name ${inputName} not found`)
+      throw new Error(`Location with name ${name} not found`)
     }
     return result
   }
 
-  save(outputDir: string) {
-    console.log(`Saving '${this.items.length}' locations`)
+  public get items() {
+    return this._items
+  }
 
-    const json = JSON.stringify(
-      this.items,
-      (key, value) => {
-        if (key === 'inputName') {
-          return undefined
-        }
-        return value
-      },
-      2
-    )
+  save(outputDir: string) {
+    console.log(`Saving '${this._items.length}' locations`)
+
+    const json = JSON.stringify(this._items, null, 2)
     fs.writeFileSync(`${outputDir}/location.json`, json)
   }
 }

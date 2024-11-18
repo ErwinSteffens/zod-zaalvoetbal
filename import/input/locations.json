@@ -1,6 +1,6 @@
 [
   {
-    "inputName": "Drostenhal - Coevorden",
+    "name": "Drostenhal - Coevorden",
     "venue": "Sporthal Drostenhal",
     "address": "Van Pallandtlaan 1",
     "postalCode": "7742 WJ",
@@ -8,7 +8,7 @@
     "placeId": "ChIJtykby738t0cRa95Tp65fULk"
   },
   {
-    "inputName": "Erica - Erica",
+    "name": "Erica - Erica",
     "venue": "Sporthal Erica",
     "address": "Veenschapswijk 25",
     "postalCode": "7887 TZ",
@@ -16,7 +16,7 @@
     "placeId": "ChIJDTz8K5Xvt0cRkJmodGWycMA"
   },
   {
-    "inputName": "De Kampen - Schoonebeek",
+    "name": "De Kampen - Schoonebeek",
     "venue": "Sporthal De Kampen",
     "address": "De Kampen 18",
     "postalCode": "7761 AJ",
@@ -24,7 +24,7 @@
     "placeId": "EihEZSBLYW1wZW4sIDc3NjEgU2Nob29uZWJlZWssIE5ldGhlcmxhbmRzIi4qLAoUChIJu9tC1Q7wt0cRlO7CSieD4vgSFAoSCQvwd2gZ8LdHEW8hzhbaUrcH"
   },
   {
-    "inputName": "Veenoord - Veenoord",
+    "name": "Veenoord - Veenoord",
     "city": "Veenoord",
     "venue": "Sporthal Veenoord",
     "address": "Nieuweweg 5",
@@ -32,7 +32,7 @@
     "placeId": "ChIJu5154v3kt0cRtbFFaQ4Qe_k"
   },
   {
-    "inputName": "Swaneburg - Coevorden",
+    "name": "Swaneburg - Coevorden",
     "venue": "Sporthal De Swaneburg",
     "address": "Pampert 2",
     "postalCode": "7742 VV",
@@ -40,7 +40,7 @@
     "placeId": "ChIJ_YlQ25T8t0cRWwxUTrsy2Qw"
   },
   {
-    "inputName": "Dalen - Dalen",
+    "name": "Dalen - Dalen",
     "venue": "Sportpark 't Grootveld",
     "address": "Dalerveensestraat 30b",
     "postalCode": "7751 ZT",
@@ -48,7 +48,7 @@
     "placeId": "ChIJL3LmBlvjt0cRABqPD9Biin8"
   },
   {
-    "inputName": "Broekveld - Sleen",
+    "name": "Broekveld - Sleen",
     "venue": "Sporthal Broekveld",
     "address": "Oldenhoffstraat 7",
     "postalCode": "7841 AJ",
@@ -56,7 +56,7 @@
     "placeId": "ChIJPQBu0VXht0cR-Zz_w6n5C5g"
   },
   {
-    "inputName": "Schoonoord - Schoonoord",
+    "name": "Schoonoord - Schoonoord",
     "venue": "Sporthal Schoonoord",
     "address": "Sportparklaan 55",
     "postalCode": "7848 BA",
@@ -64,7 +64,7 @@
     "placeId": "ChIJT3-qqmXgt0cRPwzT_fg79Yg"
   },
   {
-    "inputName": "De Goorn - Oosterhesselen",
+    "name": "De Goorn - Oosterhesselen",
     "venue": "Sporthal De Goorn",
     "address": "Edveensweg 15",
     "postalCode": "7861 AM",
@@ -72,7 +72,7 @@
     "placeId": "ChIJrdK6zjzit0cRrdWRdFWABek"
   },
   {
-    "inputName": "Ossehal - Nieuw-Schoonebeek",
+    "name": "Ossehal - Nieuw-Schoonebeek",
     "venue": "Sporthal Ossehal",
     "address": "Aalminksweg 5",
     "postalCode": "7766 AZ",

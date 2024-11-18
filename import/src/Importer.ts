@@ -6,13 +6,13 @@ import SheetParser, {
   SheetPoule,
   SheetTeam,
   SheetGame,
-  SheetContact,
+  SheetClub,
 } from './SheetParser';
-import TeamNameParser from './input/TeamName';
+import { parseTeamName, TeamName } from './input/TeamName';
 import TeamCollection from './input/TeamCollection';
-import ClubCollection from './input/ClubCollection';
+import ClubCollection, { Club } from './input/ClubCollection';
 import LocationCollection from './input/LocationCollection';
-import GameCollection, { GameStatus } from './input/GameCollection';
+import GameCollection, { Game, GameStatus } from './input/GameCollection';
 import PouleCollection, { Poule, TeamScore } from './input/PouleCollection';
 import ScoreCalculator from './ScoreCalculator';
 import ContactCollection, { Contact } from './input/ContactCollection';
@@ -31,14 +31,14 @@ class Importer {
     console.log('Reading input json files...');
 
     this.contacts = new ContactCollection();
-    this.clubs = new ClubCollection('./input/clubs.json');
+    this.clubs = new ClubCollection();
     this.locations = new LocationCollection('./input/locations.json');
     this.games = new GameCollection();
     this.poules = new PouleCollection();
     this.teams = new TeamCollection();
 
     this.sheetParser = new SheetParser(inputFile);
-    this.sheetParser.contactFound = (contact) => this.contactFound(contact);
+    this.sheetParser.clubFound = (contact) => this.clubFound(contact);
     this.sheetParser.pouleFound = (poule) => this.pouleFound(poule);
     this.sheetParser.teamFound = (team) => this.teamFound(team);
     this.sheetParser.teamFoundInPoule = (team) => this.teamFoundInPoule(team);
@@ -87,18 +87,23 @@ class Importer {
     console.log();
   }
 
-  private contactFound(sheetPoule: SheetContact) {
+  private clubFound(sheetClub: SheetClub) {
     let clubId: string | undefined;
-    if (sheetPoule.clubName) {
-      const club = this.clubs.findByInputName(sheetPoule.clubName);
-      clubId = club.id;
+    if (sheetClub.clubName) {
+      const clubId = slug(sheetClub.clubName)
+      this.clubs.add({
+        id: clubId,
+        name: sheetClub.clubName,
+        email: sheetClub.contactEmail,
+        managedVenue: sheetClub.managedVenue,
+      } as Club);
     }
 
     this.contacts.add({
       clubId: clubId,
-      name: sheetPoule.name,
-      description: sheetPoule.description,
-      email: sheetPoule.email,
+      name: sheetClub.contactName,
+      description: sheetClub.contactDescription,
+      email: sheetClub.contactEmail,
     } as Contact);
   }
 
@@ -116,9 +121,9 @@ class Importer {
   }
 
   private teamFound(teamName: string) {
-    const teamInfo = new TeamNameParser(teamName);
+    const teamInfo = parseTeamName(teamName);
 
-    const club = this.clubs.findByInputName(teamInfo.clubName);
+    const club = this.clubs.findByName(teamInfo.clubName);
 
     const teamId = slug(`${club.name}-${teamInfo.teamName}`);
     const clubId = slug(club.name);
@@ -135,9 +140,9 @@ class Importer {
   private teamFoundInPoule(sheetTeam: SheetTeam) {
     console.log(`    - Team added: '${sheetTeam.name}'.`);
 
-    const teamInfo = new TeamNameParser(sheetTeam.name);
+    const teamInfo = parseTeamName(sheetTeam.name);
 
-    const club = this.clubs.findByInputName(teamInfo.clubName);
+    const club = this.clubs.findByName(teamInfo.clubName);
     const teamId = slug(`${club.name}-${teamInfo.teamName}`);
 
     const pouleId = slug(sheetTeam.poule);
@@ -151,11 +156,11 @@ class Importer {
   }
 
   private gameFound(game: SheetGame) {
-    const location = this.locations.findByInputName(game.location);
+    const location = this.locations.findByName(game.location);
 
     const locationId = slug(location.venue);
-    const homeTeamId = this.getTeamId(new TeamNameParser(game.homeTeam));
-    const awayTeamId = this.getTeamId(new TeamNameParser(game.awayTeam));
+    const homeTeamId = parseTeamName(game.homeTeam).id;
+    const awayTeamId = parseTeamName(game.awayTeam).id;
 
     if (homeTeamId == awayTeamId) {
       console.warn('Same home team id and away team id for game', game);
@@ -179,6 +184,7 @@ class Importer {
   }
 
   private check() {
+    // Check all teams
     this.teams.items.forEach((team) => {
       if (!team.pouleId) {
         console.warn(`  - WARNING: Team '${team.id}' has no poule`);
@@ -216,6 +222,48 @@ class Importer {
 
     this.teams.items = this.teams.items.filter((t) => !!t.pouleId);
 
+    this.locations.items.forEach((location) => {
+      var datePouleMap = Map<string, Map<string, Set<string>>>();
+      for (var game of this.games.getGamesForLocation(location.id)) {
+        var dateStr = game.time.toDateString();
+
+        if (datePouleMap.has(dateStr)) {
+          datePouleMap = datePouleMap.update(dateStr, dateTeams =>
+            dateTeams
+              .update(game.pouleId, teamIds => {
+                if (!teamIds) {
+                  return Set([game.awayTeamId, game.homeTeamId]);
+                }
+
+                return teamIds
+                  .add(game.awayTeamId)
+                  .add(game.homeTeamId)
+              }));
+        }
+        else {
+          const dateTeams: Map<string, Set<string>> = Map();
+          dateTeams.set(dateStr, Set([
+            game.awayTeamId,
+            game.homeTeamId
+          ]));
+          datePouleMap = datePouleMap.set(dateStr, dateTeams);
+        }
+      }
+
+      const managedClubs = this.clubs.findClubsManagingVenue(location.name);
+      datePouleMap.forEach((dateTeams, dateStr) => {
+        dateTeams.forEach((teams, pouleId) => {
+          const hasVenueTeam = teams.some((team) => {
+            const clubId = this.teams.findById(team).clubId
+            return managedClubs.some((club) => club.id === clubId)
+          });
+          if (!hasVenueTeam) {
+            console.warn(`  - WARNING: No venue team for poule '${pouleId}' on date '${dateStr}' at venue '${location.venue}'`);
+          }
+        });
+      });
+    });
+
     this.poules.items = this.poules.items.map((poule) => {
       let gamesForPoule = Array.from(this.games.items).filter(
         (game) => game.pouleId == poule.id,
@@ -231,11 +279,6 @@ class Importer {
         },
       };
     });
-  }
-
-  private getTeamId(info: TeamNameParser): string {
-    const clubInfo = this.clubs.findByInputName(info.clubName);
-    return slug(`${clubInfo.name}-${info.teamName}`);
   }
 }
 

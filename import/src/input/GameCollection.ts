@@ -38,19 +38,14 @@ class GameCollection {
     })
   }
 
+  getGamesForLocation(locationId: string) {
+    return this.items.filter((game) => game.locationId === locationId)
+  }
+
   save(outputDir: string) {
     console.log(`Saving '${this.items.length}' games`)
 
-    const json = JSON.stringify(
-      this.items,
-      (key, value) => {
-        if (key === 'inputName') {
-          return undefined
-        }
-        return value
-      },
-      2
-    )
+    const json = JSON.stringify(this.items, null, 2)
     fs.writeFileSync(`${outputDir}/game.json`, json)
   }
 }

@@ -34,7 +34,7 @@ class ContactCollection {
     }
   }
 
-  public findByInputName(name: string) {
+  public findByName(name: string) {
     const result = this.items.find((c) => c.name == name)
     if (!result) {
       throw new Error(`Contact with name ${name} not found`)
@@ -45,16 +45,7 @@ class ContactCollection {
   public save(outputDir: string) {
     console.log(`Saving '${this.items.length}' contacts`)
 
-    const json = JSON.stringify(
-      this.items,
-      (key, value) => {
-        if (key === 'inputName') {
-          return undefined
-        }
-        return value
-      },
-      2
-    )
+    const json = JSON.stringify(this.items, null, 2)
     fs.writeFileSync(`${outputDir}/contact.json`, json)
   }
 }

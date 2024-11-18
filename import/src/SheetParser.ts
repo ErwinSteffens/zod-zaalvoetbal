@@ -2,11 +2,12 @@ import * as XLSX from 'xlsx';
 import { WorkSheet } from 'xlsx';
 import { GameStatus } from './input/GameCollection';
 
-export interface SheetContact {
-  description: string;
-  name: string;
-  email: string;
+export interface SheetClub {
   clubName: string;
+  contactDescription: string;
+  contactName: string;
+  contactEmail: string;
+  managedVenue: string;
 }
 
 export interface SheetPoule {
@@ -33,7 +34,7 @@ export interface SheetGame {
 }
 
 class SheetParser {
-  readonly contactsSheetName: string = 'Clubs';
+  readonly clubsSheetName: string = 'Clubs';
   readonly teamsSheetName: string = 'Teams';
   readonly gameSheetNamePrefix: string = 'Schema';
   readonly timeRows: number = 20;
@@ -41,7 +42,7 @@ class SheetParser {
   workbook: XLSX.WorkBook;
   teamList: Set<string>;
 
-  contactFound: (contact: SheetContact) => void;
+  clubFound: (club: SheetClub) => void;
   pouleFound: (poule: SheetPoule) => void;
   teamFound: (team: string) => void;
   teamFoundInPoule: (team: SheetTeam) => void;
@@ -52,7 +53,7 @@ class SheetParser {
   }
 
   parse() {
-    this.log('contacts', () => this.parseContacts());
+    this.log('clubs', () => this.parseClubs());
     this.log('teams', () => this.parseTeams());
     this.log('poules', () => this.parsePoules());
     this.log('games', () => this.parseGames());
@@ -66,27 +67,29 @@ class SheetParser {
     console.log('');
   }
 
-  private parseContacts() {
-    const teamsSheet = this.workbook.Sheets[this.contactsSheetName];
-    let rowIndex = 2;
+  private parseClubs() {
+    const sheet = this.workbook.Sheets[this.clubsSheetName];
+    let rowIndex = 1;
     while (true) {
-      const clubName = this.getCellValue(teamsSheet, 0, rowIndex);
+      const clubName = this.getCellValue(sheet, 0, rowIndex);
       if (!clubName) {
         break;
       }
 
-      const name = this.getCellValue(teamsSheet, 1, rowIndex);
-      const description = this.getCellValue(teamsSheet, 2, rowIndex);
-      const email = this.getCellValue(teamsSheet, 4, rowIndex);
+      const contactName = this.getCellValue(sheet, 1, rowIndex);
+      const contactDescription = this.getCellValue(sheet, 2, rowIndex);
+      const contactEmail = this.getCellValue(sheet, 4, rowIndex);
+      const managedVenue = this.getCellValue(sheet, 5, rowIndex);
 
-      console.log(`  Club: ${clubName}, contact: ${name}`);
+      console.log(`  Club: ${clubName}, contact: ${contactName}, venue: ${managedVenue}.`);
 
       if (this.teamFound) {
-        this.contactFound({
+        this.clubFound({
           clubName,
-          name,
-          description,
-          email,
+          contactName,
+          contactDescription,
+          contactEmail,
+          managedVenue
         });
       }
 
@@ -95,10 +98,10 @@ class SheetParser {
   }
 
   private parseTeams() {
-    const teamsSheet = this.workbook.Sheets[this.teamsSheetName];
+    const sheet = this.workbook.Sheets[this.teamsSheetName];
 
     for (let index = 0; index < 200; index++) {
-      const teamName = this.getCellValue(teamsSheet, 0, index + 1);
+      const teamName = this.getCellValue(sheet, 0, index + 1);
       if (!teamName) {
         continue;
       }
@@ -115,7 +118,7 @@ class SheetParser {
     this.workbook.SheetNames.forEach((name) => {
       const matches = name.match(/(O\d+)-([A-Z])/);
 
-      if (matches || name == 'Mini') {
+      if (matches) {
         const sheet: WorkSheet = this.workbook.Sheets[name];
 
         let pouleName = name;
@@ -246,7 +249,7 @@ class SheetParser {
           row + rowIndex + 2,
         );
 
-        if (homeTeam && awayTeam && !(homeTeam == 'Mini' || awayTeam == 'Mini')) {
+        if (homeTeam && awayTeam) {
           let status: GameStatus = GameStatus.Planned;
 
           let homeScore = this.getCellValue(
