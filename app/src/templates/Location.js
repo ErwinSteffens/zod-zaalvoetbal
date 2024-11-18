@@ -17,15 +17,9 @@ const LocationTemplate = ({ data }) => {
       return moment(game.time).startOf('day').toDate();
     })
     .map((games) =>
-      games
-        .groupBy((game) => {
-          return game.field;
-        })
-        .map((games) =>
-          games.groupBy((game) => {
-            return game.poule.jsonId;
-          }),
-        ),
+      games.groupBy((game) => {
+        return game.poule.jsonId;
+      }),
     )
     .sortBy((_v, k) => k);
 
@@ -64,27 +58,17 @@ const LocationTemplate = ({ data }) => {
               <h6 className="games-header date">
                 {moment(date).format('dddd LL')}
               </h6>
-              {gamesOnDate.entrySeq().map(([field, gamesOnField]) => {
+              {gamesOnDate.entrySeq().map(([pouleId, gamesByPoule]) => {
+                const poule = gamesByPoule.first().poule;
                 return (
-                  <Fragment key={field || 'field'}>
-                    {field && <h6 className="games-header">Veld {field}</h6>}
-                    {gamesOnField.entrySeq().map(([pouleId, gamesByPoule]) => {
-                      const poule = gamesByPoule.first().poule;
-                      return (
-                        <Fragment key={pouleId}>
-                          <h6 className="games-header last">
-                            <Link
-                              className="location"
-                              to={`/poules/${poule.jsonId}`}
-                            >
-                              {poule.name}
-                            </Link>
-                          </h6>
-                          {poule.temporary && <TemporaryWarning />}
-                          <Games games={gamesByPoule} />
-                        </Fragment>
-                      );
-                    })}
+                  <Fragment key={pouleId}>
+                    <h6 className="games-header last">
+                      <Link className="location" to={`/poules/${poule.jsonId}`}>
+                        {poule.name}
+                      </Link>
+                    </h6>
+                    {poule.temporary && <TemporaryWarning />}
+                    <Games games={gamesByPoule} />
                   </Fragment>
                 );
               })}
