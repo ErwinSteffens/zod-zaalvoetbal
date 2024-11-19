@@ -269,7 +269,7 @@
     "id": "dalendsc-jo9-1",
     "clubId": "dalendsc",
     "name": "JO9-1",
-    "pouleId": "o9-poule-a",
+    "pouleId": "o9-poule-b",
     "category": "JO9"
   },
   {
@@ -822,7 +822,7 @@
     "id": "sc-elim-jo9-1",
     "clubId": "sc-elim",
     "name": "JO9-1",
-    "pouleId": "o9-poule-b",
+    "pouleId": "o9-poule-a",
     "category": "JO9"
   },
   {
