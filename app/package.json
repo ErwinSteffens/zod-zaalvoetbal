@@ -26,7 +26,7 @@
         "gatsby-plugin-sass": "^5.24.0",
         "gatsby-source-filesystem": "^4.24.0",
         "gatsby-transformer-json": "^4.24.0",
-        "gatsby-transformer-remark": "^5.24.0",
+        "gatsby-transformer-remark": "^5.25.1",
         "gatsby-transformer-yaml": "^4.24.0",
         "immutable": "^4.1.0",
         "rambda": "7.3.0",
