@@ -1,37 +1,56 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Set } from 'immutable';
+import moment from 'moment';
 
 import ClubIcon from './ClubIcon';
 
 const Navigation = () => {
-  const data = useStaticQuery<{
-    allClubJson: Queries.ClubJsonConnection;
-    allPouleJson: Queries.PouleJsonConnection;
-    allLocationJson: Queries.LocationJsonConnection;
-  }>(graphql`
-    query Navigation {
-      allClubJson(sort: { fields: name }) {
-        nodes {
-          jsonId
-          name
+  const { allClubJson, allPouleJson, allLocationJson, allGameJson } =
+    useStaticQuery<{
+      allClubJson: Queries.ClubJsonConnection;
+      allPouleJson: Queries.PouleJsonConnection;
+      allLocationJson: Queries.LocationJsonConnection;
+      allGameJson: Queries.GameJsonConnection;
+    }>(graphql`
+      query Navigation {
+        allClubJson(sort: { fields: name }) {
+          nodes {
+            jsonId
+            name
+          }
+        }
+        allPouleJson(sort: { fields: sortId }) {
+          nodes {
+            jsonId
+            name
+          }
+        }
+        allLocationJson(sort: { fields: city }) {
+          nodes {
+            jsonId
+            venue
+            city
+          }
+        }
+        allGameJson {
+          edges {
+            node {
+              time
+            }
+          }
         }
       }
-      allPouleJson(sort: { fields: sortId }) {
-        nodes {
-          jsonId
-          name
-        }
-      }
-      allLocationJson(sort: { fields: city }) {
-        nodes {
-          jsonId
-          venue
-          city
-        }
-      }
-    }
-  `);
+    `);
+
+  let dates = useMemo(() => {
+    let datesSet = Set<string>();
+    allGameJson.edges.forEach(({ node }: { node: any }) => {
+      datesSet = datesSet.add(moment(node.time).format('YYYY-MM-DD'));
+    });
+    return datesSet.toArray().sort();
+  }, [allGameJson]);
 
   return (
     <Navbar bg="dark" expand="lg" variant="dark">
@@ -42,7 +61,7 @@ const Navigation = () => {
             Home
           </Nav.Link>
           <NavDropdown id="nav-poules" title="Poules">
-            {data.allPouleJson.nodes.map((node: Queries.PouleJson) => {
+            {allPouleJson.nodes.map((node: Queries.PouleJson) => {
               return (
                 <NavDropdown.Item
                   key={node.jsonId}
@@ -55,7 +74,7 @@ const Navigation = () => {
             })}
           </NavDropdown>
           <NavDropdown id="nav-clubs" title="Clubs">
-            {data.allClubJson.nodes.map((club: Queries.ClubJson) => {
+            {allClubJson.nodes.map((club: Queries.ClubJson) => {
               return (
                 <NavDropdown.Item
                   key={club.jsonId}
@@ -69,7 +88,7 @@ const Navigation = () => {
             })}
           </NavDropdown>
           <NavDropdown id="nav-locations" title="Locaties">
-            {data.allLocationJson.nodes.map((node: Queries.LocationJson) => {
+            {allLocationJson.nodes.map((node: Queries.LocationJson) => {
               return (
                 <NavDropdown.Item
                   key={node.jsonId}
@@ -77,6 +96,20 @@ const Navigation = () => {
                   to={`/locaties/${node.jsonId}`}
                 >
                   {node.city} - {node.venue}
+                </NavDropdown.Item>
+              );
+            })}
+          </NavDropdown>
+          <NavDropdown id="nav-dates" title="Speeldagen">
+            {dates.map((date: string) => {
+              return (
+                <NavDropdown.Item
+                  key={date}
+                  as={Link}
+                  to={`/${moment(date).format('D-MMMM-YYYY')}`}
+                  className="date"
+                >
+                  {moment(date).format('dddd D MMMM YYYY')}
                 </NavDropdown.Item>
               );
             })}

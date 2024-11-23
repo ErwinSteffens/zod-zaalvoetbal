@@ -3,6 +3,11 @@ import {
   CreatePagesArgs,
   CreateSchemaCustomizationArgs,
 } from 'gatsby';
+import { Map } from 'immutable';
+import moment from 'moment';
+import 'moment/locale/nl';
+
+moment.locale('nl');
 
 const path = require(`path`);
 
@@ -178,16 +183,42 @@ exports.createPages = async ({
 }: CreatePagesArgs) => {
   const { createPage } = actions;
 
+  const gameTimes = await graphql<any>(`
+    query {
+      allGameJson {
+        edges {
+          node {
+            time
+          }
+        }
+      }
+    }
+  `);
+
+  let dates = Map<string, Date>(gameTimes.data.allGameJson.edges.map(({ node: { time } }: { node: { time: Date } }) => {
+    let date = moment(time);
+    return [date.format('D-MMMM-YYYY').toLocaleLowerCase(), date.toDate()]
+  }));
+  dates.forEach((date: Date, key: string) => {
+    createPage({
+      path: `/${key}`,
+      component: path.resolve('./src/templates/Date.js'),
+      context: {
+        date,
+      },
+    });
+  });
+
   const clubs = await graphql<any>(`
     query {
       allClubJson {
         edges {
           node {
-            jsonId
-          }
+          jsonId
         }
       }
     }
+  }
   `);
 
   clubs.data.allClubJson.edges.forEach(({ node }: { node: any }) => {
@@ -205,15 +236,15 @@ exports.createPages = async ({
       allTeamJson {
         edges {
           node {
-            jsonId
-            name
+          jsonId
+          name
             club {
-              jsonId
-            }
+            jsonId
           }
         }
       }
     }
+  }
   `);
 
   teams.data.allTeamJson.edges.forEach(({ node }: { node: any }) => {
