@@ -5,7 +5,6 @@ export interface Contact {
   description?: string
   name: string
   email: string
-  clubName?: string
   clubId?: string
 }
 
@@ -24,14 +23,6 @@ class ContactCollection {
 
   public add(contact: Contact) {
     this.items.push(contact)
-  }
-
-  public updateClubId(clubName: string, clubId: string) {
-    for (const contact of this.items) {
-      if (contact.clubName && contact.clubName === clubName) {
-        contact.clubId = clubId
-      }
-    }
   }
 
   public findByName(name: string) {

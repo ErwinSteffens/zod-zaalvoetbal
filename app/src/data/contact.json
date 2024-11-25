@@ -1,65 +1,78 @@
 [
   {
+    "clubId": "sc-erica",
     "name": "Arnoud Sliekers",
     "description": null,
     "email": null
   },
   {
+    "clubId": "vv-sweel",
     "name": "Henri Hooge",
     "description": null,
     "email": "jeugdzaken@vvsweel.nl"
   },
   {
+    "clubId": "vv-raptim",
     "name": "Bert Nijenbanning",
     "description": "Organisatie",
     "email": "jeugdbestuur@vvraptim.nl"
   },
   {
+    "clubId": "fc-coevorden",
     "name": "Gerwin Kampherbeek",
     "description": null,
     "email": "hoofdjeugdopleiding@fccoevorden.nl"
   },
   {
+    "clubId": "nkvvprotos",
     "name": "Andre Wessel",
     "description": null,
     "email": "nkvvprotos@gmail.com"
   },
   {
+    "clubId": "dalendsc",
     "name": "Michel Boer",
     "description": null,
     "email": "jeugdbestuur@vvdalen.nl"
   },
   {
+    "clubId": "vv-sleen",
     "name": "Jonny Zwaan",
     "description": null,
     "email": "jonnyzwaan44@gmail.com"
   },
   {
+    "clubId": "vios",
     "name": "Linda Gubler",
     "description": null,
     "email": null
   },
   {
+    "clubId": "ksc",
     "name": "Lucianne Arling",
     "description": null,
     "email": "luciannearling@live.nl"
   },
   {
+    "clubId": "sv-twedo",
     "name": "Wilbert van Leeuwen",
     "description": "Organisatie",
     "email": "wilberteniemke@gmail.com"
   },
   {
+    "clubId": "svv04",
     "name": "Erwin Steffens",
     "description": "Organisatie en website",
     "email": "erwinsteffens@gmail.com"
   },
   {
+    "clubId": "sjo-swb",
     "name": "Mariëtte Bruins",
     "description": null,
     "email": "swbvoetbal@gmail.com"
   },
   {
+    "clubId": "sc-elim",
     "name": "Rob van der Zee",
     "description": null,
     "email": null

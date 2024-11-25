@@ -63,10 +63,6 @@ class Importer {
     let scoreCalc = new ScoreCalculator(this.games, this.poules);
     this.poules.items = scoreCalc.processGames();
 
-    for (const club of this.clubs.items) {
-      this.contacts.updateClubId(club.name, club.id);
-    }
-
     console.log();
     console.log('Saving results...');
 
@@ -90,7 +86,7 @@ class Importer {
   private clubFound(sheetClub: SheetClub) {
     let clubId: string | undefined;
     if (sheetClub.clubName) {
-      const clubId = slug(sheetClub.clubName)
+      clubId = slug(sheetClub.clubName)
       this.clubs.add({
         id: clubId,
         name: sheetClub.clubName,
