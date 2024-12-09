@@ -284,6 +284,18 @@
         "goalsAgainst": 0,
         "goalsDifference": 0,
         "teamId": "vv-sleen-jo8-1"
+      },
+      {
+        "rank": 5,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "ksc-jo8-1"
       }
     ]
   },
@@ -409,7 +421,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "ksc-jo8-1"
+        "teamId": "sc-elim-jo8-2"
       },
       {
         "rank": 4,
@@ -421,7 +433,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sc-elim-jo8-2"
+        "teamId": "ksc-jo8-2"
       }
     ]
   },
@@ -1042,7 +1054,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sc-erica-jo11-1"
+        "teamId": "svv04-jo11-1"
       },
       {
         "rank": 2,
@@ -1054,7 +1066,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "svv04-jo11-1"
+        "teamId": "sv-twedo-jo11-1"
       },
       {
         "rank": 3,
@@ -1066,7 +1078,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sv-twedo-jo11-1"
+        "teamId": "fc-coevorden-jo11-1"
       },
       {
         "rank": 4,
@@ -1078,7 +1090,19 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "fc-coevorden-jo11-1"
+        "teamId": "sjo-swb-jo11-1"
+      },
+      {
+        "rank": 5,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "vv-sleen-jo11-1"
       }
     ]
   },
@@ -1111,7 +1135,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "vv-sleen-jo11-1"
+        "teamId": "sc-erica-jo11-2"
       },
       {
         "rank": 2,
@@ -1123,7 +1147,7 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sjo-swb-jo11-1"
+        "teamId": "vv-sleen-jo11-2"
       },
       {
         "rank": 3,
@@ -1147,31 +1171,10 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "goalsDifference": 0,
-        "teamId": "sc-elim-jo12-2"
-      }
-    ]
-  },
-  {
-    "id": "o11-poule-c",
-    "name": "O11 Poule C",
-    "gamesMultiplier": 1,
-    "isFinished": false,
-    "temporary": false,
-    "teamScores": [
-      {
-        "rank": 0,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
         "teamId": "vios-jo11-1"
       },
       {
-        "rank": 1,
+        "rank": 5,
         "points": 0,
         "gamesPlayed": 0,
         "gamesWon": 0,
@@ -1181,42 +1184,6 @@
         "goalsAgainst": 0,
         "goalsDifference": 0,
         "teamId": "fc-coevorden-jo11-2"
-      },
-      {
-        "rank": 2,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "svv04-jo11-2"
-      },
-      {
-        "rank": 3,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "vv-sleen-jo11-2"
-      },
-      {
-        "rank": 4,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "sc-erica-jo11-2"
       }
     ]
   },
@@ -1367,6 +1334,18 @@
         "goalsAgainst": 0,
         "goalsDifference": 0,
         "teamId": "svv04-jo12-1"
+      },
+      {
+        "rank": 5,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "sc-erica-jo11-1"
       }
     ]
   },
@@ -1436,6 +1415,18 @@
         "goalsAgainst": 0,
         "goalsDifference": 0,
         "teamId": "vios-jo12-2"
+      },
+      {
+        "rank": 5,
+        "points": 0,
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "gamesLost": 0,
+        "gamesDraw": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalsDifference": 0,
+        "teamId": "sc-elim-jo12-2"
       }
     ]
   },

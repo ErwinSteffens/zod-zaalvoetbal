@@ -63,13 +63,6 @@
     "category": "JO11"
   },
   {
-    "id": "svv04-jo11-2",
-    "clubId": "svv04",
-    "name": "JO11-2",
-    "pouleId": "o11-poule-c",
-    "category": "JO11"
-  },
-  {
     "id": "svv04-jo12-1",
     "clubId": "svv04",
     "name": "JO12-1",
@@ -115,14 +108,14 @@
     "id": "vv-sleen-jo11-1",
     "clubId": "vv-sleen",
     "name": "JO11-1",
-    "pouleId": "o11-poule-b",
+    "pouleId": "o11-poule-a",
     "category": "JO11"
   },
   {
     "id": "vv-sleen-jo11-2",
     "clubId": "vv-sleen",
     "name": "JO11-2",
-    "pouleId": "o11-poule-c",
+    "pouleId": "o11-poule-b",
     "category": "JO11"
   },
   {
@@ -178,14 +171,14 @@
     "id": "sc-erica-jo11-1",
     "clubId": "sc-erica",
     "name": "JO11-1",
-    "pouleId": "o11-poule-a",
+    "pouleId": "o12-poule-b",
     "category": "JO11"
   },
   {
     "id": "sc-erica-jo11-2",
     "clubId": "sc-erica",
     "name": "JO11-2",
-    "pouleId": "o11-poule-c",
+    "pouleId": "o11-poule-b",
     "category": "JO11"
   },
   {
@@ -682,7 +675,7 @@
     "id": "fc-coevorden-jo11-2",
     "clubId": "fc-coevorden",
     "name": "JO11-2",
-    "pouleId": "o11-poule-c",
+    "pouleId": "o11-poule-b",
     "category": "JO11"
   },
   {
@@ -731,7 +724,7 @@
     "id": "vios-jo11-1",
     "clubId": "vios",
     "name": "JO11-1",
-    "pouleId": "o11-poule-c",
+    "pouleId": "o11-poule-b",
     "category": "JO11"
   },
   {
@@ -752,6 +745,13 @@
     "id": "ksc-jo8-1",
     "clubId": "ksc",
     "name": "JO8-1",
+    "pouleId": "o8-poule-b",
+    "category": "JO8"
+  },
+  {
+    "id": "ksc-jo8-2",
+    "clubId": "ksc",
+    "name": "JO8-2",
     "pouleId": "o8-poule-d",
     "category": "JO8"
   },
@@ -787,7 +787,7 @@
     "id": "sjo-swb-jo11-1",
     "clubId": "sjo-swb",
     "name": "JO11-1",
-    "pouleId": "o11-poule-b",
+    "pouleId": "o11-poule-a",
     "category": "JO11"
   },
   {
@@ -843,7 +843,7 @@
     "id": "sc-elim-jo12-2",
     "clubId": "sc-elim",
     "name": "JO12-2",
-    "pouleId": "o11-poule-b",
+    "pouleId": "o12-poule-c",
     "category": "JO12"
   },
   {
