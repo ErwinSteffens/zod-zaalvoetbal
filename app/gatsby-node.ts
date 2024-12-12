@@ -1,5 +1,4 @@
 import {
-  Actions,
   CreatePagesArgs,
   CreateSchemaCustomizationArgs,
 } from 'gatsby';
@@ -21,7 +20,7 @@ exports.createSchemaCustomization = ({
     `type ClubJson implements Node {
       jsonId: String!
       name: String!
-      contact: ContactJson @link(from: "clubId")
+      contact: ContactJson @link(by: "clubId", from: "jsonId")
       teams: [TeamJson!]! @link(by: "clubId", from: "jsonId")
     }`,
     `type ContactJson implements Node {
@@ -189,14 +188,22 @@ exports.createPages = async ({
         edges {
           node {
             time
+            homeTeam {
+              id
+              clubId
+            }
+            awayTeam {
+              id
+              clubId
+            }
           }
         }
       }
     }
   `);
 
-  let dates = Map<string, Date>(gameTimes.data.allGameJson.edges.map(({ node: { time } }: { node: { time: Date } }) => {
-    let date = moment(time);
+  const dates = Map<string, Date>(gameTimes.data.allGameJson.edges.map(({ node: { time } }: { node: { time: Date } }) => {
+    const date = moment(time);
     return [date.format('D-MMMM-YYYY').toLocaleLowerCase(), date.toDate()]
   }));
   dates.forEach((date: Date, key: string) => {
@@ -222,11 +229,38 @@ exports.createPages = async ({
   `);
 
   clubs.data.allClubJson.edges.forEach(({ node }: { node: any }) => {
+    const { jsonId: clubId } = node
     createPage({
-      path: `/${node.jsonId}`,
+      path: `/${clubId}`,
       component: path.resolve(`./src/templates/Club.js`),
       context: {
-        id: node.jsonId,
+        id: clubId,
+      },
+    });
+
+    const clubDates = Map<string, Date>(gameTimes.data.allGameJson.edges
+      .filter(({ node: gameNode }: { node: any }) => gameNode.homeTeam.clubId === clubId || gameNode.awayTeam.clubId === clubId)
+      .map(({ node: { time } }: { node: { time: Date } }) => {
+        const date = moment(time);
+        return [date.format('D-MMMM-YYYY').toLocaleLowerCase(), date.toDate()]
+      }));
+
+    clubDates.forEach((date: Date, key: string) => {
+      createPage({
+        path: `/${clubId}/${key}`,
+        component: path.resolve('./src/templates/ClubDate.js'),
+        context: {
+          id: clubId,
+          date,
+        },
+      });
+    });
+
+    createPage({
+      path: `/${clubId}`,
+      component: path.resolve(`./src/templates/Club.js`),
+      context: {
+        id: clubId,
       },
     });
   });

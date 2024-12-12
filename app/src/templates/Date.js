@@ -11,7 +11,7 @@ import Layout from '../components/Layout';
 const DateTemplate = ({ pageContext: { date }, data: { allLocationJson } }) => {
   return (
     <Layout className="club-page date">
-      <h6 className="text-center">Alles wedstrijden op:</h6>
+      <h6 className="text-center">Alle wedstrijden op:</h6>
       <h3 className="date text-center">
         {moment(date).format('dddd D MMMM YYYY')}
       </h3>

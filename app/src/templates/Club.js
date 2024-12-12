@@ -12,7 +12,7 @@ import { LocationName } from '../components/LocationName';
 
 const ClubTemplate = ({ data }) => {
   const club = data.clubJson;
-  const { contact } = club;
+  const { jsonId: clubId, contact } = club;
 
   const teams = [...club.teams].sort((a, b) => {
     if (a.sortId < b.sortId) {
@@ -37,10 +37,10 @@ const ClubTemplate = ({ data }) => {
         <ClubIcon className="page-header" club={club} />
         <h3>{club.name}</h3>
         {club.contact && (
-          <>
+          <small>
             <b>Contactpersoon:</b>
             <br />
-            {contact.contact}
+            {contact.name}
             <br />
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
             <br />
@@ -50,7 +50,7 @@ const ClubTemplate = ({ data }) => {
                 <br />
               </>
             )}
-          </>
+          </small>
         )}
         <br />
       </div>
@@ -108,7 +108,9 @@ const ClubTemplate = ({ data }) => {
         return (
           <Fragment key={date.toISOString()}>
             <h6 className="games-header date">
-              {moment(date).format('dddd LL')}
+              <Link to={`/${clubId}/${moment(date).format('D-MMMM-YYYY')}`}>
+                {moment(date).format('dddd LL')}
+              </Link>
             </h6>
             {games}
             <br />
@@ -128,6 +130,7 @@ export const query = graphql`
   query ClubPage($id: String!) {
     clubJson(jsonId: { eq: $id }) {
       jsonId
+      id
       name
       contact {
         name
