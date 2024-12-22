@@ -29,7 +29,8 @@ const ClubTemplate = ({ pageContext: { date }, data: { clubJson: club } }) => {
         <ClubIcon className="page-header centered" club={club} />
       </div>
       <br />
-      <h4 className="date text-center">{moment(date).format('dddd LL')}</h4>
+      <h6 className="text-center">Alle wedstrijden voor {club.name} op:</h6>
+      <h3 className="date text-center">{moment(date).format('dddd LL')}</h3>
       <br />
       {gamesByLocation.entrySeq().map(([_, games]) => {
         games = games.sortBy((v) => v.time);

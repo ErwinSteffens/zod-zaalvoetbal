@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { graphql, Link } from 'gatsby';
 import moment from 'moment';
 import { List } from 'immutable';
-import { Row, Col } from 'react-bootstrap';
 
 import TemporaryWarning from '../components/TemporaryWarning';
 import Games from '../components/Games';
@@ -15,6 +14,7 @@ const DateTemplate = ({ pageContext: { date }, data: { allLocationJson } }) => {
       <h3 className="date text-center">
         {moment(date).format('dddd D MMMM YYYY')}
       </h3>
+      <br />
       {allLocationJson.nodes.map((location) => {
         const games = List(location.games)
           .filter((game) => {
@@ -26,7 +26,6 @@ const DateTemplate = ({ pageContext: { date }, data: { allLocationJson } }) => {
           .sortBy((_v, k) => k);
 
         const mapsUrl = `https://www.google.com/maps/place/?q=place_id:${location.placeId}`;
-        const mapsEmbedUrl = `https://www.google.com/maps/embed/v1/place?q=place_id:${location.placeId}&key=${process.env.GATSBY_GOOGLE_MAPS_KEY}`;
 
         if (games.isEmpty()) {
           return null;
@@ -36,31 +35,15 @@ const DateTemplate = ({ pageContext: { date }, data: { allLocationJson } }) => {
           <Fragment key={location.jsonId}>
             <br />
             <br />
-            <hr />
-            <Row className="location-info mb-4">
-              <Col xs={12} md={6}>
-                <h4>{location.venue}</h4>
-                <b>Adres:</b>
-                <a href={mapsUrl} target="_blank" rel="noopener noreferrer">
-                  <br />
-                  {location.address}
-                  <br />
-                  {location.postalCode} {location.city}
-                  <br />
-                </a>
-                <br />
-              </Col>
-              <Col xs={12} md={6}>
-                <iframe
-                  title={location.venue}
-                  className="location-map"
-                  frameBorder="0"
-                  style={{ border: 0 }}
-                  src={mapsEmbedUrl}
-                  allowFullScreen
-                ></iframe>
-              </Col>
-            </Row>
+            <div className="text-center">
+              <a href={mapsUrl} target="_blank" rel="noopener noreferrer">
+                <h4 className="mb-0 text-center">
+                  {location.venue} - {location.city}
+                </h4>
+              </a>
+            </div>
+            <br />
+            <br />
             {games.entrySeq().map(([pouleId, gamesByPoule]) => {
               const poule = gamesByPoule.first().poule;
               return (
