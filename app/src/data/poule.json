@@ -620,14 +620,14 @@
       },
       {
         "rank": 1,
-        "points": 10,
-        "gamesPlayed": 5,
-        "gamesWon": 3,
+        "points": 13,
+        "gamesPlayed": 6,
+        "gamesWon": 4,
         "gamesLost": 1,
         "gamesDraw": 1,
-        "goalsFor": 20,
+        "goalsFor": 23,
         "goalsAgainst": 8,
-        "goalsDifference": 12,
+        "goalsDifference": 15,
         "teamId": "sv-twedo-jo9-3"
       },
       {
@@ -644,6 +644,18 @@
       },
       {
         "rank": 3,
+        "points": 7,
+        "gamesPlayed": 6,
+        "gamesWon": 2,
+        "gamesLost": 3,
+        "gamesDraw": 1,
+        "goalsFor": 5,
+        "goalsAgainst": 12,
+        "goalsDifference": -7,
+        "teamId": "sc-erica-jo9-3"
+      },
+      {
+        "rank": 4,
         "points": 4,
         "gamesPlayed": 5,
         "gamesWon": 1,
@@ -655,27 +667,15 @@
         "teamId": "dalendsc-jo9-2"
       },
       {
-        "rank": 4,
-        "points": 4,
-        "gamesPlayed": 5,
-        "gamesWon": 1,
-        "gamesLost": 3,
-        "gamesDraw": 1,
-        "goalsFor": 2,
-        "goalsAgainst": 12,
-        "goalsDifference": -10,
-        "teamId": "sc-erica-jo9-3"
-      },
-      {
         "rank": 5,
         "points": 0,
-        "gamesPlayed": 5,
+        "gamesPlayed": 7,
         "gamesWon": 0,
-        "gamesLost": 5,
+        "gamesLost": 7,
         "gamesDraw": 0,
         "goalsFor": 0,
-        "goalsAgainst": 26,
-        "goalsDifference": -26,
+        "goalsAgainst": 32,
+        "goalsDifference": -32,
         "teamId": "fc-coevorden-jo9-2"
       }
     ]
@@ -689,26 +689,26 @@
     "teamScores": [
       {
         "rank": 0,
-        "points": 10,
-        "gamesPlayed": 4,
-        "gamesWon": 3,
+        "points": 13,
+        "gamesPlayed": 5,
+        "gamesWon": 4,
         "gamesLost": 0,
         "gamesDraw": 1,
-        "goalsFor": 14,
+        "goalsFor": 17,
         "goalsAgainst": 3,
-        "goalsDifference": 11,
+        "goalsDifference": 14,
         "teamId": "vv-raptim-jo9-3"
       },
       {
         "rank": 1,
         "points": 10,
-        "gamesPlayed": 4,
+        "gamesPlayed": 6,
         "gamesWon": 3,
-        "gamesLost": 0,
+        "gamesLost": 2,
         "gamesDraw": 1,
         "goalsFor": 8,
-        "goalsAgainst": 1,
-        "goalsDifference": 7,
+        "goalsAgainst": 7,
+        "goalsDifference": 1,
         "teamId": "fc-coevorden-jo9-3"
       },
       {
@@ -737,14 +737,14 @@
       },
       {
         "rank": 4,
-        "points": 0,
-        "gamesPlayed": 4,
-        "gamesWon": 0,
+        "points": 3,
+        "gamesPlayed": 5,
+        "gamesWon": 1,
         "gamesLost": 4,
         "gamesDraw": 0,
-        "goalsFor": 0,
+        "goalsFor": 3,
         "goalsAgainst": 19,
-        "goalsDifference": -19,
+        "goalsDifference": -16,
         "teamId": "vios-jo9-1"
       }
     ]
@@ -1196,30 +1196,42 @@
     "teamScores": [
       {
         "rank": 0,
-        "points": 15,
-        "gamesPlayed": 5,
-        "gamesWon": 5,
+        "points": 18,
+        "gamesPlayed": 6,
+        "gamesWon": 6,
         "gamesLost": 0,
         "gamesDraw": 0,
-        "goalsFor": 33,
+        "goalsFor": 36,
         "goalsAgainst": 1,
-        "goalsDifference": 32,
+        "goalsDifference": 35,
         "teamId": "sv-twedo-jo12-1"
       },
       {
         "rank": 1,
         "points": 12,
-        "gamesPlayed": 5,
+        "gamesPlayed": 7,
         "gamesWon": 4,
-        "gamesLost": 1,
+        "gamesLost": 3,
         "gamesDraw": 0,
         "goalsFor": 24,
-        "goalsAgainst": 10,
-        "goalsDifference": 14,
+        "goalsAgainst": 16,
+        "goalsDifference": 8,
         "teamId": "fc-coevorden-jo12-1"
       },
       {
         "rank": 2,
+        "points": 9,
+        "gamesPlayed": 6,
+        "gamesWon": 3,
+        "gamesLost": 3,
+        "gamesDraw": 0,
+        "goalsFor": 12,
+        "goalsAgainst": 19,
+        "goalsDifference": -7,
+        "teamId": "sc-erica-jo12-1"
+      },
+      {
+        "rank": 3,
         "points": 6,
         "gamesPlayed": 5,
         "gamesWon": 2,
@@ -1231,7 +1243,7 @@
         "teamId": "vios-jo12-1"
       },
       {
-        "rank": 3,
+        "rank": 4,
         "points": 6,
         "gamesPlayed": 5,
         "gamesWon": 2,
@@ -1241,18 +1253,6 @@
         "goalsAgainst": 16,
         "goalsDifference": -9,
         "teamId": "vv-sweel-jo12-1"
-      },
-      {
-        "rank": 4,
-        "points": 6,
-        "gamesPlayed": 5,
-        "gamesWon": 2,
-        "gamesLost": 3,
-        "gamesDraw": 0,
-        "goalsFor": 9,
-        "goalsAgainst": 19,
-        "goalsDifference": -10,
-        "teamId": "sc-erica-jo12-1"
       },
       {
         "rank": 5,
