@@ -62,8 +62,10 @@ const ClubTemplate = ({ pageContext: { date }, data: { clubJson: club } }) => {
   );
 };
 
-export function Head({ data }) {
-  return <DefaultHead title={data.clubJson.name} />;
+export function Head({ pageContext: { date }, data: { clubJson: club } }) {
+  return (
+    <DefaultHead title={`${club.name} - ${moment(date).format('dddd LL')}`} />
+  );
 }
 
 export const query = graphql`

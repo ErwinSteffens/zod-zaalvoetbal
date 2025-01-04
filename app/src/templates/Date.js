@@ -6,6 +6,7 @@ import { List } from 'immutable';
 import TemporaryWarning from '../components/TemporaryWarning';
 import Games from '../components/Games';
 import Layout from '../components/Layout';
+import { Head as DefaultHead } from '../components/Head';
 
 const DateTemplate = ({ pageContext: { date }, data: { allLocationJson } }) => {
   return (
@@ -64,6 +65,10 @@ const DateTemplate = ({ pageContext: { date }, data: { allLocationJson } }) => {
     </Layout>
   );
 };
+
+export function Head({ pageContext: { date } }) {
+  return <DefaultHead title={moment(date).format('dddd LL')} />;
+}
 
 export const query = graphql`
   query {
