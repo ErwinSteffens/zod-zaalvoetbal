@@ -1,20 +1,48 @@
 import React from 'react';
-import { Row, Col, Alert } from 'react-bootstrap';
+import { Row, Col, Alert, Modal, Button } from 'react-bootstrap';
+import useAutoResetStorageValue from '../util/usePersistantState';
+
+const TemporaryAlert = () => {
+  return (
+    <Alert className="text-center" variant="danger">
+      Het kan zijn dat er in de komende periode nog wijzigingen plaats vinden in
+      de poules of het speelschema!
+      <br />
+      <br />
+      Houd de website goed in de gaten voor de meest actuele informatie.
+    </Alert>
+  );
+};
 
 const TemporaryWarning = () => {
+  const [show, setShow] = useAutoResetStorageValue<boolean>(
+    'temp-warning-modal',
+    true,
+  );
+  const handleClose = () => setShow(false);
+
   return (
-    <Row>
-      <Col xs={12}>
-        <Alert className="text-center" variant="danger">
-          <strong>Let op!</strong> Het kan zijn dat er in de komende periode nog
-          wijzigingen plaats vinden in de poules of het speelschema!
+    <>
+      <Modal show={show} centered onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Let op!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <TemporaryAlert />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Sluit
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <Row>
+        <Col xs={12}>
+          <TemporaryAlert />
           <br />
-          <br />
-          Houd de website goed in de gaten voor de meest actuele informatie.
-        </Alert>
-        <br />
-      </Col>
-    </Row>
+        </Col>
+      </Row>
+    </>
   );
 };
 
