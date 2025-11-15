@@ -51,7 +51,7 @@ const DownloadsPage = ({ data }: PageProps<Queries.DownloadsPageQuery>) => {
       <h4 className="mt-5">Spelregels</h4>
       <ul>
         <li>
-          <a href={'/downloads/Spelregels.pdf'}>Spelregels 2023/2024</a>
+          <a href={'/downloads/Spelregels.pdf'}>Spelregels 2025/2026</a>
         </li>
       </ul>
     </Layout>
