@@ -339,7 +339,7 @@
     "id": "vv-sweel-jo11-1",
     "clubId": "vv-sweel",
     "name": "JO11-1",
-    "pouleId": "o11-poule-a",
+    "pouleId": "o11-poule-b",
     "category": "JO11"
   },
   {
@@ -808,7 +808,7 @@
     "id": "sjo-swb-jo11-1",
     "clubId": "sjo-swb",
     "name": "JO11-1",
-    "pouleId": "o11-poule-b",
+    "pouleId": "o11-poule-a",
     "category": "JO11"
   },
   {

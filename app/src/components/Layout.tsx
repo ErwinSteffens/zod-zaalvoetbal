@@ -37,7 +37,7 @@ const Layout = ({
     <Row>
       <Col>
         <div className="footer">
-          Copyright © 2023
+          Copyright © 2025
           <br />
           <a href="https://github.com/erwinsteffens/zod-zaalvoetbal">
             source code
