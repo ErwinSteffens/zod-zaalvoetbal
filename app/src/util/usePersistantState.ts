@@ -4,8 +4,14 @@ export default function useAutoResetStorageValue<T>(
   key: string,
   initialValue: T,
 ): [T, (value: T) => void] {
+  const isBrowser = () => typeof window !== "undefined"
+
   // Write state method that stores in localstorage and resets on a daily basis
   const [storedValue, setStoredValue] = useState<T>(() => {
+    if (!isBrowser()) {
+      return initialValue;
+    }
+
     const item = window.localStorage.getItem(key);
     if (!item) {
       return initialValue;
@@ -23,6 +29,10 @@ export default function useAutoResetStorageValue<T>(
   });
 
   useEffect(() => {
+    if (!isBrowser()) {
+      return
+    }
+
     const today = new Date().toDateString();
     const valueToStore = {
       date: today,
