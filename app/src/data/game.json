@@ -6001,7 +6001,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T08:30:00.000Z",
+    "time": "2026-01-03T08:30:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-a",
     "homeTeamId": "svv04-jo7-1",
@@ -6013,7 +6013,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T08:50:00.000Z",
+    "time": "2026-01-03T08:50:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-a",
     "homeTeamId": "svv04-jo7-1",
@@ -6025,7 +6025,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T09:10:00.000Z",
+    "time": "2026-01-03T09:10:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-a",
     "homeTeamId": "sv-twedo-jo7-1",
@@ -6037,7 +6037,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T09:35:00.000Z",
+    "time": "2026-01-03T09:35:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-b",
     "homeTeamId": "dalendsc-jo7-1",
@@ -6049,7 +6049,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T09:55:00.000Z",
+    "time": "2026-01-03T09:55:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-b",
     "homeTeamId": "dalendsc-jo7-1",
@@ -6061,7 +6061,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T10:15:00.000Z",
+    "time": "2026-01-03T10:15:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-b",
     "homeTeamId": "vv-sweel-jo7-1",
@@ -6073,7 +6073,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T10:40:00.000Z",
+    "time": "2026-01-03T10:40:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-c",
     "homeTeamId": "dalendsc-jo7-2",
@@ -6085,7 +6085,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T11:00:00.000Z",
+    "time": "2026-01-03T11:00:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-c",
     "homeTeamId": "dalendsc-jo7-2",
@@ -6097,7 +6097,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T11:20:00.000Z",
+    "time": "2026-01-03T11:20:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-c",
     "homeTeamId": "svv04-jo7-2",
@@ -6109,7 +6109,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T08:30:00.000Z",
+    "time": "2026-01-03T08:30:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-a",
     "homeTeamId": "vv-raptim-jo7-1",
@@ -6121,7 +6121,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T08:50:00.000Z",
+    "time": "2026-01-03T08:50:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-a",
     "homeTeamId": "sv-twedo-jo7-1",
@@ -6133,7 +6133,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T09:10:00.000Z",
+    "time": "2026-01-03T09:10:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-a",
     "homeTeamId": "fc-coevorden-jo7-1",
@@ -6145,7 +6145,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T09:35:00.000Z",
+    "time": "2026-01-03T09:35:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-b",
     "homeTeamId": "sv-twedo-jo7-2",
@@ -6157,7 +6157,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T09:55:00.000Z",
+    "time": "2026-01-03T09:55:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-b",
     "homeTeamId": "vv-sweel-jo7-1",
@@ -6169,7 +6169,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T10:15:00.000Z",
+    "time": "2026-01-03T10:15:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-b",
     "homeTeamId": "vios-jo7-1",
@@ -6181,7 +6181,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T10:40:00.000Z",
+    "time": "2026-01-03T10:40:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-c",
     "homeTeamId": "sv-twedo-jo7-3",
@@ -6193,7 +6193,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T11:00:00.000Z",
+    "time": "2026-01-03T11:00:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-c",
     "homeTeamId": "svv04-jo7-2",
@@ -6205,7 +6205,7 @@
   },
   {
     "round": 0,
-    "time": "2025-01-03T11:20:00.000Z",
+    "time": "2026-01-03T11:20:00.000Z",
     "status": "planned",
     "pouleId": "o7-poule-c",
     "homeTeamId": "fc-coevorden-jo7-2",

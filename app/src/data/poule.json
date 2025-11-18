@@ -2,7 +2,7 @@
   {
     "id": "o7-poule-a",
     "name": "O7 Poule A",
-    "gamesMultiplier": 1.5,
+    "gamesMultiplier": 1,
     "isFinished": false,
     "temporary": false,
     "teamScores": [
@@ -59,7 +59,7 @@
   {
     "id": "o7-poule-b",
     "name": "O7 Poule B",
-    "gamesMultiplier": 1.5,
+    "gamesMultiplier": 1,
     "isFinished": false,
     "temporary": false,
     "teamScores": [
@@ -116,7 +116,7 @@
   {
     "id": "o7-poule-c",
     "name": "O7 Poule C",
-    "gamesMultiplier": 1.5,
+    "gamesMultiplier": 1,
     "isFinished": false,
     "temporary": false,
     "teamScores": [
