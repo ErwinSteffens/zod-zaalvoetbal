@@ -10,6 +10,13 @@ export interface SheetClub {
   managedVenue: string;
 }
 
+export interface SheetContact {
+  contactDescription: string;
+  contactName: string;
+  contactEmail: string;
+  clubName: string;
+}
+
 export interface SheetPoule {
   name: string;
   gamesMultiplier?: number;
@@ -43,6 +50,7 @@ class SheetParser {
   teamList: Set<string>;
 
   clubFound: (club: SheetClub) => void;
+  contactFound: (club: SheetContact) => void;
   pouleFound: (poule: SheetPoule) => void;
   teamFound: (team: string) => void;
   teamFoundInPoule: (team: SheetTeam) => void;
@@ -53,6 +61,7 @@ class SheetParser {
   }
 
   parse() {
+    this.log('contacts', () => this.parseContacts());
     this.log('clubs', () => this.parseClubs());
     this.log('teams', () => this.parseTeams());
     this.log('poules', () => this.parsePoules());
@@ -90,6 +99,34 @@ class SheetParser {
           contactDescription,
           contactEmail,
           managedVenue
+        });
+      }
+
+      rowIndex++;
+    }
+  }
+
+  private parseContacts() {
+    const sheet = this.workbook.Sheets[this.clubsSheetName];
+    let rowIndex = 1;
+    while (true) {
+      const contactName = this.getCellValue(sheet, 1, rowIndex);
+      if (!contactName) {
+        break;
+      }
+
+      const clubName = this.getCellValue(sheet, 0, rowIndex);
+      const contactDescription = this.getCellValue(sheet, 2, rowIndex);
+      const contactEmail = this.getCellValue(sheet, 4, rowIndex);
+
+      console.log(`  Contact: ${contactName}, club: ${clubName}, email: ${contactEmail}.`);
+
+      if (this.teamFound) {
+        this.contactFound({
+          contactName,
+          contactDescription,
+          contactEmail,
+          clubName,
         });
       }
 

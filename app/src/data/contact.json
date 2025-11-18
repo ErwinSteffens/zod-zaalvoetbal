@@ -61,9 +61,9 @@
   },
   {
     "clubId": "svv04",
-    "name": "Erwin Steffens",
-    "description": "Organisatie en website",
-    "email": "erwinsteffens@gmail.com"
+    "name": "Anne de Jonge",
+    "description": null,
+    "email": "jeugd@svv04.nl"
   },
   {
     "clubId": "sjo-swb",
@@ -76,5 +76,10 @@
     "name": "Rob van der Zee",
     "description": null,
     "email": null
+  },
+  {
+    "name": "Erwin Steffens",
+    "description": "Organisatie en website",
+    "email": "algemenezaken@svv04.nl"
   }
 ]

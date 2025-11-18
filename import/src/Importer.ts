@@ -7,6 +7,7 @@ import SheetParser, {
   SheetTeam,
   SheetGame,
   SheetClub,
+  SheetContact,
 } from './SheetParser';
 import { parseTeamName, TeamName } from './input/TeamName';
 import TeamCollection from './input/TeamCollection';
@@ -38,7 +39,8 @@ class Importer {
     this.teams = new TeamCollection();
 
     this.sheetParser = new SheetParser(inputFile);
-    this.sheetParser.clubFound = (contact) => this.clubFound(contact);
+    this.sheetParser.contactFound = (contact) => this.contactFound(contact);
+    this.sheetParser.clubFound = (club) => this.clubFound(club);
     this.sheetParser.pouleFound = (poule) => this.pouleFound(poule);
     this.sheetParser.teamFound = (team) => this.teamFound(team);
     this.sheetParser.teamFoundInPoule = (team) => this.teamFoundInPoule(team);
@@ -84,22 +86,26 @@ class Importer {
   }
 
   private clubFound(sheetClub: SheetClub) {
+    let clubId = slug(sheetClub.clubName)
+    this.clubs.add({
+      id: clubId,
+      name: sheetClub.clubName,
+      email: sheetClub.contactEmail,
+      managedVenue: sheetClub.managedVenue,
+    } as Club);
+  }
+
+  private contactFound(sheetContact: SheetContact) {
     let clubId: string | undefined;
-    if (sheetClub.clubName) {
-      clubId = slug(sheetClub.clubName)
-      this.clubs.add({
-        id: clubId,
-        name: sheetClub.clubName,
-        email: sheetClub.contactEmail,
-        managedVenue: sheetClub.managedVenue,
-      } as Club);
+    if (sheetContact.clubName) {
+      clubId = slug(sheetContact.clubName)
     }
 
     this.contacts.add({
       clubId: clubId,
-      name: sheetClub.contactName,
-      description: sheetClub.contactDescription,
-      email: sheetClub.contactEmail,
+      name: sheetContact.contactName,
+      description: sheetContact.contactDescription,
+      email: sheetContact.contactEmail,
     } as Contact);
   }
 
