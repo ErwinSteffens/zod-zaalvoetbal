@@ -4,12 +4,11 @@ import useAutoResetStorageValue from '../util/usePersistantState';
 
 const TemporaryAlert = () => {
   return (
-    <Alert className="text-center" variant="danger">
-      Het kan zijn dat er in de komende periode nog wijzigingen plaats vinden in
-      de poules of het speelschema!
+    <Alert className="text-center" variant="warning">
+      Let op! Er kunnen nog wijzigingen plaats vinden in het speelschema!
       <br />
       <br />
-      Houd de website goed in de gaten voor de meest actuele informatie.
+      Houd altijd de website goed in de gaten voor de meest actuele informatie.
     </Alert>
   );
 };
