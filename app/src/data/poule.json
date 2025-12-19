@@ -173,7 +173,7 @@
   {
     "id": "o8-poule-a",
     "name": "O8 Poule A",
-    "gamesMultiplier": 1,
+    "gamesMultiplier": 1.5,
     "isFinished": false,
     "temporary": false,
     "teamScores": [
@@ -215,18 +215,6 @@
       },
       {
         "rank": 3,
-        "points": 0,
-        "gamesPlayed": 0,
-        "gamesWon": 0,
-        "gamesLost": 0,
-        "gamesDraw": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalsDifference": 0,
-        "teamId": "fc-coevorden-jo8-1"
-      },
-      {
-        "rank": 4,
         "points": 0,
         "gamesPlayed": 0,
         "gamesWon": 0,
