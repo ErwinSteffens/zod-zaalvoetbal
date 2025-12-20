@@ -26,3 +26,6 @@
 - time: 2025-12-20T16:30:00+0100
   message:
     - Uitslagen toegevoegd voor 20 december 2025.
+- time: 2025-12-20T23:00:00+0100
+  message:
+    - Alle uitslagen van 20 december 2025 verwerkt.
