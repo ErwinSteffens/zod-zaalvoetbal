@@ -13,7 +13,7 @@ const TemporaryAlert = () => {
   );
 };
 
-const TemporaryWarning = ({ modal = false }: { modal: boolean }) => {
+const TemporaryWarning = ({ modal = false }: { modal?: boolean }) => {
   const [show, setShow] = useAutoResetStorageValue<boolean>(
     'temp-warning-modal',
     modal,
