@@ -24,7 +24,9 @@ const DateTemplate = ({ pageContext: { date }, data: { allLocationJson } }) => {
           .groupBy((game) => {
             return game.poule.jsonId;
           })
-          .sortBy((_v, k) => k);
+          .sortBy((v, k) => {
+            return moment(v.first().time).unix();
+          });
 
         const mapsUrl = `https://www.google.com/maps/place/?q=place_id:${location.placeId}`;
 
