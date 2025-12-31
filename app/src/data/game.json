@@ -4622,12 +4622,12 @@
   {
     "round": 3,
     "time": "2026-01-10T08:24:00.000Z",
-    "status": "planned",
+    "status": "away-team-no-show",
     "pouleId": "o9-poule-a",
     "homeTeamId": "dalendsc-jo9-1",
-    "homeScore": null,
+    "homeScore": 3,
     "awayTeamId": "svv04-jo9-1",
-    "awayScore": null,
+    "awayScore": 0,
     "locationId": "sportpark-t-grootveld",
     "field": null
   },
@@ -4646,12 +4646,12 @@
   {
     "round": 3,
     "time": "2026-01-10T09:12:00.000Z",
-    "status": "planned",
+    "status": "away-team-no-show",
     "pouleId": "o9-poule-a",
     "homeTeamId": "ksc-jo9-1",
-    "homeScore": null,
+    "homeScore": 3,
     "awayTeamId": "svv04-jo9-1",
-    "awayScore": null,
+    "awayScore": 0,
     "locationId": "sportpark-t-grootveld",
     "field": null
   },
@@ -5270,12 +5270,12 @@
   {
     "round": 4,
     "time": "2026-01-17T12:00:00.000Z",
-    "status": "planned",
+    "status": "away-team-no-show",
     "pouleId": "o9-poule-a",
     "homeTeamId": "vv-raptim-jo9-1",
-    "homeScore": null,
+    "homeScore": 3,
     "awayTeamId": "svv04-jo9-1",
-    "awayScore": null,
+    "awayScore": 0,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
@@ -5306,12 +5306,12 @@
   {
     "round": 4,
     "time": "2026-01-17T13:12:00.000Z",
-    "status": "planned",
+    "status": "away-team-no-show",
     "pouleId": "o9-poule-a",
     "homeTeamId": "fc-coevorden-jo9-1",
-    "homeScore": null,
+    "homeScore": 3,
     "awayTeamId": "svv04-jo9-1",
-    "awayScore": null,
+    "awayScore": 0,
     "locationId": "sporthal-de-swaneburg",
     "field": null
   },
