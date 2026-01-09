@@ -301,7 +301,11 @@ class SheetParser {
           );
 
           if (homeScore !== null || awayScore !== null) {
-            if (homeScore === 'x' && awayScore === 'x') {
+            if (homeScore === '-' || awayScore === '-') {
+              homeScore = 0;
+              awayScore = 0;
+              status = GameStatus.Cancelled;
+            } else if (homeScore === 'x' && awayScore === 'x') {
               homeScore = 0;
               awayScore = 0;
               status = GameStatus.BothTeamNoShow;

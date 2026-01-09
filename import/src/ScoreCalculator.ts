@@ -118,7 +118,7 @@ class ScoreCalculator {
     teamScore.goalsAgainst += goalsAgainst
     teamScore.goalsDifference += goalsFor - goalsAgainst
 
-    if (status !== GameStatus.BothTeamNoShow) {
+    if (status !== GameStatus.Cancelled && status !== GameStatus.BothTeamNoShow) {
       if (goalsFor > goalsAgainst) {
         teamScore.points += 3
         teamScore.gamesWon++

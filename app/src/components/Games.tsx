@@ -52,23 +52,28 @@ const Games = ({
         } = game;
 
         const isPlayed = showScores && status !== 'planned';
+        const isCancelled = status === 'cancelled';
         const middleClasses = cn('game-content', {
           'game-content-score': isPlayed,
           'game-content-time': !isPlayed && !field,
           'game-content-time-field': !isPlayed && field,
+          'game-content-warning': isCancelled,
         });
 
-        const middleContent = isPlayed
-          ? `${homeScore} - ${awayScore}`
-          : moment(game.time).format('LT');
+        let middleContent = moment(time).format('LT');
+        if (isCancelled) {
+          middleContent = 'Afgelast';
+        } else if (isPlayed) {
+          middleContent = `${homeScore} - ${awayScore}`;
+        }
 
         let footerTxt = null;
         if (status === 'both-team-no-show') {
-          footerTxt = 'Beide niet op komen dagen.';
+          footerTxt = 'Beide teams afgemeld.';
         } else if (status === 'home-team-no-show') {
-          footerTxt = `${homeTeam.fullName} niet op komen dagen.`;
+          footerTxt = `${homeTeam.fullName} afgemeld.`;
         } else if (status === 'away-team-no-show') {
-          footerTxt = `${awayTeam.fullName} niet op komen dagen.`;
+          footerTxt = `${awayTeam.fullName} afgemeld.`;
         }
 
         const homeClub = homeTeam.club;

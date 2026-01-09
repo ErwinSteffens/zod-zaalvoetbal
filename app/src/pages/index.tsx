@@ -1,21 +1,18 @@
 import React from 'react';
 import { Link, graphql, PageProps } from 'gatsby';
 import { Row, Col, Alert } from 'react-bootstrap';
-import moment from 'moment';
 
 import Layout from '../components/Layout';
 import ClubIcon from '../components/ClubIcon';
 import ChampionIcon from '../components/ChampionIcon';
 import { Head as DefaultHead } from '../components/Head';
+import NewsItem from '../components/NewsItem';
 
 const RootPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
   const clubs = data.allClubJson;
-  const updates = data.allUpdatesYaml.edges;
-
-  let lastUpdate = null;
-  if (updates.length) {
-    lastUpdate = updates[0].node;
-  }
+  const news = data.allNewsYaml.edges
+    .filter((n) => n.node.frontPage)
+    .map((n) => n.node);
 
   return (
     <Layout>
@@ -44,22 +41,16 @@ const RootPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
           </p>
         </Col>
       </Row>
-      {lastUpdate && (
-        <>
-          <br />
-          <Alert variant="info" className="small">
-            <b>Laatst bijgewerkt {moment(lastUpdate.time).calendar()}: </b>
-            <ul>
-              {lastUpdate.message?.map((m) => (
-                <li>{m}</li>
-              ))}
-            </ul>
-            <Link className="alert-link" to="/updates">
-              Alle updates
-            </Link>
-          </Alert>
-        </>
-      )}
+      {news.map(n => {
+        return (
+          <NewsItem
+            time={n.time ?? ''}
+            title={n.title}
+            status={n.status}
+            message={n.message}
+          />
+        );
+      })}
       <h4 className="mt-5">Teams</h4>
       <Row>
         {clubs.nodes.map((club) => {
@@ -115,11 +106,14 @@ export const query = graphql`
         }
       }
     }
-    allUpdatesYaml(sort: { fields: time, order: DESC }, limit: 1) {
+    allNewsYaml(sort: { fields: time, order: DESC }, limit: 1) {
       edges {
         node {
+          title
           time
+          status
           message
+          frontPage
         }
       }
     }
