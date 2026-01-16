@@ -1,7 +1,7 @@
 - title: Wedstrijden op 10 januari 2026 afgelast
   time: 2026-01-09T11:00:00+0100
   status: warning
-  frontPage: true
+  frontPage: false
   allPages: true
   message: |
     Vanwege de voorspelde weersomstandigheden is besloten om alle wedstrijden op 10 januari niet door te laten gaan.<br/>
