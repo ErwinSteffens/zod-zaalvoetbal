@@ -638,14 +638,14 @@
     "teamScores": [
       {
         "rank": 0,
-        "points": 15,
-        "gamesPlayed": 7,
-        "gamesWon": 5,
+        "points": 18,
+        "gamesPlayed": 8,
+        "gamesWon": 6,
         "gamesLost": 0,
         "gamesDraw": 0,
-        "goalsFor": 21,
+        "goalsFor": 23,
         "goalsAgainst": 3,
-        "goalsDifference": 18,
+        "goalsDifference": 20,
         "teamId": "svv04-jo9-3"
       },
       {
@@ -687,13 +687,13 @@
       {
         "rank": 4,
         "points": 3,
-        "gamesPlayed": 7,
+        "gamesPlayed": 8,
         "gamesWon": 1,
-        "gamesLost": 4,
+        "gamesLost": 5,
         "gamesDraw": 0,
         "goalsFor": 1,
-        "goalsAgainst": 20,
-        "goalsDifference": -19,
+        "goalsAgainst": 22,
+        "goalsDifference": -21,
         "teamId": "vios-jo9-1"
       }
     ]
